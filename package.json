@@ -1,0 +1,13 @@
+{
+  "name": "@tp/tp-examples",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.15.5",
+  "scripts": {
+    "dev:single": "pnpm --filter @tp/example-single-page dev",
+    "dev:multi": "pnpm --filter @tp/example-multi-pages dev",
+    "build": "pnpm -r build",
+    "dev:derivatives": "pnpm --filter @tp/example-derivatives dev"
+  }
+}
