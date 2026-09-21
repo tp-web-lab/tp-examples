@@ -6,7 +6,7 @@ En fait, pour distinguer les descentes des montées, on dira qu’en descente la
 
 ::: tp-multi-choice-question { random answer="1,2"}
 Title
-: Calcul d'une pente
+: Pente de +5%
 
 Prompt
 : Laquelle, ou lesquelles, de ces affirmations représente(nt) une pente de +5% ?
@@ -66,6 +66,21 @@ On ne va pas l’obtenir directement, mais de plus en plus précisément, en pre
 On peut démontrer plus généralement que, si la portion vaut :tp-math:`10^{-n}`{} (ce qui peut être très petit quand :tp-math:`n`{} est grand), alors la pente vaut :tp-math:`0{,}1+\frac{10^{-n}}{1000}`{}. Donc la pente se rapproche d’aussi près qu’on veut de :tp-math:`0{,}1`{} pourvu qu’on choisisse une portion suffisamment petite.
 
 On considérera alors cette valeur de 0,1 comme la « vraie » valeur de la pente au point considéré. C’est la valeur *limite* vers laquelle tend la pente moyenne quand on considère des portions de route de plus en plus petites.
+
+::: tp-python-viewer-question {src=examples/slope.init.py test=examples/slope.test.py}
+Title
+: Calculs de pente
+
+Prompt
+: Définir une fonction Python `slope(f,x0,x1)` qui calcule le taux d'accroissement d'une fonction :tp-math:`f`{} entre :tp-math:`x_{0}`{} et :tp-math:`x_{1}`{}.
+
+  Utiliser cette fonction pour retrouver (à peu près) les valeurs de la pente de la route définie par la fonction :tp-math:`\frac{x^2}{1000}`{}, à partir de l'abscisse :tp-math:`x_0=50`{} et pour des portions de route de plus en plus petites. On donnera à la portion la valeur de :tp-math:`10^{-n}`{} pour :tp-math:`n \in [0,6]`{}.
+
+Solution
+:
+  :::: tp-markdown {src=/docs/examples/slope.solution.md}
+  ::::
+:::
 
 :span:--- Et si on veut calculer la pente en un autre point, par exemple au point qui se trouve à 1 km de l’origine, il faut refaire tous ces calculs ?{.tp-red-style}\
 Heureusement non, parce que les mathématiciens les ont faits une fois pour toutes et les ont résumés dans des formules (du moins lorsque la formule qui définit le profil de la route n’est pas trop compliquée).
