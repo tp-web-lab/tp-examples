@@ -89,6 +89,46 @@ Ici, par exemple, le profil de la route est de la forme :tp-math:`ax^2`{}, avec 
 
 Pour 1 km, :tp-math:`x=1000`{} mètres, donc la pente est :tp-math:`2\times\frac{1}{1000}\times 1000=2`{}, c’est-à-dire une pente de 200 %. Une telle route ferait un angle de plus de 60 degrés avec l’horizontale, ce n’est pas réaliste.
 
+::: tp-fill-blank-question
+Answers
+: 25
+
+Title
+: Où se situe la pente à +5% ?
+
+Prompt
+: On considère une route dont le profil est de la forme :tp-math:`ax^2`{} avec :tp-math:`a = \frac{1}{1000}`{}.
+
+  A quelle distance de l'origine se situe la pente de +5% ?
+
+Form
+: La pente de +5% se situe à :tp-textfield:{clearable placeholder="un nombre"} mètres de l'origine.
+
+Feedback
+: Un théorème dit que la pente correspondant au point :tp-math:`x`{} est :tp-math:`2ax`{}.
+
+Solution
+: Pour un profil de la forme :tp-math:`ax^2`{}, un théorème dit que la pente correspondant au point :tp-math:`x`{} est :tp-math:`2ax`{}.
+
+  Avec :tp-math:`a = \frac{1}{1000}`{} et la pente :tp-math:`2ax = 5% = 0.05`{}, on obtient :
+
+  :tp-math:`\displaystyle x = \frac{0.05}{2\frac{1}{1000}} = 1000 \frac{0.05}{2} = \frac{50}{2} = 25`{}.
+
+  :::: tp-stack
+  Vérification sur un intervalle de :tp-math:`0.2`{} autour de :tp-math:`25`{}, de :tp-math:`24.9`{} à :tp-math:`25.1`{} :
+  
+  :tp-math:`\displaystyle\frac{\Delta f}{\Delta x} = \frac{f(25 + 0.1)-f(25 - 0.1)}{25.1 - 24.9} = \frac{(25+0.1)^2 - (25-0.1)^2}{1000\cdot 0.2}`{}
+  
+  Or : :tp-math:`(25+0.1)^2 - (25-0.1)^2`{} est de la forme : :tp-math:`(a+b)^2 - (a-b)^2 = (a^2 + 2ab + b^2) - (a^2 - 2ab + b^2) = 4ab`{}
+
+  Donc : :tp-math:`\displaystyle\frac{\Delta f}{\Delta x} = \frac{4\cdot 25\cdot 0.1}{1000\cdot 0.2} = \frac{10}{200} = 0.05 = 5%`{}.
+
+  ::::: tp-box
+  La pente est de +5% se situe à 25 mètres de l'origine.
+  :::::
+  ::::
+:::
+
 :span:--- Finalement, c’est quoi une dérivée ?{.tp-red-style}\
 Pour être complet, on doit dire « dérivée d’une fonction », et il faudrait définir précisément ce qu’est une fonction. Ici, la fonction c’est le procédé de calcul qui permet de trouver l’altitude en fonction de la distance : si la distance est :tp-math:`x`{}, l’altitude est :tp-math:`\frac{x^2}{1000}`{}.
 
