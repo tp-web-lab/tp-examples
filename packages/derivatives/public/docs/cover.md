@@ -98,3 +98,4 @@ verso
   Géométriquement, le taux d’accroissement est la pente de la droite sécante passant par les points :tp-math:`A(a,f(a))`{} et :tp-math:`B(b,f(b))`{} .
   ::::
 :::
+

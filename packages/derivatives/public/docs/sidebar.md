@@ -1,7 +1,8 @@
-- [Introduction](cover.md)
-- Qu’est-ce qu’une dérivée ?
+- [Introduction](petit-prince.md)
+- [Qu’est-ce qu’une dérivée ?](cover.md)
   - [Une pente](slope.md)
   - [Un débit](flow.md)
   - [Une vitesse](speed.md)
 - [À quoi sert une dérivée ?](applications.md)
+- []()
 - [Conclusion](conclusion.md)
