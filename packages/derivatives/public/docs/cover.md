@@ -1,101 +1,79 @@
 # C’est quoi, une dérivée ?
-#### Les dérivées expliquées à ma petite nièce...
+#### Les dérivées expliquées à ma petite nièce...{style="margin-bottom:2rem;"}
 
-:span:adapté d'après le site http://gerard.tisseau.free.fr/site/derivees.html {style="font-size:80%;margin-bottom:8rem;"}
+Voici un exemple d'utilisation de la bibliothèque de composants `tp-components`.
 
+Il s'agit d'une leçon de mathématiques sur les dérivées adaptée d'un extrait du site web http://gerard.tisseau.free.fr/site/derivees.html. Ce site s'adresse aux élèves de terminale de la filière générale du lycée français, c'est-à-dire aux jeunes âgés de 17-18 ans.
 
-<!-- Transcription of derivatives.pdf, pages 1–4. Red dialogue uses native inline roles with the shared tp-red-style class. -->
+Dans cette leçon, écrite en `tp-markdown`, les composants utilisés directement dans cet exemple sont répertoriés ci-dessous.
 
-:span:--- C’est quoi une dérivée ?{.tp-red-style}\
-Eh bien, c’est simple : c’est la limite du taux d’accroissement.
-
-:span:--- Euh…{.tp-red-style}\
-Oui, le nombre dérivé d’une fonction :tp-math:`f`{} en un point :tp-math:`a`{}, c’est :tp-math:`\displaystyle\lim_{x\to a}\frac{f(x)-f(a)}{x-a}`{}.\
-Enfin du moins quand c’est réel.
-
-:span:--- Euh…{.tp-red-style}\
-Tu comprendras quand tu seras plus grande…
-
-:span:--- Mais en vrai, c’est quoi une dérivée ?{.tp-red-style}
-
-::: tp-flip-card { style="--tp-flip-card-width:25rem;--tp-flip-card-aspect-ratio:0.75;" }
-recto
-:
-  Quel est l'**accroissement** de la fonction :tp-math:`f(x) = x^2`{}
-  entre :tp-math:`x = 2`{} et :tp-math:`x = 5`{} ?
-
-  :::: tp-xy-plot
-  ::::: script { type=tp/xy-plot }
-    xyFunctionGraph
-      x-axis [-1,6]
-      x-ticks [-1,0,1,2,3,4,5,6]
-      legend-x "x"
-      y-ticks [-5,0,1,4,9,16,25]
-      y-axis [-5,25]
-      legend-y "f(x)"
-      points [["A",2,4,10,10], ["B",5,25]]
-      functions [["Parabola", "x*x"]]
-  :::::
-  ::::
-
-verso
-:
-  :::: tp-stack
-  L’**accroissement** :tp-math:`\Delta f`{} de la fonction :tp-math:`f(x)`{} est la variation
-  de sa valeur entre :tp-math:`x = a`{} et :tp-math:`x = b`{} :
-
-  :tp-math:`\Delta f = f(b) - f(a)`{}.
-
-  Avec :tp-math:`f(x) = x^2`{}, :tp-math:`a = 2`{}
-  et :tp-math:`b = 5`{}, on a :
-
-  :tp-math:`\Delta f = f(5) - f(2) = 5^2 - 2^2 = 25 - 4 = 21`{}
-
-  ::::: tp-box
-  :tp-math:`\Delta f = 21`{} est l'accroissement de :tp-math:`f(x)=x^2`{} entre :tp-math:`x = 2`{} et :tp-math:`x = 5`{}.
-  :::::
-  ::::
+::: tp-cluster
+| Utilitaires | Utilisation |
+|-------------|-------------|
+|`<tp-markup-multi-pages>` | mise en page générale |
+|`<tp-math>` | rendu d'expressions mathématiques |
+|`<tp-xy-plot>` | tracé de graphes de fonctions |
+|`<tp-code-editor>` | éditeur de code |
+|`<tp-code-comment>` | infobulles dans le code informatique |
+<!-- -->
+| Questionnaires | Description |
+|----------------|-------------|
+|`<tp-flip-card>` | carte mémoire de type question/réponse |
+||`<tp-multi-choice-question>` | question à choix multiple |
+|`<tp-python-viewer-question>` | interpréteur Python |
+|`<tp-fill-blank-question>` | texte à trous |
 :::
 
-::: tp-flip-card { style="--tp-flip-card-width:25rem;--tp-flip-card-aspect-ratio:0.75;" }
-recto
-:
-  Quel est le **taux d’accroissement** de la fonction :tp-math:`f(x) = x^2`{}
-  entre :tp-math:`x = 2`{} et :tp-math:`x = 5`{} ?
 
-  ::::: tp-xy-plot
-  :::::: script { type=tp/xy-plot }
-    xyFunctionGraph
-      x-axis [-1,6]
-      x-ticks [-1,0,1,2,3,4,5,6]
-      legend-x "x"
-      y-ticks [-5,0,1,4,9,16,25]
-      y-axis [-5,25]
-      legend-y "f(x)"
-      points [["A",2,4,10,10], ["B",5,25]]
-      functions [["Parabola", "x*x"],["Secant", "7*x - 10", [2,5]]]
-  ::::::
-  :::::
+::: details
+:::: summary
+Dessine-moi une dérivée
+::::
+:::: span {style="font-size:1.1em;margin-bottom:3rem;"}
+Le Petit Prince et la dérivée
+::::
 
-verso
-:
-  :::: tp-stack
-  Le **taux d’accroissement** de la fonction :tp-math:`f(x)`{} rapporte son accroissement :tp-math:`\Delta f`{} à la variation correspondante :tp-math:`\Delta x`{} de :tp-math:`x`{} :
+:span:— Dessine-moi une dérivée{.tp-red-style}, me dit-il un matin, alors que je tentais encore une fois de réparer le moteur de mon avion. 
 
-  :tp-math:`\displaystyle\frac{\Delta f}{\Delta x} = \frac{f(b) - f(a)}{b - a}`{} avec :tp-math:`a \neq b`{}.
+Je levai les yeux, surpris. Le désert était immense et silencieux, et voilà que ce petit bonhomme aux cheveux d'or me demandait de lui dessiner un concept que les grandes personnes enferment d’ordinaire dans de lourds traités d'algèbre. 
 
-  Avec :tp-math:`f(x) = x^2`{}, :tp-math:`a = 2`{}
-  et :tp-math:`b = 5`{}, on a :
+— Une dérivée ? répétai-je. C'est un peu difficile à dessiner. Les grandes personnes aiment les nombres et les formules, elles écrivent cela avec des :tp-math:`f'(x)`{} et des limites qui tendent vers zéro... 
 
-  :tp-math:`\displaystyle\frac{\Delta f}{\Delta x} = \frac{f(5) - f(2)}{5 - 2} = \frac{21}{3} = 7`{}
+Il eut un petit rire agacé :\
+:span:— Je ne veux pas de nombres. Les nombres ne racontent rien sur les fleurs ou sur les renards. Dessine-moi une dérivée s'il te plait.{.tp-red-style} 
 
-  ::::: tp-box
-  - :tp-math:`\Delta x = 3`{} est la variation de :tp-math:`x`{}.
-  - :tp-math:`\Delta f = 21`{} est l'accroissement correspondant de :tp-math:`f(x)=x^2`{}.
-  - :tp-math:`\displaystyle\frac{\Delta f}{\Delta x} = 7`{} est le taux d'accroissement de :tp-math:`f(x)=x^2`{} entre :tp-math:`x = 2`{} et :tp-math:`x = 5`{}.
-  :::::
+Alors, je pris une feuille de papier chiffonnée et un bout de crayon. Je ne savais pas dessiner les abstractions, alors je dessinai une simple ligne courbe, qui s'élevait doucement avant de redescendre, comme la crête d'une dune sous le vent. 
 
-  Géométriquement, le taux d’accroissement est la pente de la droite sécante passant par les points :tp-math:`A(a,f(a))`{} et :tp-math:`B(b,f(b))`{} .
-  ::::
+— Regarde, lui dis-je. C'est une colline sur ta planète. 
+
+Il pencha sa tête blonde sur mon croquis, sérieux.\
+:span:— Ce n'est qu'une ligne, dit-il. Où est la dérivée ?{.tp-red-style}
+
+Je posai la pointe de mon crayon sur la partie de la ligne qui grimpait vers le ciel. J'y traçai une petite flèche droite, une seule, qui effleurait la courbe en un point unique, comme un oiseau qui rase le sol sans jamais s'y poser. La flèche pointait fièrement vers le haut. 
+
+— La voilà, murmurai-je. Ta colline te dit *où tu es*. Mais cette petite flèche, elle, te dit *où tu vas*. Elle ne s'occupe ni du passé, ni du futur lointain. Elle ne connaît que l'élan du pas suivant. C'est l'« intention » du voyage à cet instant précis. 
+
+Le Petit Prince regarda la flèche, puis mon crayon.\
+:span:— Et si je marche vers le sommet de la colline ? Tout en haut ?{.tp-red-style}
+
+Je déplaçai mon crayon sur la crête de la dune et je dessinai une nouvelle flèche. Celle-ci était parfaitement horizontale, posée en équilibre sur le sommet, parallèle au ciel. 
+
+— Quand tu es tout en haut, tu t'arrête de monter et tu n'as pas encore commencé à descendre. Pendant une fraction de seconde, la flèche est immobile. C'est une dérivée nulle. C'est le moment exact où tu te reposes, où tu regardes le paysage avant de choisir la suite. 
+
+:span:— Je connais ce moment, dit-il doucement. C'est le moment où le soleil se couche et où le ciel attend.{.tp-red-style} 
+
+Il pointa ensuite son doigt vers le versant qui redescendait.\
+:span:— Et là ?{.tp-red-style}
+
+Je traçai une dernière flèche, inclinée vers la terre.\
+— Là, la flèche pointe vers le sol. La dérivée est négative, car le chemin perd de sa hauteur. 
+
+Le Petit Prince resta un long moment silencieux. Il regardait mes trois petites flèches qui changeaient de direction à chaque pas sur la colline. 
+
+:span:— Les grandes personnes croient qu'une chose est grande ou petite, finit-il par dire. Elles mesurent la hauteur de la colline. Mais elles ne regardent jamais la flèche. Ta dérivée, c'est le secret du mouvement.{.tp-red-style}
+
+— C'est exactement cela, acquiesçai-je, émerveillé par sa logique. 
+
+:span:— Merci{.tp-red-style}, dit-il en reprenant sa feuille. :span:Maintenant, dessine-moi un mouton sur la colline...{.tp-red-style}
+
 :::
-

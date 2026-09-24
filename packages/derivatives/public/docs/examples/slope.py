@@ -1,4 +1,7 @@
 def altitude(x):
+    """
+    Calculate the altitude based on the horizontal distance x.
+    """
     return x**2/1000
 
 def slope(f, x0, x1):

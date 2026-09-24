@@ -85,7 +85,7 @@ Solution
 :span:--- Et si on veut calculer la pente en un autre point, par exemple au point qui se trouve à 1 km de l’origine, il faut refaire tous ces calculs ?{.tp-red-style}\
 Heureusement non, parce que les mathématiciens les ont faits une fois pour toutes et les ont résumés dans des formules (du moins lorsque la formule qui définit le profil de la route n’est pas trop compliquée).
 
-Ici, par exemple, le profil de la route est de la forme :tp-math:`ax^2`{}, avec :tp-math:`a=\frac{1}{1000}`{}. Un théorème dit alors que la pente correspondant au point :tp-math:`x`{} est :tp-math:`2ax`{}. Vérifions avec l’exemple précédent : :tp-math:`2\times\frac{1}{1000}\times 50=\frac{100}{1000}=0{,}1`{}. C’est bien ça.
+Ici, par exemple, le profil de la route est de la forme :tp-math:`cx^2`{}, avec :tp-math:`c=\frac{1}{1000}`{}. Un théorème[^1] dit alors que la pente correspondant au point :tp-math:`x`{} est :tp-math:`2cx`{}. Vérifions avec l’exemple précédent : :tp-math:`2\times\frac{1}{1000}\times 50=\frac{100}{1000}=0{,}1`{}. C’est bien ça.
 
 Pour 1 km, :tp-math:`x=1000`{} mètres, donc la pente est :tp-math:`2\times\frac{1}{1000}\times 1000=2`{}, c’est-à-dire une pente de 200 %. Une telle route ferait un angle de plus de 60 degrés avec l’horizontale, ce n’est pas réaliste.
 
@@ -97,7 +97,7 @@ Title
 : Où se situe la pente à +5% ?
 
 Prompt
-: On considère une route dont le profil est de la forme :tp-math:`ax^2`{} avec :tp-math:`a = \frac{1}{1000}`{}.
+: On considère une route dont le profil est de la forme :tp-math:`cx^2`{} avec :tp-math:`c = \frac{1}{1000}`{}. Il s'agit d'une route qui change de pente continuellement.
 
   A quelle distance de l'origine se situe la pente de +5% ?
 
@@ -105,12 +105,12 @@ Form
 : La pente de +5% se situe à :tp-textfield:{clearable placeholder="un nombre"} mètres de l'origine.
 
 Feedback
-: Un théorème dit que la pente correspondant au point :tp-math:`x`{} est :tp-math:`2ax`{}.
+: Un théorème[^1] dit que la pente correspondant au point :tp-math:`x`{} est :tp-math:`2cx`{}.
 
 Solution
-: Pour un profil de la forme :tp-math:`ax^2`{}, un théorème dit que la pente correspondant au point :tp-math:`x`{} est :tp-math:`2ax`{}.
+: Pour un profil de la forme :tp-math:`cx^2`{}, un théorème[^1] dit que la pente correspondant au point :tp-math:`x`{} est :tp-math:`2cx`{}.
 
-  Avec :tp-math:`a = \frac{1}{1000}`{} et la pente :tp-math:`2ax = 5% = 0.05`{}, on obtient :
+  Avec :tp-math:`c = \frac{1}{1000}`{} et la pente :tp-math:`2cx = 5% = 0.05`{}, on obtient :
 
   :tp-math:`\displaystyle x = \frac{0.05}{2\frac{1}{1000}} = 1000 \frac{0.05}{2} = \frac{50}{2} = 25`{}.
 
@@ -144,3 +144,18 @@ Oui, un col se caractérise par le fait qu’on y arrive en montant et qu’on e
 Elle est nulle : 0 %. Le col est « horizontal » (mais ce n’est qu’en un point).
 
 <!-- Optional insertion point: questions about slope and the limiting value. -->
+
+<hr>
+
+[^1]: Pour :tp-math:`f(x)=x^2`{}, la définition de la dérivée :tp-math:`f'`{} en :tp-math:`a`{} est :\
+      :tp-math:`\displaystyle f'(a)=\lim_{h\to 0}\frac{f(a+h)-f(a)}{h}`{}.\
+      On remplace la fonction par son expression, puis on développe :\
+      :tp-math:`\displaystyle \frac{(a+h)^2-a^2}{h}=\frac{a^2+2ah+h^2-a^2}{h}=\frac{2ah+h^2}{h}=2a+h`{}\
+      La simplification est permise car **:tp-math:`h\neq 0`{}** : il tend vers zéro, sans être nul dans ce quotient.\
+      En passant à la limite :
+      :tp-math:`\displaystyle f'(a)=\lim_{h\to 0}(2a+h)=2a`{}\
+      Ainsi, pour tout réel :tp-math:`x`{} :
+      :tp-math:`\boxed{(x^2)'=2x}`{}\
+      Pour le profil de la route défini par :tp-math:`f(x) = cx^2`{}, on a : :tp-math:`f'(x) = (cx^2)' = c(x^2)' = c(2x) = 2cx`{}.
+
+::notes{}
