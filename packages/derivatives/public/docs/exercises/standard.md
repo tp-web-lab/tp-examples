@@ -1,4 +1,4 @@
-::: tp-fill-blank-question {open closed}
+::: tp-fill-blank-question {closed}
 Title
 : Fonctions usuelles
 
@@ -18,7 +18,8 @@ Answers
   12. :tp-math:`\sin(x)`{}
   13. :tp-math:`-\cos(x)`{}
 
-
+Prompt
+: Remplir chaque espace vide avec une des réponses proposées.
 
 Form
 :
@@ -53,4 +54,4 @@ Solution
 
   6. Les fonctions trigonométriques :tp-math:`f(x) = \sin(x)`{} et :tp-math:`g(x) = \cos(x)`{} ont pour dérivées respectives :tp-math:`f'(x) = \cos(x)`{} et :tp-math:`g'(x) = -\sin(x)`{}.
 
-
+:::

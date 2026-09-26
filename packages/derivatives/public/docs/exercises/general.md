@@ -2,6 +2,10 @@
 Title
 : Généralités
 
+Prompt
+: Remplir chaque espace vide avec une des réponses proposées.
+
+
 Answers
 : 
   1. :tp-math:`\displaystyle\frac{f(x)-f(a)}{x-a}`{} 
