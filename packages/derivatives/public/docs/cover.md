@@ -15,6 +15,8 @@ Dans cette leçon, écrite en `tp-markdown`, les composants utilisés directemen
 |`<tp-xy-plot>` | tracé de graphes de fonctions |
 |`<tp-code-editor>` | éditeur de code |
 |`<tp-code-comment>` | infobulles dans le code informatique |
+|`<tp-spreadsheet-editor>` | éditeur de feuilles de calcul |
+
 <!-- -->
 | Questionnaires | Description |
 |----------------|-------------|
@@ -50,6 +52,22 @@ Il pencha sa tête blonde sur mon croquis, sérieux.\
 :span:— Ce n'est qu'une ligne, dit-il. Où est la dérivée ?{.tp-red-style}
 
 Je posai la pointe de mon crayon sur la partie de la ligne qui grimpait vers le ciel. J'y traçai une petite flèche droite, une seule, qui effleurait la courbe en un point unique, comme un oiseau qui rase le sol sans jamais s'y poser. La flèche pointait fièrement vers le haut. 
+
+
+:::: tp-xy-plot {style="width:50%;float:right;border:1px solid gray;"}
+::::: script {type="tp/xy-plot"}
+xyFunctionGraph
+  title "Colline"
+  x-axis [0, 2*PI]
+  y-axis [-0.5, 2]
+  points [["A", 1, 0.5*cos(1 - PI) + 1, 10, 10],["B", PI, 1.5], ["C", 4.71, 1]]
+  functions [["Collines", "0.5*cos(x - PI) + 1", [0,2*PI]], 
+    ["Pente","-0.5*sin(x-PI)"],
+    ["Montée","-0.5*sin(1-PI)*(x-1) + 0.5*cos(1 - PI) + 1", [1,2]],
+    ["Col", "-0.5*sin(PI-PI)*(x-PI) + 0.5*cos(PI - PI) + 1", [PI, 3.93]],
+    ["Descente", "-0.5*sin(4.71-PI)*(x-4.71) + 0.5*cos(4.71 - PI) + 1", [4.71,5.495]]]
+:::::
+::::  
 
 — La voilà, murmurai-je. Ta colline te dit *où tu es*. Mais cette petite flèche, elle, te dit *où tu vas*. Elle ne s'occupe ni du passé, ni du futur lointain. Elle ne connaît que l'élan du pas suivant. C'est l'« intention » du voyage à cet instant précis. 
 

@@ -12,12 +12,34 @@ On calcule alors le débit comme précédemment, mais pour une toute petite dur�
 :span:--- Mais on ne peut pas mesurer des quantités aussi petites avec précision, et dans une baignoire, en plus !{.tp-red-style}\
 C’est là qu’il faut sortir de la physique pour faire des mathématiques, qui raisonnent sur des objets abstraits, « idéaux », sans se soucier des conditions pratiques de mesure.
 
-Il faut supposer qu’on connaît exactement l’écoulement du robinet, par exemple sous forme de formule. Admettons qu’à partir d’un certain instant considéré comme origine (l’instant 0 : le moment où la baignoire est vide et où on ouvre le robinet) on sache calculer exactement le volume d’eau dans la baignoire à tout instant. Par exemple, supposons que, si on appelle :tp-math:`d`{} la durée depuis l’instant 0 (en secondes), le volume soit égal à :tp-math:`\frac{d^2}{1000}`{} (en litres).
+Il faut supposer qu’on connaît exactement l’écoulement du robinet, par exemple sous forme de formule. Admettons qu’à partir d’un certain instant considéré comme origine (l’instant 0 : le moment où la baignoire est vide et où on ouvre le robinet) on sache calculer exactement le volume d’eau dans la baignoire à tout instant. Par exemple, supposons que, si on appelle :tp-math:`t`{} la durée depuis l’instant 0 (en secondes), le volume :tp-math:`V`{} soit égal à :tp-math:`\frac{t^2}{1000}`{} (en litres).
 
 Quel serait le débit au bout d’une minute ?
+
+::: tp-fill-blank-question
+Title
+: Calcul de débit
+
+Prompt
+: On remplit une baignoire telle que le volume d'eau :tp-math:`V`{} varie en fonction de la durée :tp-math:`t`{} de templissage selon la loi : :tp-math:`\displaystyle V(t) = \frac{t^2}{1000}`{}.
+
+  A l'aide de la feuille de calcul ci-dessous, calculer successivement :
+
+  a. le volume d'eau :tp-math:`V(t_0)`{} au bout d'une durée :tp-math:`t_0 = 60s`{} _(cellule B2)_;
+  b. le volume d'eau :tp-math:`V(t_0+dt)`{} au bout d'une durée :tp-math:`t_0 + dt`{} pour des intervalles de temps :tp-math:`dt = 10^{-n}`{} allant de :tp-math:`n = 0`{} à :tp-math:`n = 12`{} inclus _(cellules B5 à N5)_;
+  c. l'accroissement de volume :tp-math:`\Delta V`{} entre les instants :tp-math:`t_0`{} et :tp-math:`t_0 + dt`{} (cellules _(cellules B6 à N6)_;
+  d. le taux d'accroissement du volume d'eau entre les instants :tp-math:`t_0`{} et :tp-math:`t_0 + dt`{} _(cellules B7 à N7)_;
+
+  :::: tp-spreadsheet-editor {columns=15 rows=8 }
+  ::::
+
+Form
+: 
+  1. A partir des résultats de la feuille de style précédente, estimer la valeur du débit d'eau à l'instant :tp-math:`t_0 = 60s`{} : :tp-numberfield:`a`{placeholder=débit}
+  2. La vérification de cette valeur se fait à l'aide de la formule : :tp-mathfield:`a`{placeholder=formule mode=asciimath}.
+:::
 
 :span:--- Le volume serait{.tp-red-style} :tp-math:`\frac{60^2}{1000}`{.tp-red-style}:span:, soit{.tp-red-style} :tp-math:`3{,}6`{.tp-red-style} :span:litres. Si on laisse couler ensuite pendant une seconde, le volume deviendra{.tp-red-style} :tp-math:`\frac{61^2}{1000}`{.tp-red-style}:span:, soit{.tp-red-style} :tp-math:`3{,}721`{.tp-red-style}:span:. Le débit moyen sera alors{.tp-red-style} :tp-math:`\frac{3{,}721-3{,}6}{1}`{.tp-red-style}:span:, soit{.tp-red-style} :tp-math:`0{,}121`{.tp-red-style} :span:litre par seconde. Si on considère une seconde comme une durée petite, alors cela sera en gros le débit instantané au bout d’une minute.{.tp-red-style}
 
 Parfait, mais on sait maintenant qu’avec la notion de dérivée on peut profiter de formules mathématiques toutes faites, démontrées par les mathématiciens. Ici, c’est exactement la même formule que dans l’exemple de la pente de la route, donc c’est la même dérivée : :tp-math:`\frac{2d}{1000}=\frac{d}{500}`{}. Ici :tp-math:`d=60`{}, donc le débit instantané vaut :tp-math:`\frac{2\times 60}{1000}=0{,}12`{}. Ta valeur de :tp-math:`0{,}121`{} est finalement une assez bonne approximation.
 
-<!-- Optional insertion point: questions about average and instantaneous flow. -->

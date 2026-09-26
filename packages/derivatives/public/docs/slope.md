@@ -28,7 +28,7 @@ Solution
 
   Pour calculer les pourcentages respectifs des deux montées proposées (_On monte de..._), on divise la hauteur d'élévation par la distance parcourue : :tp-math:`\frac{50}{1000}`{} dans un cas et :tp-math:`\frac{5}{100}`{} dans l'autre cas.\
   Or ces deux rapports sont égaux et valent 5% :\
-  :tp-math:`\frac{50}{1000}=\frac{5}{100}= 0.5 = 5\%`{}.
+  :tp-math:`\frac{50}{1000}=\frac{5\cdot 10}{100\cdot 10} = \frac{5}{100}= 0.5 = 5\%`{}.
 
   Les deux montées proposées correspondent à la bonne réponse.
 :::
@@ -124,7 +124,7 @@ Solution
   Donc : :tp-math:`\displaystyle\frac{\Delta f}{\Delta x} = \frac{4\cdot 25\cdot 0.1}{1000\cdot 0.2} = \frac{10}{200} = 0.05 = 5%`{}.
 
   ::::: tp-box
-  La pente est de +5% se situe à 25 mètres de l'origine.
+  La pente de +5% se situe à 25 mètres de l'origine.
   :::::
   ::::
 :::
@@ -143,8 +143,20 @@ Oui, un col se caractérise par le fait qu’on y arrive en montant et qu’on e
 :span:--- Et quelle est la pente au col ?{.tp-red-style}\
 Elle est nulle : 0 %. Le col est « horizontal » (mais ce n’est qu’en un point).
 
-<!-- Optional insertion point: questions about slope and the limiting value. -->
-
+::: tp-xy-plot 
+:::: script {type="tp/xy-plot"}
+xyFunctionGraph
+  title "Colline"
+  x-axis [0, 2*PI]
+  y-axis [0, 2]
+  points [["A", 1, 0.5*cos(1 - PI) + 1, 10, 10],["B", PI, 1.5], ["C", 4.71, 1]]
+  functions [["Collines", "0.5*cos(x - PI) + 1", [0,2*PI]], 
+    ["Montée","-0.5*sin(1-PI)*(x-1) + 0.5*cos(1 - PI) + 1", [0.4,1.6]],
+    ["Col", "-0.5*sin(PI-PI)*(x-PI) + 0.5*cos(PI - PI) + 1", [2.36, 3.93]],
+    ["Descente", "-0.5*sin(4.71-PI)*(x-4.71) + 0.5*cos(4.71 - PI) + 1", [3.925,5.495]]]
+::::
+:::  
+  
 <hr>
 
 [^1]: Pour :tp-math:`f(x)=x^2`{}, la définition de la dérivée :tp-math:`f'`{} en :tp-math:`a`{} est :\
