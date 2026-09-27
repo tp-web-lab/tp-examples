@@ -13,6 +13,7 @@ Oui, et comment peut-on faire pour calculer exactement la vitesse instantanée ?
 :span:--- Eh bien il faudrait connaître la formule qui donne la distance en fonction du temps, et appliquer les fameuses formules démontrées par les mathématiciens pour calculer la dérivée.{.tp-red-style}\
 Parfait.
 
+
 :span:--- Et à quoi ça sert, tout ça ?{.tp-red-style}
 
 <!-- Optional insertion point: questions about speed and rates of change. -->
