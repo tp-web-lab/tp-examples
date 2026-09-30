@@ -1,4 +1,4 @@
-::: tp-fill-blank-question {closed}
+::: tp-fill-blank-question {closed partial}
 Title
 : Fonctions composées
 
@@ -7,11 +7,18 @@ Answers
   1. :tp-math:`u' + v'`{}
   2. :tp-math:`u'v + uv'`{}
   3. :tp-math:`ku'`{}
-  4. :tp-math:`nu^{n-1}u'`{}.
+  4. :tp-math:`nu^{n-1}u'`{}
   5. :tp-math:`-1`{}
   6. :tp-math:`\displaystyle -\frac{u'}{u^2}`{}
   7. :tp-math:`\displaystyle\frac{1}{2}`{}
   8. :tp-math:`\displaystyle\frac{u'}{2\sqrt{u}}`{}
+  9. :tp-math:`1`{}
+  10. :tp-math:`\displaystyle \frac{u'}{u^2}`{}
+  11. :tp-math:`u'v - uv'`{}
+  12. :tp-math:`\displaystyle -\frac{1}{2}`{}
+
+
+
 
 Prompt
 : Remplir chaque espace vide avec une des réponses proposées.

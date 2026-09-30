@@ -150,7 +150,7 @@ xyFunctionGraph
   x-axis [0, 2*PI]
   y-axis [0, 2]
   points [["A", 1, 0.5*cos(1 - PI) + 1, 10, 10],["B", PI, 1.5], ["C", 4.71, 1]]
-  functions [["Collines", "0.5*cos(x - PI) + 1", [0,2*PI]], 
+  functions [["Colline", "0.5*cos(x - PI) + 1", [0,2*PI]], 
     ["Montée","-0.5*sin(1-PI)*(x-1) + 0.5*cos(1 - PI) + 1", [0.4,1.6]],
     ["Col", "-0.5*sin(PI-PI)*(x-PI) + 0.5*cos(PI - PI) + 1", [2.36, 3.93]],
     ["Descente", "-0.5*sin(4.71-PI)*(x-4.71) + 0.5*cos(4.71 - PI) + 1", [3.925,5.495]]]

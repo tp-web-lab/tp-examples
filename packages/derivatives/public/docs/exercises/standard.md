@@ -1,4 +1,4 @@
-::: tp-fill-blank-question {closed}
+::: tp-fill-blank-question {closed partial}
 Title
 : Fonctions usuelles
 
@@ -17,6 +17,9 @@ Answers
   11. :tp-math:`-\sin(x)`{}
   12. :tp-math:`\sin(x)`{}
   13. :tp-math:`-\cos(x)`{}
+  14. :tp-math:`\displaystyle \frac{1}{x^2}`{}
+  15. :tp-math:`\displaystyle -\frac{1}{2\sqrt{x}}`{}
+
 
 Prompt
 : Remplir chaque espace vide avec une des réponses proposées.

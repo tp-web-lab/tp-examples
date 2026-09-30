@@ -1,4 +1,4 @@
-::: tp-fill-blank-question {closed}
+::: tp-fill-blank-question {closed partial}
 Title
 : Généralités
 
@@ -30,7 +30,7 @@ Answers
 
 Form
 : 
-  1.  Soit :tp-math:`f`{} une fonction définie sur un intervalle :tp-math:`I`{}, et :tp-math:`a`{} un réel dans :tp-math:`I`{}.
+  1.  Soit :tp-math:`f`{} une fonction définie sur un intervalle :tp-math:`I`{}, et :tp-math:`a`{} un réel dans :tp-math:`I`{}.\
       Le taux d'accroissement peut s'écrire de :tp-math:`a`{} à :tp-math:`x`{} : <tp-blank></tp-blank> ou de :tp-math:`a`{} à :tp-math:`a+h`{} : <tp-blank></tp-blank> 
 
       Dire que :tp-math:`f`{} est dérivable en a signifie que la limite du taux d'accroissement de :tp-math:`f`{} entre :tp-math:`a`{} et :tp-math:`x`{} quand <tp-blank></tp-blank> tend vers <tp-blank></tp-blank> est <tp-blank></tp-blank>.
@@ -41,18 +41,22 @@ Form
 
   4.  Pour :tp-math:`f`{} et :tp-math:`f'`{} dérivables sur :tp-math:`I`{}, la dérivée de :tp-math:`f'`{} se note <tp-blank></tp-blank> et s'appelle la <tp-blank></tp-blank> de :tp-math:`f`{}.
 
-  5.  Le coefficient directeur de la tangente à la courbe de :tp-math:`f`{} en :tp-math:`A(a,f(a))`{} est <tp-blank></tp-blank>. L'équation de la tangente est <tp-blank></tp-blank>.
+  5.  Le coefficient directeur de la tangente à la courbe de :tp-math:`f`{} en :tp-math:`A(a,f(a))`{} est <tp-blank></tp-blank>.\
+      L'équation de la tangente est <tp-blank></tp-blank>.
 
-  6.  Pour :tp-math:`x`{} voisin de :tp-math:`a`{}, :tp-math:`f(x)`{} est peu différent de <tp-blank></tp-blank>. Pour :tp-math:`h`{} voisin de :tp-math:`0`{}, :tp-math:`f(a+h)`{} est peu différent de <tp-blank></tp-blank>. On fait ainsi une <tp-blank></tp-blank> qui assimile la fonction :tp-math:`f`{} en un point :tp-math:`a`{} à sa <tp-blank></tp-blank> en ce point.
+  6.  Pour :tp-math:`x`{} voisin de :tp-math:`a`{}, :tp-math:`f(x)`{} est peu différent de <tp-blank></tp-blank>.\
+      Pour :tp-math:`h`{} voisin de :tp-math:`0`{}, :tp-math:`f(a+h)`{} est peu différent de <tp-blank></tp-blank>.\
+      On fait ainsi une <tp-blank></tp-blank> qui assimile la fonction :tp-math:`f`{} en un point :tp-math:`a`{} à sa <tp-blank></tp-blank> en ce point.
 
-  7.  Si :tp-math:`f' \leq 0`{} sur :tp-math:`I`{}, alors :tp-math:`f`{} est <tp-blank></tp-blank> sur :tp-math:`I`{}. Si :tp-math:`f' \geq 0`{} sur :tp-math:`I`{}, alors :tp-math:`f`{} est <tp-blank></tp-blank> sur :tp-math:`I`{}.
+  7.  Si :tp-math:`f' \leq 0`{} sur :tp-math:`I`{}, alors :tp-math:`f`{} est <tp-blank></tp-blank> sur :tp-math:`I`{}.\
+      Si :tp-math:`f' \geq 0`{} sur :tp-math:`I`{}, alors :tp-math:`f`{} est <tp-blank></tp-blank> sur :tp-math:`I`{}.
 
 Solution
 : 
   1.  Soit :tp-math:`f`{} une fonction définie sur un intervalle :tp-math:`I`{}, et :tp-math:`a`{} un réel dans :tp-math:`I`{}.
       Le taux d'accroissement peut s'écrire de :tp-math:`a`{} à :tp-math:`x`{} : :tp-math:`\displaystyle\frac{f(x)-f(a)}{x-a}`{}  ou de :tp-math:`a`{} à :tp-math:`a+h`{} : :tp-math:`\displaystyle\frac{f(a+h)-f(a)}{h}`{}
 
-      Dire que :tp-math:`f`{} est dérivable en a signifie que la limite du taux d'accroissement de :tp-math:`f`{} entre :tp-math:`a`{} et :tp-math:`x`{} quand :tp-math:`x`{} tend vers :tp-math:`a`{} est :tp-math:`f'(a)`{}.
+      Dire que :tp-math:`f`{} est dérivable en a signifie que la limite du taux d'accroissement de :tp-math:`f`{} entre :tp-math:`a`{} et :tp-math:`x`{} quand :tp-math:`x`{} tend vers :tp-math:`a`{} est un nombre réel.
 
   2.  Soit :tp-math:`f`{} une fonction définie sur intervalle :tp-math:`I`{}. Dire que :tp-math:`f`{} est dérivable sur :tp-math:`I`{} signifie que :tp-math:`f`{} est dérivable en :tp-math:`a`{} pour tout :tp-math:`a\in I`{}.
 

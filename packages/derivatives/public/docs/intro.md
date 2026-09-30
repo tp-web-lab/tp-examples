@@ -29,11 +29,12 @@ recto
       x-axis [-1,6]
       x-ticks [-1,0,1,2,3,4,5,6]
       legend-x "x"
-      y-ticks [-5,0,1,4,9,16,25]
-      y-axis [-5,25]
+      y-ticks [-5,0,1,4,9,16,25,36]
+      y-axis [-5,36]
       legend-y "f(x)"
-      points [["A",2,4,10,10], ["B",5,25]]
+      points [["A",2,4,-12,0], ["B",5,25,-12,0]]
       functions [["Parabola", "x*x"]]
+      vectors [["Dx",2,4,3,0,"dashed"], ["Df",5,4,0,21,"dashed"]]
   :::::
   ::::
 
@@ -68,11 +69,13 @@ recto
       x-axis [-1,6]
       x-ticks [-1,0,1,2,3,4,5,6]
       legend-x "x"
-      y-ticks [-5,0,1,4,9,16,25]
-      y-axis [-5,25]
+      y-ticks [-5,0,1,4,9,16,25,36]
+      y-axis [-5,36]
       legend-y "f(x)"
-      points [["A",2,4,10,10], ["B",5,25]]
+      points [["A",2,4,-12,0], ["B",5,25,-12,0]]
       functions [["Parabola", "x*x"],["Secant", "7*x - 10", [2,5]]]
+      vectors [["Dx",2,4,3,0,"dashed"], ["Df",5,4,0,21,"dashed"]]
+
   ::::::
   :::::
 

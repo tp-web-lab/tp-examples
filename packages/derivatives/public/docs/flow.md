@@ -30,7 +30,7 @@ Prompt
   c. l'accroissement de volume :tp-math:`\Delta V`{} entre les instants :tp-math:`t_0`{} et :tp-math:`t_0 + dt`{} (cellules _(cellules B6 à N6)_;
   d. le taux d'accroissement du volume d'eau entre les instants :tp-math:`t_0`{} et :tp-math:`t_0 + dt`{} _(cellules B7 à N7)_;
 
-  :::: tp-spreadsheet-editor {columns=15 rows=8 }
+  :::: tp-spreadsheet-editor {columns=15 rows=8 src="exercises/flow.json"}
   ::::
 
 Form
