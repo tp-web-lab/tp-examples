@@ -26,4 +26,3 @@ Par exemple, il peut exister une loi qui dit qu’une certaine fonction est éga
 
 On arrive à trouver une description précise du phénomène à partir de la loi générale qui cause le phénomène.
 
-<!-- Optional insertion point: questions about applications of derivatives. -->

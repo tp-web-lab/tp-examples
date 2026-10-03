@@ -30,13 +30,23 @@ Prompt
   c. l'accroissement de volume :tp-math:`\Delta V`{} entre les instants :tp-math:`t_0`{} et :tp-math:`t_0 + dt`{} (cellules _(cellules B6 à N6)_;
   d. le taux d'accroissement du volume d'eau entre les instants :tp-math:`t_0`{} et :tp-math:`t_0 + dt`{} _(cellules B7 à N7)_;
 
-  :::: tp-spreadsheet-editor {columns=15 rows=8 src="exercises/flow.json"}
+  :::: tp-spreadsheet-editor {columns=15 rows=8}
   ::::
 
 Form
 : 
-  1. A partir des résultats de la feuille de style précédente, estimer la valeur du débit d'eau à l'instant :tp-math:`t_0 = 60s`{} : :tp-numberfield:`a`{placeholder=débit}
-  2. La vérification de cette valeur se fait à l'aide de la formule : :tp-mathfield:`a`{placeholder=formule mode=asciimath}.
+  1. A partir des résultats de la feuille de calcul précédente, estimer la valeur du débit d'eau :tp-math:`D`{} à l'instant :tp-math:`t_0 = 60s`{} : :tp-numberfield:`a`{placeholder=débit}.
+  2. La vérification de cette valeur se fait à l'aide de la formule : :tp-mathfield:` `{placeholder="formule asciimath" mode=asciimath}.
+
+Solution
+: 
+  1. Les résultats de la feuille de calcul montre que le débit de l'eau :tp-math:`D`{} à l'instant :tp-math:`t_0 = 60s`{} est de :tp-math:`0.12\ ls^{-1}`{}.
+  2. Le débit représente la dérivée de la loi :tp-math:`\displaystyle V(t) = \frac{t^2}{1000}`{}, soit :tp-math:`\displaystyle D(t) = \frac{2t}{1000} = \frac{t}{500}`{}.
+
+     Ainsi, :tp-math:`\displaystyle D(60) = \frac{60}{500} = 0.12\ ls^{-1}`{}; ce qui correspond bien à la valeur estimée à partir des résultats de la feuille de calcul.
+
+     
+     :tp-math:`\boxed{\displaystyle D(60) = 0.12\ ls^{-1}}`{}
 :::
 
 :span:--- Le volume serait{.tp-red-style} :tp-math:`\frac{60^2}{1000}`{.tp-red-style}:span:, soit{.tp-red-style} :tp-math:`3{,}6`{.tp-red-style} :span:litres. Si on laisse couler ensuite pendant une seconde, le volume deviendra{.tp-red-style} :tp-math:`\frac{61^2}{1000}`{.tp-red-style}:span:, soit{.tp-red-style} :tp-math:`3{,}721`{.tp-red-style}:span:. Le débit moyen sera alors{.tp-red-style} :tp-math:`\frac{3{,}721-3{,}6}{1}`{.tp-red-style}:span:, soit{.tp-red-style} :tp-math:`0{,}121`{.tp-red-style} :span:litre par seconde. Si on considère une seconde comme une durée petite, alors cela sera en gros le débit instantané au bout d’une minute.{.tp-red-style}
