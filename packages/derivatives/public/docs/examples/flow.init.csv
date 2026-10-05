@@ -1,0 +1,6 @@
+Durée (t),60,,,,,,,,,,,,
+Volume V(t),,,,,,,,,,,,,
+Intervalle (dt),1,=B3/10,=C3/10,=D3/10,=E3/10,=F3/10,=G3/10,=H3/10,=I3/10,=J3/10,=K3/10,=L3/10,=M3/10
+Volume V(t+dt),,,,,,,,,,,,,
+Accroissement,,,,,,,,,,,,,
+Taux d’accroissement,,,,,,,,,,,,,

@@ -4,16 +4,22 @@ Imaginons une voiture qui roule sur une route droite (c’est-à-dire sans virag
 
 En gros, la dérivée de la distance parcourue, c’est la vitesse.
 
-:span:--- Mais cette notion ne s’applique que si la vitesse est constante ! Que se passe-t-il si ce n’est pas le cas ? À chaque instant, la vitesse est différente ! Comment calculer la vitesse à chaque instant ?{.tp-red-style}\
+--- Mais cette notion ne s’applique que si la vitesse est constante ! Que se passe-t-il si ce n’est pas le cas ? À chaque instant, la vitesse est différente ! Comment calculer la vitesse à chaque instant ?
+{.tp-red-style}
+
 C’est toujours la même question, on pourrait aller plus vite…
 
-:span:--- Oui, d’accord. Si à l’instant{.tp-red-style} :tp-math:`t`{.tp-red-style} :span:on est à la distance{.tp-red-style} :tp-math:`d`{.tp-red-style}:span:, on calcule où on sera un petit instant plus tard, par exemple à l’instant{.tp-red-style} :tp-math:`t+h`{.tp-red-style} :span:avec{.tp-red-style} :tp-math:`h`{.tp-red-style} :span:petit. Si cette distance est{.tp-red-style} :tp-math:`e`{.tp-red-style}:span:, alors la vitesse moyenne sur la petite durée{.tp-red-style} :tp-math:`h`{.tp-red-style} :span:sera{.tp-red-style} :tp-math:`\frac{e-d}{h}`{.tp-red-style}:span:, et comme{.tp-red-style} :tp-math:`h`{.tp-red-style} :span:est petit, on peut considérer que c’est quasiment la vitesse instantanée à l’instant{.tp-red-style} :tp-math:`t`{.tp-red-style}:span:.{.tp-red-style}\
+--- Oui, d’accord. Si à l’instant :tp-math:`t`{} on est à la distance :tp-math:`d`{}, on calcule où on sera un petit instant plus tard, par exemple à l’instant :tp-math:`t+h`{} avec :tp-math:`h`{} petit. Si cette distance est :tp-math:`e`{}, alors la vitesse moyenne sur la petite durée :tp-math:`h`{} sera :tp-math:`\frac{e-d}{h}`{}, et comme :tp-math:`h`{} est petit, on peut considérer que c’est quasiment la vitesse instantanée à l’instant :tp-math:`t`{}.
+{.tp-red-style}
+
 Oui, et comment peut-on faire pour calculer exactement la vitesse instantanée ?
 
-:span:--- Eh bien il faudrait connaître la formule qui donne la distance en fonction du temps, et appliquer les fameuses formules démontrées par les mathématiciens pour calculer la dérivée.{.tp-red-style}\
+--- Eh bien il faudrait connaître la formule qui donne la distance en fonction du temps, et appliquer les fameuses formules démontrées par les mathématiciens pour calculer la dérivée.
+{.tp-red-style}
+
 Parfait.
 
-::: tp-fill-blank-question {open}
+::: tp-fill-blank-question 
 Title
 : Calcul de vitesses
 
@@ -25,24 +31,24 @@ Form
 :
 
   1. Comment appelle-t-on le taux d'accroissement de la vitesse :tp-math:`v(t)`{} entre deux instants :tp-math:`t_1`{} et :tp-math:`t_2`{} ?\
-  :tp-textfield:` `{placeholder=grandeur physique}
+  :tp-textfield:{placeholder=grandeur physique}
   2. Calculer le taux d'accroissement de la vitesse (en :tp-math:`ms^{-2}`{}) pour ces deux voitures.
     
-     Citadine : :tp-numberfield:` `{placeholder="nombre (m/s²)"}\
-     Sportive : :tp-numberfield:` `{placeholder="nombre (m/s²)"}
+     Citadine : :tp-numberfield:{placeholder="nombre (m/s²)"}\
+     Sportive : :tp-numberfield:{placeholder="nombre (m/s²)"}
   3. Pendant cette phase, on suppose que la vitesse suit une loi linéaire du type :tp-math:`v(t) = at`{}
      où :tp-math:`a`{} est l'accélération constante pendant la phase : on parle de mouvement rectiligne uniformément accéléré.
 
      Calculer la vitesse (en :tp-math:`ms^{-1}`{}) atteinte au bout de :tp-math:`2s`{} par chacune des deux voitures.
 
-     Citadine : :tp-numberfield:` `{placeholder="vitesse (m/s)"}\
-     Sportive : :tp-numberfield:` `{placeholder="vitesse (m/s)"}
+     Citadine : :tp-numberfield:{placeholder="vitesse (m/s)"}\
+     Sportive : :tp-numberfield:{placeholder="vitesse (m/s)"}
   4. En mathématiques, on peut montrer que la distance parcourue :tp-math:`x(t)`{} lorsque la vitesse suit la loi linéaire :tp-math:`v(t) = at`{} est de la forme :tp-math:`\displaystyle x(t) = \frac{1}{2}at^2`{}.
 
      En déduire la distance (en :tp-math:`m`{}) parcourue en :tp-math:`2s`{} par chacune de ces deux voitures. 
 
-     Citadine : :tp-numberfield:` `{placeholder="distance (m)"}\
-     Sportive : :tp-numberfield:` `{placeholder="distance (m)"}
+     Citadine : :tp-numberfield:{placeholder="distance (m)"}\
+     Sportive : :tp-numberfield:{placeholder="distance (m)"}
 
 Solution
 : 
@@ -74,6 +80,6 @@ Solution
 
 :::
 
-:span:--- Et à quoi ça sert, tout ça ?{.tp-red-style}
+--- Et à quoi ça sert, tout ça ?
+{.tp-red-style}
 
-<!-- Optional insertion point: questions about speed and rates of change. -->
