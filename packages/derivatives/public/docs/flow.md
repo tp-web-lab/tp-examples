@@ -25,7 +25,7 @@ Title
 : Calcul de débit
 
 Prompt
-: On remplit une baignoire telle que le volume d'eau :tp-math:`V`{} varie en fonction de la durée :tp-math:`t`{} de templissage selon la loi : :tp-math:`\displaystyle V(t) = \frac{t^2}{1000}`{}.
+: On remplit une baignoire telle que le volume d'eau :tp-math:`V`{} varie en fonction de la durée :tp-math:`t`{} de remplissage selon la loi : :tp-math:`\displaystyle V(t) = \frac{t^2}{1000}`{}.
 
   A l'aide de la feuille de calcul ci-dessous, calculer successivement :
 
@@ -39,8 +39,8 @@ Prompt
 
 Form
 : 
-  1. A partir des résultats de la feuille de calcul précédente, estimer la valeur du débit d'eau :tp-math:`D`{} à l'instant :tp-math:`t_0 = 60s`{} : :tp-numberfield:`a`{placeholder=débit}.
-  2. La vérification de cette valeur se fait à l'aide de la formule : :tp-mathfield:{placeholder="formule asciimath" mode=asciimath}.
+  1. A partir des résultats de la feuille de calcul précédente, estimer la valeur du débit d'eau :tp-math:`D`{} à l'instant :tp-math:`t_0 = 60s`{} : :tp-numberfield:`D`{placeholder=débit}.
+  2. La vérification de cette valeur se fait à l'aide de la formule : :tp-mathfield:`formule`{placeholder="formule" mode=asciimath}.
 
 Solution
 : 
