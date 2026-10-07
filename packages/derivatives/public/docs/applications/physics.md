@@ -20,15 +20,15 @@ On va illustrer « tout ça » avec les phénomènes de diffusion.
 En physique, la diffusion est le phénomène de transport (ou de transfert) par lequel des entités (molécules, chaleur, neutrons, lumière) se propagent et se dispersent dans un milieu sous l'effet d'une série de perturbations ou de mouvements désordonnés, tendant généralement à homogénéiser le système. En voilà trois exemples.
 
 Diffusion massique (loi de Fick, :tp-ref:` `{href="@Fick"})
-: Un flux de matière :tp-math:`J_c`{} est provoqué par une différence de concentration :tp-math:`C`{}:\
+: Un flux de matière :tp-math:`J_c`{} est provoqué par une différence de concentration :tp-math:`C`{} et tend à homogénéiser la concentration au sein du système :\
   :tp-math:`\displaystyle J_c = -D_c\frac{dC}{dx}`{} où :tp-math:`D_c`{} est un coefficient de diffusivité massique qui dépend du milieu.
 
 Diffusion thermique (loi de Fourier, :tp-ref:` `{href="@Fourier"})
-: Un flux de chaleur :tp-math:`J_t`{} est provoqué par une différence de température :tp-math:`T`{}:\
+: Un flux de chaleur :tp-math:`J_t`{} est provoqué par une différence de température :tp-math:`T`{} et tend à homogénéiser la température au sein du système :\
   :tp-math:`\displaystyle J_t = -D_t\frac{dT}{dx}`{}  où :tp-math:`D_t`{} est un coefficient de diffusivité thermique (ou conductivité thermique) qui dépend du milieu.
 
 Conduction électrique (loi d'Ohm, :tp-ref:` `{href="@Ohm"})
-: Un flux de charge électrique :tp-math:`J_v`{} est provoqué par une différence de potentiel électrique :tp-math:`V`{}:\
+: Un flux de charge électrique :tp-math:`J_v`{} est provoqué par une différence de potentiel électrique :tp-math:`V`{} et cherche à homogénéiser le potentiel au sein du système :\
   :tp-math:`\displaystyle J_v = -D_v\frac{dV}{dx}`{}  où :tp-math:`D_v`{} est un coefficient de diffusivité électrique (ou conductivité électrique) qui dépend du milieu.
 
 --- Ca se ressemble, non?{.tp-red-style}
@@ -145,7 +145,7 @@ Le calcul différentiel est la branche des mathématiques qui englobe toutes les
 :::
 
 ::: tp-note { ref="notation" }
-Newton proposait la notation :tp-math:`\dot{X}`{} où un point est placé au-dessus de la variable. Ainsi :tp-math:`\dot{x}`{} représentait la vitesse :tp-math:`\displaystyle\frac{dx}{dt}(t)`{} et :tp-math:`\ddot{x}`{} l'accélération :tp-math:`\displaystyle\frac{dv}{dt}(t)`{}.
+Newton proposait la notation :tp-math:`\dot{X}`{} où un point est placé au-dessus de la variable :tp-math:`X`{}. Ainsi :tp-math:`\dot{x}`{} représente la vitesse :tp-math:`\displaystyle\frac{dx}{dt}(t)`{} et :tp-math:`\ddot{x}`{} l'accélération :tp-math:`\displaystyle\frac{dv}{dt}(t)`{}.
 :::
 
 ## Références

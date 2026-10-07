@@ -16,6 +16,7 @@ Pour connaître les interactions possibles avec un composant, il suffit de taper
 | <tp-icon size="2em" name="home"></tp-icon> | retour à la page d'accueil                         |
 | <tp-icon size="2em" name="menu"></tp-icon> | afficher/cacher la table des matières              |
 | <tp-icon size="2em" name="code"></tp-icon> | afficher/cacher le code source                     |
+| <tp-icon size="2em" name="calculator" library="components"></tp-icon>     | calculette          |
 | <tp-icon size="2em" name="post-it-editor" library="components"></tp-icon> | éditeur de post-it  |
 [Commandes générales]
 <!-- -->
@@ -45,6 +46,7 @@ Les composants utilisés directement dans l'ensemble du document sont répertori
 |`<tp-markup-multi-pages>` | mise en page générale                  |
 |`<tp-math>`               | rendu d'expressions mathématiques      |
 |`<tp-note>`               | infobulle dans le texte                |
+|`<tp-ref>`                | référence dans le texte                |
 |`<tp-spreadsheet-editor>` | éditeur de feuilles de calcul          |
 |`<tp-xy-plot>`            | tracé de graphes de fonctions          |
 <!-- -->

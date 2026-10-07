@@ -40,7 +40,7 @@ Prompt
 Form
 : 
   1. A partir des résultats de la feuille de calcul précédente, estimer la valeur du débit d'eau :tp-math:`D`{} à l'instant :tp-math:`t_0 = 60s`{} : :tp-numberfield:`D`{placeholder=débit}.
-  2. La vérification de cette valeur se fait à l'aide de la formule : :tp-mathfield:`formule`{placeholder="formule" mode=asciimath}.
+  2. La vérification de cette valeur se fait à l'aide de la formule : :tp-math:`V(t) = `{} :tp-mathfield:`formule`{placeholder="formule" mode=asciimath}.
 
 Solution
 : 
@@ -61,4 +61,3 @@ Solution
 {.tp-red-style}
 
 Parfait, mais on sait maintenant qu’avec la notion de dérivée on peut profiter de formules mathématiques toutes faites, démontrées par les mathématiciens. Ici, c’est exactement la même formule que dans l’exemple de la pente de la route, donc c’est la même dérivée : :tp-math:`\frac{2d}{1000}=\frac{d}{500}`{}. Ici :tp-math:`d=60`{}, donc le débit instantané vaut :tp-math:`\frac{2\times 60}{1000}=0.12`{}. Ta valeur de :tp-math:`0.121`{} est finalement une assez bonne approximation.
-
