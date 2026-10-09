@@ -11,4 +11,3 @@
 - [Exercices](exercises.md)
   - [Questions de cours](exercises/course.md)
   - [Exemples](exercises/examples.md)
-
