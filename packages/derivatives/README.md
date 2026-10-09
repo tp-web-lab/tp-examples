@@ -10,6 +10,20 @@ Alternatively, run `pnpm dev` in this package. Vite opens port 4313, or the next
 available port. The sibling component library must already be built.
 Run `pnpm build` and `pnpm preview` in this package for a standalone static build.
 
+## Component loader
+
+The entry page loads the compiled TP library with:
+
+```html
+<script vite-ignore type="module" src="./@tp/tp-components/tp-loader.js"></script>
+```
+
+This is a relative browser URL, not an npm import specifier. Vite serves the
+installed library’s `dist/` directory at `@tp/tp-components/` during development
+and copies it to that same location in the static build. The directory structure
+preserves the loader’s relative imports and assets. Rebuild `tp-components`
+after modifying its sources; this example consumes the compiled library.
+
 ## Edit the document
 
 Edit the files in `public/docs/`. Their order is declared in `sidebar.md`.

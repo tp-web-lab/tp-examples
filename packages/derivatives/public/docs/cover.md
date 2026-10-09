@@ -37,23 +37,35 @@ Pour connaître les interactions possibles avec un composant, il suffit de taper
 Les composants utilisés directement dans l'ensemble du document sont répertoriés ci-dessous.
 
 ::: tp-cluster {align=flex-start}
-| Utilitaires              | Utilisation                            |
-|--------------------------|----------------------------------------|
-|`<tp-code-comment>`       | infobulle  dans le code                |
-|`<tp-code-editor>`        | éditeur de code                        |
-|`<tp-icon>`               | icône                                  | 
-|`<tp-icon-button>`        | bouton icône                           | 
-|`<tp-markup-multi-pages>` | mise en page générale                  |
-|`<tp-math>`               | rendu d'expressions mathématiques      |
-|`<tp-note>`               | infobulle dans le texte                |
-|`<tp-ref>`                | référence dans le texte                |
-|`<tp-spreadsheet-editor>` | éditeur de feuilles de calcul          |
-|`<tp-xy-plot>`            | tracé de graphes de fonctions          |
+| Utilitaires              | Utilisation                              | 
+|--------------------------|------------------------------------------|
+|<tp-icon name="code-comment" library="components" size="2em"></tp-icon> `<tp-code-comment>`       | infobulle  dans le code                  |
+|<tp-icon name="code-editor" library="components" size="2em"></tp-icon> `<tp-code-editor>`        | éditeur de code                          |
+|<tp-icon name="csv-table" library="components" size="2em"></tp-icon> `<tp-csv-table>`          | table HTML à partir de données CSV       |
+|<tp-icon name="icon" library="components" size="2em"></tp-icon> `<tp-icon>`               | icône                                    |
+|<tp-icon name="icon-button" library="components" size="2em"></tp-icon> `<tp-icon-button>`        | bouton icône                             | 
+|<tp-icon name="markup-multi-pages" library="components" size="2em"></tp-icon> `<tp-markup-multi-pages>` | mise en page générale                    |
+|<tp-icon name="math" library="components" size="2em"></tp-icon> `<tp-math>`               | rendu d'expressions mathématiques        |
+|<tp-icon name="listof" library="components" size="2em"></tp-icon> `<tp-listof>`             | liste des références                     |
+|<tp-icon name="list-table" library="components" size="2em"></tp-icon> `<tp-list-table>`         | table HTML à partir de listes imbriquées |
+|<tp-icon name="note" library="components" size="2em"></tp-icon> `<tp-note>`               | infobulle dans le texte                  |
+|<tp-icon name="ref" library="components" size="2em"></tp-icon> `<tp-ref>`                | référence dans le texte                  |
+|<tp-icon name="spreadsheet-editor" library="components" size="2em"></tp-icon> `<tp-spreadsheet-editor>` | éditeur de feuilles de calcul            |
+|<tp-icon name="xy-plot" library="components" size="2em"></tp-icon> `<tp-xy-plot>`            | tracé de graphes de fonctions            |
 <!-- -->
-| Questionnaires               | Description               |
-|------------------------------|---------------------------|
-|`<tp-fill-blank-question>`    | texte à trous             |
-|`<tp-flip-card>`              | carte question/réponse    |
-|`<tp-multi-choice-question>`  | question à choix multiple |
-|`<tp-python-viewer-question>` | interpréteur Python       |
+| Questionnaires                | Description               |
+|-------------------------------|---------------------------|
+|<tp-icon name="fill-blank-question" library="components" size="2em"></tp-icon> `<tp-fill-blank-question>`     | texte à trous             |
+|<tp-icon name="flip-card" library="components" size="2em"></tp-icon> `<tp-flip-card>`               | carte question/réponse    |
+|<tp-icon name="matching-question" library="components" size="2em"></tp-icon> `<tp-matching-question>`       | association de concepts   |
+|<tp-icon name="multi-choice-question" library="components" size="2em"></tp-icon> `<tp-multi-choice-question>`   | question à choix multiple |
+|<tp-icon name="python-viewer-question" library="components" size="2em"></tp-icon> `<tp-python-viewer-question>`  | interpréteur Python       |
 :::
+
+Tous ces composants, et uniquement ceux-là, sont chargés automatiquement par le module `tp-loader.js`. 
+
+Ces composants peuvent utilisés eux-mêmes, de manière complètement transparente à l'utilisateur, d'autres composants de la bibliothèque `tp-components`.
+
+Certains composants peuvent chargés dynamiquement des modules extérieurs, là encore de manière complètement transparente.
+C'est le cas de `<tp-math>` pour le rendu des formules mathématiques avec [Mathjax](https://www.mathjax.org), et de `<tp-python-viewer-question>` pour l'interprétation des programmes Python en ligne avec [Pyodide](https://pyodide.com).
+

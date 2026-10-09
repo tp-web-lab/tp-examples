@@ -1,28 +1,39 @@
 # À quoi sert une dérivée ?
 
-## Calculer de manière approchée une variation d’une grandeur à partir de sa dérivée en un point
+--- Et à quoi ça sert, tout ça ?
+{.tp-red-style}
 
-Les exemples précédents montraient comment calculer la pente d’une route à partir de son profil, le débit d’un robinet à partir du volume écoulé, la vitesse d’une voiture à partir de la distance parcourue.
+Tu sais ce que c'est, un spiromètre ?
 
-Mais suivant les conditions, certaines grandeurs ne sont pas faciles à mesurer pratiquement (par exemple le profil, le volume). Dans certaines situations, il est plus facile de mesurer directement la grandeur qui correspond à la dérivée. Par exemple, il existe des débitmètres pour mesurer le débit (c’est utile en particulier pour les personnes asthmatiques).
+--- Non, c'est quoi ? Spiro-mètre : un truc à mesurer les spires ? Mais les spires de quoi ?
+{.tp-red-style}
 
-Par exemple, si on apprend que le débit est de :tp-math:`0{,}1`{} litre par seconde à un instant :tp-math:`t`{}, alors on pourra dire qu’en gros, à partir de cet instant, une seconde plus tard il se sera écoulé 0,1 litre. Il se peut que le débit ne soit pas constant, et alors cela ne sera pas la valeur exacte, mais c’est une approximation raisonnable car une seconde est un petit intervalle pour ce genre de débit.
+Pas mal ! Mais en fait, le nom spiromètre vient du latin spirare, « souffler » ou « respirer », et du grec metron, « mesure » : c’est donc un « appareil à mesurer le souffle »<tp-ref href="@Hutchinson"></tp-ref> , et non les spires ! 
 
-Plus généralement, connaître la dérivée d’une fonction en un point permet de trouver une approximation de la variation de cette fonction sur un petit intervalle.
+::: tp-biblio { ref="Hutchinson" }
+Hutchinson, John (1846). _On the capacity of the lungs and on the respiratory functions, with a view to establishing a precise and easy method of detecting disease by the spirometer_ [Sur la capacité pulmonaire et les fonctions respiratoires, en vue de mettre au point une méthode précise et simple de dépistage des maladies à l'aide du spiromètre], Medico-Chirurgical Transactions, 29: 137–252.
 
-## Remplacer localement une courbe par une droite
+John Hutchinson a conçu le spiromètre pour mesurer la « capacité vitale » des poumons, c'est-à-dire le volume d'air maximal qu'une personne peut expulser après une inspiration profonde.
+:::
 
-Étudier une courbe est souvent plus difficile qu’étudier une droite. Pour faciliter l’étude d’une courbe au voisinage d’un point (par exemple une route dont le profil est courbe), on peut remplacer la courbe par la droite qui correspondrait à une route dont le profil serait rectiligne, avec comme pente la pente de la route en ce point (donc la dérivée du profil). On peut montrer que cette droite est celle qui approche le mieux la courbe au voisinage du point. L’avantage est qu’on simplifie, mais l’inconvénient est qu’on n’a plus les valeurs exactes.
+Il s’agit de mesurer le volume d’air que l’on expire. Avec un spiromètre à capteur de débit, on souffle dans un embout : l’appareil mesure le débit d’air au cours du temps :tp-math:`d(t)`{} et en déduit le volume total expulsé :tp-math:`V(t)`{}.
 
-## Calculer la formule d’une fonction à partir de celle de sa dérivée
+::: figure
+![Une personne expire dans le capteur de débit d’un spiromètre ; l’écran présente le débit en fonction du temps et le volume expiré cumulé.](/docs/images/spirometre.png){width=768 style="display:block;width:100%;max-width:768px;height:auto;margin-inline:auto"}
+:::: figcaption  {style="text-align:center"}
+*Spiromètre à capteur de débit — illustration pédagogique générée, courbes schématiques.*
+::::
+:::
 
-Par exemple, les théorèmes mathématiques permettent de dire que si, à tout instant :tp-math:`t`{}, la vitesse est égale à :tp-math:`2t`{}, alors la distance parcourue est égale à :tp-math:`t^2`{}.
+Sur une petite durée :tp-math:`\Delta t`{}, le volume d’air expulsé vaut approximativement :tp-math:`\Delta V \approx d(t)\,\Delta t`{} car le débit est, comme on l'a vu, la dérivée du volume : :tp-math:`\displaystyle d(t)=V'(t)=\frac{dV}{dt}\approx \frac{\Delta V}{\Delta t}`{} . En additionnant ces petits volumes pendant toute l’expiration, on retrouve le volume total. 
 
-## Calculer la formule d’une grandeur à partir d’une relation entre cette grandeur et sa dérivée
+Par exemple, si on apprend que le débit est de :tp-math:`0.1`{} litre par seconde à un instant :tp-math:`t`{}, alors on pourra dire qu’en gros, à partir de cet instant, une seconde plus tard il se sera écoulé 0,1 litre. Il se peut que le débit ne soit pas constant, et alors cela ne sera pas la valeur exacte, mais c’est une approximation raisonnable car une seconde est un petit intervalle pour ce genre de débit.
 
-Certaines lois de la nature s’expriment par des relations entre une grandeur (qu’on peut exprimer comme une fonction du temps) et sa dérivée.
+--- Super, j'ai une copine qui est asthmatique et qui me dit souvent qu'elle doit souffler dans un espèce de tube. C'est un spiromètre ! Je lui dirai que c'est grâce à la dérivée qu'on peut mesurer son souffle.
 
-Par exemple, il peut exister une loi qui dit qu’une certaine fonction est égale à la moitié de sa dérivée. Des techniques mathématiques permettent alors de retrouver exactement la formule de cette fonction.
 
-On arrive à trouver une description précise du phénomène à partir de la loi générale qui cause le phénomène.
+Exactement\. 
+
+--- Et tu as d'autres exemples ?
+{.tp-red-style}
 

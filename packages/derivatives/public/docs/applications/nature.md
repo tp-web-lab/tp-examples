@@ -1,9 +1,9 @@
-# Expliciter les lois de la nature
+# Lois de la nature
 
 La notion de dérivée joue un rôle essentiel en physique : c'est l'outil mathématique pour traduire le changement et le mouvement. 
 
-Avant l'invention de la dérivée et du calcul différentiel:tp-ref:` `{href=^calcul} par Newton et Leibniz au cours de la seconde moitié du :tp-math:`17^{ème}`{} siècle, les scientifiques ne pouvaient calculer que des moyennes sur un intervalle donné : comme par exemple une pente moyenne :tp-math:`\displaystyle\frac{\Delta f}{\Delta x}`{}, un débit moyen :tp-math:`\displaystyle\frac{\Delta V}{\Delta t}`{} ou
-une vitesse moyenne :tp-math:`\displaystyle\frac{\Delta x}{\Delta t}`{}.
+Avant l'invention de la dérivée et du calcul différentiel:tp-ref:` `{href=^calcul} par Newton et Leibniz au cours de la seconde moitié du :tp-math:`17^{ème}`{} siècle, les scientifiques ne pouvaient calculer que des moyennes sur un intervalle donné : comme par exemple une [pente](/docs/slope.md) moyenne :tp-math:`\displaystyle\frac{\Delta f}{\Delta x}`{}, un [débit](/docs/flow.md) moyen :tp-math:`\displaystyle\frac{\Delta V}{\Delta t}`{} ou
+une [vitesse](/docs/speed.md) moyenne :tp-math:`\displaystyle\frac{\Delta x}{\Delta t}`{}.
 
 La dérivée fait tendre cet intervalle vers zéro pour accéder à des valeurs locales ou instantanées : :tp-math:`\displaystyle\lim_{\Delta x \rightarrow 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}`{} que l'on note avec Leibniz :tp-math:`\displaystyle\frac{df}{dx}(x)`{}:tp-ref:` `{href="^notation"} ou encore :tp-math:`f'(x)`{}. 
 - Une pente n'est plus seulement connue en moyenne pour une dénivelée donnée, 
@@ -46,29 +46,90 @@ L'effet
 --- Ca devient un peu compliqué. Tu pourrais donner un ou deux exemples ?
 {.tp-red-style}
 
-D'après toi, qu'est-ce qui se passe quand on laisse tomber une goutte d'encre noire dans un verre d'eau ?
+#### Dilution d'une goutte d'encre
+D'après toi, qu'est-ce qui se passe quand on laisse tomber une goutte d'encre bleue dans un verre d'eau ?
+
+::: tp-flip-card { style="--tp-flip-card-width:26rem;--tp-flip-card-aspect-ratio:0.8;margin-bottom:1rem;" }
+Recto
+: 
+  ##### Goutte d'encre
+
+  :::: figure
+  ![Goutte juste après être tombée](/docs/images/goutte-encre-1.jpg)
+  ::::: figcaption {style="text-align:center;}
+  Goutte d'encre tout juste entrée dans l'eau<tp-ref href="^physique-ludique-2"></tp-ref>
+  :::::
+  ::::
+
+  Au début, l'encre est très concentrée spatialement.
+
+Verso
+: 
+  ##### Goutte d'encre
+
+  :::: figure
+  ![Goutte après quelques temps](/docs/images/goutte-encre-2.jpg)
+  ::::: figcaption {style="text-align:center;}
+  Goutte d'encre après quelques temps<tp-ref href="^physique-ludique-2"></tp-ref>
+  :::::
+  ::::
+
+  Au bout d'un certain temps, l'encre s'est diluée dans l'eau.
+:::
 
 --- Ce n'est pas très malin, ça salit l'eau.
 {.tp-red-style}
 
 D'accord, mais qu'est-ce que tu observes ?
 
---- Au début, on voit bien la goutte, mais au bout d'un certain temps on ne voit plus rien, comme si l'encre avait disparu.
+--- Au début, on voit bien la goutte, mais au bout d'un certain temps on ne voit plus la goutte, comme si l'encre avait disparu.
 {.tp-red-style}
 
-Exactement, au début l'encre est entièrement concentrée dans la goutte en surface de l'eau et à la fin, elle a été complètement dispersée dans tout le verre. C'est la diffusion massique de l'encre au sein du verre d'eau qui agit.
+Exactement, au début l'encre est entièrement concentrée dans la goutte en surface de l'eau et à la fin, elle a été complètement dispersée dans tout le verre. C'est la diffusion massique de l'encre dans le verre d'eau qui agit on dit que l'encre s'est diluée dans l'eau.
 
 Lorsqu'on laisse tomber la goutte d'encre, on provoque une différence de concentration :tp-math:`C`{} d'encre dans le verre, et donc une « pente » de concentration :tp-math:`\displaystyle\frac{dC}{dx}`{}. Le phénomène de diffusion massique :tp-math:`\displaystyle J_c = -D_c\frac{dC}{dx}`{} nous dit alors qu'un flux de matière va tendre à homogénéiser la concentration d'encre dans le verre. Et c'est ce qu'on observe au bout d'un certain temps : la goutte d'encre a été dispersée dans tout le volume d'eau. A la fin, la concentration d'encre est homogène dans tout le verre d'eau, la « pente » devient nulle (:tp-math:`\displaystyle\frac{dC}{dx}=0`{}) et le flux de matière s'arrête (:tp-math:`\displaystyle J_c = 0`{}).
 
 --- C'est assez simple en fait.
 {.tp-red-style}
 
-Oui... grâce aux dérivées en partie! En fait, toutes ces lois ont d'abord été découvertes par l'observation et l'expérimentation au :tp-math:`19^{ème}`{} siècle. Elles ont été démontrées théoriquement au :tp-math:`20^{ème}`{} siècle.
+Oui... grâce aux dérivées en partie! En fait, toutes ces lois ont d'abord été découvertes par l'observation et l'expérimentation au :tp-math:`19^{ème}`{} siècle.
 
 --- Et pour la diffusion thermique ?
 {.tp-red-style}
 
+#### Fonte d'un glaçon
 Imagine sortir un glaçon du réfrigérateur et pose-le sur une table.
+
+::: tp-flip-card { style="--tp-flip-card-width:26rem;--tp-flip-card-aspect-ratio:0.7;margin-bottom:1rem;" }
+Recto
+: 
+  ##### Glaçons
+
+  :::: figure
+  ![glaçon dans l'état initial](/docs/images/glacon-1.jpg)
+  ::::: figcaption {style="text-align:center;}
+  Glaçons tout juste sortis du réfrigérateur<tp-ref href="^physique-ludique-1"></tp-ref>
+  :::::
+  ::::
+
+  La poêle en métal et l'écuelle en bois sont à la température ambiante de 20°C.
+
+Verso
+:
+  ##### Glaçons
+
+  :::: figure
+  ![glaçon au bout de 10 minutes](/docs/images/glacon-2.jpg)
+  ::::: figcaption {style="text-align:center;}
+  Glaçons au bout de 10'<tp-ref href="^physique-ludique-1"></tp-ref>
+  :::::
+  ::::
+
+  Au bout de 10', le glaçon dans la poêle a complétement fondu; celui dans l'écuelle n'a que partiellement fondu.
+
+  Le métal est bien meilleur conducteur thermique que le bois.
+:::
+
 Qu'observes-tu ?
 
 --- Facile, il va fondre !
@@ -92,6 +153,9 @@ C'est le flux de chaleur qui s'exprime en fonction de la dérivée de la tempér
 
 Et donc, en se réchauffant, le glaçon va fondre au contact de l'air. Quand l'eau du glaçon et l'air ambiant seront à la même température, le flux s'arrêtera.
 
+Et pour comprendre l'importance du coefficient de diffusivité thermique :tp-math:`D_t`{} dans l'équation, tu peux refaire l'expérience « [La course de fonte de glaçons](https://physiqueludique.fr/2013/07/fonteglacons/) » décrite sur le site https://physiqueludique.fr.
+
+
 --- C'est vraiment pareil que pour la concentration !
 {.tp-red-style}
 
@@ -100,7 +164,39 @@ Oui, c'est très semblable et ça se comprend bien grâce à leur structure math
 --- Grâce aux dérivées ! Donc ça va être pareil pour la conduction électrique ?
 {.tp-red-style}
 
-En effet, imagine un circuit électrique avec une pile, un interrupteur et une ampoule. Au début, l'interrupteur est ouvert. Que se passe-t-il quand on le ferme ?
+#### Circuit électrique
+En effet, imagine un circuit électrique avec une pile, un interrupteur et une ampoule. Au début, l'interrupteur est ouvert. 
+Que se passe-t-il quand on le ferme ?
+
+::: tp-flip-card { style="--tp-flip-card-width:26rem;--tp-flip-card-aspect-ratio:0.7;margin-bottom:1rem;" }
+Recto
+: 
+  ##### Circuit électrique
+
+  :::: figure
+  ![circuit électrique avec interrupteur ouvert](/docs/images/circuit-electrique-off.jpg)
+  ::::: figcaption {style="text-align:center;}
+  Interrupteur ouvert<tp-ref href="^petits-debrouillards"></tp-ref>
+  :::::
+  ::::
+
+  Le trombone ne touche pas les deux bornes du support : le circuit est ouvert. Aucun courant ne circule.
+
+Verso
+: 
+  ##### Circuit électrique
+
+  :::: figure
+  ![circuit électrique avec interrupteur ouvert](/docs/images/circuit-electrique-on.jpg)
+  ::::: figcaption {style="text-align:center;}
+  Interrupteur fermé<tp-ref href="^petits-debrouillards"></tp-ref>
+  :::::
+  ::::
+
+  Le trombone touche les deux bornes du support : il ferme le circuit.
+
+  L'ampoule est traversée par un courant électrique : elle s'allume.
+:::
 
 --- La lampe s'allume.
 {.tp-red-style}
@@ -146,6 +242,18 @@ Le calcul différentiel est la branche des mathématiques qui englobe toutes les
 
 ::: tp-note { ref="notation" }
 Newton proposait la notation :tp-math:`\dot{X}`{} où un point est placé au-dessus de la variable :tp-math:`X`{}. Ainsi :tp-math:`\dot{x}`{} représente la vitesse :tp-math:`\displaystyle\frac{dx}{dt}(t)`{} et :tp-math:`\ddot{x}`{} l'accélération :tp-math:`\displaystyle\frac{dv}{dt}(t)`{}.
+:::
+
+::: tp-note { ref="physique-ludique-1" }
+Image issue du site de [Physique Ludique](https://physiqueludique.fr/2013/07/fonteglacons/) : « La course de fonte de glaçons »
+:::
+
+::: tp-note { ref="physique-ludique-2" }
+Image issue du site de [Physique Ludique](https://physiqueludique.fr/2008/04/diffusion-de-lencre-dans-un-verre-deau/) : « Diffusion de l’encre dans un verre d’eau »
+:::
+
+::: tp-note { ref="petits-debrouillards" }
+Image issue du site des [Petits Débrouillards](https://www.wikidebrouillard.org/wiki/Fabriquer_un_circuit_électrique) : « Fabriquer un circuit électrique »
 :::
 
 ## Références

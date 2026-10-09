@@ -80,6 +80,3 @@ Solution
 
 :::
 
---- Et à quoi ça sert, tout ça ?
-{.tp-red-style}
-

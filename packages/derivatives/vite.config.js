@@ -27,7 +27,7 @@ export default defineConfig(({ isPreview }) => {
 						targets: [
 							{
 								src: "node_modules/@tp/tp-components/dist/**/*",
-								dest: "vendor/tp",
+								dest: "@tp/tp-components",
 								rename: { stripBase: 4 },
 							},
 						],

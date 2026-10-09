@@ -36,7 +36,7 @@ run `pnpm build` and `pnpm preview` independently. Serve each build at the root
 of its own HTTP site: the multipage repository uses `/docs`.
 
 Vite uses `vite-plugin-static-copy` to serve the compiled library during development.
-The build copies the installed library's complete `dist/` under `vendor/tp/`
+The build copies the installed library's complete `dist/` under `@tp/tp-components/`
 to preserve the loader's dynamic imports, styles, help manifests and assets.
 This favors a reliable starting point over a minimal download size. A built
 example no longer needs the sibling repository or a package installation.
@@ -69,7 +69,7 @@ the `PORT` environment variable.
 The library's module script uses `vite-ignore`: it is already compiled and must
 retain its path so the loader can find dynamically loaded components. The loader
 injects the shared styles, and each component injects its own styles; these
-examples do not need a separate stylesheet link. The static-copy plugin serves them at `/vendor/tp/` and includes them
+examples do not need a separate stylesheet link. The static-copy plugin serves them at `/@tp/tp-components/` and includes them
 in the production build. Missing documents return 404 rather than the app shell.
 
 References: [Vite](https://vite.dev/guide/) and
