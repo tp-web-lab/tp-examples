@@ -13,26 +13,34 @@ cd ../tp-components
 pnpm build
 cd ../tp-examples
 pnpm install
-pnpm dev:single
+pnpm dev
 ```
 
-Run `pnpm dev:multi` for the multipage example. The examples use ports 4311
-and 4312 respectively, falling back to the next available port if needed. The development and preview commands open your default
-browser automatically. Set `OPEN_BROWSER=0` to disable this behavior, for example
-`OPEN_BROWSER=0 pnpm dev:single`. Stop a server with Ctrl+C.
+`pnpm dev` (or `pnpm dev:home`) opens the home page at
+`http://127.0.0.1:4310/`. Its content is ordinary Markdown rendered by
+`tp-markup-single-page` in the independent `packages/home` package.
+
+The derivatives card opens its published site at
+https://tp-web-lab.github.io/derivatives/. No local derivatives server is needed
+when browsing from the home page. For local development, run
+`pnpm dev:derivatives` separately (port 4313).
+
+Set `OPEN_BROWSER=0` to disable automatic browser opening. Stop each local
+server with Ctrl+C. Edit the cards in `packages/home/public/docs/index.md`.
 
 ## Packages
 
 | Package | Container | Purpose |
 | --- | --- | --- |
-| `@tp/example-single-page` | `tp-markup-single-page` | A study session with a timer and expandable hints. |
-| `@tp/example-multi-pages` | `tp-markup-multi-pages` | A short guide with navigation between Markdown and HTML documents. |
+| `@tp/example-home` | `tp-markup-single-page` | A Markdown home page linking to the examples. |
 | `@tp/example-derivatives` | `tp-markup-multi-pages` | A French introduction to derivatives, transcribed from a PDF with editable math. |
 
 ## Build and preview
 
-`pnpm build` creates a separate `dist/` directory in each package. In a package,
-run `pnpm build` and `pnpm preview` independently. Serve each build at the root
+`pnpm build` creates a separate `dist/` directory in each package, including
+`packages/home/dist/`. In a package, run `pnpm build` and `pnpm preview` independently.
+The home page links to the published examples. Keep new cards’ links public
+when publishing the home page. Serve each build at the root
 of its own HTTP site: the multipage repository uses `/docs`.
 
 Vite uses `vite-plugin-static-copy` to serve the compiled library during development.
@@ -52,6 +60,10 @@ link to the component library's location before installing. The default path
 is relative to `packages/<example>/`. No registry publication is assumed.
 
 ## Add an example
+
+Add a `tp-card` containing a title, description and link button to
+`packages/home/public/docs/index.md`. There is no discovery script or special
+metadata: edit the home page like any other document.
 
 Copy a package, give it a unique name in `package.json` and a default port in
 `vite.config.js`, then edit `index.html` and its `public/` content. Keep the document inside either

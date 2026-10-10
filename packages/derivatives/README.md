@@ -98,3 +98,15 @@ Solution
   :tp-math:`…`{value="f'(50)=50/500=0{,}1"}.
 :::
 ```
+
+## Public site
+
+The course is published at https://tp-web-lab.github.io/derivatives/.
+Its compiled site is stored in the public `tp-web-lab/derivatives` repository;
+the working sources remain in the private `tp-examples` repository.
+
+Run `pnpm build:pages` in this package to prepare `.pages/` for GitHub Pages.
+It adjusts the course's `/docs` paths to `/derivatives/docs` and omits source maps.
+Publish the contents of `.pages/` to the public repository's `main` branch,
+configured as the GitHub Pages source (root directory). Never copy the private
+workspace or its Git history into that repository.

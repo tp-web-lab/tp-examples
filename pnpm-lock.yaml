@@ -21,20 +21,7 @@ importers:
         specifier: 4.1.1
         version: 4.1.1(vite@8.1.5)
 
-  packages/multi-pages:
-    dependencies:
-      '@tp/tp-components':
-        specifier: link:../../../tp-components
-        version: link:../../../tp-components
-    devDependencies:
-      vite:
-        specifier: 8.1.5
-        version: 8.1.5
-      vite-plugin-static-copy:
-        specifier: 4.1.1
-        version: 4.1.1(vite@8.1.5)
-
-  packages/single-page:
+  packages/home:
     dependencies:
       '@tp/tp-components':
         specifier: link:../../../tp-components

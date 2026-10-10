@@ -1,7 +1,7 @@
 # Introduction
 <tp-toc position="end" expand-all open brand></tp-toc>
 
-Ce document, composé de plusieurs pages, a pour but d'illustrer l'utilisation de la bibliothèque open source [`tp-components`](@tp/tp-components/index.html), bibliothèque de composants web écrits en HTML standard, conçue pour créer des documents techniques interactifs à des fins pédagogiques.
+Ce document, composé de plusieurs pages, a pour but d'illustrer l'utilisation de la bibliothèque open source [`tp-components`](https://tp-web-lab.github.io/tp-components/), bibliothèque de composants web écrits en HTML standard, conçue pour créer des documents techniques interactifs à des fins pédagogiques.
 
 Il s'agit d'une leçon de mathématiques sur les dérivées adaptée d'un extrait du site web http://gerard.tisseau.free.fr/site/derivees.html. Ce site s'adresse aux élèves de terminale de la filière générale du lycée français, c'est-à-dire aux jeunes âgés de 17-18 ans.
 
@@ -75,7 +75,7 @@ C'est le cas de `<tp-math>` pour le rendu des formules mathématiques avec [Math
 
 ## Annexes
 ### Fichier `sidebar.md`
-La table des matières générale est définie dans le fichier `sidebar.md` par une liste imbriquée où chaque item est un lien sur la page associée.
+La table des matières générale est définie dans le fichier `sidebar.md` par une liste imbriquée où chaque item est un lien `markdown` sur la page associée : `- [texte](url)`.
 
 Le fichier du lien est chargé tel quel puis traduit dynamiquement en HTML pour être rendu dans la page Web.
 
@@ -112,7 +112,7 @@ Le corps (section `<body>...</body>`) du fichier est juste constitué du composa
 </body>
 ````
 
-Ce composant recherche les fichiers à charger dans le répertoire `/docs` (attribut `repository="/docs"`), affiche la table des matières générale (attribut booléen `menu`) et précise que les langues accessibles sont l'anglais et le français (attribut `langs="en,fr"`).
+Ce composant recherche les fichiers à charger dans le répertoire `/docs` (attribut `repository="/docs"`), affiche la table des matières générale (attribut booléen `menu`) et précise que les langues accessibles sont l'anglais et le français (attribut `langs="en,fr"`). L'attribut `label` sert à afficher un titre dans la barre d'outils du haut de la page.
 
 
 
