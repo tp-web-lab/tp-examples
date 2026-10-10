@@ -25,9 +25,10 @@ async function rewrite(directory) {
   }
 }
 await rewrite(path.join(output, 'docs'));
-await renderHome(root, output, base);
+const manifest = await renderHome(root, output, base);
+const metadata = JSON.stringify(manifest).replaceAll('&', '&amp;').replaceAll('"', '&quot;');
 const index = path.join(output, 'index.html');
-await writeFile(index, (await readFile(index, 'utf8')).replace('src="/docs/index.md"', `src="${base}docs/index.html" data-tp-original-src="${base}docs/index.md"`));
+await writeFile(index, (await readFile(index, 'utf8')).replace('src="/docs/index.md"', `src="${base}docs/index.html" data-tp-original-src="${base}docs/index.md" data-tp-prerendered="${metadata}"`));
 await cp(path.join(root, 'node_modules/@tp/tp-components/LICENSE'), path.join(output, '@tp/tp-components/LICENSE'));
 await writeFile(path.join(output, '.nojekyll'), '');
 console.log(`Prepared ${output} for https://tp-web-lab.github.io${base}`);

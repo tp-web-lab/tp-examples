@@ -40,3 +40,7 @@ interactive output or the other examples. No speedup percentage is claimed.
 The workflow runs `pnpm --filter @tp/example-home test:prerender` before publishing.
 A missing converter or failed conversion stops publication; it never silently
 falls back to browser Markdown rendering.
+
+### Translations
+
+`index.html` declares `langs="en,fr"`: the English source is `public/docs/index.md`, and French is `public/docs/fr/index.md`. Publication converts the root page and every `index.md` in a language directory to HTML. The language button appears when at least two declared translations are available. Generated source metadata keeps Code and annotations attached to the selected language's Markdown source.

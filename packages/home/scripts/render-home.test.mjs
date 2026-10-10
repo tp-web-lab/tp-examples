@@ -12,11 +12,17 @@ test('publication converts TP Markdown while preserving inactive component sourc
   try {
     await symlink(fileURLToPath(new URL('../node_modules', import.meta.url)), path.join(root, 'node_modules'), 'dir');
     const output = path.join(root, '.pages');
-    await mkdir(path.join(output, 'docs'), { recursive: true });
+    await mkdir(path.join(output, 'docs/fr'), { recursive: true });
     const source = '# Title\n\n::: tp-card\nA **card**.\n:::\n\n:tp-button:Open{href="https://example.org/"}\n\n::: tp-xy-plot\n<script type="tp/xy-plot">\nxyFunctionGraph\n  functions [["f", "x^2"]]\n</script>\n:::\n';
     await writeFile(path.join(output, 'docs/index.md'), source);
+    await writeFile(path.join(output, 'docs/fr/index.md'), '# Bonjour\n\nUne **carte**.');
     const before = Object.getOwnPropertyDescriptor(globalThis, 'document');
-    await renderHome(root, output, '/tp-examples/');
+    const manifest = await renderHome(root, output, '/tp-examples/');
+    assert.equal(manifest['/tp-examples/docs/fr/index.md'], '/tp-examples/docs/fr/index.html');
+    const french = await readFile(path.join(output, 'docs/fr/index.html'), 'utf8');
+    assert.match(french, /<h1[^>]*>Bonjour<\/h1>/);
+    assert.match(french, /<strong>carte<\/strong>/);
+    assert.match(french, /<style/);
     assert.deepEqual(Object.getOwnPropertyDescriptor(globalThis, 'document'), before);
     assert.equal(await readFile(path.join(output, 'docs/index.md'), 'utf8'), source);
     const html = await readFile(path.join(output, 'docs/index.html'), 'utf8');
