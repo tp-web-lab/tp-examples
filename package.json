@@ -8,6 +8,10 @@
     "dev": "pnpm --filter @tp/example-home dev",
     "build": "pnpm -r build",
     "dev:derivatives": "pnpm --filter @tp/example-derivatives dev",
-    "dev:home": "pnpm --filter @tp/example-home dev"
+    "dev:home": "pnpm --filter @tp/example-home dev",
+    "test:prerender": "node --test scripts/render-markdown.test.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.2"
   }
 }

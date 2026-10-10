@@ -6,7 +6,11 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      jsdom:
+        specifier: ^30.1.2
+        version: 30.1.2
 
   packages/derivatives:
     dependencies:

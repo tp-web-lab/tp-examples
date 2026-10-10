@@ -1,6 +1,7 @@
 import { cp, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { renderDocuments } from '../../../scripts/render-markdown.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = path.join(root, '.pages');
@@ -24,8 +25,19 @@ async function rewrite(directory) {
   }
 }
 await rewrite(path.join(output, 'docs'));
+const files = [];
+async function collect(directory) {
+  for (const entry of await readdir(path.join(output, directory), { withFileTypes: true })) {
+    const file = `${directory}/${entry.name}`;
+    if (entry.isDirectory()) await collect(file);
+    else if (entry.name.endsWith('.md')) files.push(file);
+  }
+}
+await collect('docs');
+const manifest = await renderDocuments(root, output, base, files.sort());
+const metadata = JSON.stringify(manifest).replaceAll('&', '&amp;').replaceAll('"', '&quot;');
 const index = path.join(output, 'index.html');
-await writeFile(index, (await readFile(index, 'utf8')).replace('repository="/docs"', `repository="${base}docs"`));
+await writeFile(index, (await readFile(index, 'utf8')).replace('repository="/docs"', `repository="${base}docs" data-tp-prerendered="${metadata}"`));
 await cp(path.join(root, 'node_modules/@tp/tp-components/LICENSE'), path.join(output, '@tp/tp-components/LICENSE'));
 await writeFile(path.join(output, '.nojekyll'), '');
 console.log(`Prepared ${output} for https://tp-web-lab.github.io${base}`);

@@ -110,3 +110,11 @@ It adjusts the course's `/docs` paths to `/derivatives/docs` and omits source ma
 Publish the contents of `.pages/` to the public repository's `main` branch,
 configured as the GitHub Pages source (root directory). Never copy the private
 workspace or its Git history into that repository.
+
+## HTML publication
+
+The GitHub Pages build converts every Markdown file under `public/docs` to HTML, including the sidebar, cover, nested pages and Markdown includes. Local development still reads the original Markdown. The shared converter is `scripts/render-markdown.mjs` at the repository root; a missing include fails the build.
+
+The generated site retains both formats. Build metadata (`data-tp-prerendered`) maps the existing Markdown routes to HTML files, so bookmarks, navigation and annotation page identities remain unchanged. The Code button loads the original Markdown on demand. Components, graphs, formulas and exercises still initialise in the browser. No rendered answers or interactive state are captured by the build.
+
+Run `pnpm test:prerender` from the repository root, then `pnpm --filter @tp/example-derivatives build:pages`. Each push to `main` runs these steps through the existing publication workflow. Performance comparisons should use the same course pages and runtime, with separate cold-cache and warm-cache runs.
