@@ -1,0 +1,89 @@
+name: Examples Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: examples-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          path: tp-examples
+          persist-credentials: false
+      - name: Read runtime revision
+        id: runtime
+        run: echo "revision=$(cat tp-examples/.github/tp-components-revision)" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v6
+        with:
+          repository: tp-web-lab/tp-components
+          ref: ${{ steps.runtime.outputs.revision }}
+          path: tp-components
+          persist-credentials: false
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 9.15.5
+          run_install: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: tp-examples/pnpm-lock.yaml
+      - name: Build both sites using the pinned runtime
+        working-directory: tp-examples
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm --filter @tp/example-home build:pages
+          pnpm --filter @tp/example-derivatives build:pages
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: tp-examples/packages/home/.pages
+      - uses: actions/upload-artifact@v6
+        with:
+          name: derivatives-site
+          path: tp-examples/packages/derivatives/.pages
+          include-hidden-files: true
+          retention-days: 7
+  deploy-home:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - uses: actions/deploy-pages@v4
+        id: deployment
+  deploy-derivatives:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v6
+        with:
+          name: derivatives-site
+          path: site
+      - uses: actions/checkout@v6
+        with:
+          repository: tp-web-lab/derivatives
+          ref: main
+          path: published
+          ssh-key: ${{ secrets.DERIVATIVES_PUBLISH_KEY }}
+      - name: Publish the course
+        working-directory: published
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rsync -a --delete --exclude='.git' --exclude='README.md' ../site/ ./
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish derivatives from tp-examples ${GITHUB_SHA}"
+            git push origin HEAD:main
+          fi

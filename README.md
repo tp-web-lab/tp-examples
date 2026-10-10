@@ -89,3 +89,18 @@ References: [Vite](https://vite.dev/guide/) and
 
 Run `pnpm dev:derivatives` to open the French derivatives document on port 4313.
 See `packages/derivatives/README.md` for transcription notes and question authoring.
+
+## Automatic publication
+
+Every push to main runs Examples Pages: it builds the home page and derivatives
+with the compiled tp-components revision recorded in
+`.github/tp-components-revision`. GitHub Actions publishes the home page to
+https://tp-web-lab.github.io/tp-examples/ and updates the compiled course in
+`tp-web-lab/derivatives`, whose Pages deployment follows automatically.
+A successful tp-components documentation build updates this revision and
+therefore republishes both examples with the new library. Manual runs are
+available in Actions. The old gh-pages branch is retained but no longer used.
+
+`DERIVATIVES_PUBLISH_KEY` is a deploy key granting write access only to the
+compiled derivatives repository. No credentials for private dependencies are
+needed here: this workflow consumes the public compiled runtime branch.

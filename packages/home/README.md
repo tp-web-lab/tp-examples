@@ -17,8 +17,10 @@ for any additional example cards.
 ## GitHub Pages
 
 The public home page is https://tp-web-lab.github.io/tp-examples/.
-Run `pnpm --filter @tp/example-home build:pages` from the workspace root after
-building `tp-components`. Publish the contents of `packages/home/.pages/` to
-the `gh-pages` branch of `tp-web-lab/tp-examples`. GitHub Pages serves that
-branch at its root. The preparation script rebases the home page's document
-URLs under `/tp-examples/`, includes the library license and omits source maps.
+Every push to the main branch publishes this page through the Examples Pages
+workflow. It also republishes the derivatives course. See the workspace README
+for the runtime revision and deployment credentials.
+
+For a local publication preview, run `pnpm --filter @tp/example-home build:pages`
+after building tp-components. The output is `packages/home/.pages/`, with URLs
+rebased under `/tp-examples/`, the library license, and no source maps.
