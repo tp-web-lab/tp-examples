@@ -10,12 +10,14 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "build:pages": "vite build && node scripts/prepare-pages.mjs"
+    "build:pages": "vite build && node scripts/prepare-pages.mjs",
+    "test:prerender": "node --test scripts/render-home.test.mjs"
   },
   "dependencies": {
     "@tp/tp-components": "link:../../../tp-components"
   },
   "devDependencies": {
+    "jsdom": "^30.1.2",
     "vite": "8.1.5",
     "vite-plugin-static-copy": "4.1.1"
   }

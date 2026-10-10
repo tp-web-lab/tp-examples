@@ -38,6 +38,7 @@ jobs:
         working-directory: tp-examples
         run: |
           pnpm install --frozen-lockfile
+          pnpm --filter @tp/example-home test:prerender
           pnpm --filter @tp/example-home build:pages
           pnpm --filter @tp/example-derivatives build:pages
       - uses: actions/upload-pages-artifact@v4
