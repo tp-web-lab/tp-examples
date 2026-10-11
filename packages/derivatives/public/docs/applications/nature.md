@@ -55,7 +55,7 @@ Recto
   ##### Goutte d'encre
 
   :::: figure
-  ![Goutte juste après être tombée](/docs/images/goutte-encre-1.jpg)
+  ![Goutte juste après être tombée](/docs/images/goutte-encre-1-255.webp){width=255 height=191 loading=lazy decoding=async style="max-width:100%;height:auto"}
   ::::: figcaption {style="text-align:center;}
   Goutte d'encre tout juste entrée dans l'eau<tp-ref href="^physique-ludique-2"></tp-ref>
   :::::
@@ -68,7 +68,7 @@ Verso
   ##### Goutte d'encre
 
   :::: figure
-  ![Goutte après quelques temps](/docs/images/goutte-encre-2.jpg)
+  ![Goutte après quelques temps](/docs/images/goutte-encre-2-255.webp){width=255 height=191 loading=lazy decoding=async style="max-width:100%;height:auto"}
   ::::: figcaption {style="text-align:center;}
   Goutte d'encre après quelques temps<tp-ref href="^physique-ludique-2"></tp-ref>
   :::::
@@ -106,7 +106,7 @@ Recto
   ##### Glaçons
 
   :::: figure
-  ![glaçon dans l'état initial](/docs/images/glacon-1.jpg)
+  ![glaçon dans l'état initial](/docs/images/glacon-1-400.webp){width=709 height=531 loading=lazy decoding=async style="max-width:100%;height:auto" srcset="/docs/images/glacon-1-400.webp 400w, /docs/images/glacon-1-709.webp 709w" sizes="(max-width: 30rem) calc(100vw - 4rem), 24rem"}
   ::::: figcaption {style="text-align:center;}
   Glaçons tout juste sortis du réfrigérateur<tp-ref href="^physique-ludique-1"></tp-ref>
   :::::
@@ -119,7 +119,7 @@ Verso
   ##### Glaçons
 
   :::: figure
-  ![glaçon au bout de 10 minutes](/docs/images/glacon-2.jpg)
+  ![glaçon au bout de 10 minutes](/docs/images/glacon-2-400.webp){width=709 height=531 loading=lazy decoding=async style="max-width:100%;height:auto" srcset="/docs/images/glacon-2-400.webp 400w, /docs/images/glacon-2-709.webp 709w" sizes="(max-width: 30rem) calc(100vw - 4rem), 24rem"}
   ::::: figcaption {style="text-align:center;}
   Glaçons au bout de 10'<tp-ref href="^physique-ludique-1"></tp-ref>
   :::::
@@ -174,7 +174,7 @@ Recto
   ##### Circuit électrique
 
   :::: figure
-  ![circuit électrique avec interrupteur ouvert](/docs/images/circuit-electrique-off.jpg)
+  ![circuit électrique avec interrupteur ouvert](/docs/images/circuit-electrique-off-400.webp){width=800 height=600 loading=lazy decoding=async style="max-width:100%;height:auto" srcset="/docs/images/circuit-electrique-off-400.webp 400w, /docs/images/circuit-electrique-off-800.webp 800w" sizes="(max-width: 30rem) calc(100vw - 4rem), 24rem"}
   ::::: figcaption {style="text-align:center;}
   Interrupteur ouvert<tp-ref href="^petits-debrouillards"></tp-ref>
   :::::
@@ -187,7 +187,7 @@ Verso
   ##### Circuit électrique
 
   :::: figure
-  ![circuit électrique avec interrupteur ouvert](/docs/images/circuit-electrique-on.jpg)
+  ![circuit électrique avec interrupteur ouvert](/docs/images/circuit-electrique-on-400.webp){width=800 height=600 loading=lazy decoding=async style="max-width:100%;height:auto" srcset="/docs/images/circuit-electrique-on-400.webp 400w, /docs/images/circuit-electrique-on-800.webp 800w" sizes="(max-width: 30rem) calc(100vw - 4rem), 24rem"}
   ::::: figcaption {style="text-align:center;}
   Interrupteur fermé<tp-ref href="^petits-debrouillards"></tp-ref>
   :::::

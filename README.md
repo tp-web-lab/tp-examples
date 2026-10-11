@@ -104,3 +104,14 @@ available in Actions. The old gh-pages branch is retained but no longer used.
 `DERIVATIVES_PUBLISH_KEY` is a deploy key granting write access only to the
 compiled derivatives repository. No credentials for private dependencies are
 needed here: this workflow consumes the public compiled runtime branch.
+
+## Course images
+
+The derivatives course uses responsive WebP images with intrinsic dimensions.
+The originals remain in `packages/derivatives/public/docs/images/`; generated
+variants are committed and are copied by the existing publication workflow.
+After replacing an original, run `node scripts/optimize-course-images.mjs`
+with the WebP `cwebp` command installed (quality 85), review the results and
+commit the generated files. Keep the Markdown `width`, `height` and `srcset`
+attributes in sync if the original dimensions change. Below-the-fold images
+in the nature examples use native lazy loading.
