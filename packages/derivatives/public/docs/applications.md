@@ -19,7 +19,7 @@ John Hutchinson a conçu le spiromètre pour mesurer la « capacité vitale » d
 Il s’agit de mesurer le volume d’air que l’on expire. Avec un spiromètre à capteur de débit, on souffle dans un embout : l’appareil mesure le débit d’air au cours du temps :tp-math:`d(t)`{} et en déduit le volume total expulsé :tp-math:`V(t)`{}.
 
 ::: figure
-![Une personne expire dans le capteur de débit d’un spiromètre ; l’écran présente le débit en fonction du temps et le volume expiré cumulé.](/docs/images/spirometre.png){width=768 style="display:block;width:100%;max-width:768px;height:auto;margin-inline:auto"}
+![Une personne expire dans le capteur de débit d’un spiromètre ; l’écran présente le débit en fonction du temps et le volume expiré cumulé.](/docs/images/spirometre.png){width=768 height=512 style="display:block;width:100%;max-width:768px;height:auto;margin-inline:auto"}
 :::: figcaption  {style="text-align:center"}
 *Spiromètre à capteur de débit — illustration pédagogique générée, courbes schématiques.*
 ::::
