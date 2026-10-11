@@ -2,6 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 import path from 'node:path';
 import { JSDOM } from 'jsdom';
+import { renderMath } from './render-math.mjs';
 
 export async function renderDocuments(root, output, base, files) {
   // Parse author content without registering or executing web components.
@@ -36,7 +37,10 @@ export async function renderDocuments(root, output, base, files) {
       dom.reconfigure({ url: `https://tp-web-lab.github.io${sourceUrl}` });
       const source = await readFile(path.join(output, file), 'utf8');
       const expanded = await resolveMarkdownIncludes(source, new URL(sourceUrl, dom.window.location.href));
-      const html = await renderMarkdownToHtml(expanded, sourceUrl);
+      const content = dom.window.document.createElement('div');
+      content.innerHTML = await renderMarkdownToHtml(expanded, sourceUrl);
+      await renderMath(content);
+      const html = content.innerHTML;
       if (failures.length) throw new Error(`Unable to render ${file}:\n${failures.join('\n')}`);
       const styles = [...dom.window.document.head.querySelectorAll('style')].map(node => node.outerHTML).join('\n');
       const target = file.replace(/\.md$/, '.html');

@@ -23,7 +23,9 @@ test('multiple course pages preserve nested includes, raw sources and component 
     const page = await readFile(path.join(output, 'docs/chapter/page.html'), 'utf8');
     assert.match(cover, /&lt;main&gt;Original HTML&lt;\/main&gt;/);
     assert.match(page, /<tp-fill-blank-question/);
-    assert.match(page, /<tp-math><code>x\^2<\/code><\/tp-math>/);
+    assert.match(page, /data-tp-math-source="x\^2"/);
+    assert.match(page, /<svg/);
+    assert.match(page, /data-tp-math-key=/);
     assert.match(page, /<tp-numberfield><code>x<\/code><\/tp-numberfield>/);
     assert.match(page, /<style/);
     assert.match(cover, /<style/);

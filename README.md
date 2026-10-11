@@ -115,3 +115,17 @@ with the WebP `cwebp` command installed (quality 85), review the results and
 commit the generated files. Keep the Markdown `width`, `height` and `srcset`
 attributes in sync if the original dimensions change. Below-the-fold images
 in the nature examples use native lazy loading.
+
+## Static mathematics
+
+The Pages build renders inline `tp-math` expressions (LaTeX and AsciiMath) into
+self-contained SVGs using MathJax 4.1.3 in Node.js. Their source, notation and
+accessibility labels are retained. The browser reuses this output, including
+copies in reference tooltips and lists, without downloading the MathJax engine.
+Changing a formula or its rendering attributes loads the browser renderer on
+demand. Formulas with an external `src` remain dynamic. Invalid inline formulas
+fail the build rather than silently publishing an error. Markdown source files
+and code examples remain unchanged; ordinary development still renders live.
+
+This step runs automatically with `build:pages` for both sites and their
+translations. Run `pnpm test:prerender` to verify the conversion contract.
