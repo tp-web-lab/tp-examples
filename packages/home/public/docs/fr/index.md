@@ -19,7 +19,7 @@ main
 :
   Une introduction aux dérivées mathématiques à travers des exemples, des situations concrètes et des exercices interactifs.
 
-  ::::: tp-xy-plot { canvas-only }
+  ::::: tp-xy-plot
   :::::: script { type=tp/xy-plot }
     xyFunctionGraph
       x-axis [0,36]
@@ -46,7 +46,7 @@ main
 :
   Construire des figures géométriques avec juste une règle et un compas.
 
-  ::::: tp-graph-geometry
+  ::::: tp-graph-geometry { canvas-only }
   :::::: script { type=tp/geometry }
     point O = (0, 0)
     point A = (3, 4)
