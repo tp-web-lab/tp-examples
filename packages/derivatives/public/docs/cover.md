@@ -113,7 +113,3 @@ Le corps (section `<body>...</body>`) du fichier est juste constitué du composa
 ````
 
 Ce composant recherche les fichiers à charger dans le répertoire `/docs` (attribut `repository="/docs"`), affiche la table des matières générale (attribut booléen `menu`) et précise que les langues accessibles sont l'anglais et le français (attribut `langs="en,fr"`). L'attribut `label` sert à afficher un titre dans la barre d'outils du haut de la page.
-
-
-
-
