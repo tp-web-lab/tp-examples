@@ -19,7 +19,7 @@ main
 :
   Une introduction aux dérivées mathématiques à travers des exemples, des situations concrètes et des exercices interactifs.
 
-  ::::: tp-xy-plot
+  ::::: tp-xy-plot { canvas-only }
   :::::: script { type=tp/xy-plot }
     xyFunctionGraph
       x-axis [0,36]
