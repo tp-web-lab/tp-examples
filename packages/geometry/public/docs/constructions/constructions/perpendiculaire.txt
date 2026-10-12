@@ -1,0 +1,17 @@
+point A = (-3, 0)
+point B = (3, 0)
+segment AB = segment(A, B)
+point P = (1, 3)
+line qaxis = line(A, B) hidden
+circle qcircle = circle(P, through=A) style=dotted color=zinc
+point qX = intersection(qaxis, qcircle, branch=1)
+circle qma = circle(A, distance(A, qX)) style=dotted color=zinc
+circle qmb = circle(qX, distance(A, qX)) style=dotted color=zinc
+point qmC = intersection(qma, qmb, branch=0)
+point qmD = intersection(qma, qmb, branch=1)
+line qmperp = line(qmC, qmD) color=red
+line qmbase = line(A, qX) hidden
+point qmM = intersection(qmperp, qmbase, branch=0)
+point H = intersection(qmperp, qaxis, branch=0)
+segment PH = segment(P, H) color=blue
+comment droit = angle(PH, AB)

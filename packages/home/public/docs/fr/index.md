@@ -40,29 +40,24 @@ footer
 
 :::: tp-card { style="width:350px;text-align:center;" }
 header
-: #### Qu'est-ce qu'une dérivée ?
+: #### Avec règle et compas
 
 main
 :
-  Une introduction aux dérivées mathématiques à travers des exemples, des situations concrètes et des exercices interactifs.
+  Construire des figures géométriques avec juste une règle et un compas.
 
-  ::::: tp-xy-plot
-  :::::: script { type=tp/xy-plot }
-    xyFunctionGraph
-      x-axis [0,36]
-      x-ticks [0,1,4,9,16,25,36]
-      legend-x "x"
-      y-axis [0,6]
-      y-ticks [0,1,2,3,4,5,6]
-      legend-y "f(x)"
-      points [["A",4,2,5,10]]
-      functions [["Racine carrée", "sqrt(x)"], ["Tangente", "2 + (x-4)/4"]]
+  ::::: tp-graph-geometry
+  :::::: script { type=tp/geometry }
+    point O = (0, 0)
+    point A = (3, 4)
+    circle c = circle(O, through=A)
+    point P = on(c, angle=30deg)  
   ::::::
   :::::
 
 footer
 :
-  :tp-button:Voir l'exemple{href="https://tp-web-lab.github.io/derivatives/" variant="brand" size="xxl"}
+  :tp-button:Voir l'exemple{href="https://tp-web-lab.github.io/geometry/" variant="brand" size="xxl"}
 ::::
 
 :::: tp-card { style="width:350px;text-align:center;" }

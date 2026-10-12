@@ -1,0 +1,38 @@
+point O = (0, 0)
+point A = (5, 0)
+segment base = segment(O, A)
+point B = on(base, t=0.4)
+point C = rotation(A, O, angle=90deg)
+vector up = vector(O, C) hidden
+point D = translation(A, up)
+point E = rotation(B, O, angle=90deg)
+line vertical = line(O, C) hidden
+line horizontal = line(O, A) hidden
+line cutV = parallel(B, vertical) style=dashed color=zinc
+line cutH = parallel(E, horizontal) style=dashed color=zinc
+line right = parallel(A, vertical) hidden
+line top = parallel(C, horizontal) hidden
+point F = intersection(cutV, cutH)
+point G = intersection(right, cutH)
+point H = intersection(top, cutV)
+polygon outer = polygon(O, A, D, C) color=zinc
+point J = rotation(B, O, angle=-90deg) hidden
+vector oa = vector(O, A) hidden
+point K = translation(E, oa)
+vector ab = vector(B, A) hidden
+point L = translation(C, ab)
+point M = rotation(A, B, angle=90deg) hidden
+point N = rotation(A, O, angle=90deg) hidden
+point T = translation(O, ab) hidden
+point U = rotation(T, O, angle=90deg)
+polygon t1 = polygon(O, B, U) color=blue
+polygon t2 = polygon(B, A, K) color=green
+polygon t3 = polygon(K, D, L) color=blue
+polygon t4 = polygon(L, C, U) color=green
+polygon centerSquare = polygon(B, K, L, U) color=orange
+comment souter = area(outer)
+comment scenterSquare = area(centerSquare)
+comment st1 = area(t1)
+comment st2 = area(t2)
+comment st3 = area(t3)
+comment st4 = area(t4)

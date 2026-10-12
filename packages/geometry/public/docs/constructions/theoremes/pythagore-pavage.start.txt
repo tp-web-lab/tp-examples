@@ -1,0 +1,4 @@
+point O = (0, 0)
+point A = (5, 0)
+segment base = segment(O, A)
+point B = on(base, t=0.4)

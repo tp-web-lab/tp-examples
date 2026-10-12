@@ -1,0 +1,29 @@
+point O = (0, 0)
+point A = (5, 0)
+segment base = segment(O, A)
+point B = on(base, t=0.4)
+point C = rotation(A, O, angle=90deg)
+vector up = vector(O, C) hidden
+point D = translation(A, up)
+point E = rotation(B, O, angle=90deg)
+line vertical = line(O, C) hidden
+line horizontal = line(O, A) hidden
+line cutV = parallel(B, vertical) style=dashed color=zinc
+line cutH = parallel(E, horizontal) style=dashed color=zinc
+line right = parallel(A, vertical) hidden
+line top = parallel(C, horizontal) hidden
+point F = intersection(cutV, cutH)
+point G = intersection(right, cutH)
+point H = intersection(top, cutV)
+polygon outer = polygon(O, A, D, C) color=zinc
+polygon removed = polygon(O, B, F, E) color=zinc
+polygon strip1 = polygon(E, G, D, C) color=blue
+polygon strip2 = polygon(B, A, G, F) color=orange
+polygon turned = rotation(strip2, G, angle=-90deg) hidden
+vector shift = vector(O, B) hidden
+polygon moved = translation(turned, shift) color=orange
+comment souter = area(outer)
+comment sremoved = area(removed)
+comment sstrip1 = area(strip1)
+comment sstrip2 = area(strip2)
+comment smoved = area(moved)

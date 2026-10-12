@@ -1,0 +1,8 @@
+point O = (0, 0)
+point A = (4, 0)
+line base = line(O, A)
+line height = perpendicular(O, base)
+point B = on(height, t=3)
+segment OA = segment(O, A)
+segment OB = segment(O, B)
+segment AB = segment(A, B)

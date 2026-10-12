@@ -9,7 +9,8 @@
     "build": "pnpm -r build",
     "dev:derivatives": "pnpm --filter @tp/example-derivatives dev",
     "dev:home": "pnpm --filter @tp/example-home dev",
-    "test:prerender": "node --test scripts/render-markdown.test.mjs scripts/render-math.test.mjs"
+    "test:prerender": "node --test scripts/render-markdown.test.mjs scripts/render-math.test.mjs",
+    "dev:geometry": "pnpm --filter @tp/example-geometry dev"
   },
   "devDependencies": {
     "@mathjax/src": "4.1.3",

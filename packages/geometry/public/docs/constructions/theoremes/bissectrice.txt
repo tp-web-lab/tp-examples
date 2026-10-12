@@ -1,0 +1,19 @@
+point A = (0, 4)
+point B = (-3, 0)
+point C = (5, 0)
+segment AB = segment(A, B)
+segment AC = segment(A, C)
+segment BC = segment(B, C)
+line bis = bisector(B, A, C) color=red
+point D = intersection(bis, BC, branch=0)
+segment AD = segment(A, D) color=red
+polygon left = polygon(A, B, D) color=blue
+polygon rightPart = polygon(A, D, C) color=orange
+comment bd = length(B,D)
+comment dc = length(D,C)
+comment ab = length(AB)
+comment ac = length(AC)
+comment alpha = angle(B,A,D)
+comment beta = angle(D,A,C)
+comment sl = area(left)
+comment sr = area(rightPart)

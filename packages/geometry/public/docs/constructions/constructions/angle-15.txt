@@ -1,0 +1,34 @@
+point O = (0, 0)
+point A = (4, 0)
+segment OA = segment(O, A)
+circle c = circle(O, through=A) style=dotted color=zinc
+circle ca = circle(A, through=O) style=dotted color=zinc
+point S = intersection(c, ca, branch=0)
+line axis = line(O, A) hidden
+point L = intersection(axis, c, branch=0)
+circle ra = circle(A, distance(A, L)) style=dotted color=zinc
+circle rb = circle(L, distance(A, L)) style=dotted color=zinc
+point rC = intersection(ra, rb, branch=0)
+point rD = intersection(ra, rb, branch=1)
+line rperp = line(rC, rD) hidden
+line rbase = line(A, L) hidden
+point rM = intersection(rperp, rbase, branch=0)
+point N = intersection(rperp, c, branch=1)
+circle bc = circle(O, through=A) hidden
+ray barm = ray(O, S) hidden
+point bV = intersection(barm, bc, branch=1)
+circle ba = circle(A, distance(A, bV)) style=dotted color=zinc
+circle bb = circle(bV, distance(A, bV)) style=dotted color=zinc
+point bW = intersection(ba, bb, branch=1)
+ray bray = ray(O, bW) hidden
+point bT = intersection(bray, bc, branch=1)
+circle hc = circle(O, through=A) hidden
+ray harm = ray(O, bT) hidden
+point hV = intersection(harm, hc, branch=1)
+circle ha = circle(A, distance(A, hV)) style=dotted color=zinc
+circle hb = circle(hV, distance(A, hV)) style=dotted color=zinc
+point hW = intersection(ha, hb, branch=1)
+ray hray = ray(O, hW) hidden
+point hT = intersection(hray, hc, branch=1)
+segment angleSide = segment(O, hT) color=red
+comment angle = angle(OA, angleSide)

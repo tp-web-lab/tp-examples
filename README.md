@@ -129,3 +129,7 @@ and code examples remain unchanged; ordinary development still renders live.
 
 This step runs automatically with `build:pages` for both sites and their
 translations. Run `pnpm test:prerender` to verify the conversion contract.
+
+## Geometry
+
+Run `pnpm dev:geometry` for the French ruler-and-compass course (port 4314), using `tp-markdown-multi-pages`. See [packages/geometry](packages/geometry/README.md) for the four sections and validation commands. The package is prepared for a standalone build; publication is not configured yet.

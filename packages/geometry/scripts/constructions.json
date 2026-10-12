@@ -1,0 +1,306 @@
+[
+	{
+		"key": "constructions/mediatrice",
+		"title": "Médiatrice d’un segment",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "equalLengths",
+				"pairs": [["A", "kM"], ["kM", "B"]]
+			}
+		]
+	},
+	{
+		"key": "constructions/milieu",
+		"title": "Milieu d’un segment",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "equalLengths",
+				"pairs": [["A", "kM"], ["kM", "B"]]
+			}
+		]
+	},
+	{
+		"key": "constructions/perpendiculaire",
+		"title": "Perpendiculaire passant par un point",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "perpendicular",
+				"lines": ["AB", "PH"]
+			}
+		]
+	},
+	{
+		"key": "constructions/parallele",
+		"title": "Parallèle passant par un point",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "parallel",
+				"lines": ["AB", "vperp"]
+			}
+		]
+	},
+	{
+		"key": "constructions/bissectrice",
+		"title": "Bissectrice d’un angle",
+		"builtin": false,
+		"checks": []
+	},
+	{
+		"key": "constructions/symetrie-axiale",
+		"title": "Symétrie axiale",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "equalLengths",
+				"pairs": [["P", "H"], ["H", "Q"]]
+			}
+		]
+	},
+	{
+		"key": "constructions/symetrie-centrale",
+		"title": "Symétrie centrale",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "equalLengths",
+				"pairs": [["O", "P"], ["O", "Q"]]
+			}
+		]
+	},
+	{
+		"key": "constructions/angle-15",
+		"title": "Construire un angle de 15°",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "angle",
+				"points": ["A", "O", "hT"],
+				"degrees": 15
+			}
+		]
+	},
+	{
+		"key": "constructions/angle-30",
+		"title": "Construire un angle de 30°",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "angle",
+				"points": ["A", "O", "bT"],
+				"degrees": 30
+			}
+		]
+	},
+	{
+		"key": "constructions/angle-45",
+		"title": "Construire un angle de 45°",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "angle",
+				"points": ["A", "O", "bT"],
+				"degrees": 45
+			}
+		]
+	},
+	{
+		"key": "constructions/angle-60",
+		"title": "Construire un angle de 60°",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "angle",
+				"points": ["A", "O", "S"],
+				"degrees": 60
+			}
+		]
+	},
+	{
+		"key": "constructions/angle-75",
+		"title": "Construire un angle de 75°",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "angle",
+				"points": ["A", "O", "bT"],
+				"degrees": 75
+			}
+		]
+	},
+	{
+		"key": "constructions/angle-90",
+		"title": "Construire un angle de 90°",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "angle",
+				"points": ["A", "O", "N"],
+				"degrees": 90
+			}
+		]
+	},
+	{
+		"key": "polygones/p3",
+		"title": "3 côtés — polygone régulier",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "polygon",
+				"id": "poly",
+				"sides": 3,
+				"regular": true
+			}
+		]
+	},
+	{
+		"key": "polygones/p4",
+		"title": "4 côtés — polygone régulier",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "polygon",
+				"id": "poly",
+				"sides": 4,
+				"regular": true
+			}
+		]
+	},
+	{
+		"key": "polygones/p5",
+		"title": "5 côtés — polygone régulier",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "polygon",
+				"id": "poly",
+				"sides": 5,
+				"regular": true
+			}
+		]
+	},
+	{
+		"key": "polygones/p6",
+		"title": "6 côtés — polygone régulier",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "polygon",
+				"id": "poly",
+				"sides": 6,
+				"regular": true
+			}
+		]
+	},
+	{
+		"key": "polygones/p7",
+		"title": "7 côtés — heptagone approché",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "polygon",
+				"id": "poly",
+				"sides": 7,
+				"regular": false
+			}
+		]
+	},
+	{
+		"key": "polygones/p8",
+		"title": "8 côtés — polygone régulier",
+		"builtin": false,
+		"checks": [
+			{
+				"type": "polygon",
+				"id": "poly",
+				"sides": 8,
+				"regular": true
+			}
+		]
+	},
+	{
+		"key": "identites/somme-carre",
+		"title": "Le carré d’une somme : (a + b)²",
+		"builtin": true,
+		"checks": [
+			{
+				"type": "areas",
+				"whole": "outer",
+				"parts": ["aa", "ab1", "ab2", "bb"]
+			}
+		]
+	},
+	{
+		"key": "identites/difference-carre",
+		"title": "Le carré d’une différence : (a − b)²",
+		"builtin": true,
+		"checks": [
+			{
+				"type": "areaDifference"
+			}
+		]
+	},
+	{
+		"key": "identites/difference-carres",
+		"title": "Différence de deux carrés : a² − b²",
+		"builtin": true,
+		"checks": [
+			{
+				"type": "differenceSquares"
+			}
+		]
+	},
+	{
+		"key": "theoremes/pythagore",
+		"title": "Théorème de Pythagore",
+		"builtin": true,
+		"checks": [
+			{
+				"type": "areas",
+				"whole": "s3",
+				"parts": ["s1", "s2"]
+			}
+		]
+	},
+	{
+		"key": "theoremes/pythagore-pavage",
+		"title": "Pythagore — le pavage qui démontre",
+		"builtin": true,
+		"checks": [
+			{
+				"type": "areas",
+				"whole": "outer",
+				"parts": ["t1", "t2", "t3", "t4", "centerSquare"]
+			},
+			{
+				"type": "polygon",
+				"id": "centerSquare",
+				"sides": 4,
+				"regular": true
+			}
+		]
+	},
+	{
+		"key": "theoremes/thales",
+		"title": "Théorème de Thalès",
+		"builtin": true,
+		"checks": [
+			{
+				"type": "thales"
+			}
+		]
+	},
+	{
+		"key": "theoremes/bissectrice",
+		"title": "Théorème de la bissectrice intérieure",
+		"builtin": true,
+		"checks": [
+			{
+				"type": "bisectorTheorem"
+			}
+		]
+	}
+]

@@ -1,0 +1,29 @@
+point O = (0, 0)
+point A = (5, 0)
+segment base = segment(O, A)
+point B = on(base, t=0.4)
+point C = rotation(A, O, angle=90deg)
+vector up = vector(O, C) hidden
+point D = translation(A, up)
+point E = rotation(B, O, angle=90deg)
+line vertical = line(O, C) hidden
+line horizontal = line(O, A) hidden
+line cutV = parallel(B, vertical) style=dashed color=zinc
+line cutH = parallel(E, horizontal) style=dashed color=zinc
+line right = parallel(A, vertical) hidden
+line top = parallel(C, horizontal) hidden
+point F = intersection(cutV, cutH)
+point G = intersection(right, cutH)
+point H = intersection(top, cutV)
+polygon outer = polygon(O, A, D, C) color=zinc
+polygon aa = polygon(O, B, F, E) color=blue
+polygon ab1 = polygon(B, A, G, F) color=orange
+polygon ab2 = polygon(E, F, H, C) color=orange
+polygon bb = polygon(F, G, D, H) color=green
+comment souter = area(outer)
+comment saa = area(aa)
+comment sab1 = area(ab1)
+comment sab2 = area(ab2)
+comment sbb = area(bb)
+comment a = length(O, B)
+comment b = length(B, A)

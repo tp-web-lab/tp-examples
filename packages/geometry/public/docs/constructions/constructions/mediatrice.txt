@@ -1,0 +1,14 @@
+point A = (-3, 0)
+point B = (3, 0)
+segment AB = segment(A, B)
+circle ka = circle(A, distance(A, B)) style=dotted color=zinc
+circle kb = circle(B, distance(A, B)) style=dotted color=zinc
+point kC = intersection(ka, kb, branch=0)
+point kD = intersection(ka, kb, branch=1)
+line kperp = line(kC, kD) color=red
+line kbase = line(A, B) hidden
+point kM = intersection(kperp, kbase, branch=0)
+segment AM = segment(A, kM) color=blue
+segment MB = segment(kM, B) color=green
+comment gauche = length(AM, dx=-0.7, dy=-0.7)
+comment droite = length(MB, dx=0.2, dy=0.7)

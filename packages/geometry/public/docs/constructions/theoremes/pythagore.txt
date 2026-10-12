@@ -1,0 +1,15 @@
+point O = (0, 0)
+point A = (4, 0)
+line base = line(O, A)
+line height = perpendicular(O, base)
+point B = on(height, t=3)
+segment OA = segment(O, A)
+segment OB = segment(O, B)
+segment AB = segment(A, B)
+polygon s1 = regularPolygon(A, O, sides=4) color=blue
+polygon s2 = regularPolygon(O, B, sides=4) color=green
+polygon s3 = regularPolygon(B, A, sides=4) color=orange
+comment angle = angle(OA, OB)
+comment areas1 = area(s1)
+comment areas2 = area(s2)
+comment areas3 = area(s3)

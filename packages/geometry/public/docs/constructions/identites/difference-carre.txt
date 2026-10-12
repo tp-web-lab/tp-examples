@@ -1,0 +1,27 @@
+point O = (0, 0)
+point A = (5, 0)
+segment base = segment(O, A)
+point B = on(base, t=0.4)
+point C = rotation(A, O, angle=90deg)
+vector up = vector(O, C) hidden
+point D = translation(A, up)
+point E = rotation(B, O, angle=90deg)
+line vertical = line(O, C) hidden
+line horizontal = line(O, A) hidden
+line cutV = parallel(B, vertical) style=dashed color=zinc
+line cutH = parallel(E, horizontal) style=dashed color=zinc
+line right = parallel(A, vertical) hidden
+line top = parallel(C, horizontal) hidden
+point F = intersection(cutV, cutH)
+point G = intersection(right, cutH)
+point H = intersection(top, cutV)
+polygon outer = polygon(O, A, D, C) color=zinc
+polygon leftStrip = polygon(O, B, H, C) color=orange
+polygon bottomStrip = polygon(O, A, G, E) color=orange
+polygon overlap = polygon(O, B, F, E) color=red
+polygon remaining = polygon(F, G, D, H) color=blue
+comment souter = area(outer)
+comment sleftStrip = area(leftStrip)
+comment sbottomStrip = area(bottomStrip)
+comment soverlap = area(overlap)
+comment sremaining = area(remaining)

@@ -1,0 +1,4 @@
+point A = (-3, 0)
+point B = (3, 0)
+segment AB = segment(A, B)
+point P = (1, 3)

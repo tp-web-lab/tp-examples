@@ -1,0 +1,9 @@
+point O = (0, 0)
+point P = (3, 2)
+line d = line(O, P) color=zinc
+circle c = circle(O, through=P) style=dotted color=zinc
+point Q = intersection(d, c, branch=0)
+segment OP = segment(O, P) color=blue
+segment OQ = segment(O, Q) color=red
+comment p = length(OP)
+comment q = length(OQ)

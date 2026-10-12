@@ -1,0 +1,16 @@
+point O = (0, 0)
+point A = (4, 0)
+point B = (2, 3)
+ray OA = ray(O, A)
+ray OB = ray(O, B)
+circle bc = circle(O, through=A) hidden
+ray barm = ray(O, B) hidden
+point bV = intersection(barm, bc, branch=1)
+circle ba = circle(A, distance(A, bV)) style=dotted color=zinc
+circle bb = circle(bV, distance(A, bV)) style=dotted color=zinc
+point bW = intersection(ba, bb, branch=1)
+ray bray = ray(O, bW) hidden
+point bT = intersection(bray, bc, branch=1)
+ray bis = ray(O, bT) color=red
+comment a1 = angle(A, O, bT)
+comment a2 = angle(bT, O, B)

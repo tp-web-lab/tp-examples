@@ -1,0 +1,23 @@
+{
+	"name": "@tp/example-geometry",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"engines": {
+		"node": "^20.19.0 || >=22.12.0"
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"build:pages": "vite build && node scripts/prepare-pages.mjs",
+		"test:geometry": "node scripts/check-geometry.mjs"
+	},
+	"dependencies": {
+		"@tp/tp-components": "link:../../../tp-components"
+	},
+	"devDependencies": {
+		"vite": "8.1.5",
+		"vite-plugin-static-copy": "4.1.1"
+	}
+}

@@ -1,0 +1,18 @@
+point O = (0, 0)
+point B = (6, 0)
+point C = (2, 5)
+segment OB = segment(O, B)
+segment OC = segment(O, C)
+segment BC = segment(B, C)
+point M = on(OB, t=0.4)
+line parallel = parallel(M, BC) color=red
+point N = intersection(parallel, OC, branch=0)
+segment MN = segment(M, N) color=red
+polygon small = polygon(O, M, N) color=blue
+polygon large = polygon(O, B, C) color=orange
+comment om = length(O,M)
+comment ob = length(OB)
+comment on = length(O,N)
+comment oc = length(OC)
+comment mn = length(MN)
+comment bc = length(BC)

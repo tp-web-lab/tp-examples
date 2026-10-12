@@ -1,0 +1,3 @@
+point O = (0, 0)
+point A = (4, 0)
+segment OA = segment(O, A)

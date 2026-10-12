@@ -1,0 +1,7 @@
+point O = (0, 0)
+point B = (6, 0)
+point C = (2, 5)
+segment OB = segment(O, B)
+segment OC = segment(O, C)
+segment BC = segment(B, C)
+point M = on(OB, t=0.4)

@@ -1,0 +1,31 @@
+point O = (0, 0)
+point A = (4, 0)
+segment OA = segment(O, A)
+circle c = circle(O, through=A) style=dotted color=zinc
+circle ca = circle(A, through=O) style=dotted color=zinc
+point S = intersection(c, ca, branch=0)
+line axis = line(O, A) hidden
+point L = intersection(axis, c, branch=0)
+circle ra = circle(A, distance(A, L)) style=dotted color=zinc
+circle rb = circle(L, distance(A, L)) style=dotted color=zinc
+point rC = intersection(ra, rb, branch=0)
+point rD = intersection(ra, rb, branch=1)
+line rperp = line(rC, rD) hidden
+line rbase = line(A, L) hidden
+point rM = intersection(rperp, rbase, branch=0)
+point N = intersection(rperp, c, branch=1)
+circle step1 = circle(A, distance(A, N)) hidden
+point V1 = intersection(c, step1, branch=0)
+circle step2 = circle(V1, distance(A, N)) hidden
+point V2 = intersection(c, step2, branch=0)
+circle step3 = circle(V2, distance(A, N)) hidden
+point V3 = intersection(c, step3, branch=0)
+polygon poly = polygon(A, V1, V2, V3) color=blue
+segment e0 = segment(A, V1) color=blue
+comment len0 = length(e0)
+segment e1 = segment(V1, V2) color=blue
+comment len1 = length(e1)
+segment e2 = segment(V2, V3) color=blue
+comment len2 = length(e2)
+segment e3 = segment(V3, A) color=blue
+comment len3 = length(e3)

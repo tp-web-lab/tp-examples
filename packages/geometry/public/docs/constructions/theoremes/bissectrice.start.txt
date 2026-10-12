@@ -1,0 +1,6 @@
+point A = (0, 4)
+point B = (-3, 0)
+point C = (5, 0)
+segment AB = segment(A, B)
+segment AC = segment(A, C)
+segment BC = segment(B, C)

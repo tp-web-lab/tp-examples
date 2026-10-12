@@ -1,0 +1,5 @@
+point O = (0, 0)
+point A = (4, 0)
+point B = (2, 3)
+ray OA = ray(O, A)
+ray OB = ray(O, B)
