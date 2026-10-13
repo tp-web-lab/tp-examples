@@ -1,4 +1,4 @@
-# <tp-icon name="logo-tp-components" size="2em"></tp-icon> Examples of TP Components
+# <tp-icon name="logo-tp-components" size="2em"></tp-icon> Examples of use
 
 :::::: tp-callout { variant=brand style="font-size:1.2em;" }
 ::: tp-center {intrinsic center-text}

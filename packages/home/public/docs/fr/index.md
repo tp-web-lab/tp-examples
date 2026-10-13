@@ -1,4 +1,4 @@
-# <tp-icon name="logo-tp-components" size="2em"></tp-icon> Exemples d'application de `tp-components`
+# <tp-icon name="logo-tp-components" size="2em"></tp-icon> Exemples d'application
 
 :::::: tp-callout { variant=brand style="font-size:1.2em;" }
 ::: tp-center {intrinsic center-text}
@@ -44,7 +44,7 @@ header
 
 main
 :
-  Exercices interactifs pour la construction des figures géométriques avec juste une règle et un compas.
+  Exercices interactifs pour la construction de figures géométriques avec juste une règle et un compas.
 
   ::::: tp-graph-geometry { style="--tp-plot-height:440px;" canvas-only }
   :::::: script { type=tp/geometry }
