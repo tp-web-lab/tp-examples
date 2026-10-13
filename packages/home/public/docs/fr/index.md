@@ -1,4 +1,4 @@
-# <tp-icon name="logo-tp-components" size="2em"></tp-icon> Exemples de composants `tp-components`
+# <tp-icon name="logo-tp-components" size="2em"></tp-icon> Exemples d'application de `tp-components`
 
 :::::: tp-callout { variant=brand style="font-size:1.2em;" }
 ::: tp-center {intrinsic center-text}
@@ -10,8 +10,8 @@ La [documentation officielle](https://tp-web-lab.github.io/tp-components/) propo
 
 Les exemples présentés ici constituent des cas pédagogiques plus complets qui exploitent les composants de `tp-components` dans des situations concrètes, au sein d'un contexte spécifique que la documentation officielle ne peut pas couvrir.
 
-::: tp-cluster
-:::: tp-card { style="width:350px;text-align:center;" }
+::: tp-grid { min-width="350px" style="grid-auto-rows:1fr;align-items:stretch;max-width:calc(1050px + 2rem);" }
+:::: tp-card { style="min-width:0;text-align:center;" }
 header
 : #### Qu'est-ce qu'une dérivée ?
 
@@ -19,7 +19,7 @@ main
 :
   Une introduction aux dérivées mathématiques à travers des exemples, des situations concrètes et des exercices interactifs.
 
-  ::::: tp-xy-plot
+  ::::: tp-xy-plot { style="--tp-plot-height:440px;" }
   :::::: script { type=tp/xy-plot }
     xyFunctionGraph
       x-axis [0,36]
@@ -38,20 +38,29 @@ footer
   :tp-button:Voir l'exemple{href="https://tp-web-lab.github.io/derivatives/" variant="brand" size="xxl"}
 ::::
 
-:::: tp-card { style="width:350px;text-align:center;" }
+:::: tp-card { style="min-width:0;text-align:center;" }
 header
-: #### Avec règle et compas
+: #### Une règle, un compas
 
 main
 :
-  Construire des figures géométriques avec juste une règle et un compas.
+  Exercices interactifs pour la construction des figures géométriques avec juste une règle et un compas.
 
-  ::::: tp-graph-geometry { canvas-only }
+  ::::: tp-graph-geometry { style="--tp-plot-height:440px;" canvas-only }
   :::::: script { type=tp/geometry }
-    point O = (0, 0)
-    point A = (3, 4)
-    circle c = circle(O, through=A)
-    point P = on(c, angle=30deg)  
+    label = "Médiatrice"
+    point A = (-3, 0)
+    point B = (3, 0)
+    segment AB = segment(A, B)
+    circle cA = circle(A, distance(A, B)) hidden
+    circle cB = circle(B, distance(A, B)) hidden
+    arc aC = arc(cA, start=40deg, end=80deg, direction=ccw, relative-to=AB)
+    arc aD = arc(cA, start=280deg, end=320deg, direction=ccw, relative-to=AB)
+    arc bC = arc(cB, start=100deg, end=140deg, direction=ccw, relative-to=AB)
+    arc bD = arc(cB, start=220deg, end=260deg, direction=ccw, relative-to=AB)
+    point C = intersection(aC, bC, branch=0)
+    point D = intersection(aD, bD, branch=1)
+    line m = line(C, D)  
   ::::::
   :::::
 
@@ -60,7 +69,7 @@ footer
   :tp-button:Voir l'exemple{href="https://tp-web-lab.github.io/geometry/" variant="brand" size="xxl"}
 ::::
 
-:::: tp-card { style="width:350px;text-align:center;" }
+:::: tp-card { style="min-width:0;text-align:center;" }
 header
 : #### Qu'est-ce qu'une dérivée ?
 
@@ -68,7 +77,7 @@ main
 :
   Une introduction aux dérivées mathématiques à travers des exemples, des situations concrètes et des exercices interactifs.
 
-  ::::: tp-xy-plot
+  ::::: tp-xy-plot { style="--tp-plot-height:440px;" }
   :::::: script { type=tp/xy-plot }
     xyFunctionGraph
       x-axis [0,36]
