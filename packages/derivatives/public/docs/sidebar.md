@@ -4,6 +4,7 @@
     - [Une pente](slope.md)
     - [Un débit](flow.md)
     - [Une vitesse](speed.md)
+  - [Intermède](interlude.md)
   - [À quoi sert une dérivée ?](applications.md)
     - [Approximations](applications/approximations.md)
     - [Lois de la nature](applications/nature.md)

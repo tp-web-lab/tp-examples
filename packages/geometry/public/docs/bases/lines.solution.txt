@@ -1,0 +1,14 @@
+point A = (-3, 0)
+point B = (3, 0)
+segment s = segment(A, B) label-hidden
+point P = (4, 2)
+circle c = circle(A, through=B) style=dotted hidden label-hidden
+circle c1 = circle(B, through=A) style=dotted hidden label-hidden
+arc arc = arc(c1, start=110deg, end=130deg, direction=ccw) style=dotted label-hidden
+arc arc1 = arc(c, start=45deg, end=75deg, direction=ccw) style=dotted label-hidden
+arc arc2 = arc(c, start=-75deg, end=-45deg, direction=ccw) style=dotted label-hidden
+arc arc3 = arc(c1, start=220deg, end=260deg, direction=ccw) style=dotted label-hidden
+point I = intersection(arc1, arc, branch=0)
+point I1 = intersection(arc2, arc3, branch=1)
+line median = line(I, I1) label-x=-1.16537403442 label-y=2.72440948769
+comment measure = angle(median, s)

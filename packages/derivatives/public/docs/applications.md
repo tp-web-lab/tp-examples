@@ -21,7 +21,7 @@ Il s’agit de mesurer le volume d’air que l’on expire. Avec un spiromètre 
 ::: figure
 ![Une personne expire dans le capteur de débit d’un spiromètre ; l’écran présente le débit en fonction du temps et le volume expiré cumulé.](/docs/images/spirometre-768.webp){width=768 height=512 srcset="/docs/images/spirometre-480.webp 480w, /docs/images/spirometre-768.webp 768w, /docs/images/spirometre-1536.webp 1536w" sizes="(max-width: 48rem) calc(100vw - 4rem), (max-width: 68rem) calc(100vw - 20rem), 768px" decoding=async style="display:block;width:100%;max-width:768px;height:auto;margin-inline:auto"}
 :::: figcaption  {style="text-align:center"}
-*Spiromètre à capteur de débit — illustration pédagogique générée, courbes schématiques.*
+*Spiromètre à capteur de débit — illustration pédagogique générée par IA, courbes schématiques.*
 ::::
 :::
 
@@ -30,7 +30,7 @@ Sur une petite durée :tp-math:`\Delta t`{}, le volume d’air expulsé vaut app
 Par exemple, si on apprend que le débit est de :tp-math:`0.1`{} litre par seconde à un instant :tp-math:`t`{}, alors on pourra dire qu’en gros, à partir de cet instant, une seconde plus tard il se sera écoulé 0,1 litre. Il se peut que le débit ne soit pas constant, et alors cela ne sera pas la valeur exacte, mais c’est une approximation raisonnable car une seconde est un petit intervalle pour ce genre de débit.
 
 --- Super, j'ai une copine qui est asthmatique et qui me dit souvent qu'elle doit souffler dans un espèce de tube. C'est un spiromètre ! Je lui dirai que c'est grâce à la dérivée qu'on peut mesurer son souffle.
-
+{.tp-red-style}
 
 Exactement\. 
 

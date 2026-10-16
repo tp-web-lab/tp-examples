@@ -1,0 +1,10 @@
+point A = (-3, 0)
+point B = (3, 0)
+segment s = segment(A, B)
+circle c = circle(A, through=B) hidden
+circle c1 = circle(B, through=A) hidden
+point I = intersection(c, c1, branch=0) hidden
+point I1 = intersection(c, c1, branch=1) hidden
+line d = line(I, I1)
+comment measure = angle(s, d)
+comment note = comment(I, "Médiatrice")

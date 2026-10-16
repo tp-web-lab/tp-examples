@@ -1,0 +1,4 @@
+point A = (-3, 0)
+point B = (3, 0)
+segment s = segment(A, B) label-hidden
+point P = (4,2)
