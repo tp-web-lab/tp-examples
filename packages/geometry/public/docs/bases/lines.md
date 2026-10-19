@@ -1,7 +1,7 @@
 # Médiatrices
 
 ::: tp-accordion {appearance="filled" open-indexes="0"}
-Médiatrice
+Le 
 : La médiatrice d'un segment est le lieu des points situés à égale distance des extrémités du segment. C'est une droite qui passe perpendiculairement par le milieu de ce segment.
 
   Réciproquement, si un point est à égale distance des deux extrémités d’un segment, alors il appartient obligatoirement à sa médiatrice.

@@ -1,6 +1,11 @@
-# Différence de deux carrés : a² − b²
+# Différence de deux carrés
 
-Les outils **built-in** sont disponibles pour les découpages et les transformations qui conservent les aires.
+::: tp-math {displaystyle}
+:::: script { typ="tp/math" }
+a^2 - b^2 = (a+b)(a-b)
+::::
+:::
+
 
 ## À construire
 

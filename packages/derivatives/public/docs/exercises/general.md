@@ -1,4 +1,3 @@
-::: tp-fill-blank-question {closed partial}
 Title
 : Généralités
 
@@ -23,7 +22,7 @@ Answers
   13. :tp-math:`y = f'(a)\cdot (x-a)+f(a)`{}
   14. :tp-math:`f(a) + f'(a)(x-a)`{}
   15. :tp-math:`f(a) + f'(a)h`{}
-  16. approximation affine
+  16. une approximation affine
   17. tangente
   18. décroissante
   19. croissante
@@ -31,25 +30,26 @@ Answers
 Form
 : 
   1.  Soit :tp-math:`f`{} une fonction définie sur un intervalle :tp-math:`I`{}, et :tp-math:`a`{} un réel dans :tp-math:`I`{}.\
-      Le taux d'accroissement peut s'écrire de :tp-math:`a`{} à :tp-math:`x`{} : <tp-blank></tp-blank> ou de :tp-math:`a`{} à :tp-math:`a+h`{} : <tp-blank></tp-blank> 
+      Le taux d'accroissement de :tp-math:`a`{} à :tp-math:`x`{}peut s'écrire : :tp-blank:{type="math" mathlive}\
+      ou de :tp-math:`a`{} à :tp-math:`a+h`{} : :tp-blank:{type="math" mathlive} 
 
-      Dire que :tp-math:`f`{} est dérivable en a signifie que la limite du taux d'accroissement de :tp-math:`f`{} entre :tp-math:`a`{} et :tp-math:`x`{} quand <tp-blank></tp-blank> tend vers <tp-blank></tp-blank> est <tp-blank></tp-blank>.
+      Dire que :tp-math:`f`{} est dérivable en :tp-math:`a`{} signifie que la limite du taux d'accroissement de :tp-math:`f`{} entre :tp-math:`a`{} et :tp-math:`x`{} quand :tp-blank:{type="math" mathlive} tend vers :tp-blank:{type="math" mathlive} est :tp-blank:{closed}.
 
-  2.  Soit :tp-math:`f`{} une fonction définie sur intervalle :tp-math:`I`{}. Dire que :tp-math:`f`{} est dérivable sur :tp-math:`I`{} signifie que :tp-math:`f`{} est dérivable en <tp-blank></tp-blank> pour tout <tp-blank></tp-blank>.
+  2.  Soit :tp-math:`f`{} une fonction définie sur intervalle :tp-math:`I`{}. Dire que :tp-math:`f`{} est dérivable sur :tp-math:`I`{} signifie que :tp-math:`f`{} est dérivable en :tp-blank:{type="math" mathlive} pour tout :tp-blank:{type="math" mathlive}.
 
-  3.  Si :tp-math:`f`{} est dérivable sur un intervalle :tp-math:`I`{}, la fonction qui à tout :tp-math:`x`{} de :tp-math:`I`{} associe le nombre dérivé de :tp-math:`f`{} en :tp-math:`x`{} s'appelle la fonction <tp-blank></tp-blank> de :tp-math:`f`{} sur :tp-math:`I`{} et se note <tp-blank></tp-blank>.
+  3.  Si :tp-math:`f`{} est dérivable sur un intervalle :tp-math:`I`{}, la fonction qui à tout :tp-math:`x`{} de :tp-math:`I`{} associe le nombre dérivé de :tp-math:`f`{} en :tp-math:`x`{} s'appelle la fonction :tp-blank:{closed} de :tp-math:`f`{} sur :tp-math:`I`{} et se note :tp-blank:{type="math" mathlive}.
 
-  4.  Pour :tp-math:`f`{} et :tp-math:`f'`{} dérivables sur :tp-math:`I`{}, la dérivée de :tp-math:`f'`{} se note <tp-blank></tp-blank> et s'appelle la <tp-blank></tp-blank> de :tp-math:`f`{}.
+  4.  Pour :tp-math:`f`{} et :tp-math:`f'`{} dérivables sur :tp-math:`I`{}, la dérivée de :tp-math:`f'`{} se note :tp-blank:{type="math" mathlive} et s'appelle la :tp-blank:{closed} de :tp-math:`f`{}.
 
-  5.  Le coefficient directeur de la tangente à la courbe de :tp-math:`f`{} en :tp-math:`A(a,f(a))`{} est <tp-blank></tp-blank>.\
-      L'équation de la tangente est <tp-blank></tp-blank>.
+  5.  Le coefficient directeur de la tangente à la courbe de :tp-math:`f`{} en :tp-math:`A(a,f(a))`{} est :tp-blank:{type="math" mathlive}.\
+      L'équation de la tangente est :tp-blank:{type="math" mathlive closed}.
 
-  6.  Pour :tp-math:`x`{} voisin de :tp-math:`a`{}, :tp-math:`f(x)`{} est peu différent de <tp-blank></tp-blank>.\
-      Pour :tp-math:`h`{} voisin de :tp-math:`0`{}, :tp-math:`f(a+h)`{} est peu différent de <tp-blank></tp-blank>.\
-      On fait ainsi une <tp-blank></tp-blank> qui assimile la fonction :tp-math:`f`{} en un point :tp-math:`a`{} à sa <tp-blank></tp-blank> en ce point.
+  6.  Pour :tp-math:`x`{} voisin de :tp-math:`a`{}, :tp-math:`f(x)`{} est peu différent de :tp-blank:{type="math" mathlive}.\
+      Pour :tp-math:`h`{} voisin de :tp-math:`0`{}, :tp-math:`f(a+h)`{} est peu différent de :tp-blank:{type="math" mathlive}.\
+      On fait ainsi :tp-blank:{closed} qui assimile la fonction :tp-math:`f`{} en un point :tp-math:`a`{} à sa :tp-blank:{closed} en ce point.
 
-  7.  Si :tp-math:`f' \leq 0`{} sur :tp-math:`I`{}, alors :tp-math:`f`{} est <tp-blank></tp-blank> sur :tp-math:`I`{}.\
-      Si :tp-math:`f' \geq 0`{} sur :tp-math:`I`{}, alors :tp-math:`f`{} est <tp-blank></tp-blank> sur :tp-math:`I`{}.
+  7.  Si :tp-math:`f' \leq 0`{} sur :tp-math:`I`{}, alors :tp-math:`f`{} est :tp-blank:{closed} sur :tp-math:`I`{}.\
+      Si :tp-math:`f' \geq 0`{} sur :tp-math:`I`{}, alors :tp-math:`f`{} est :tp-blank:{closed} sur :tp-math:`I`{}.
 
 Solution
 : 
@@ -69,6 +69,4 @@ Solution
   6.  Pour :tp-math:`x`{} voisin de :tp-math:`a`{}, :tp-math:`f(x)`{} est peu différent de :tp-math:`f(a) + f'(a)(x-a)`{}. Pour :tp-math:`h`{} voisin de :tp-math:`0`{}, :tp-math:`f(a+h)`{} est peu différent de :tp-math:`f(a) + f'(a)h`{}. On fait ainsi une approximation affine qui assimile la fonction :tp-math:`f`{} en un point :tp-math:`a`{} à sa tangente en ce point.
 
   7.  Si :tp-math:`f \leq 0`{} sur :tp-math:`I`{}, alors :tp-math:`f`{} est décroissante sur :tp-math:`I`{}. Si :tp-math:`f \geq 0`{} sur :tp-math:`I`{}, alors :tp-math:`f`{} est croissante sur :tp-math:`I`{}.
-
-:::
 

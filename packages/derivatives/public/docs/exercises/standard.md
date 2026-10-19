@@ -1,4 +1,3 @@
-::: tp-fill-blank-question {closed partial}
 Title
 : Fonctions usuelles
 
@@ -56,5 +55,3 @@ Solution
   5. La fonction racine carrée :tp-math:`f: f(x)=\sqrt{x}`{} est définie sur :tp-math:`\mathbb{R^+}`{}, dérivable sur :tp-math:`\mathbb{R^{*+}}`{} et :tp-math:`\displaystyle f'(x) = \frac{1}{2\sqrt{x}}`{}.
 
   6. Les fonctions trigonométriques :tp-math:`f(x) = \sin(x)`{} et :tp-math:`g(x) = \cos(x)`{} ont pour dérivées respectives :tp-math:`f'(x) = \cos(x)`{} et :tp-math:`g'(x) = -\sin(x)`{}.
-
-:::

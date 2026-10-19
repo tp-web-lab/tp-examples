@@ -1,4 +1,3 @@
-::: tp-fill-blank-question {closed partial}
 Title
 : Fonctions composées
 
@@ -42,7 +41,3 @@ Solution
      Cas particulier : :tp-math:`\displaystyle\frac{1}{u} = u^n`{} avec :tp-math:`n = -1`{}, :tp-math:`\displaystyle \left(\frac{1}{u}\right)' = -\frac{u'}{u^2}`{}.
 
   3. Si :tp-math:`u`{} est une fonction dérivable telle que :tp-math:`u > 0`{}, alors :tp-math:`\sqrt{u} = u^n`{} avec :tp-math:`\displaystyle n = \frac{1}{2}`{} et :tp-math:`\displaystyle (\sqrt{u})' = \frac{u'}{2\sqrt{u}}`{}.
-
-
-
-:::

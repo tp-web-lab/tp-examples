@@ -1,4 +1,10 @@
-# Le carré d’une différence : (a − b)²
+# Carré d’une différence
+
+::: tp-math {displaystyle}
+:::: script { typ="tp/math" }
+(a-b)^2 = a^2 - 2ab + b^2
+::::
+:::
 
 Les outils **built-in** sont disponibles pour les découpages et les transformations qui conservent les aires.
 
