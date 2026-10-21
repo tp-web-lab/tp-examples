@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.85 5" width="554" height="172" role="img" aria-labelledby="tangram-triangles" style="display: block; max-width: 100%; height: auto; margin: 0.75rem 0;" stroke="#fff" stroke-width="0.035" stroke-linejoin="round">
+  <title id="tangram-triangles">Les cinq triangles du tangram, représentés à la même échelle</title>
+  <polygon points="1.15,2.15 1.15,4.15 0.15,3.15" fill="#648237"><title>Petit triangle de surface 1</title></polygon>
+  <polygon points="2.75,3.15 3.75,4.15 1.75,4.15" fill="#925599"><title>Petit triangle de surface 1</title></polygon>
+  <polygon points="6.35,2.15 6.35,4.15 4.35,4.15" fill="#ba7b15"><title>Triangle moyen de surface 2</title></polygon>
+  <polygon points="6.95,2.15 10.95,2.15 8.95,4.15" fill="#b84432"><title>Grand triangle de surface 4</title></polygon>
+  <polygon points="11.55,0.15 13.55,2.15 11.55,4.15" fill="#246c94"><title>Grand triangle de surface 4</title></polygon>
+</svg>

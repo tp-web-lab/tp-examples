@@ -3,53 +3,121 @@
 ::: tp-toc { position="end" expand-all open brand }
 :::
 
-Ce document, composé de plusieurs pages, illustre l’utilisation de la bibliothèque open source [tp-components](https://tp-web-lab.github.io/tp-components/), conçue pour créer des documents techniques interactifs à des fins pédagogiques. Ce parcours invite à expérimenter les constructions géométriques et à comprendre leurs propriétés.
+Ce document, composé de plusieurs pages, illustre l’utilisation de la bibliothèque open source [tp-components](https://tp-web-lab.github.io/tp-components/), conçue pour créer des documents techniques interactifs à des fins pédagogiques. 
 
-La question est ici : **comment construire une figure, puis expliquer pourquoi elle possède la propriété annoncée ?** Nous disposons d’une règle graduée et d’un compas virtuels, sans équations ni tracés de fonctions. Les premières pages détaillent les gestes ; les dernières réutilisent les outils directs pour se concentrer sur les preuves.
+Il s'agit ici d'expérimenter les constructions géométriques à l'aide d'une règle et d'un compas.
 
-Les pages sont écrites en **tp-markdown** et affichées dans **tp-markdown-multi-pages**. Le bouton Code montre la source de la page ; un second clic revient au rendu. Les figures utilisent **tp-graph-geometry** (nom du composant dans la bibliothèque).
+Ces notes sont rédigées en `tp-markdown` pour HTML afin de pouvoir accéder plus facilement aux composants de la bibliothèque `tp-components`. 
+Il est d'ailleurs possible de consulter le code source `tp-markdown` de la page courante en cliquant sur le bouton :tp-icon:{name="code" variant="neutral"} dans la barre d'outils en haut à gauche de ce document.
+On revient au rendu HTML en cliquant une nouvelle fois sur ce bouton.
 
-## Commandes du document
+## Commandes
+Les commandes globales, toujours disponibles par défaut<tp-ref href="^commandes"></tp-ref> quelle que soit la page chargée, sont explicitées dans les tableaux suivants.
+D'autres commandes peuvent être introduites par certains composants.
+Pour connaître les interactions possibles avec un composant, il suffit de taper <kbd>Ctrl</kbd>+<kbd>?</kbd> quand le composant a le focus ou quand la souris le survole, un panneau d'aide s'ouvrira alors.
 
-| Commande | Action |
-| --- | --- |
-| Home | Revenir à cette introduction. |
-| Menu | Afficher ou masquer la table des matières. |
-| Code | Alterner entre le document et sa source Markdown. |
-| Couleur / thème | Choisir la couleur principale et le thème clair ou sombre. |
-| Plein écran | Agrandir le document. |
-| Table des matières | Ouvrir une section puis un atelier. |
-| Ctrl+? | Consulter l’aide du composant survolé ou ayant le focus ; Maj peut être nécessaire pour saisir ?. |
-
-## Composants utilisés
-
-| Composant | Utilisation |
-| --- | --- |
-| tp-markdown-multi-pages | Navigation entre les pages Markdown. |
-| tp-graph-geometry | Construction, manipulation, mesures et sauvegarde du dessin. |
-| tp-accordion | Ouvrir une construction corrigée après avoir essayé. |
-| tp-toc | Sommaire de la page. |
-| tp-callout | Consignes et limites des constructions. |
-
-Les boutons, champs, éditeurs et menus de chaque figure sont ceux de la bibliothèque.
-
-## Quatre étapes
-
-1. [Construire sans built-in](constructions.md) : médiatrice, perpendiculaire, parallèle, milieu, bissectrice, symétries et angles usuels.
-2. [Tracer des polygones](polygones.md) : 3 à 8 côtés, en distinguant la construction exacte de l’approximation à 7 côtés.
-3. [Découper des aires](identites.md) : a² − b², (a + b)² et (a − b)².
-4. [Démontrer avec built-in](theoremes.md) : Pythagore, Thalès et le théorème de la bissectrice.
-
-::: tp-callout { variant="info" outlined }
-Une mesure confirme un essai, pas un théorème. Chaque atelier sépare la construction, la manipulation et la justification.
+::: tp-cluster {align=flex-start}
+|--------------------------------------------|----------------------------------------------------|
+| <tp-icon size="2em" name="home"></tp-icon> | retour à la page d'accueil                         |
+| <tp-icon size="2em" name="menu"></tp-icon> | afficher/cacher la table des matières              |
+| <tp-icon size="2em" name="code"></tp-icon> | afficher/cacher le code source                     |
+| <tp-icon size="2em" name="calculator" library="components"></tp-icon>     | calculette          |
+| <tp-icon size="2em" name="post-it-editor" library="components"></tp-icon> | éditeur de post-it  |
+[Commandes générales]
+<!-- -->
+|------------------------------------------------------|--------------------------------------------------------------------|
+| <tp-icon size="2em" name="palette-swatch"></tp-icon> | choix de la couleur principale                                     |
+| <tp-icon size="2em" name="sun"></tp-icon>/<tp-icon size="2em" name="moon"></tp-icon> | thème light/dark global            |
+| <tp-icon size="2em" name="fullscreen"></tp-icon>/<tp-icon size="2em" name="fullscreen-exit"></tp-icon> | mode plein écran |
+[Contrôle de l'apparence]
+<!-- -->
+|---------------------------------------------------------------|----------------------------------------------------------------------------------|
+| <tp-icon size="2em" name="search"></tp-icon>                  | rechercher dans la table des matières                                            |
+| <tp-icon size="2em" name="arrow-expand-vertical"></tp-icon>   | développer tous les niveaux                                                      |
+| <tp-icon size="2em" name="arrow-collapse-vertical"></tp-icon> | contracter tous les niveaux                                                      |
+| <tp-icon size="2em" name="arrow-expand-horizontal"></tp-icon> | adapter la largeur                                                               |
+| <tp-icon size="2em" name="plus-box-outline"></tp-icon>/<tp-icon size="2em" name="minus-box-outline"></tp-icon> | développer/contracter un niveau |
+[Table des matières]
 :::
 
-## Mise en page
+::: tp-note {ref="commandes"}
+En option, l'auteur du document peut décider de supprimer certaines de ces commandes.
+:::
 
-Le fichier d’entrée HTML contient le chargeur de composants, puis :
+## Composants
+Les composants utilisés directement dans l'ensemble du document sont répertoriés ci-dessous.
 
-```html
-<tp-markdown-multi-pages menu langs="fr" repository="/docs" label="Construire et démontrer en géométrie"></tp-markdown-multi-pages>
+::: tp-cluster {align=flex-start}
+| Utilitaires                                                                                             | Utilisation                              | 
+|---------------------------------------------------------------------------------------------------------|------------------------------------------|
+|<tp-icon name="code-comment" library="components" size="2em"></tp-icon> `<tp-code-comment>`              | infobulle  dans le code                  |
+|<tp-icon name="code-editor" library="components" size="2em"></tp-icon> `<tp-code-editor>`                | éditeur de code                          |
+|<tp-icon name="csv-table" library="components" size="2em"></tp-icon> `<tp-csv-table>`                    | table HTML à partir de données CSV       |
+|<tp-icon name="icon" library="components" size="2em"></tp-icon> `<tp-icon>`                              | icône                                    |
+|<tp-icon name="icon-button" library="components" size="2em"></tp-icon> `<tp-icon-button>`                | bouton icône                             | 
+|<tp-icon name="markup-multi-pages" library="components" size="2em"></tp-icon> `<tp-markup-multi-pages>`  | mise en page générale                    |
+|<tp-icon name="math" library="components" size="2em"></tp-icon> `<tp-math>`                              | rendu d'expressions mathématiques        |
+|<tp-icon name="listof" library="components" size="2em"></tp-icon> `<tp-listof>`                          | liste des références                     |
+|<tp-icon name="list-table" library="components" size="2em"></tp-icon> `<tp-list-table>`                  | table HTML à partir de listes imbriquées |
+|<tp-icon name="note" library="components" size="2em"></tp-icon> `<tp-note>`                              | infobulle dans le texte                  |
+|<tp-icon name="ref" library="components" size="2em"></tp-icon> `<tp-ref>`                                | référence dans le texte                  |
+|<tp-icon name="spreadsheet-editor" library="components" size="2em"></tp-icon> `<tp-spreadsheet-editor>`  | éditeur de feuilles de calcul            |
+|<tp-icon name="toc" library="components" size="2em"></tp-icon> `<tp-toc>`                                | table des matières locale                | 
+|<tp-icon name="xy-plot" library="components" size="2em"></tp-icon> `<tp-xy-plot>`                        | tracé de graphes de fonctions            |
+<!-- -->
+| Questionnaires                                                                                                  | Description               |
+|-----------------------------------------------------------------------------------------------------------------|---------------------------|
+|<tp-icon name="fill-blank-question" library="components" size="2em"></tp-icon> `<tp-fill-blank-question>`        | texte à trous             |
+|<tp-icon name="flip-card" library="components" size="2em"></tp-icon> `<tp-flip-card>`                            | carte question/réponse    |
+|<tp-icon name="matching-question" library="components" size="2em"></tp-icon> `<tp-matching-question>`            | association de concepts   |
+|<tp-icon name="multi-choice-question" library="components" size="2em"></tp-icon> `<tp-multi-choice-question>`    | question à choix multiple |
+|<tp-icon name="python-viewer-question" library="components" size="2em"></tp-icon> `<tp-python-viewer-question>`  | interpréteur Python       |
+:::
+
+Tous ces composants, et uniquement ceux-là, sont chargés automatiquement par le module `tp-loader.js`. 
+
+Ces composants peuvent utilisés eux-mêmes, de manière complètement transparente à l'utilisateur, d'autres composants de la bibliothèque `tp-components`.
+
+Certains composants peuvent chargés dynamiquement des modules extérieurs, là encore de manière complètement transparente.
+C'est le cas de `<tp-math>` pour le rendu des formules mathématiques avec [Mathjax](https://www.mathjax.org), et de `<tp-python-viewer-question>` pour l'interprétation des programmes Python en ligne avec [Pyodide](https://pyodide.com).
+
+## Annexes
+### Fichier `sidebar.md`
+La table des matières générale est définie dans le fichier `sidebar.md` par une liste imbriquée où chaque item est un lien `markdown` sur la page associée : `- [texte](url)`.
+
+Le fichier du lien est chargé tel quel puis traduit dynamiquement en HTML pour être rendu dans la page Web.
+
+```markdown
+::include{sidebar.md}
 ```
 
-Le répertoire `docs` contient `cover.md` (cette introduction), `sidebar.md` (la navigation), les ateliers et leurs descriptions .txt. La langue de ce cours est le français. Commencer par la [prise en main](prise-en-main.md).
+### Fichier `index.html`
+Le fichier `index.html` est le point d'entrée de cette documentation : c'est le fichier HTML qu'il faut ouvrir dans le navigateur.
+
+```html
+::include{../index.html mode=raw}
+```
+
+#### En-tête
+L'en-tête (section `<head>...</head>`) du fichier précise que la langue utilisée est le français (attribut `lang="fr"` de la balise principale `<html>...</html>`), définit le texte qui sera affiché dans l'onglet de la page Web (balise `<title>`) et surtout, importe le fichier `tp-loader.js` qui a la responsabilité de charger automatiquement et dynamiquement, au fil des pages, les composants de la bibliothèque `tp-components` utilisés dans les différents fichiers visités.
+```html
+<script type="module" src="./@tp/tp-components/tp-loader.js"></script>
+```
+Dans un script, l'attribut `type="module"` indique au navigateur que le script est un module JavaScript, qui peut notamment importer d’autres modules avec `import` et exporter des fonctions ou des valeurs avec `export`.
+Cela change aussi son comportement :
+  - Exécution différée : le navigateur télécharge le module et ses dépendances, puis l’exécute après l’analyse du document HTML.
+  - Portée propre : ses variables et fonctions ne sont pas globales et ne sont pas accessibles aux autres éventuels scripts exécutés dans cette même page Web.
+  - Mode strict automatique : certaines erreurs JavaScript tolérées dans les scripts classiques sont interdites.
+  - Chargement unique : un même module, identifié par son URL, n’est exécuté qu’une fois dans la page, même si plusieurs modules l’importent.
+  {style="list-style-type:disc;"}
+
+#### Corps
+Le corps (section `<body>...</body>`) du fichier est juste constitué du composant `<tp-mardown-multi-pages>` qui se charge de la mise en page dans le navigateur : une barre d'outils en haut de la page, une table des matières générale dans le panneau de gauche et le contenu principal dans le panneau de droite.
+
+```html
+<body>
+  <tp-mardown-multi-pages menu langs="fr" repository="/docs" label="C’est quoi, une dérivée ?"></tp-markup-multi-pages>
+</body>
+````
+
+Ce composant recherche les fichiers à charger dans le répertoire `/docs` (attribut `repository="/docs"`), affiche la table des matières générale (attribut booléen `menu`) et précise que les langues accessibles sont l'anglais et le français (attribut `langs="en,fr"`). L'attribut `label` sert à afficher un titre dans la barre d'outils du haut de la page.

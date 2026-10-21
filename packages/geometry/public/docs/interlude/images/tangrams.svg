@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 680" role="img" aria-label="Six tangrams"><rect width="100%" height="100%" fill="#faf9f6" /><metadata>Chat et cygne : Wiebke Köpp, TangramGenerator (MIT), voir LICENSE-TangramGenerator.txt. Personnages A2 et C3 : Lulu la taupe, https://lululataupe.com/imprimerie/jeux-d-observation/tangrams/586-tangram-modeles-personnages-couleur</metadata><g transform="translate(0 0)"><polygon points="259.5122,165.9817 201.5122,223.9817 201.5122,107.9817" fill="#b84432" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="259.5122,248.0061 177.4878,248.0061 259.5122,165.9817" fill="#246c94" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="160.5000,148.9939 201.5122,107.9817 201.5122,190.0061" fill="#ba7b15" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="119.4878,90.9939 90.4878,119.9939 90.4878,61.9939" fill="#648237" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="119.4878,90.9939 148.4878,61.9939 148.4878,119.9939" fill="#925599" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="119.4878,90.9939 148.4878,119.9939 119.4878,148.9939 90.4878,119.9939" fill="#187f7c" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="119.4878,148.9939 160.5000,107.9817 201.5122,107.9817 160.5000,148.9939" fill="#b94574" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<text x="175" y="316" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#333">Chat</text>
+</g><g transform="translate(350 0)"><polygon points="143.5122,248.0061 143.5122,165.9817 225.5366,248.0061" fill="#b84432" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="201.5122,223.9817 143.5122,165.9817 259.5122,165.9817" fill="#246c94" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="102.5000,206.9939 143.5122,165.9817 143.5122,248.0061" fill="#ba7b15" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="131.5000,103.0061 90.4878,103.0061 131.5000,61.9939" fill="#648237" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="131.5000,177.9939 102.5000,206.9939 102.5000,148.9939" fill="#925599" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="131.5000,119.9939 160.5000,148.9939 131.5000,177.9939 102.5000,148.9939" fill="#187f7c" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="131.5000,61.9939 131.5000,119.9939 160.5000,148.9939 160.5000,90.9939" fill="#b94574" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<text x="175" y="316" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#333">Cygne</text>
+</g><g transform="translate(700 0)"><polygon points="113.4817,77.6384 195.5061,77.6384 195.5061,159.6628" fill="#b84432" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="163.6061,127.7628 163.6061,209.7872 245.6305,209.7872" fill="#246c94" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="163.6061,166.2872 163.6061,248.3116 122.5939,207.2994" fill="#ba7b15" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="227.4061,209.7872 268.4183,209.7872 268.4183,250.7994" fill="#648237" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="147.6561,232.3616 176.6561,261.3616 147.6561,290.3616" fill="#925599" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="185.3561,77.6384 214.3561,48.6384 185.3561,19.6384 156.3561,48.6384" fill="#187f7c" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="163.6061,127.7628 122.5939,127.7628 81.5817,86.7506 122.5939,86.7506" fill="#b94574" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<text x="175" y="316" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#333">Coureur</text>
+</g><g transform="translate(0 340)"><polygon points="92.9756,81.4695 175.0000,81.4695 175.0000,163.4939" fill="#b84432" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="175.0000,81.4695 257.0244,81.4695 175.0000,163.4939" fill="#246c94" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="175.0000,163.4939 233.0000,221.4939 175.0000,221.4939" fill="#ba7b15" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="133.9878,245.5183 133.9878,286.5305 92.9756,286.5305" fill="#648237" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="216.0122,221.4939 257.0244,221.4939 257.0244,262.5061" fill="#925599" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="175.0000,81.4695 204.0000,52.4695 175.0000,23.4695 146.0000,52.4695" fill="#187f7c" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="175.0000,163.4939 175.0000,204.5061 133.9878,245.5183 133.9878,204.5061" fill="#b94574" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<text x="175" y="316" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#333">Équilibriste</text>
+</g><g transform="translate(350 340)"><polygon points="195.5061,124.1378 195.5061,206.1622 277.5305,206.1622" fill="#b84432" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="154.4939,124.1378 154.4939,206.1622 72.4695,206.1622" fill="#246c94" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="133.9878,103.8378 216.0122,103.8378 175.0000,62.8256" fill="#ba7b15" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="154.4939,206.1622 113.4817,247.1744 154.4939,247.1744" fill="#648237" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="195.5061,206.1622 236.5183,247.1744 195.5061,247.1744" fill="#925599" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="154.4939,103.8378 195.5061,103.8378 195.5061,144.8500 154.4939,144.8500" fill="#187f7c" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="154.4939,144.8500 195.5061,185.8622 195.5061,226.8744 154.4939,185.8622" fill="#b94574" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<text x="175" y="316" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#333">Avion</text>
+</g><g transform="translate(700 340)"><polygon points="92.9756,155.0000 175.0000,155.0000 175.0000,72.9756" fill="#b84432" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="175.0000,155.0000 257.0244,155.0000 175.0000,72.9756" fill="#246c94" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="175.0000,196.0122 216.0122,237.0244 133.9878,237.0244" fill="#ba7b15" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="175.0000,155.0000 133.9878,155.0000 133.9878,196.0122" fill="#648237" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="216.0122,237.0244 216.0122,196.0122 175.0000,196.0122" fill="#925599" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="175.0000,155.0000 216.0122,155.0000 216.0122,196.0122 175.0000,196.0122" fill="#187f7c" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<polygon points="175.0000,155.0000 133.9878,196.0122 133.9878,237.0244 175.0000,196.0122" fill="#b94574" stroke="#fff" stroke-width="1" stroke-linejoin="round" />
+<text x="175" y="316" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#333">Maison</text>
+</g></svg>

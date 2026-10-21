@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="218" viewBox="0 0 160 218" role="img" aria-labelledby="hexagon-title hexagon-desc">
+  <title id="hexagon-title">Hexagone</title>
+  <desc id="hexagon-desc">Polygone régulier à 6 côtés inscrit dans un cercle de centre O. Angle au centre α : 60°. Angle intérieur β : 120°.</desc>
+  <circle cx="80" cy="76" r="60" fill="none" stroke="#9baaaa" stroke-width="1" stroke-dasharray="4 4"/>
+  <polygon points="80.0000,16.0000 131.9615,46.0000 131.9615,106.0000 80.0000,136.0000 28.0385,106.0000 28.0385,46.0000" fill="#187f7c" fill-opacity="0.16" stroke="#187f7c" stroke-width="2.5" stroke-linejoin="round"/>
+  <g fill="#187f7c">
+    <circle cx="80.0000" cy="16.0000" r="2.5"/>
+    <circle cx="131.9615" cy="46.0000" r="2.5"/>
+    <circle cx="131.9615" cy="106.0000" r="2.5"/>
+    <circle cx="80.0000" cy="136.0000" r="2.5"/>
+    <circle cx="28.0385" cy="106.0000" r="2.5"/>
+    <circle cx="28.0385" cy="46.0000" r="2.5"/>
+  </g>
+  <g fill="#187f7c" font-family="system-ui, sans-serif" text-anchor="middle">
+    <text x="80" y="159" font-size="13" font-weight="600">Hexagone</text>
+    <text x="80" y="177" font-size="12">6 côtés</text>
+  </g>
+  <g fill="none" stroke="#246c94" stroke-width="1.2">
+    <path d="M 80.000,16.000 L 80.000,76.000 L 131.962,46.000" stroke-dasharray="3 2"/>
+    <path d="M 80.000,59.000 A 17 17 0 0 1 94.722,67.500"/>
+  </g>
+  <path d="M 28.038,93.000 A 13 13 0 0 1 39.297,112.500" fill="none" stroke="#b84432" stroke-width="1.5"/>
+  <circle cx="80" cy="76" r="2" fill="#246c94"/>
+  <g font-family="system-ui, sans-serif" font-size="11" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="2" stroke-linejoin="round">
+    <text x="71" y="79" fill="#246c94">O</text>
+    <text x="94.500" y="54.885" fill="#246c94">α</text>
+    <text x="49.689" y="97.500" fill="#b84432">β</text>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">
+    <text x="80" y="195" fill="#246c94">Au centre : α = 60°</text>
+    <text x="80" y="210" fill="#b84432">Intérieur : β = 120°</text>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="16 33.5 118 118" role="img" aria-label="Tangram convexe 01"><polygon points="20,37.5 47.5,37.5 47.5,65" fill="#648237" stroke="white" stroke-width="1" />
+<polygon points="47.5,37.5 75,37.5 75,65 47.5,65" fill="#187f7c" stroke="white" stroke-width="1" />
+<polygon points="75,37.5 102.5,37.5 75,65" fill="#925599" stroke="white" stroke-width="1" />
+<polygon points="75,65 102.5,37.5 130,37.5 102.5,65" fill="#b94574" stroke="white" stroke-width="1" />
+<polygon points="20,37.5 75,92.5 20,92.5" fill="#b84432" stroke="white" stroke-width="1" />
+<polygon points="47.5,65 102.5,65 75,92.5" fill="#ba7b15" stroke="white" stroke-width="1" />
+<polygon points="20,92.5 75,92.5 20,147.5" fill="#246c94" stroke="white" stroke-width="1" />
+</svg>

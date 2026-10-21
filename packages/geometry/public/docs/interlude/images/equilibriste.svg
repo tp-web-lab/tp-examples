@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 340" role="img" aria-labelledby="titre"><title id="titre">Tangram : Équilibriste, modèle A2</title>
+<metadata>Placement adapté du personnage A2 de Lulu la taupe. Couleurs et géométrie des pièces de tp-tangram. Source : https://lululataupe.com/imprimerie/jeux-d-observation/tangrams/586-tangram-modeles-personnages-couleur</metadata>
+<polygon points="92.9756,81.4695 175.0000,81.4695 175.0000,163.4939" fill="#b84432" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="175.0000,81.4695 257.0244,81.4695 175.0000,163.4939" fill="#246c94" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="175.0000,163.4939 233.0000,221.4939 175.0000,221.4939" fill="#ba7b15" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="133.9878,245.5183 133.9878,286.5305 92.9756,286.5305" fill="#648237" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="216.0122,221.4939 257.0244,221.4939 257.0244,262.5061" fill="#925599" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="175.0000,81.4695 204.0000,52.4695 175.0000,23.4695 146.0000,52.4695" fill="#187f7c" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="175.0000,163.4939 175.0000,204.5061 133.9878,245.5183 133.9878,204.5061" fill="#b94574" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<text x="175" y="316" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#333">Équilibriste</text>
+</svg>

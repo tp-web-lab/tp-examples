@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 340" role="img" aria-labelledby="titre">
+<metadata>Cat and swan arrangements adapted from Wiebke Köpp, TangramGenerator (MIT, copyright 2019). See LICENSE-TangramGenerator.txt. https://github.com/Wiebke/TangramGenerator</metadata>
+<title id="titre">Tangram : Cygne, sept pièces de surface totale 16</title>
+<polygon points="143.5122,248.0061 143.5122,165.9817 225.5366,248.0061" fill="#b84432" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="201.5122,223.9817 143.5122,165.9817 259.5122,165.9817" fill="#246c94" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="102.5000,206.9939 143.5122,165.9817 143.5122,248.0061" fill="#ba7b15" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="131.5000,103.0061 90.4878,103.0061 131.5000,61.9939" fill="#648237" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="131.5000,177.9939 102.5000,206.9939 102.5000,148.9939" fill="#925599" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="131.5000,119.9939 160.5000,148.9939 131.5000,177.9939 102.5000,148.9939" fill="#187f7c" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="131.5000,61.9939 131.5000,119.9939 160.5000,148.9939 160.5000,90.9939" fill="#b94574" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<text x="175" y="316" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#333">Cygne</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 340" role="img" aria-labelledby="titre"><title id="titre">Tangram : Avion, sept pièces de surface totale 16</title>
+<polygon points="195.5061,124.1378 195.5061,206.1622 277.5305,206.1622" fill="#b84432" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="154.4939,124.1378 154.4939,206.1622 72.4695,206.1622" fill="#246c94" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="133.9878,103.8378 216.0122,103.8378 175.0000,62.8256" fill="#ba7b15" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="154.4939,206.1622 113.4817,247.1744 154.4939,247.1744" fill="#648237" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="195.5061,206.1622 236.5183,247.1744 195.5061,247.1744" fill="#925599" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="154.4939,103.8378 195.5061,103.8378 195.5061,144.8500 154.4939,144.8500" fill="#187f7c" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="154.4939,144.8500 195.5061,185.8622 195.5061,226.8744 154.4939,185.8622" fill="#b94574" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<text x="175" y="316" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#333">Avion</text>
+</svg>

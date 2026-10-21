@@ -9,7 +9,7 @@
   - [Pentagone]()
   - [Hexagone]()
   - [Octogone]()
-- [Intermède](tangram.md)
+- [Intermède](interlude.md)
 - [Identités remarquables](identities.md)
   - [Carré d'une somme](identities/square-sum.md)
   - [Carré d'une différence](identities/square-diff.md)

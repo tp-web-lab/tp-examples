@@ -1,0 +1,30 @@
+The cat and swan arrangements are adapted from Wiebke Köpp, TangramGenerator, Code/exampleTangrams.js.
+Source: https://github.com/Wiebke/TangramGenerator/blob/master/Code/exampleTangrams.js
+Coordinates normalized to the tp-tangram pieces and recolored.
+The airplane and house are original arrangements for this course.
+The balancing figure (A2) and runner (C3) follow the placements selected from Lulu la taupe:
+https://lululataupe.com/imprimerie/jeux-d-observation/tangrams/586-tangram-modeles-personnages-couleur
+Their vector geometry was reconstructed with the exact tp-tangram pieces.
+The MIT license below applies to the TangramGenerator cat and swan arrangements only.
+
+MIT License
+
+Copyright (c) 2019 Wiebke Köpp
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

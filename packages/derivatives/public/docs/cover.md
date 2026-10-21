@@ -10,7 +10,7 @@ Il est d'ailleurs possible de consulter le code source `tp-markdown` de la page 
 On revient au rendu HTML en cliquant une nouvelle fois sur ce bouton.
 
 ## Commandes
-Les commandes globales, toujours disponibles quelle que soit la page chargée, sont explicitées dans les tableaux suivants.
+Les commandes globales, toujours disponibles par défaut<tp-ref href="^commandes"></tp-ref> quelle que soit la page chargée, sont explicitées dans les tableaux suivants.
 D'autres commandes peuvent être introduites par certains composants.
 Pour connaître les interactions possibles avec un composant, il suffit de taper <kbd>Ctrl</kbd>+<kbd>?</kbd> quand le composant a le focus ou quand la souris le survole, un panneau d'aide s'ouvrira alors.
 
@@ -30,10 +30,16 @@ Pour connaître les interactions possibles avec un composant, il suffit de taper
 [Contrôle de l'apparence]
 <!-- -->
 |---------------------------------------------------------------|----------------------------------------------------------------------------------|
+| <tp-icon size="2em" name="search"></tp-icon>                  | rechercher dans la table des matières                                            |
 | <tp-icon size="2em" name="arrow-expand-vertical"></tp-icon>   | développer tous les niveaux                                                      |
 | <tp-icon size="2em" name="arrow-collapse-vertical"></tp-icon> | contracter tous les niveaux                                                      |
+| <tp-icon size="2em" name="arrow-expand-horizontal"></tp-icon> | adapter la largeur                                                               |
 | <tp-icon size="2em" name="plus-box-outline"></tp-icon>/<tp-icon size="2em" name="minus-box-outline"></tp-icon> | développer/contracter un niveau |
 [Table des matières]
+:::
+
+::: tp-note {ref="commandes"}
+En option, l'auteur du document peut décider de supprimer certaines de ces commandes.
 :::
 
 ## Composants

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.15 -0.15 4.3 4.3" width="172" height="172" role="img" aria-labelledby="tangram-dissection" style="display: block; max-width: 100%; height: auto; margin: 0.75rem 0;" stroke="#fff" stroke-width="0.035" stroke-linejoin="round">
+  <title id="tangram-dissection">Les sept pièces du tangram assemblées en un carré de surface 16</title>
+  <polygon points="0,0 4,0 2,2" fill="#b84432"><title>Grand triangle de surface 4</title></polygon>
+  <polygon points="0,0 2,2 0,4" fill="#246c94"><title>Grand triangle de surface 4</title></polygon>
+  <polygon points="4,2 4,4 2,4" fill="#ba7b15"><title>Triangle moyen de surface 2</title></polygon>
+  <polygon points="4,0 4,2 3,1" fill="#648237"><title>Petit triangle de surface 1</title></polygon>
+  <polygon points="2,2 3,3 1,3" fill="#925599"><title>Petit triangle de surface 1</title></polygon>
+  <polygon points="2,2 3,1 4,2 3,3" fill="#187f7c"><title>Carré de surface 2</title></polygon>
+  <polygon points="0,4 2,4 3,3 1,3" fill="#b94574"><title>Parallélogramme de surface 2</title></polygon>
+</svg>

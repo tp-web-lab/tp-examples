@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 340" role="img" aria-labelledby="titre"><title id="titre">Tangram : Coureur, modèle C3</title>
+<metadata>Placement adapté du personnage C3 de Lulu la taupe. Couleurs et géométrie des pièces de tp-tangram. Source : https://lululataupe.com/imprimerie/jeux-d-observation/tangrams/586-tangram-modeles-personnages-couleur</metadata>
+<polygon points="113.4817,77.6384 195.5061,77.6384 195.5061,159.6628" fill="#b84432" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="163.6061,127.7628 163.6061,209.7872 245.6305,209.7872" fill="#246c94" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="163.6061,166.2872 163.6061,248.3116 122.5939,207.2994" fill="#ba7b15" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="227.4061,209.7872 268.4183,209.7872 268.4183,250.7994" fill="#648237" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="147.6561,232.3616 176.6561,261.3616 147.6561,290.3616" fill="#925599" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="185.3561,77.6384 214.3561,48.6384 185.3561,19.6384 156.3561,48.6384" fill="#187f7c" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="163.6061,127.7628 122.5939,127.7628 81.5817,86.7506 122.5939,86.7506" fill="#b94574" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+<text x="175" y="316" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#333">Coureur</text>
+</svg>
