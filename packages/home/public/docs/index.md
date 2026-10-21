@@ -47,9 +47,8 @@ main
 :
   Interactive exercises for constructing geometric figures using just a ruler and a compass.
 
-  ::::: tp-graph-geometry { style="--tp-plot-height:440px;" canvas-only label="Example"}
+  ::::: tp-graph-geometry { style="--tp-plot-height:440px;" canvas-only label="Perpendicular bisector" }
   :::::: script { type=tp/geometry }
-    label = "Perpendicular bisector"
     point A = (-3, 0)
     point B = (3, 0)
     segment AB = segment(A, B)
