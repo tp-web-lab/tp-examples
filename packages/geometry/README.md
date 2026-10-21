@@ -19,3 +19,7 @@ Edit public/docs and public/docs/constructions. sidebar.md lists 26 workshops ac
 The heptagon workshop is explicitly approximate: ordinary straightedge/compass operations do not construct an exact regular heptagon. A graduated ruler is not a neusis tool in this component.
 
 For manual browser checks use public/docs/bilan.md. Automated mathematical checks do not certify every browser interaction.
+
+## Publication
+
+The course is published at https://tp-web-lab.github.io/geometry/. The Examples Pages workflow builds it with the pinned components runtime and updates the public `tp-web-lab/geometry` repository using the `GEOMETRY_PUBLISH_KEY` secret. That repository contains only the compiled site, with GitHub Pages serving the root of `main`. Edit course sources in this package.

@@ -92,17 +92,17 @@ See `packages/derivatives/README.md` for transcription notes and question author
 
 ## Automatic publication
 
-Every push to main runs Examples Pages: it builds the home page and derivatives
+Every push to main runs Examples Pages: it builds the home page, derivatives and geometry
 with the compiled tp-components revision recorded in
 `.github/tp-components-revision`. GitHub Actions publishes the home page to
 https://tp-web-lab.github.io/tp-examples/ and updates the compiled course in
-`tp-web-lab/derivatives`, whose Pages deployment follows automatically.
+`tp-web-lab/derivatives` and `tp-web-lab/geometry`, whose Pages deployments follow automatically.
 A successful tp-components documentation build updates this revision and
-therefore republishes both examples with the new library. Manual runs are
+therefore republishes all examples with the new library. Manual runs are
 available in Actions. The old gh-pages branch is retained but no longer used.
 
 `DERIVATIVES_PUBLISH_KEY` is a deploy key granting write access only to the
-compiled derivatives repository. No credentials for private dependencies are
+compiled derivatives repository; `GEOMETRY_PUBLISH_KEY` grants write access only to the compiled geometry repository. No credentials for private dependencies are
 needed here: this workflow consumes the public compiled runtime branch.
 
 ## Course images
@@ -132,4 +132,4 @@ translations. Run `pnpm test:prerender` to verify the conversion contract.
 
 ## Geometry
 
-Run `pnpm dev:geometry` for the French ruler-and-compass course (port 4314), using `tp-markdown-multi-pages`. See [packages/geometry](packages/geometry/README.md) for the four sections and validation commands. The package is prepared for a standalone build; publication is not configured yet.
+Run `pnpm dev:geometry` for the French ruler-and-compass course (port 4314), using `tp-markdown-multi-pages`. See [packages/geometry](packages/geometry/README.md) for the four sections and validation commands. The Examples Pages workflow builds and publishes the course to https://tp-web-lab.github.io/geometry/. The public `tp-web-lab/geometry` repository contains the compiled site only; Pages serves `main` from the repository root. The `GEOMETRY_PUBLISH_KEY` Actions secret in `tp-examples` holds a deploy key with write access restricted to that publication repository.

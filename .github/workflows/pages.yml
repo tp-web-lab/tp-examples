@@ -34,7 +34,7 @@ jobs:
           node-version: 24
           cache: pnpm
           cache-dependency-path: tp-examples/pnpm-lock.yaml
-      - name: Build both sites using the pinned runtime
+      - name: Build all sites using the pinned runtime
         working-directory: tp-examples
         run: |
           pnpm install --frozen-lockfile
@@ -42,6 +42,7 @@ jobs:
           pnpm --filter @tp/example-home test:prerender
           pnpm --filter @tp/example-home build:pages
           pnpm --filter @tp/example-derivatives build:pages
+          pnpm --filter @tp/example-geometry build:pages
       - uses: actions/upload-pages-artifact@v4
         with:
           path: tp-examples/packages/home/.pages
@@ -49,6 +50,12 @@ jobs:
         with:
           name: derivatives-site
           path: tp-examples/packages/derivatives/.pages
+          include-hidden-files: true
+          retention-days: 7
+      - uses: actions/upload-artifact@v6
+        with:
+          name: geometry-site
+          path: tp-examples/packages/geometry/.pages
           include-hidden-files: true
           retention-days: 7
   deploy-home:
@@ -87,5 +94,31 @@ jobs:
           git add -A
           if ! git diff --cached --quiet; then
             git commit -m "Publish derivatives from tp-examples ${GITHUB_SHA}"
+            git push origin HEAD:main
+          fi
+
+  deploy-geometry:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v6
+        with:
+          name: geometry-site
+          path: site
+      - uses: actions/checkout@v6
+        with:
+          repository: tp-web-lab/geometry
+          ref: main
+          path: published
+          ssh-key: ${{ secrets.GEOMETRY_PUBLISH_KEY }}
+      - name: Publish the course
+        working-directory: published
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rsync -a --delete --exclude='.git' --exclude='README.md' ../site/ ./
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish geometry from tp-examples ${GITHUB_SHA}"
             git push origin HEAD:main
           fi
