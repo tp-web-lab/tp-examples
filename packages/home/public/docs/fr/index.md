@@ -70,27 +70,39 @@ footer
 
 :::: tp-card { style="min-width:0;text-align:center;" }
 header
-: #### Qu'est-ce qu'une dérivée ?
+: #### Do you speak English?
 
 main
 :
-  Une introduction aux dérivées mathématiques à travers des exemples, des situations concrètes et des exercices interactifs.
+  Des exercices d'anglais professionnel originaux inspirés des formats d'examen du [TOEIC]( https://www.etsglobal.org/fr/fr/programme/tests-toeic).
 
-  ::::: tp-xy-plot { style="--tp-plot-height:440px;" }
-  :::::: script { type=tp/xy-plot }
-    xyFunctionGraph
-      x-axis [0,36]
-      x-ticks [0,1,4,9,16,25,36]
-      legend-x "x"
-      y-axis [0,6]
-      y-ticks [0,1,2,3,4,5,6]
-      legend-y "f(x)"
-      points [["A",4,2,5,10]]
-      functions [["Racine carrée", "sqrt(x)"], ["Tangente", "2 + (x-4)/4"]]
+  :::::: tp-single-choice-question {open="input" score answer="3" random}
+  Title
+  : Incomplete sentence
+
+  Prompt
+  : All expense claims must be _____ by a department manager.
+
+  Form
+  :
+    - approval
+    - approve
+    - approved
+    - approving
+
+  Feedback
+  :
+    - approval (noun): The passive form is “must be” followed by the past participle.
+    - approve (present simple): The passive form is “must be” followed by the past participle.
+    - approved (past participle): The passive form is “must be” followed by the past participle “approved”.
+    - approving (present participle): The passive form is “must be” followed by the past participle.
+
+  Solution
+  : approved: The passive form is “must be” followed by the past participle “approved”.
   ::::::
-  :::::
 
 footer
-:
-  :tp-button:Voir l'exemple{href="https://tp-web-lab.github.io/derivatives/" variant="brand" size="xxl"}
+: 
+  :tp-button:Voir l'exemple{href="https://tp-web-lab.github.io/toeic/" variant="brand" size="xxl"}
 ::::
+:::

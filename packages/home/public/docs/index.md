@@ -10,7 +10,7 @@ The [official documentation](https://tp-web-lab.github.io/tp-components/) provid
 
 The examples presented here are more comprehensive educational examples that utilise the components of `tp-components` in real-world scenarios, within a specific context that the official documentation cannot cover.
 
-::: tp-grid { min-width="350px" style="grid-auto-rows:1fr;align-items:stretch;max-width:calc(1050px + 2rem);" }
+::: tp-grid { min-width="350px" style="grid-auto-rows:1fr;align-items:stretch;max-width:100%;" }
 :::: tp-card { style="min-width:0;text-align:center;" }
 header
 : #### What is a derivative?
@@ -71,28 +71,39 @@ footer
 
 :::: tp-card { style="min-width:0;text-align:center;" }
 header
-: #### What is a derivative?
+: #### Do you speak English?
 
 main
 :
-  An introduction to mathematical derivatives through examples, real-life situations and interactive exercises.
+  Original business English activities modelled on the [TOEIC]( https://www.etsglobal.org/fr/fr/programme/tests-toeic) test formats.
 
-  ::::: tp-xy-plot { style="--tp-plot-height:440px;" }
-  :::::: script { type=tp/xy-plot }
-    xyFunctionGraph
-      x-axis [0,36]
-      x-ticks [0,1,4,9,16,25,36]
-      legend-x "x"
-      y-axis [0,6]
-      y-ticks [0,1,2,3,4,5,6]
-      legend-y "f(x)"
-      points [["A",4,2,5,10]]
-      functions [["Square root", "sqrt(x)"], ["Tangent", "2 + (x-4)/4"]]
+  :::::: tp-single-choice-question {open="input" score answer="3" random}
+  Title
+  : Incomplete sentence
+
+  Prompt
+  : All expense claims must be _____ by a department manager.
+
+  Form
+  :
+    - approval
+    - approve
+    - approved
+    - approving
+
+  Feedback
+  :
+    - approval (noun): The passive form is “must be” followed by the past participle.
+    - approve (present simple): The passive form is “must be” followed by the past participle.
+    - approved (past participle): The passive form is “must be” followed by the past participle “approved”.
+    - approving (present participle): The passive form is “must be” followed by the past participle.
+
+  Solution
+  : approved: The passive form is “must be” followed by the past participle “approved”.
   ::::::
-  :::::
 
 footer
 : 
-  :tp-button:View the example{href="https://tp-web-lab.github.io/derivatives/" variant="brand" size="xxl"}
+  :tp-button:View the example{href="https://tp-web-lab.github.io/toeic/" variant="brand" size="xxl"}
 ::::
 :::

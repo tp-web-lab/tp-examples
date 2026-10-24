@@ -33,7 +33,12 @@ server with Ctrl+C. Edit the cards in `packages/home/public/docs/index.md`.
 | Package | Container | Purpose |
 | --- | --- | --- |
 | `@tp/example-home` | `tp-markup-single-page` | A Markdown home page linking to the examples. |
+| `@tp/example-toeic` | Markdown | Workplace English with corrected questions, writing fields and the library audio recorder. |
 | `@tp/example-derivatives` | `tp-markup-multi-pages` | A French introduction to derivatives, transcribed from a PDF with editable math. |
+
+Run `pnpm dev:toeic` for the independent four-skills English practice sampler at
+`http://127.0.0.1:4315/`. See [its README](packages/toeic/README.md) for content,
+timing, recordings and assessment limits. It is not yet published.
 
 ## Build and preview
 
