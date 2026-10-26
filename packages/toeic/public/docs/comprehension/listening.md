@@ -10,24 +10,27 @@ Here we outline the different types of listening tasks in the TOEIC:
 
 Listen to each recording, then answer the questions. Replay it while training; for a first attempt, listen only once.
 
-<!-- 1' -->
-## Photograph
-
-Listen once and select the statement that matches the scene.
-
-Suggested response time: **60 seconds**.
-
-![Two colleagues in a packing area](../images/workplace.svg)
-
-::: audio {controls preload="none" src="../audio/photo.wav" aria-label="Photograph recording"}
-:::
-
-::: tp-single-choice-question {open answer="1"}
+<!-- timing="00:01:00" -->
+::: tp-single-choice-question {}
 Title
-: Photograph — 1
+: Photograph
 
 Prompt
-: Which statement describes the scene?
+: Listen once and select the statement that matches the scene.
+
+  ![Two colleagues in a packing area](../images/workplace.svg)
+
+  :::: tp-text-to-speech {lang="en-GB" pause-between-lines="800"}
+    ::::: script {type="tp/txt"}
+      [voice=Daniel]
+      Look at the illustration.
+
+      A.[pause=100] A woman is placing a box on a table.
+      B.[pause=100] Two people are boarding a train.
+      C.[pause=100] A man is cleaning a window.
+      D.[pause=100] Some chairs are being stacked.
+    :::::
+  ::::
 
 Form
 :
@@ -38,279 +41,349 @@ Form
 
 Feedback
 :
-  - **Correct.** The woman is lowering a box onto the table. No train, window cleaning or stacked chairs is shown.
-  - **Try again.** The woman is lowering a box onto the table. No train, window cleaning or stacked chairs is shown.
-  - **Try again.** The woman is lowering a box onto the table. No train, window cleaning or stacked chairs is shown.
-  - **Try again.** The woman is lowering a box onto the table. No train, window cleaning or stacked chairs is shown.
+  - **Correct.** The woman is lowering a box onto the table.
+  - **Try again.** No train is shown.
+  - **Try again.** No window cleaning is shown.
+  - **Try again.** No stacked chairs is shown.
 
 Solution
-: **A** — The woman is lowering a box onto the table. No train, window cleaning or stacked chairs is shown.
+: **A** — The woman is lowering a box onto the table.\
+  No train, window cleaning or stacked chairs is shown.
+
+  Transcript
+  : 
+    :::: tp-text-to-speech {lang="en-GB" show-text pause-between-lines="800"}
+      ::::: script {type="tp/txt"}
+        [voice=Samantha]Look at the illustration.
+
+        A.[pause=100] A woman is placing a box on a table.
+        B.[pause=100] Two people are boarding a train.
+        C.[pause=100] A man is cleaning a window.
+        D.[pause=100] Some chairs are being stacked.
+      :::::
+    ::::
 :::
 
-::: tp-accordion
-Transcript — open after your attempt
-:
-  Look at the illustration. A. A woman is placing a box on a table. B. Two people are boarding a train. C. A man is cleaning a window. D. Some chairs are being stacked.
-:::
-
-## Question–response
-
-Listen to the question and the three replies. Choose the most appropriate reply.
-
-Suggested response time: **45 seconds**.
-
-::: audio {controls preload="none" src="../audio/response.wav" aria-label="Question–response recording"}
-
-:::
-
-::: tp-single-choice-question {open answer="2"}
+<!-- timing="00:01:00" -->
+::: tp-single-choice-question {answer="2"}
 Title
-: Question–response — 1
+: Question–response
 
 Prompt
-: Choose a reply.
+: Listen to the question and the three replies. 
+
+  Choose the most appropriate reply.
+
+  :::: tp-text-to-speech {lang="en-GB" pause-between-lines="800"}
+    ::::: script {type="tp/txt"}
+      [voice=Samantha]
+      When will the revised brochure be ready? 
+      
+      A.[pause=100] On the reception desk. 
+      B.[pause=100] By Thursday afternoon. 
+      C.[pause=100] I read it yesterday.
+    :::::
+  ::::
 
 Form
 :
   - A
-
   - B
-
   - C
 
 Feedback
 :
-  - **Try again.** “When” asks for a time; “by Thursday afternoon” gives a deadline.
-
+  - **Try again.** “When” asks for a time.
   - **Correct.** “When” asks for a time; “by Thursday afternoon” gives a deadline.
-
-  - **Try again.** “When” asks for a time; “by Thursday afternoon” gives a deadline.
+  - **Try again.** “When” asks for a time.
 
 Solution
 : **B** — “When” asks for a time; “by Thursday afternoon” gives a deadline.
+
+  Transcript
+  : 
+    :::: tp-text-to-speech {lang="en-GB" show-text pause-between-lines="800"}
+    ::::: script {type="tp/txt"}
+      [voice=Daniel]When will the revised brochure be ready? 
+      
+      A.[pause=100] On the reception desk. 
+      B.[pause=100] By Thursday afternoon. 
+      C.[pause=100] I read it yesterday.
+    :::::
+  ::::
 :::
 
-::: tp-accordion
-Transcript — open after your attempt
-:
-  When will the revised brochure be ready? A. On the reception desk. B. By Thursday afternoon. C. I read it yesterday.
-:::
 
-## Conversation
-
-Listen to the workplace conversation and answer all three questions.
-
-Suggested response time: **150 seconds**.
-
-::: audio {controls preload="none" src="../audio/conversation.wav" aria-label="Conversation recording"}
-
-:::
-
-::: tp-single-choice-question {open answer="3"}
+<!-- timing="00:03:00" -->
+::: tp-exercise {}
 Title
-: Conversation — 1
+: Conversation
 
-Prompt
-: What problem are the speakers discussing?
+Context
+: Listen to the conversation between Samantha and Daniel at their workplace, then answer the three questions.
 
-Form
-:
-  - A room is too cold.
+  :::: tp-text-to-speech {lang="en-GB" pause-between-lines="800"}
+    ::::: script {type="tp/txt"}
+      [voice=Samantha]- The workshop starts at nine tomorrow, but the projector in room three is broken. 
+      [voice=Daniel]- We can use room five. It has a screen, although it only seats twelve. 
+      [voice=Samantha]- That is enough. We have ten participants. Could you update the room number in the invitation? 
+      [voice=Daniel]- Of course. I will send a revised invitation this afternoon. 
+      [voice=Samantha]- Thanks. I will ask reception to put a sign outside room three.
+    :::::
+  ::::
 
-  - Some guests have cancelled.
+Questions
+: 
+  1.  
+      :::: tp-single-choice-question {answer="3" random}
+      Title
+      : Conversation — 1
 
-  - Presentation equipment is faulty.
+      Prompt
+      : What problem are the speakers discussing?
 
-  - The workshop starts too late.
+      Form
+      :
+        - A room is too cold.
+        - Some guests have cancelled.
+        - Presentation equipment is faulty.
+        - The workshop starts too late.
 
-Feedback
-:
-  - **Try again.** The projector in room three is broken.
+      Feedback
+      :
+        - **Try again.** In the conversation, there’s no mention of a room being too cold.
+        - **Try again.** In the conversation, there is no mention of cancellation.
+        - **Correct.** The projector in room three is broken.
+        - **Try again.** In the conversation, no one mentions that the workshop starts too late.
 
-  - **Try again.** The projector in room three is broken.
+      Solution
+      : Presentation equipment is faulty.. The projector in room three is broken.
 
-  - **Correct.** The projector in room three is broken.
+        Transcript (excerpt)
+        : 
+          ::::: tp-text-to-speech {lang="en-GB" show-text pause-between-lines="800"}
+            :::::: script {type="tp/txt"}
+              [voice=Samantha]- The workshop starts at nine tomorrow, but the projector in room three is broken.
+              [hide-text][speech-off]
+              [voice=Daniel]- We can use room five. It has a screen, although it only seats twelve. 
+              [voice=Samantha]- That is enough. We have ten participants. Could you update the room number in the invitation? 
+              [voice=Daniel]- Of course. I will send a revised invitation this afternoon. 
+              [voice=Samantha]- Thanks. I will ask reception to put a sign outside room three.
+            ::::::
+          :::::
+      ::::
 
-  - **Try again.** The projector in room three is broken.
+  2.  
+      :::: tp-single-choice-question {answer="1" random}
+      Title
+      : Conversation — 2
 
-Solution
-: Presentation equipment is faulty.. The projector in room three is broken.
+      Prompt
+      : Why is room five suitable?
+
+      Form
+      :
+        - It has enough seats.
+        - It is next to reception.
+        - It has just been renovated.
+        - It has a larger table.
+
+      Feedback
+      :
+        - **Correct.** Ten people will attend and the room seats twelve.
+        - **Try again.** The conversation does not mention the reception area.
+        - **Try again.** The conversation does not mention that room five has been renovated.
+        - **Try again.** No table is mentioned in this conversation.
+
+      Solution
+      : It has enough seats.. Ten people will attend and the room seats twelve.
+
+        Transcript (excerpt)
+        : 
+          ::::: tp-text-to-speech {lang="en-GB" show-text pause-between-lines="800"}
+            :::::: script {type="tp/txt"}
+              [voice=Samantha]- The workshop starts at nine tomorrow, but the projector in room three is broken.
+              [voice=Daniel]- We can use room five. It has a screen, although it only seats twelve. 
+              [voice=Samantha]- That is enough. We have ten participants. Could you update the room number in the invitation?
+              [hide-text][speech-off]
+              [voice=Daniel]- Of course. I will send a revised invitation this afternoon. 
+              [voice=Samantha]- Thanks. I will ask reception to put a sign outside room three.
+            ::::::
+          :::::
+
+      ::::
+
+  3.  
+      :::: tp-single-choice-question {answer="2" random}
+      Title
+      : Conversation — 3
+
+      Prompt
+      : What will Daniel do?
+
+      Form
+      :
+        - Repair the projector.
+        - Revise the invitation.
+        - Print a sign.
+        - Cancel the workshop.
+
+      Feedback
+      :
+        - **Try again.** There isn’t enough time to repair the projector before tomorrow.
+        - **Correct.** Daniel agrees to send a revised invitation that afternoon.
+        - **Try again.** Samantha will ask reception to put a sign outside room three.
+        - **Try again.** Nobody is talking about cancelling the workshop.
+
+      Solution
+      : Revise the invitation.. Leo agrees to send a revised invitation that afternoon.
+
+        Transcript
+        : 
+          ::::: tp-text-to-speech {lang="en-GB" show-text pause-between-lines="800"}
+            :::::: script {type="tp/txt"}
+              [voice=Samantha]- The workshop starts at nine tomorrow, but the projector in room three is broken.
+              [voice=Daniel]- We can use room five. It has a screen, although it only seats twelve. 
+              [voice=Samantha]- That is enough. We have ten participants. Could you update the room number in the invitation?
+              [voice=Daniel]- Of course. I will send a revised invitation this afternoon. 
+              [voice=Samantha]- Thanks. I will ask reception to put a sign outside room three.
+            ::::::
+          :::::
+      ::::
 :::
 
-::: tp-single-choice-question {open answer="1"}
+<!-- timing="00:03:00" -->
+::: tp-exercise {}
 Title
-: Conversation — 2
+: Announcement
 
-Prompt
-: Why is room five suitable?
+Context
+: Listen to the announcement and answer the questions.
 
-Form
+  :::: tp-text-to-speech {lang="en-GB" pause-between-lines="800"}
+    ::::: script {type="tp/txt"}
+      Good afternoon everyone. This is a message for staff attending Friday’s customer service course. 
+      Because the trainer’s flight arrives later than expected, the first session will begin at ten thirty, rather than nine. 
+      Please arrive fifteen minutes before the new start time to collect your materials. 
+      Lunch will still be served at twelve thirty in the courtyard. If you have a dietary requirement, email the training team by four o’clock today.
+    :::::
+  ::::
+
+Questions
 :
-  - It has enough seats.
+  1. 
+      :::: tp-single-choice-question {answer="2" random}
+      Title
+      : Announcement — 1
 
-  - It is next to reception.
+      Prompt
+      : Why has the start time changed?
 
-  - It has just been renovated.
+      Form
+      :
+        - The materials are missing.
+        - The trainer will arrive late.
+        - The courtyard is closed.
+        - More staff have registered.
 
-  - It has a larger table.
+      Feedback
+      :
+        - **Try again.** The trainer’s flight arrives later than expected.
+        - **Correct.** The trainer’s flight arrives later than expected.
+        - **Try again.** The trainer’s flight arrives later than expected.
+        - **Try again.** The trainer’s flight arrives later than expected.
 
-Feedback
-:
-  - **Correct.** Ten people will attend and the room seats twelve.
+      Solution
+      : The trainer will arrive late.. The trainer’s flight arrives later than expected.
 
-  - **Try again.** Ten people will attend and the room seats twelve.
+        Transcript (excerpt)
+        :
+          ::::: tp-text-to-speech {lang="en-GB" show-text pause-between-lines="800"}
+            :::::: script {type="tp/txt"}
+              [voice="Daniel"]Good afternoon everyone. This is a message for staff attending Friday’s customer service course. 
+              Because the trainer’s flight arrives later than expected, the first session will begin at ten thirty, rather than nine.
+              [hide-text][speech-off]
+              Please arrive fifteen minutes before the new start time to collect your materials. 
+              Lunch will still be served at twelve thirty in the courtyard. If you have a dietary requirement, email the training team by four o’clock today.
+            ::::::
+          :::::
 
-  - **Try again.** Ten people will attend and the room seats twelve.
+      ::::
 
-  - **Try again.** Ten people will attend and the room seats twelve.
+  2. 
+      :::: tp-single-choice-question {answer="3" random}
+      Title
+      : Announcement — 2
 
-Solution
-: It has enough seats.. Ten people will attend and the room seats twelve.
+      Prompt
+      : When should participants arrive?
+
+      Form
+      :
+        - 9:00
+        - 10:00
+        - 10:15
+        - 10:30
+
+      Feedback
+      :
+        - **Try again.** The first session will begin at ten thirty, rather than nine.
+        - **Try again.** The first session will begin at ten thirty, rather than nine.
+        - **Correct.** Fifteen minutes before 10:30 is 10:15.
+        - **Try again.** The first session will begin at ten thirty, rather than nine.
+
+      Solution
+      : 10:15. The first session will begin at ten thirty. Fifteen minutes before 10:30 is 10:15.
+
+        Transcript (excerpt)
+        :
+          ::::: tp-text-to-speech {lang="en-GB" show-text pause-between-lines="800"}
+            :::::: script {type="tp/txt"}
+              [voice="Daniel"]Good afternoon everyone. This is a message for staff attending Friday’s customer service course.
+              Because the trainer’s flight arrives later than expected, the first session will begin at ten thirty, rather than nine.
+              Please arrive fifteen minutes before the new start time to collect your materials.
+              [hide-text][speech-off]
+              Lunch will still be served at twelve thirty in the courtyard. If you have a dietary requirement, email the training team by four o’clock today.
+            ::::::
+          :::::
+      ::::
+
+  3. 
+      :::: tp-single-choice-question {answer="1" random}
+      Title
+      : Announcement — 3
+
+      Prompt
+      : Who should email the training team?
+
+      Form
+      :
+        - Anyone needing a particular meal.
+        - Anyone arriving by air.
+        - Everyone attending the course.
+        - The courtyard manager.
+
+      Feedback
+      :
+        - **Correct.** The request concerns dietary requirements.
+        - **Try again.** This requirement does not apply to people arriving by air.
+        - **Try again.** The request does not apply to all course participants.
+        - **Try again.** The request does not concern the courtyard manager.
+
+      Solution
+      : Anyone needing a particular meal.. The request concerns dietary requirements.
+
+        Transcript
+        :
+          ::::: tp-text-to-speech {lang="en-GB" show-text pause-between-lines="800"}
+            :::::: script {type="tp/txt"}
+              [voice="Daniel"]Good afternoon everyone. This is a message for staff attending Friday’s customer service course. 
+              Because the trainer’s flight arrives later than expected, the first session will begin at ten thirty, rather than nine.
+              Please arrive fifteen minutes before the new start time to collect your materials. 
+              Lunch will still be served at twelve thirty in the courtyard. If you have a dietary requirement, email the training team by four o’clock today.
+            ::::::
+          :::::
+      ::::
 :::
 
-::: tp-single-choice-question {open answer="2"}
-Title
-: Conversation — 3
-
-Prompt
-: What will Leo do?
-
-Form
-:
-  - Repair the projector.
-
-  - Revise the invitation.
-
-  - Print a sign.
-
-  - Cancel the workshop.
-
-Feedback
-:
-  - **Try again.** Leo agrees to send a revised invitation that afternoon.
-
-  - **Correct.** Leo agrees to send a revised invitation that afternoon.
-
-  - **Try again.** Leo agrees to send a revised invitation that afternoon.
-
-  - **Try again.** Leo agrees to send a revised invitation that afternoon.
-
-Solution
-: Revise the invitation.. Leo agrees to send a revised invitation that afternoon.
-:::
-
-::: tp-accordion
-Transcript — open after your attempt
-:
-  Maya: The workshop starts at nine tomorrow, but the projector in room three is broken. Leo: We can use room five. It has a screen, although it only seats twelve. Maya: That is enough. We have ten participants. Could you update the room number in the invitation? Leo: Of course. I will send a revised invitation this afternoon. Maya: Thanks. I will ask reception to put a sign outside room three.
-:::
-
-## Announcement
-
-Listen to the announcement and answer the questions.
-
-Suggested response time: **150 seconds**.
-
-::: audio {controls preload="none" src="../audio/talk.wav" aria-label="Announcement recording"}
-
-:::
-
-::: tp-single-choice-question {open answer="2"}
-Title
-: Announcement — 1
-
-Prompt
-: Why has the start time changed?
-
-Form
-:
-  - The materials are missing.
-
-  - The trainer will arrive late.
-
-  - The courtyard is closed.
-
-  - More staff have registered.
-
-Feedback
-:
-  - **Try again.** The trainer’s flight arrives later than expected.
-
-  - **Correct.** The trainer’s flight arrives later than expected.
-
-  - **Try again.** The trainer’s flight arrives later than expected.
-
-  - **Try again.** The trainer’s flight arrives later than expected.
-
-Solution
-: The trainer will arrive late.. The trainer’s flight arrives later than expected.
-:::
-
-::: tp-single-choice-question {open answer="3"}
-Title
-: Announcement — 2
-
-Prompt
-: When should participants arrive?
-
-Form
-:
-  - 9:00
-
-  - 10:00
-
-  - 10:15
-
-  - 10:30
-
-Feedback
-:
-  - **Try again.** Fifteen minutes before 10:30 is 10:15.
-
-  - **Try again.** Fifteen minutes before 10:30 is 10:15.
-
-  - **Correct.** Fifteen minutes before 10:30 is 10:15.
-
-  - **Try again.** Fifteen minutes before 10:30 is 10:15.
-
-Solution
-: 10:15. Fifteen minutes before 10:30 is 10:15.
-:::
-
-::: tp-single-choice-question {open answer="1"}
-Title
-: Announcement — 3
-
-Prompt
-: Who should email the training team?
-
-Form
-:
-  - Anyone needing a particular meal.
-
-  - Anyone arriving by air.
-
-  - Everyone attending the course.
-
-  - The courtyard manager.
-
-Feedback
-:
-  - **Correct.** The request concerns dietary requirements.
-
-  - **Try again.** The request concerns dietary requirements.
-
-  - **Try again.** The request concerns dietary requirements.
-
-  - **Try again.** The request concerns dietary requirements.
-
-Solution
-: Anyone needing a particular meal.. The request concerns dietary requirements.
-:::
-
-::: tp-accordion
-Transcript — open after your attempt
-:
-  Good afternoon, everyone. This is a message for staff attending Friday’s customer service course. Because the trainer’s flight arrives later than expected, the first session will begin at ten thirty, rather than nine. Please arrive fifteen minutes before the new start time to collect your materials. Lunch will still be served at twelve thirty in the courtyard. If you have a dietary requirement, email the training team by four o’clock today.
-:::
 

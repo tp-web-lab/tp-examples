@@ -1,0 +1,14 @@
+label = "Médiatrice"
+point A = (-3, 0)
+point B = (3, 0)
+segment AB = segment(A, B) label-x=0.449165513108 label-y=-0.759473915531
+circle cA = circle(A, distance(A, B)) hidden
+circle cB = circle(B, distance(A, B)) hidden
+arc aC = arc(cA, start=40deg, end=80deg, direction=ccw, relative-to=AB) label-x=1.16225540176 label-y=-1.998421508
+arc aD = arc(cA, start=280deg, end=320deg, direction=ccw, relative-to=AB) label-x=1.13681424234 label-y=1.17951114467
+arc bC = arc(cB, start=100deg, end=140deg, direction=ccw, relative-to=AB) label-x=1.78663307365 label-y=0.302049243423
+arc bD = arc(cB, start=220deg, end=260deg, direction=ccw, relative-to=AB) label-x=1.82475794153 label-y=-1.18039605456
+point C = intersection(aC, bC, branch=0) label-x=-0.165920604908 label-y=0.084140182311
+point D = intersection(aD, bD, branch=1) label-x=0.0923993413108 label-y=-0.392015082529
+line m = line(C, D) label-x=-0.482349634089 label-y=1.24056992727
+comment measure = angle(m, AB)

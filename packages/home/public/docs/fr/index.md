@@ -1,4 +1,4 @@
-# <tp-icon name="logo-tp-components" size="2em"></tp-icon> Exemples d'application
+# <tp-icon name="logo-tp" size="2em"></tp-icon> Exemples d'application
 
 :::::: tp-callout { variant=brand style="font-size:1.2em;" }
 ::: tp-center {intrinsic center-text}
@@ -17,7 +17,7 @@ header
 
 main
 :
-  Une introduction aux dérivées mathématiques à travers des exemples, des situations concrètes et des exercices interactifs.
+  Introduction aux dérivées mathématiques à travers des exemples, des situations concrètes et des exercices interactifs.
 
   ::::: tp-xy-plot { style="--tp-plot-height:440px;" }
   :::::: script { type=tp/xy-plot }
@@ -46,21 +46,7 @@ main
 :
   Exercices interactifs pour la construction de figures géométriques avec juste une règle et un compas.
 
-  ::::: tp-graph-geometry { style="--tp-plot-height:440px;" canvas-only label="Médiatrice" }
-  :::::: script { type=tp/geometry }
-    point A = (-3, 0)
-    point B = (3, 0)
-    segment AB = segment(A, B)
-    circle cA = circle(A, distance(A, B)) hidden
-    circle cB = circle(B, distance(A, B)) hidden
-    arc aC = arc(cA, start=40deg, end=80deg, direction=ccw, relative-to=AB)
-    arc aD = arc(cA, start=280deg, end=320deg, direction=ccw, relative-to=AB)
-    arc bC = arc(cB, start=100deg, end=140deg, direction=ccw, relative-to=AB)
-    arc bD = arc(cB, start=220deg, end=260deg, direction=ccw, relative-to=AB)
-    point C = intersection(aC, bC, branch=0)
-    point D = intersection(aD, bD, branch=1)
-    line m = line(C, D)  
-  ::::::
+  ::::: tp-graph-geometry { style="--tp-plot-height:440px;" src="/docs/perpendicular-bisector.fr.txt" canvas-only label="Perpendicular bisector" }
   :::::
 
 footer
@@ -76,7 +62,7 @@ main
 :
   Des exercices d'anglais professionnel originaux inspirés des formats d'examen du [TOEIC]( https://www.etsglobal.org/fr/fr/programme/tests-toeic).
 
-  :::::: tp-single-choice-question {open="input" score answer="3" random}
+  :::::: tp-single-choice-question {open="input" score answer="3" random style="text-align:start;"}
   Title
   : Incomplete sentence
 

@@ -1,4 +1,4 @@
-# <tp-icon name="logo-tp-components" size="2em"></tp-icon> Examples of use
+# <tp-icon name="logo-tp" size="2em"></tp-icon> Examples of use
 
 :::::: tp-callout { variant=brand style="font-size:1.2em;" }
 ::: tp-center {intrinsic center-text}
@@ -17,7 +17,7 @@ header
 
 main
 :
-  An introduction to mathematical derivatives through examples, real-life situations and interactive exercises.
+  Introduction to mathematical derivatives through examples, real-life situations and interactive exercises.
 
   ::::: tp-xy-plot { style="--tp-plot-height:440px;" }
   :::::: script { type=tp/xy-plot }
@@ -47,21 +47,7 @@ main
 :
   Interactive exercises for constructing geometric figures using just a ruler and a compass.
 
-  ::::: tp-graph-geometry { style="--tp-plot-height:440px;" canvas-only label="Perpendicular bisector" }
-  :::::: script { type=tp/geometry }
-    point A = (-3, 0)
-    point B = (3, 0)
-    segment AB = segment(A, B)
-    circle cA = circle(A, distance(A, B)) hidden
-    circle cB = circle(B, distance(A, B)) hidden
-    arc aC = arc(cA, start=40deg, end=80deg, direction=ccw, relative-to=AB)
-    arc aD = arc(cA, start=280deg, end=320deg, direction=ccw, relative-to=AB)
-    arc bC = arc(cB, start=100deg, end=140deg, direction=ccw, relative-to=AB)
-    arc bD = arc(cB, start=220deg, end=260deg, direction=ccw, relative-to=AB)
-    point C = intersection(aC, bC, branch=0)
-    point D = intersection(aD, bD, branch=1)
-    line m = line(C, D)  
-  ::::::
+  ::::: tp-graph-geometry { style="--tp-plot-height:440px;" src="/docs/perpendicular-bisector.txt" canvas-only label="Perpendicular bisector" }
   :::::
 
 footer
@@ -77,30 +63,52 @@ main
 :
   Original business English activities modelled on the [TOEIC]( https://www.etsglobal.org/fr/fr/programme/tests-toeic) test formats.
 
-  :::::: tp-single-choice-question {open="input" score answer="3" random}
+  ::::: tp-single-choice-question {answer="2" open="input" orientation="horizontal" style="text-align:start;"}
   Title
-  : Incomplete sentence
+  : Question–response
 
   Prompt
-  : All expense claims must be _____ by a department manager.
+  : Listen to the question and the three replies. 
+
+    Choose the most appropriate reply.
+
+    :::::: tp-text-to-speech {lang="en-GB" voice=Daniel pause-between-lines="800"}
+      ::::::: script {type="tp/txt"}
+        When will the revised brochure be ready? 
+        
+        A.[pause=100] On the reception desk. 
+        B.[pause=100] By Thursday afternoon. 
+        C.[pause=100] I read it yesterday.
+      :::::::
+    ::::::
 
   Form
   :
-    - approval
-    - approve
-    - approved
-    - approving
+    - A
+    - B
+    - C
 
   Feedback
   :
-    - approval (noun): The passive form is “must be” followed by the past participle.
-    - approve (present simple): The passive form is “must be” followed by the past participle.
-    - approved (past participle): The passive form is “must be” followed by the past participle “approved”.
-    - approving (present participle): The passive form is “must be” followed by the past participle.
+    - **Try again.** “When” asks for a time.
+    - **Correct.** “When” asks for a time; “by Thursday afternoon” gives a deadline.
+    - **Try again.** “When” asks for a time.
 
   Solution
-  : approved: The passive form is “must be” followed by the past participle “approved”.
-  ::::::
+  : **B** — “When” asks for a time; “by Thursday afternoon” gives a deadline.
+
+    Transcript
+    : 
+      :::::: tp-text-to-speech {lang="en-GB" show-text pause-between-lines="800"}
+      ::::::: script {type="tp/txt"}
+        [voice=Daniel]When will the revised brochure be ready? 
+        
+        A.[pause=100] On the reception desk. 
+        B.[pause=100] By Thursday afternoon. 
+        C.[pause=100] I read it yesterday.
+      :::::::
+    ::::::
+  :::::
 
 footer
 : 
