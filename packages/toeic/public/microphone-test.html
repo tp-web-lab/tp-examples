@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microphone comparison</title>
+<style>
+body{font:17px system-ui;max-width:850px;margin:2rem auto;padding:0 1rem;color:#17212b;background:#fafafa}section{border:1px solid #aaa;border-radius:12px;padding:1rem;margin:1rem 0;background:white}button{font:inherit;padding:.6rem 1rem;margin-right:.5rem}audio,meter{display:block;width:100%;margin:1rem 0}pre{white-space:pre-wrap;font-size:.85rem}p{line-height:1.5}
+</style>
+<h1>Microphone comparison</h1>
+<p>Record the same sentence from the same position in both modes. Recording stops automatically after 15 seconds. Nothing is uploaded. Recordings disappear when this page closes.</p>
+<p><strong>Suggested sentence:</strong> Welcome to the Riverside Business Centre. Visitors should collect a badge at reception.</p>
+<div id="tests"></div>
+<script type="module">
+const tests = [
+  ['Browser defaults', {audio:true}],
+  ['Audio processing disabled', {audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false}}],
+];
+let active = null;
+const urls = [];
+for (const [name, constraints] of tests) {
+  const section = document.createElement('section');
+  section.innerHTML = '<h2></h2><button type="button">Record</button><button type="button" disabled>Stop</button><p role="status">Ready.</p><label>Microphone level (dBFS)<meter min="-90" max="0" low="-45" high="-12" optimum="-18" value="-90"></meter></label><p class="level">No measurement yet.</p><audio controls hidden></audio><details><summary>Actual microphone settings</summary><pre></pre></details>';
+  section.querySelector('h2').textContent = name;
+  document.querySelector('#tests').append(section);
+  const [start, stop] = section.querySelectorAll('button');
+  const status = section.querySelector('[role=status]');
+  const meter = section.querySelector('meter');
+  const level = section.querySelector('.level');
+  const audio = section.querySelector('audio');
+  let finish = null;
+  stop.onclick = () => finish?.();
+  start.onclick = async () => {
+    if (active) return;
+    active = section;
+    document.querySelectorAll('#tests section button:first-of-type').forEach(b => b.disabled = true);
+    status.textContent = 'Waiting for microphone permission…';
+    let stream, context, animation, timeout;
+    const release = () => {
+      cancelAnimationFrame(animation);
+      clearTimeout(timeout);
+      stream?.getTracks().forEach(t => t.stop());
+      if (context) void context.close();
+      active = null;
+      finish = null;
+      stop.disabled = true;
+      document.querySelectorAll('#tests section button:first-of-type').forEach(b => b.disabled = false);
+    };
+    try {
+      document.querySelectorAll('audio').forEach(a => a.pause());
+      stream = await navigator.mediaDevices.getUserMedia(constraints);
+      section.querySelector('pre').textContent = JSON.stringify(stream.getAudioTracks()[0].getSettings(), null, 2);
+      context = new AudioContext();
+      await context.resume();
+      const analyser = context.createAnalyser();
+      analyser.fftSize = 2048;
+      context.createMediaStreamSource(stream).connect(analyser);
+      const samples = new Float32Array(analyser.fftSize);
+      let sum = 0, count = 0, peak = 0;
+      const db = v => v > 0 ? Math.max(-90, 20 * Math.log10(v)) : -90;
+      const measure = () => {
+        analyser.getFloatTimeDomainData(samples);
+        let energy = 0;
+        for (const value of samples) { energy += value * value; peak = Math.max(peak, Math.abs(value)); }
+        sum += energy; count += samples.length;
+        meter.value = db(Math.sqrt(energy / samples.length));
+        level.textContent = `Current: ${meter.value.toFixed(1)} dBFS · Peak: ${db(peak).toFixed(1)} dBFS`;
+        animation = requestAnimationFrame(measure);
+      };
+      const chunks = [];
+      const recorder = new MediaRecorder(stream);
+      recorder.ondataavailable = e => { if(e.data.size) chunks.push(e.data); };
+      recorder.onstop = () => {
+        if (audio.src.startsWith('blob:')) URL.revokeObjectURL(audio.src);
+        const blob = new Blob(chunks, {type:recorder.mimeType});
+        if (blob.size) {
+          const url = URL.createObjectURL(blob); urls.push(url); audio.src = url; audio.hidden = false;
+          status.textContent = 'Recording ready. Listen and compare the two modes.';
+        } else status.textContent = 'No audio captured.';
+        level.textContent = `Sampled average: ${db(Math.sqrt(sum / Math.max(1,count))).toFixed(1)} dBFS · Peak: ${db(peak).toFixed(1)} dBFS`;
+        release();
+      };
+      recorder.onerror = () => { status.textContent = 'Recording failed.'; release(); };
+      finish = () => { if(recorder.state === 'recording') recorder.stop(); stop.disabled = true; };
+      recorder.start(); stop.disabled = false; status.textContent = 'Recording… Read the sentence, then press Stop.';
+      measure(); timeout = setTimeout(finish,15000);
+    } catch (error) {
+      status.textContent = `${error.name}: ${error.message}`;
+      release();
+    }
+  };
+}
+window.addEventListener('pagehide', () => { active?.querySelectorAll('button')[1]?.click(); urls.forEach(url => URL.revokeObjectURL(url)); });
+</script>
+<h2>Compare the actual component</h2>
+<p>Simultaneous recording and transcription is temporarily enabled only in Safari. In other browsers, the components show a warning and keep their main function: audio recording or transcription alone.</p>
+<p>Try these recorders one at a time with the same sentence. The transcription test may use Chrome’s online speech recognition service.</p>
+<section>
+<h3>Component without transcription</h3>
+<tp-audio-recorder lang="fr-FR"></tp-audio-recorder>
+</section>
+<section>
+<h3>Component with transcription</h3>
+<tp-audio-recorder lang="fr-FR" transcript="#diagnostic-transcript"></tp-audio-recorder>
+<label for="diagnostic-transcript">Recognized text</label>
+<textarea id="diagnostic-transcript" rows="4" style="width:100%"></textarea>
+</section>
+<section>
+<h3>Speech-to-text without recording</h3>
+<p>Transcribe speech without capturing an audio file. Stop the other tests before starting this one.</p>
+<tp-speech-to-text lang="fr-FR" continuous interim-results></tp-speech-to-text>
+</section>
+<section>
+<h3>Speech-to-text with recording</h3>
+<p>Start recognition first, then capture audio alongside it. Wait for the recording status before reading. Stop the other tests before starting this one.</p>
+<tp-speech-to-text lang="fr-FR" continuous interim-results record></tp-speech-to-text>
+</section>
+<script type="module" src="/@tp/tp-components/tp-loader.js"></script>
+</html>

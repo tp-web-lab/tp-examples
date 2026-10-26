@@ -2,16 +2,16 @@
 
 Here we outline the different types of listening tasks in the TOEIC:
 
-- Photographs 
-- Questions and answers 
-- Conversations 
-- Short presentations 
+- Photographs (1')
+- Questions and answers (1')
+- Conversations (3')
+- Short presentations (3')
 
 
 Listen to each recording, then answer the questions. Replay it while training; for a first attempt, listen only once.
 
 <!-- timing="00:01:00" -->
-::: tp-single-choice-question {}
+::: tp-single-choice-question {timing=00:01:00 answer="1"}
 Title
 : Photograph
 
@@ -65,7 +65,7 @@ Solution
 :::
 
 <!-- timing="00:01:00" -->
-::: tp-single-choice-question {answer="2"}
+::: tp-single-choice-question {answer="2" timing="00:01:00"}
 Title
 : Question–response
 
@@ -74,9 +74,8 @@ Prompt
 
   Choose the most appropriate reply.
 
-  :::: tp-text-to-speech {lang="en-GB" pause-between-lines="800"}
+  :::: tp-text-to-speech {lang="en-GB" voice=Samantha pause-between-lines="800"}
     ::::: script {type="tp/txt"}
-      [voice=Samantha]
       When will the revised brochure be ready? 
       
       A.[pause=100] On the reception desk. 
@@ -115,7 +114,7 @@ Solution
 
 
 <!-- timing="00:03:00" -->
-::: tp-exercise {}
+::: tp-exercise {timing="00:03:00"}
 Title
 : Conversation
 
@@ -253,7 +252,7 @@ Questions
 :::
 
 <!-- timing="00:03:00" -->
-::: tp-exercise {}
+::: tp-exercise {timing="00:03:00"}
 Title
 : Announcement
 

@@ -11,19 +11,25 @@
 
 Prepare your answer, then use the recorder to practise speaking. Start and stop recording yourself. Download each recording before leaving this page. Microphone access is optional: you can also practise aloud without recording.
 
-<!-- 2' -->
-::: tp-fill-blank-question {timing="00:00:10" open}
+<!-- timing="00:02:00"  -->
+::: tp-fill-blank-question {open}
 Title
 : Read aloud
 
 Prompt
 : Prepare the text below, then use the recorder to read it aloud clearly (start and stop recording yourself).
 
-  > Welcome to the Riverside Business Centre. Visitors attending today’s design seminar should collect a badge at reception before going to the second floor. Refreshments will be available during the morning break. If you need assistance connecting your laptop, a member of our technical team will be happy to help.
+  > Welcome to the Riverside Business Centre.\
+  > Visitors attending today’s design seminar should collect a badge at reception before going to the second floor.\
+  > Refreshments will be available during the morning break.\
+  > If you need assistance connecting your laptop, a member of our technical team will be happy to help.
+
+  :::: tp-audio-recorder {transcript="#read_aloud"}
+  ::::
 
 Form
 :
-  :::: tp-audio-recorder
+  :::: tp-textfield {multiline id="read_aloud"}
   ::::
 
 Feedback
@@ -38,9 +44,12 @@ Feedback
 Solution
 : Read all sentences, grouping words naturally. Pause after “Centre” and at sentence endings. Give clear stress to “badge”, “second floor” and “technical team”.
 
-  :::: tptext-to-speech
+  :::: tp-text-to-speech {show-text lang="en-GB" voice=Daniel pause-between-lines="500"}
   ::::: script {type="tp/txt"}
-    Welcome to the Riverside Business Centre. Visitors attending today’s design seminar should collect a badge at reception before going to the second floor. Refreshments will be available during the morning break. If you need assistance connecting your laptop, a member of our technical team will be happy to help.
+    Welcome to the Riverside Business Centre. 
+    Visitors attending today’s design seminar should collect a badge at reception before going to the second floor. 
+    Refreshments will be available during the morning break. 
+    If you need assistance connecting your laptop, a member of our technical team will be happy to help.
   :::::
 :::
 
