@@ -19,7 +19,7 @@ Context
 Questions
 :
   1. 
-      :::: tp-single-choice-question {open answer="3" orientation="horizontal"}
+      :::: tp-single-choice-question {open answer="3" orientation="horizontal" ai-help="solution" ai-api}
       Title
       : Incomplete sentences — 1
 
@@ -35,13 +35,14 @@ Questions
 
       Feedback
       :
-        - **Try again.** The passive form is “must be” followed by the past participle.
-        - **Try again.** The passive form is “must be” followed by the past participle.
+        - **Try again.** “Approval” is a noun, as in “manager approval”. Here, the claims receive an action performed by the manager, so “must be” needs a past participle, not a noun.
+        - **Try again.** “Approve” is the base form of the verb. It works after “must” in “Managers must approve the claims”, but not after “must be”. Here, the claims receive the action: use the passive form.
         - **Correct.** The passive form is “must be” followed by the past participle “approved”.
-        - **Try again.** The passive form is “must be” followed by the past participle.
+        - **Try again.** “Approving” is the present participle. “Must be approving” would describe the subject carrying out an ongoing action, but expense claims cannot approve anything. “By a department manager” identifies who performs the action: the claims receive it.
 
       Solution
-      : **approved**\
+      : **approved**
+
         The passive form is “must be” followed by the past participle “approved”.
       ::::
 
@@ -62,13 +63,14 @@ Questions
 
       Feedback
       :
-        - **Try again.** “Due to” is followed by a noun phrase: heavy traffic.
+        - **Try again.** “Because” introduces a clause with a subject and a verb, such as “because traffic was heavy”. Here, “heavy traffic near the warehouse” is a noun phrase. “Because of” could introduce it, but “because” alone cannot.
         - **Correct.** “Due to” is followed by a noun phrase: “heavy traffic”.
-        - **Try again.** “Due to” is followed by a noun phrase: heavy traffic.
-        - **Try again.** “Due to” is followed by a noun phrase: heavy traffic.
+        - **Try again.** “Although” introduces a contrast, usually with a clause such as “although traffic was light”. Here, heavy traffic explains the delay rather than contrasting with it. The words after the gap are also a noun phrase, not a full clause.
+        - **Try again.** “During” tells us when something happens, as in “during rush hour”. This sentence needs to explain why the delivery was delayed: heavy traffic is the cause. Choose an expression of cause that can introduce a noun phrase.
 
       Solution
-      : **due to**\
+      : **due to**
+
         “Due to” is followed by a noun phrase: “heavy traffic”.
       ::::
 :::
@@ -108,7 +110,8 @@ Questions
         - **Correct.** “Installed” is the past participle. “Are installed” is passive: someone installs the gates, so the gates receive the action.
 
       Solution
-      : **installed**\
+      : **installed**
+
         “Are installed” is the passive verb phrase.
       ::::
 
@@ -135,7 +138,8 @@ Questions
         - **Try again.** Cancelling a meeting has little to do with the bicycle storage area.
 
       Solution
-      : **The temporary racks are clearly marked with blue signs.**\
+      : **The temporary racks are clearly marked with blue signs.**
+
         This sentence adds relevant information about finding the temporary racks.
       ::::
 :::
@@ -179,7 +183,8 @@ Questions
         - **Try again.** She doesn’t mention an appointment with a technician.
 
       Solution
-      : **A free replacement part.**\
+      : **A free replacement part.**
+
         She offers a replacement shade at no charge.
       ::::
 
@@ -206,7 +211,8 @@ Questions
         - **Try again.** Nora isn’t talking about changing the model.
 
       Solution
-      : **Send a photograph.**\
+      : **Send a photograph.**
+
         The photograph of the label identifies the model.
       ::::
 :::
@@ -253,7 +259,8 @@ Questions
         - **Try again.** You don’t sign up for a workshop if you’re not interested in any of the sessions.
 
       Solution
-      : **Presenting with confidence.**\
+      : **Presenting with confidence.**
+
         Speaking to a group relates to presenting with confidence.
       ::::
 
@@ -276,12 +283,13 @@ Questions
       :
         - **Try again.** “Please book both sessions I can attend.”
         - **Try again.** The first session overlaps the client call.
-        - **Correct.** €35 + €20 − €5 = €50. The first session overlaps the client call.
+        - **Correct.** €35 + €20 − €5 = €50. The first session overlaps the client call. He books the other two sessionsand is therefore entitled to a discount.
         - **Try again.** You get a discount as soon as you take part in two sessions.
 
       Solution
-      : €50. €35 + €20 − €5 = €50.\ 
+      : €50. €35 + €20 − €5 = €50.
+
         The client is unable to attend the first session as it clashes with their phone call.
         However, he is taking part in the other two sessions : “Please book both sessions I can attend.”.
       ::::
-
+:::

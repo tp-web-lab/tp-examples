@@ -1,6 +1,6 @@
 # Conclusion
 
-::: tp-matching-question {heading}
+::: tp-matching-question {heading ai-help=solution}
 Title
 : Résumé
 

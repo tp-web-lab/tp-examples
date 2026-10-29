@@ -1,3 +1,4 @@
+import { questionAiPlugin } from "@tp/tp-components/vite-ai";
 import { existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
@@ -21,8 +22,9 @@ export default defineConfig(({ isPreview }) => {
 		server: { host: "127.0.0.1", port, open },
 		preview: { host: "127.0.0.1", port, open },
 		plugins: isPreview
-			? []
+			? [questionAiPlugin()]
 			: [
+                    questionAiPlugin(),
 					viteStaticCopy({
 						targets: [
 							{

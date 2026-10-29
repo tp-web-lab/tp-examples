@@ -4,7 +4,7 @@ Sur les routes, on peut voir parfois : « attention, descente de 10 % ». Cela v
 
 En fait, pour distinguer les descentes des montées, on dira qu’en descente la pente est de :tp-math:`-0.1`{} et qu’en montée elle est de :tp-math:`0.1`{}. C’est un des aspects de la notion de dérivée : en gros, la dérivée du profil de la route (les altitudes), c’est la pente.
 
-::: tp-multi-choice-question { random answer="1,2"}
+::: tp-multi-choice-question { random answer="1,2" ai-help=solution ai-api}
 Title
 : Pente de +5%
 
@@ -29,7 +29,7 @@ Solution
 
   Pour calculer les pourcentages respectifs des deux montées proposées (_On monte de..._), on divise la hauteur d'élévation par la distance parcourue : :tp-math:`\frac{50}{1000}`{} dans un cas et :tp-math:`\frac{5}{100}`{} dans l'autre cas.\
   Or ces deux rapports sont égaux et valent 5% :\
-  :tp-math:`\frac{50}{1000}=\frac{5\cdot 10}{100\cdot 10} = \frac{5}{100}= 0.5 = 5\%`{}.
+  :tp-math:`\frac{50}{1000}=\frac{5\cdot 10}{100\cdot 10} = \frac{5}{100}= 0.05 = 5\%`{}.
 
   Les deux montées proposées correspondent à la bonne réponse.
 :::
@@ -88,7 +88,7 @@ Donc la pente se rapproche d’aussi près qu’on veut de :tp-math:`0.1`{} pour
 
 On considérera alors cette valeur de :tp-math:`0.1`{} comme la « vraie » valeur de la pente au point considéré. C’est la valeur *limite* vers laquelle tend la pente moyenne quand on considère des portions de route de plus en plus petites.
 
-::: tp-python-viewer-question {src=examples/slope.init.py test=examples/slope.test.py}
+::: tp-python-viewer-question {src=examples/slope.init.py test=examples/slope.test.py ai-help=solution ai-api ai-explanation-src="./explanations/slope.md"}
 Title
 : Calculs de pente
 
@@ -115,7 +115,7 @@ C’est bien ça.
 Pour 1 km, :tp-math:`x=1000`{} mètres, donc la pente est :tp-math:`2\times\frac{1}{1000}\times 1000=2`{}, c’est-à-dire une pente de 200 %. 
 Une telle route ferait un angle de plus de 60 degrés avec l’horizontale, ce n’est pas réaliste.
 
-::: tp-fill-blank-question
+::: tp-fill-blank-question {ai-help=solution}
 Answers
 : 25
 
@@ -212,3 +212,7 @@ xyFunctionGraph
       Pour le profil de la route défini par :tp-math:`f(x) = cx^2`{}, on a : :tp-math:`f'(x) = (cx^2)' = c(x^2)' = c(2x) = 2cx`{}.
 
 ::notes{}
+
+
+
+

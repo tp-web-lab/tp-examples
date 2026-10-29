@@ -20,7 +20,7 @@ Il faut supposer qu’on connaît exactement l’écoulement du robinet, par exe
 
 Quel serait le débit au bout d’une minute ?
 
-::: tp-fill-blank-question
+::: tp-fill-blank-question {ai-help=solution}
 Title
 : Calcul de débit
 

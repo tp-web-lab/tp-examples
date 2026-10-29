@@ -19,7 +19,7 @@ Oui, et comment peut-on faire pour calculer exactement la vitesse instantanée ?
 
 Parfait.
 
-::: tp-fill-blank-question 
+::: tp-fill-blank-question {ai-help=solution}
 Title
 : Calcul de vitesses
 

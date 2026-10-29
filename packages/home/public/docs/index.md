@@ -1,8 +1,9 @@
 # <tp-icon name="logo-tp" size="2em"></tp-icon> Examples of use
 
+::::::::: tp-stack {style="gap:0.5em;"}
 :::::: tp-callout { variant=brand style="font-size:1.2em;" }
 ::: tp-center {intrinsic center-text}
-`tp-components` is an open-source library of **web components** written in standard HTML, designed for creating **interactive technical documents for educational purposes**.
+**tp-components** is an open-source library of **web components** written in standard HTML, designed for creating **interactive technical documents for educational purposes**.
 :::
 :::::: 
 
@@ -115,3 +116,4 @@ footer
   :tp-button:View the example{href="https://tp-web-lab.github.io/toeic/" variant="brand" size="xxl"}
 ::::
 :::
+:::::::::
