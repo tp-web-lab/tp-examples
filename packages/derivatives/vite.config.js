@@ -1,4 +1,3 @@
-import { questionAiPlugin } from "@tp/tp-components/vite-ai";
 import { existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
@@ -8,7 +7,11 @@ const runtime = fileURLToPath(
 	new URL("./node_modules/@tp/tp-components/dist/", import.meta.url),
 );
 
-export default defineConfig(({ isPreview }) => {
+export default defineConfig(async ({ command, isPreview }) => {
+	// The AI bridge is server-only; published static runtimes do not include it.
+	const aiPlugins = command === "serve"
+		? [(await import("@tp/tp-components/vite-ai")).questionAiPlugin()]
+		: [];
 	if (!isPreview && !existsSync(`${runtime}/tp-loader.js`)) {
 		throw new Error(
 			"Build tp-components and run pnpm install before starting this example.",
@@ -22,9 +25,9 @@ export default defineConfig(({ isPreview }) => {
 		server: { host: "127.0.0.1", port, open },
 		preview: { host: "127.0.0.1", port, open },
 		plugins: isPreview
-			? [questionAiPlugin()]
+			? aiPlugins
 			: [
-                    questionAiPlugin(),
+					...aiPlugins,
 					viteStaticCopy({
 						targets: [
 							{

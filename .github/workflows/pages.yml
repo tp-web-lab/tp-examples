@@ -38,6 +38,7 @@ jobs:
         working-directory: tp-examples
         run: |
           pnpm install --frozen-lockfile
+          node --test scripts/vite-static-runtime.test.mjs
           pnpm test:prerender
           pnpm --filter @tp/example-home test:prerender
           pnpm --filter @tp/example-home build:pages
