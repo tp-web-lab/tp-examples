@@ -1,5 +1,5 @@
 # <tp-icon name="logo-tp" size="2em"></tp-icon> Examples of use
-
+:::
 ::::::::: tp-stack {style="gap:0.5em;"}
 :::::: tp-callout { variant=brand style="font-size:1.2em;" }
 ::: tp-center {intrinsic center-text}
@@ -11,8 +11,48 @@ The [official documentation](https://tp-web-lab.github.io/tp-components/) provid
 
 The examples presented here are more comprehensive educational examples that utilise the components of `tp-components` in real-world scenarios, within a specific context that the official documentation cannot cover.
 
-::: tp-grid { min-width="350px" style="grid-auto-rows:1fr;align-items:stretch;max-width:100%;" }
-:::: tp-card { style="min-width:0;text-align:center;" }
+::: div { data-example-filters data-filter-language="en" }
+:::: tp-cluster
+::::: tp-button { id="example-markup-button" variant="brand" }
+:span:Markup language: all{data-filter-label="markup"}
+:::::
+::::: tp-dropdown { id="example-markup-menu" anchor="#example-markup-button" outside-click data-example-filter="markup" }
+- all
+- asciidoc
+- html
+- markdown
+- restructuredtext
+:::::
+::::: tp-button { id="example-category-button" variant="brand" }
+:span:Category: all{data-filter-label="category"}
+:::::
+::::: tp-dropdown { id="example-category-menu" anchor="#example-category-button" outside-click data-example-filter="category" }
+- all
+- language
+- math
+- music
+- physics
+- plot
+- programming
+:::::
+::::: tp-button { id="example-type-button" variant="brand" }
+:span:Document type: all{data-filter-label="type"}
+:::::
+::::: tp-dropdown { id="example-type-menu" anchor="#example-type-button" outside-click data-example-filter="type" }
+- all
+- multi-pages
+- notebook
+- single-page
+- slideshow
+:::::
+::::
+
+:::: p { data-example-filter-status role="status" aria-live="polite" }
+::::
+:::
+
+::: tp-grid { data-example-grid min-width="350px" style="grid-auto-rows:1fr;align-items:stretch;max-width:100%;" }
+:::: tp-card { data-type="multi-pages" data-markup="markdown" data-category="math plot physics" style="min-width:0;text-align:center;" }
 header
 : #### What is a derivative?
 
@@ -40,7 +80,7 @@ footer
   :tp-button:View the example{href="https://tp-web-lab.github.io/derivatives/" variant="brand" size="xxl"}
 ::::
 
-:::: tp-card { style="min-width:0;text-align:center;" }
+:::: tp-card { data-type="multi-pages" data-markup="markdown" data-category="math" style="min-width:0;text-align:center;" }
 header
 : #### A ruler, a compass
 
@@ -48,7 +88,7 @@ main
 :
   Interactive exercises for constructing geometric figures using just a ruler and a compass.
 
-  ::::: tp-graph-geometry { style="--tp-plot-height:440px;" src="/docs/perpendicular-bisector.txt" canvas-only label="Perpendicular bisector" }
+  ::::: tp-graph-geometry { style="--tp-plot-height:440px;" src="/docs/perpendicular-bisector.txt" canvas-only grid label="Perpendicular bisector" }
   :::::
 
 footer
@@ -56,7 +96,7 @@ footer
   :tp-button:View the example{href="https://tp-web-lab.github.io/geometry/" variant="brand" size="xxl"}
 ::::
 
-:::: tp-card { style="min-width:0;text-align:center;" }
+:::: tp-card { data-type="multi-pages" data-markup="markdown" data-category="language" style="min-width:0;text-align:center;" }
 header
 : #### Do you speak English?
 
@@ -115,5 +155,38 @@ footer
 : 
   :tp-button:View the example{href="https://tp-web-lab.github.io/toeic/" variant="brand" size="xxl"}
 ::::
+
+:::: tp-card { data-type="single-page" data-markup="markdown" data-category="epistemology" style="min-width:0;text-align:center;" }
+header
+: #### Epistemology of Virtual Reality
+
+main
+: A brief introduction to the epistemology of virtual reality in four videos.
+
+  {style="margin-bottom:1rem;"}
+
+  ::::: tp-video-player { id="jt-vr-video" src="https://www.youtube.com/watch?v=4n0M4YRAVjc" controls label="Introduction to virtual reality" style="margin-bottom:1rem;"}
+  :::::
+
+  The videos are in French and are hosted on YouTube.
+
+footer
+:
+  :tp-button:View the example{href="https://tp-web-lab.github.io/tp-examples/jt-vr/" variant="brand" size="xxl"}
+::::
+:::: tp-card { data-type="slideshow" data-markup="asciidoc" data-category="programming" style="min-width:0;text-align:center;" }
+header
+: #### Réalité virtuelle — Pint of Science
+
+main
+:
+  Jacques Tisseau’s talk: 18 AsciiDoc slides with progressive reveals and speaker notes.
+
+footer
+:
+  :tp-button:View example{href="https://tp-web-lab.github.io/tp-examples/pint-of-science-rv/" variant="brand" size="xxl"}
+::::
+
+
 :::
 :::::::::

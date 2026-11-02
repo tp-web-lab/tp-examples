@@ -1,0 +1,47 @@
+= Modélisation, simulation
+:showtitle:
+
+[div,role="diagram-stack"]
+====
+[tp-include,role="diagram-stage",data-tp-source="docs/slides/",src="../fig/modelisation-0.svg",aria-label="Schéma — étape 1"]
+--
+
+--
+
+[tp-include,role="diagram-stage",data-slide-step="1",data-tp-source="docs/slides/",src="../fig/modelisation-1.svg",aria-label="Schéma — étape 2"]
+--
+
+--
+
+[tp-include,role="diagram-stage",data-slide-step="2",data-tp-source="docs/slides/",src="../fig/modelisation-2.svg",aria-label="Schéma — étape 3"]
+--
+
+--
+
+[tp-include,role="diagram-stage",data-slide-step="3",data-tp-source="docs/slides/",src="../fig/modelisation-3.svg",aria-label="Schéma — étape 4"]
+--
+
+--
+
+[tp-include,role="diagram-stage",data-slide-step="4",data-tp-source="docs/slides/",src="../fig/modelisation-4.svg",aria-label="Schéma — étape 5"]
+--
+
+--
+
+[tp-include,role="diagram-stage",data-slide-step="5",data-tp-source="docs/slides/",src="../fig/modelisation-5.svg",aria-label="Schéma — étape 6"]
+--
+
+--
+
+[tp-include,role="diagram-stage",data-slide-step="6",data-tp-source="docs/slides/",src="../fig/modelisation-6.svg",aria-label="Schéma — étape 7"]
+--
+
+--
+
+[tp-include,role="diagram-stage",data-slide-step="7",data-tp-source="docs/slides/",src="../fig/modelisation-7.svg",aria-label="Schéma — étape 8"]
+--
+
+--
+
+====
+

@@ -1,0 +1,32 @@
+= Immersion, interaction, autonomie
+:showtitle:
+
+[div,role="diagram-stack"]
+====
+[tp-include,role="diagram-stage",data-tp-source="docs/slides/",src="../fig/cube-0.svg",aria-label="Schéma — étape 1"]
+--
+
+--
+
+[tp-include,role="diagram-stage",data-slide-step="1",data-tp-source="docs/slides/",src="../fig/cube-1.svg",aria-label="Schéma — étape 2"]
+--
+
+--
+
+[tp-include,role="diagram-stage",data-slide-step="2",data-tp-source="docs/slides/",src="../fig/cube-2.svg",aria-label="Schéma — étape 3"]
+--
+
+--
+
+[tp-include,role="diagram-stage",data-slide-step="3",data-tp-source="docs/slides/",src="../fig/cube-3.svg",aria-label="Schéma — étape 4"]
+--
+
+--
+
+[tp-include,role="diagram-stage",data-slide-step="4",data-tp-source="docs/slides/",src="../fig/cube-4.svg",aria-label="Schéma — étape 5"]
+--
+
+--
+
+====
+

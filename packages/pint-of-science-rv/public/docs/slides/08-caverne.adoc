@@ -1,0 +1,42 @@
+= La caverne de Platon revisitée
+:showtitle:
+
+[tp-callout,role="key-message",variant="brand"]
+--
+La réalité virtuelle : vivre une expérience *cognitive et sensorimotrice* dans un univers virtuel peuplé d’*entités autonomes*.
+--
+
+[div,role="takeaway"]
+--
+→ *Vivre une expérience de pensée.*
+--
+[div,data-slide-step="1"]
+========
+[div,role="columns"]
+======
+[div]
+--
+image::docs/fig/immersia-1.png[Immersia — environnement immersif]
+
+--
+
+[div]
+====
+[div,role="peripherals"]
+--
+image::docs/fig/rv-periph-1.jpg[Interface comportementale 1]
+
+image::docs/fig/rv-periph-2.jpg[Interface comportementale 2]
+
+image::docs/fig/rv-periph-3.jpg[Interface comportementale 3]
+
+image::docs/fig/rv-periph-4.jpg[Interface comportementale 4]
+
+--
+
+====
+
+======
+
+========
+

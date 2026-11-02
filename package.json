@@ -11,7 +11,9 @@
     "dev:home": "pnpm --filter @tp/example-home dev",
     "test:prerender": "node --test scripts/render-markdown.test.mjs scripts/render-math.test.mjs",
     "dev:geometry": "pnpm --filter @tp/example-geometry dev",
-    "dev:toeic": "pnpm --filter @tp/example-toeic dev"
+    "dev:toeic": "pnpm --filter @tp/example-toeic dev",
+    "dev:jt-vr": "pnpm --filter @tp/example-jt-vr dev",
+    "dev:pint-of-science-rv": "pnpm --filter @tp/example-pint-of-science-rv dev"
   },
   "devDependencies": {
     "@mathjax/src": "4.1.3",

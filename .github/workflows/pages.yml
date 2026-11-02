@@ -43,6 +43,13 @@ jobs:
           pnpm --filter @tp/example-home build:pages
           pnpm --filter @tp/example-derivatives build:pages
           pnpm --filter @tp/example-geometry build:pages
+          pnpm --filter @tp/example-jt-vr test
+          pnpm --filter @tp/example-jt-vr build
+          pnpm --filter @tp/example-pint-of-science-rv build
+          mkdir -p packages/home/.pages/pint-of-science-rv
+          cp -R packages/pint-of-science-rv/dist/. packages/home/.pages/pint-of-science-rv/
+          mkdir -p packages/home/.pages/jt-vr
+          cp -R packages/jt-vr/dist/. packages/home/.pages/jt-vr/
       - uses: actions/upload-pages-artifact@v4
         with:
           path: tp-examples/packages/home/.pages

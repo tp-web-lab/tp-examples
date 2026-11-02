@@ -1,0 +1,30 @@
+= L’enjeu
+:showtitle:
+
+[tp-callout,role="key-message",variant="brand"]
+--
+*Décrire, expliquer, prédire* les phénomènes complexes, naturels ou artificiels : un enjeu majeur du XXIe siècle.
+--
+[div,data-slide-step="1"]
+--
+*Complexe* : « ce qui est tissé ensemble ».
+
+Systèmes ouverts, dynamiques, hétérogènes, multiéchelles, multiphénomènes, incluant l’homme.
+--
+[div,data-slide-step="2"]
+--
+Compréhension / conception → *Modélisation*
+--
+[div,data-slide-step="3"]
+--
+Étude des modèles → *Simulation*
+--
+[div,data-slide-step="4"]
+--
+Simulation → *Instrumentation adaptée*
+--
+
+
+[tp-slide-note%show-text,src="notes/slide-10.txt",data-tp-source="./",lang="fr",legend="Notes — 10. L'enjeu"]
+--
+--

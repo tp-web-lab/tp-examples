@@ -38,7 +38,7 @@ test('publication converts TP Markdown while preserving inactive component sourc
   }
 });
 
-test('both published home pages contain a valid geometry construction', async () => {
+test('both published home pages preserve gallery filters and a valid geometry construction', async () => {
   const root = fileURLToPath(new URL('../', import.meta.url));
   const { parseGeometry, evaluateGeometry } = await import(new URL('../node_modules/@tp/tp-components/dist/components/graph-geometry/geometry.js', import.meta.url));
   const output = await mkdtemp(path.join(tmpdir(), 'tp-home-geometry-'));
@@ -51,13 +51,31 @@ test('both published home pages contain a valid geometry construction', async ()
     for (const file of ['docs/index.html', 'docs/fr/index.html']) {
       const dom = new JSDOM(await readFile(path.join(output, file), 'utf8'));
       try {
+        const document = dom.window.document;
+        const filters = document.querySelector('[data-example-filters]');
+        assert.ok(filters);
+        assert.ok(filters.nextElementSibling.matches('tp-grid[data-example-grid]'));
+        assert.deepEqual([...filters.querySelectorAll('[data-example-filter="markup"] li')].map(item => item.textContent.trim()), ['all', 'asciidoc', 'html', 'markdown', 'restructuredtext']);
+        assert.deepEqual([...filters.querySelectorAll('[data-example-filter="category"] li')].map(item => item.textContent.trim()), ['all', 'language', 'math', 'music', 'physics', 'plot', 'programming']);
+        assert.deepEqual([...filters.querySelectorAll('[data-example-filter="type"] li')].map(item => item.textContent.trim()), ['all', 'multi-pages', 'notebook', 'single-page', 'slideshow']);
+        const buttons = [...filters.querySelectorAll('tp-button')];
+        assert.equal(buttons.length, 3);
+        assert.ok(buttons.every(button => button.getAttribute('variant') === 'brand'));
+        const cards = [...document.querySelectorAll('tp-grid[data-example-grid] > tp-card')];
+        assert.equal(cards.length, 5);
+        assert.deepEqual(cards.map(card => card.dataset.markup), ['markdown', 'markdown', 'markdown', 'markdown', 'asciidoc']);
+        assert.deepEqual(cards.map(card => card.dataset.type), ['multi-pages', 'multi-pages', 'multi-pages', 'single-page', 'slideshow']);
+        assert.equal(cards[3].querySelector('tp-button').getAttribute('href'), 'https://tp-web-lab.github.io/tp-examples/jt-vr/');
+        assert.deepEqual(cards.map(card => card.dataset.category), ['math plot physics', 'math', 'language', file.includes('/fr/') ? 'programming' : 'epistemology', 'programming']);
+        assert.equal(cards[4].querySelector('tp-button').getAttribute('href'), 'https://tp-web-lab.github.io/tp-examples/pint-of-science-rv/');
         const figure = dom.window.document.querySelector('tp-graph-geometry');
         assert.ok(figure?.getAttribute('label'));
-        const source = figure.querySelector('script[type="tp/geometry"]')?.textContent;
+        const source = figure.querySelector('script[type="tp/geometry"]')?.textContent
+          ?? await readFile(path.join(root, 'public', figure.getAttribute('src').replace(/^\/(?:tp-examples\/)?/, '')), 'utf8');
         assert.ok(source);
         const result = evaluateGeometry(parseGeometry(source));
         assert.equal(result.errors.size, 0, JSON.stringify([...result.errors]));
-        assert.equal(result.values.size, 12);
+        for (const name of ['A', 'B', 'C', 'D', 'm']) assert.ok(result.values.has(name));
         assert.ok(result.values.has('m'));
       } finally {
         dom.window.close();

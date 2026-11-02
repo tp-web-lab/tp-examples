@@ -1,0 +1,35 @@
+= Les mots pour le dire
+:showtitle:
+
+[div,role="columns"]
+======
+[div,data-slide-step="1"]
+--
+image::docs/fig/artaud-livre-1.jpg[Le Théâtre et son double,width=150]
+
+*Antonin Artaud · France, 1932*
+
+« La réalité virtuelle du théâtre »
+
+_Le Théâtre alchimique_ (1932), dans _Le Théâtre et son double_, Paris, 1938.
+--
+
+[div]
+====
+[div,data-slide-step="2"]
+--
+image::docs/fig/lanier-1.jpg[Jaron Lanier,width=200]
+
+*Jaron Lanier · États-Unis, 1989*
+
+« Virtual reality » · « Alternate reality » · « Expansion of reality » · « Artificial reality »
+
+_An interview with Jaron Lanier_, Whole Earth Review, automne 1989.
+--
+====
+======
+
+
+[tp-slide-note%show-text,src="notes/slide-03.txt",data-tp-source="./",lang="fr",legend="Notes — 3. Les mots pour le dire"]
+--
+--

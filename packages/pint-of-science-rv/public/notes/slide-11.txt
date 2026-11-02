@@ -1,0 +1,42 @@
+Pour mieux comprendre, la place et le rôle de la réalité virtuelle
+considérons deux types d'expérimentation : la simulation numérique classique 
+et le jeu de rôle.
+
+[trigger=clic]
+
+La simulation classique a pour rôle de reproduire une réalité
+là où le jeu de rôle interprète une ralité.
+
+[trigger=clic]
+
+La simulation sert à étudier des modèles, le jeu de rôle étudie des comportements.
+
+[trigger=clic]
+
+En simulation, on s'intéresse à des situations normalisées afin d'assurer 
+la reproductibilité des simulations, essentielle à la démarche scientifique.
+Les jeux de rôle préfèrent les situations imprévues, singulières.
+
+[trigger=clic]
+
+En simulation, l'expérimentation nécessite un savoir-faire,
+là où le jeu de rôle s'appuie sur un savoir-être.
+
+[trigger=clic]
+
+En simulation, nous parlerons d'expérimentation in silico alors
+que nous menons une expérimentation in vivo avec le jeu de rôle.
+
+[trigger=clic]
+
+La démarche de la réalité virtuelle est de mixer les deux en mettant l'homme dans la boucle 
+de simulation, pour faire jouer un rôle à l'utilisateur d'une expérimentation in silico.
+Nous appelons cette expérimentation, l'expérimentation in virtuo
+
+[trigger=clic]
+
+et c'est cette expérimentation in virtuo qui va nous permettre de vivre une expérience de pensée.
+Cette nouvelle capacité, de vivre une expérience de pensée, complète l'arsenal méthodologique
+des scientifiques en les dotant d'un outil supplémentaire pour décrire, expliquer et prédire le comportement de systèmes.
+
+[trigger=clic]

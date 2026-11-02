@@ -1,0 +1,52 @@
+= Métaphore de Pinocchio
+:showtitle:
+
+[div,role="four-columns"]
+======
+[div]
+====
+[tp-include,data-tp-source="docs/slides/",src="../fig/cube-pinocchio.svg",aria-label="Immersion interaction autonomie"]
+--
+
+--
+
+====
+
+[div]
+====
+[div,data-slide-step="1"]
+--
+*Immersion*
+
+image::docs/fig/pinocchio-immersion.jpg[Pinocchio — immersion]
+
+--
+
+====
+
+[div]
+====
+[div,data-slide-step="2"]
+--
+*Interaction*
+
+image::docs/fig/pinocchio-interaction.jpg[Pinocchio — interaction]
+
+--
+
+====
+
+[div]
+====
+[div,data-slide-step="3"]
+--
+*Autonomie*
+
+image::docs/fig/pinocchio-autonomie.jpg[Pinocchio — autonomie]
+
+--
+
+====
+
+======
+

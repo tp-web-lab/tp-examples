@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Réalité virtuelle — Jacques Tisseau, Pint of Science, Brest, 2018">
+  <title>Réalité virtuelle · Pint of Science</title>
+  <script type="module" src="./src/main.js"></script>
+  <script vite-ignore type="module" src="./@tp/tp-components/tp-loader.js"></script>
+</head>
+<body>
+  <section id="presentation">
+    <tp-asciidoc-multi-slides repository="./docs" auto="notes" timing="5000" label="Réalité virtuelle · Pint of Science" lang="fr" langs="fr"></tp-asciidoc-multi-slides>
+    <tp-menu data-slide-mode-menu class="speaker-notes" orientation="horizontal" aria-label="Presentation mode">
+      <ul>
+        <li data-mode="manual">Manual</li>
+        <li data-mode="timing">Timing</li>
+        <li data-mode="notes" aria-current="true">Narration</li>
+        <li data-action="toggle-note" aria-expanded="false">Note</li>
+      </ul>
+    </tp-menu>
+  </section>
+</body>
+</html>

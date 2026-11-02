@@ -1,0 +1,26 @@
+image:docs/fig/logo-pintofscience.jpg[Pint of Science]
+
+[tp-callout%outlined,variant="brand",style="text-align:center;"]
+=====
+[h1,style="border-bottom:none;"]
+--
+Réalité virtuelle
+--
+[h3,style="border-bottom:none;"]
+--
+Jacques Tisseau
+--
+[h5]
+--
+Pint of Science · Brest · 16 mai 2018
+--
+=====
+
+
+[div.affiliation-logos]
+=====
+image::docs/fig/logo-cerv.jpg[CERV]
+image::docs/fig/logo-cnrs.jpg[CNRS]
+image::docs/fig/logo-labsticc.jpg[Lab-STICC]
+image::docs/fig/logo-enib.png[ENIB]
+=====

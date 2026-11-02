@@ -1,0 +1,35 @@
+= La réalité virtuelle… en deux mots
+:showtitle:
+
+[tp-callout,role="key-message",variant="brand"]
+--
+La réalité virtuelle : vivre une expérience *cognitive et sensorimotrice* dans un univers virtuel peuplé d’*entités autonomes*.
+--
+
+[div,role="takeaway"]
+--
+→ *Vivre une expérience de pensée.*
+--
+[div,data-slide-step="1"]
+--
+*Philosophie* : la caverne de Platon (−380), le problème de Molyneux (1688), la chambre chinoise de Searle (1980).
+
+T. S. Kuhn, _A Function for Thought Experiments_, 1964.
+--
+[div,data-slide-step="2"]
+--
+*Sciences* : la chute des corps de Galilée (1638), les démons de Maxwell (1867), le paradoxe EPR d’Einstein et al. (1935).
+
+Ernst Mach, _La connaissance et l’erreur_, 1908.
+--
+[div,role="choices",data-slide-step="3"]
+--
+Une autre Pint of Science ?
+
+link:10-enjeu.adoc[Oui, continuons] · link:17-action.adoc[Non, allons au résumé]
+--
+
+
+[tp-slide-note%show-text,src="notes/slide-09.txt",data-tp-source="./",lang="fr",legend="Notes — 9. La réalité virtuelle… en deux mots"]
+--
+--

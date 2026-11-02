@@ -16,6 +16,7 @@ export default defineConfig(({ isPreview }) => {
 	const port = Number(process.env.PORT ?? 4310);
 	const open = process.env.OPEN_BROWSER !== "0";
 	return {
+		base: "./",
 		// Missing documents must return 404 instead of the application shell.
 		appType: "mpa",
 		server: { host: "127.0.0.1", port, open },

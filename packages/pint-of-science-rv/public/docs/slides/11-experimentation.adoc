@@ -1,0 +1,119 @@
+= L’expérimentation des modèles
+:showtitle:
+
+[div,role="comparison heading"]
+====
+[div]
+--
+*Simulation*
+--
+
+[div]
+--
+*Jeu de rôle*
+--
+
+====
+
+[div,data-slide-step="1"]
+======
+[div,role="comparison"]
+====
+[div]
+--
+Reproduire la réalité
+--
+
+[div]
+--
+Interpréter la réalité
+--
+
+====
+
+======
+
+[div,data-slide-step="2"]
+======
+[div,role="comparison"]
+====
+[div]
+--
+Étudier les modèles
+--
+
+[div]
+--
+Étudier les comportements
+--
+
+====
+
+======
+
+[div,data-slide-step="3"]
+======
+[div,role="comparison"]
+====
+[div]
+--
+Situations normalisées · reproductibilité
+--
+
+[div]
+--
+Situations imprévues · singularité
+--
+
+====
+
+======
+
+[div,data-slide-step="4"]
+======
+[div,role="comparison"]
+====
+[div]
+--
+Savoir-faire
+--
+
+[div]
+--
+Savoir-être
+--
+
+====
+
+======
+
+[div,data-slide-step="5"]
+======
+[div,role="comparison"]
+====
+[div]
+--
+_In silico_
+--
+
+[div]
+--
+_In vivo_
+--
+
+====
+
+======
+[tp-callout,role="key-message",data-slide-step="6",variant="brand"]
+--
+Mettre l’homme dans la boucle → *Expérimentation in virtuo*
+--
+[div,data-slide-step="7"]
+--
+→ *Vivre une expérience de pensée.*
+--
+
+
+[tp-slide-note%show-text,src="notes/slide-11.txt",data-tp-source="./",lang="fr",legend="Notes — 11. Expérimentation des modèles"]
+--
+--

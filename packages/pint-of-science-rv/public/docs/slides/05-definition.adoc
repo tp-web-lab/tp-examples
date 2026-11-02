@@ -1,0 +1,31 @@
+= Une définition consensuelle
+:showtitle:
+
+[tp-callout,role="key-message",variant="brand"]
+--
+La réalité virtuelle est un domaine scientifique et technologique exploitant l’informatique et des interfaces comportementales en vue de simuler dans un monde virtuel le comportement d’entités 3D, qui sont en interaction en temps réel entre elles et avec un ou des utilisateurs en immersion pseudo-naturelle par l’intermédiaire de canaux sensori-moteurs.
+--
+[div,data-slide-step="1"]
+--
+*Simuler* des comportements · *interagir* en temps réel · *immerger* des utilisateurs.
+--
+[div,role="book-row"]
+--
+image::docs/fig/trv1.jpg[Traité de la réalité virtuelle — volume 1,width=90]
+
+image::docs/fig/trv2.jpg[Traité de la réalité virtuelle — volume 2,width=90]
+
+image::docs/fig/trv3.jpg[Traité de la réalité virtuelle — volume 3,width=90]
+
+image::docs/fig/trv4.jpg[Traité de la réalité virtuelle — volume 4,width=90]
+
+image::docs/fig/trv5.jpg[Traité de la réalité virtuelle — volume 5,width=90]
+
+--
+
+_Le Traité de la réalité virtuelle_, Presses de l’École des mines, 2003–2009.
+
+
+[tp-slide-note%show-text,src="notes/slide-05.txt",data-tp-source="./",lang="fr",legend="Notes — 5. Une définition consensuelle"]
+--
+--

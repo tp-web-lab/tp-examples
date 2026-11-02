@@ -1,0 +1,155 @@
+= Réalité virtuelle — Notes du conférencier
+:showtitle:
+:toc:
+:toclevels: 1
+
+Jacques Tisseau · Pint of Science, Brest, 16 mai 2018.
+
+Les commandes `[trigger=clic]` remplacent les indications « CLIC » du document source. Elles ne sont pas prononcées ; dans le diaporama en mode Narration, elles commandent les apparitions et les changements de diapositive.
+
+[[slide-01]]
+== 1. Réalité virtuelle
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-01.txt",data-tp-source="./",lang="fr",legend="Notes — 1. Réalité virtuelle"]
+--
+--
+
+
+[[slide-02]]
+== 2. Plan
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-02.txt",data-tp-source="./",lang="fr",legend="Notes — 2. Plan"]
+--
+--
+
+[[slide-03]]
+== 3. Les mots pour le dire
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-03.txt",data-tp-source="./",lang="fr",legend="Notes — 3. Les mots pour le dire"]
+--
+--
+
+
+[[slide-04]]
+== 4. Entre deux
+
+_Cette diapositive ne comporte pas de note dans le fichier source. En mode automatique, le délai de minutage prend le relais._
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-04.txt",data-tp-source="./",lang="fr",legend="Notes — 4. Entre deux"]
+--
+--
+
+
+[[slide-05]]
+== 5. Une définition consensuelle
+
+_Cette diapositive ne comporte pas de note dans le fichier source. En mode automatique, le délai de minutage prend le relais._
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-05.txt",data-tp-source="./",lang="fr",legend="Notes — 5. Une définition consensuelle"]
+--
+--
+
+
+[[slide-06]]
+== 6. Immersion, interaction, autonomie
+
+_Cette diapositive ne comporte pas de note dans le fichier source. En mode automatique, le délai de minutage prend le relais._
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-06.txt",data-tp-source="./",lang="fr",legend="Notes — 6. Immersion, interaction, autonomie"]
+--
+--
+
+[[slide-07]]
+== 7. Métaphore de Pinocchio
+
+_Cette diapositive ne comporte pas de note dans le fichier source. En mode automatique, le délai de minutage prend le relais._
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-07.txt",data-tp-source="./",lang="fr",legend="Notes — 7. Métaphore de Pinocchio"]
+--
+--
+
+[[slide-08]]
+== 8. Caverne de Platon revisitée
+
+_Cette diapositive ne comporte pas de note dans le fichier source. En mode automatique, le délai de minutage prend le relais._
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-08.txt",data-tp-source="./",lang="fr",legend="Notes — 8. Caverne de Platon revisitée"]
+--
+--
+[[slide-09]]
+== 9. La réalité virtuelle… en deux mots
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-09.txt",data-tp-source="./",lang="fr",legend="Notes — 9. La réalité virtuelle… en deux mots"]
+--
+--
+
+
+[[slide-10]]
+== 10. L'enjeu
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-10.txt",data-tp-source="./",lang="fr",legend="Notes — 10. L'enjeu"]
+--
+--
+
+
+[[slide-11]]
+== 11. Expérimentation des modèles
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-11.txt",data-tp-source="./",lang="fr",legend="Notes — 11. Expérimentation des modèles"]
+--
+--
+
+
+[[slide-12]]
+== 12. Modélisation et simulation
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-12.txt",data-tp-source="./",lang="fr",legend="Notes — 12. Modélisation et simulation"]
+--
+--
+
+[[slide-13]]
+== 13. L'expérimentation in virtuo
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-13.txt",data-tp-source="./",lang="fr",legend="Notes — 13. L'expérimentation in virtuo"]
+--
+--
+
+
+[[slide-14]]
+== 14. Métaconnaissance
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-14.txt",data-tp-source="./",lang="fr",legend="Notes — 14. Métaconnaissance"]
+--
+--
+
+
+[[slide-15]]
+== 15. Enaction
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-15.txt",data-tp-source="./",lang="fr",legend="Notes — 15. Enaction"]
+--
+--
+
+
+[[slide-16]]
+== 16. Histoires de couplages structurels
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-16.txt",data-tp-source="./",lang="fr",legend="Notes — 16. Histoires de couplages structurels"]
+--
+--
+
+
+[[slide-17]]
+== 17. L'énaction en action
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-17.txt",data-tp-source="./",lang="fr",legend="Notes — 17. L'énaction en action"]
+--
+--
+
+
+[[slide-18]]
+== 18. Réalité virtuelle
+
+[tp-text-to-speech%show-text,data-slide-notes="",src="notes/slide-18.txt",data-tp-source="./",lang="fr",legend="Notes — 18. Réalité virtuelle"]
+--
+--

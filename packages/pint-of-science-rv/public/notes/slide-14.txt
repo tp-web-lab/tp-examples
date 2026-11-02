@@ -1,0 +1,50 @@
+Les sciences cognitives, l'intelligence artificielle et la réalité virtuelle
+nous proposent aujourd'hui 3 points de vue sur la connaissance pour éclairer
+notre connaissance de la connaissance.
+
+[trigger=clic]
+
+Pour simplifier, les sciences cognitives qui ont pour objet d'étude la connaissance 
+elle-même, nous aide à décrire et à comprendre la connaissance.
+
+[trigger=clic]
+
+De son côté, l'intelligence artificielle se pose la question de l'acquisition 
+de la connaissance, de sa représentation informatique afin d'inférer automatiquement 
+de nouvelles connaissances.
+
+[trigger=clic]
+
+Quant à la réalité virtuelle avec l'expérimentation in virtuo, elle nous permet de donner 
+du sens à la connaissance et de se construire une connaissance.
+
+[trigger=clic]
+
+Plusieurs courants ont marqué l'histoire des sciences cognitives et de la cognition, 
+le processus d'acquisition de la connaissance :
+- le behaviorisme tout d'abord où ce processus est vu comme une boîte noire 
+	qui agirait à la manière d'une fonction de transfert entre ses entrées et ses sorties,
+	entre des stimuli et des réactions, à la manière du chien de Pavlov;
+
+[trigger=clic]
+
+- le computationnalisme où on ouvre la boîte noire pour y voir un système de traitement
+	de l'information et comparer la cognition à un calcul à la manière d'un ordinateur qui
+	exécute des algorithmes;
+	
+[trigger=clic]
+
+- le connexionnisme qui voit la cognition comme un processus émergent de réseaux d'unités simples
+	interconnectées, à la manière des réseaux de neurones formels comme ils sont
+	aujourd'hui très utilisés en intelligence artificielle dans les algorithmes de deep
+	learning (apprentissage profond) par exemple;
+
+[trigger=clic]
+
+- et l'énactionnisme qui étend l'approche connexionnisme des réseaux de neurones intracraniens
+	en les immergeant dans leur environnement, le processus d'acquisition de la connaissance
+	étant alors constitutif du couplage entre l'homme et son environnement.
+	
+C'est évidemment cette dernière approche que nous retenons pour la réalité virtuelle.
+
+[trigger=clic]

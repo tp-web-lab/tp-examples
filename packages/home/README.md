@@ -44,3 +44,18 @@ falls back to browser Markdown rendering.
 ### Translations
 
 `index.html` declares `langs="en,fr"`: the English source is `public/docs/index.md`, and French is `public/docs/fr/index.md`. Publication converts the root page and every `index.md` in a language directory to HTML. The language button appears when at least two declared translations are available. Generated source metadata keeps Code and annotations attached to the selected language's Markdown source.
+
+### Gallery filters
+
+The English and French home pages place three `tp-dropdown` menus before the
+example grid. Markup, category and document type filters combine; `all` is the default for each.
+Their trigger buttons use `variant="brand"`, and the current choice has a check icon.
+Each direct `tp-card` child declares `data-markup`, `data-category` and `data-type`, with
+space-separated values when more than one classification applies. Keep both
+translations' metadata synchronized when adding or changing a card. Categories
+are `language`, `math`, `music`, `physics`, `plot` and `programming`; markup values
+are `asciidoc`, `html`, `markdown` and `restructuredtext`. Document types are
+`multi-pages`, `notebook`, `single-page` and `slideshow`.
+
+Filtering preserves the cards and their interactive state. The shared entry
+initializes the menus after Markdown rendering and again on language changes.

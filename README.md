@@ -32,6 +32,8 @@ server with Ctrl+C. Edit the cards in `packages/home/public/docs/index.md`.
 
 | Package | Container | Purpose |
 | --- | --- | --- |
+| `@tp/example-pint-of-science-rv` | `tp-asciidoc-multi-slides` | Jacques Tisseau’s 2018 Pint of Science talk, with progressive reveals and speaker notes. |
+| `@tp/example-jt-vr` | `tp-markdown-single-page` | An interactive video ending with three clickable destinations. |
 | `@tp/example-home` | `tp-markup-single-page` | A Markdown home page linking to the examples. |
 | `@tp/example-toeic` | Markdown | Workplace English with corrected questions, writing fields and the library audio recorder. |
 | `@tp/example-derivatives` | `tp-markup-multi-pages` | A French introduction to derivatives, transcribed from a PDF with editable math. |
@@ -138,3 +140,12 @@ translations. Run `pnpm test:prerender` to verify the conversion contract.
 ## Geometry
 
 Run `pnpm dev:geometry` for the French ruler-and-compass course (port 4314), using `tp-markdown-multi-pages`. See [packages/geometry](packages/geometry/README.md) for the four sections and validation commands. The Examples Pages workflow builds and publishes the course to https://tp-web-lab.github.io/geometry/. The public `tp-web-lab/geometry` repository contains the compiled site only; Pages serves `main` from the repository root. The `GEOMETRY_PUBLISH_KEY` Actions secret in `tp-examples` holds a deploy key with write access restricted to that publication repository.
+
+## JT VR
+
+Run `pnpm dev:jt-vr` (port 4316) for the interactive video example. It plays four YouTube videos and displays a clickable image menu when the introduction finishes. No MP4 files are needed in the repository. See [packages/jt-vr](packages/jt-vr/README.md). Its page uses `tp-markdown-single-page` and the official `tp-video-player`. The Markdown declares the interface and the example script only connects its navigation through the public player API. The Pages workflow includes its lightweight player under `/tp-examples/jt-vr/`; personal MP4 files are excluded.
+
+## Pint of Science — Virtual reality
+
+Run `pnpm dev:pint-of-science-rv` from this workspace or from tp-docs (port 4319).
+The 18-slide French presentation uses `tp-asciidoc-multi-slides`, native AsciiDoc documents and TP brand colors. See [the example README](packages/pint-of-science-rv/README.md).

@@ -1,0 +1,38 @@
+= Énaction
+:showtitle:
+
+[tp-callout,role="key-message",variant="brand"]
+--
+L’histoire du *couplage structurel* d’une entité *autopoïétique* avec son environnement, qui fait *émerger un monde*.
+--
+
+Francisco Varela, _Invitation aux sciences cognitives_, 1996.
+
+[div,data-slide-step="1"]
+======
+[div,role="columns"]
+====
+[div]
+--
+image::docs/fig/escher-hands.png[Escher — Mains dessinant]
+
+--
+
+[div]
+--
+image::docs/fig/escher-gallery.jpg[Escher — Galerie d’estampes]
+
+--
+
+====
+
+======
+[div,role="takeaway",data-slide-step="2"]
+--
+« *La marche pour chemin*. »
+--
+
+
+[tp-slide-note%show-text,src="notes/slide-15.txt",data-tp-source="./",lang="fr",legend="Notes — 15. Enaction"]
+--
+--

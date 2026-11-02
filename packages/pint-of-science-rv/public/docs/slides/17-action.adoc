@@ -1,0 +1,44 @@
+= L’énaction en action
+:showtitle:
+
+[div,role="columns"]
+======
+[div]
+====
+Le cri → le langage
+
+L’oral → l’écrit
+
+La main → l’outil
+
+[div,data-slide-step="1"]
+--
+*Le réel → le virtuel*
+--
+[div,data-slide-step="2"]
+--
+Vivre une expérience de pensée pour *coconstruire de nouvelles connaissances*.
+
+Passer des idées reçues et conçues aux *idées vécues*.
+--
+[div,data-slide-step="3"]
+--
+image::docs/fig/logo-virtuoscope.jpg[Le Virtuoscope,width=300]
+
+--
+
+====
+
+[div]
+--
+image::docs/fig/pinocchio_cerv-blanc.png[Pinocchio au CERV]
+
+*Merci !*
+--
+
+======
+
+
+[tp-slide-note%show-text,src="notes/slide-17.txt",data-tp-source="./",lang="fr",legend="Notes — 17. L'énaction en action"]
+--
+--

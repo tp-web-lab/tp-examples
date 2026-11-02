@@ -1,0 +1,32 @@
+Et comment ces expériences de pensée vont-elles intervenir dans les enjeux plus actuels ?
+
+L'enjeu, pour les scientifiques d'aujourd'hui, est sans doute de décrire, d'expliquer
+et de prédire les comportements des systèmes complexes, qu'ils soient naturels et artificiels.
+
+[trigger=clic]
+
+Mais précisons ce que nous entendons par « système complexe ».
+C'est un système ouvert,...
+dynamique,...
+hétérogène,...
+multi-échelles,...
+multi-phénomènes,...
+et incluant l'homme.
+
+[trigger=clic]
+
+Pour comprendre ou concevoir de tels systèmes, nous passons aujourd'hui par leur modélisation.
+
+[trigger=clic]
+
+Pour comprendre la dynamique de ces systèmes, nous menons des expérimentations sur
+leurs modèles; c'est le rôle de la simulation qui, par définition, est justement 
+l'expérimentation des modèles.
+
+[trigger=clic]
+
+Et pour inclure l'homme dans de tels systèmes, il faut une instrumentation adaptée
+et c'est là où la réalité virtuelle va prendre toute son importance dans la modélisation et 
+la simulation des systèmes complexes.
+
+[trigger=clic]

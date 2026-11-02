@@ -1,0 +1,29 @@
+= Plan
+:showtitle:
+
+[h4]
+--
+Point de vue épistémologique
+--
+
+[ol]
+====
+[li,data-slide-step="1",style="margin-bottom:1em;"]
+--
+La réalité virtuelle en deux mots
+--
+
+[li,data-slide-step="2",style="margin-bottom:1em;"]
+--
+L’expérimentation _in virtuo_
+--
+
+[li,data-slide-step="3",style="margin-bottom:1em;"]
+--
+L’énaction en action
+--
+====
+
+[tp-slide-note%show-text,src="notes/slide-02.txt",data-tp-source="./",lang="fr",legend="Notes — 2. Plan"]
+--
+--

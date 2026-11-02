@@ -1,0 +1,25 @@
+En fait, la réalité virtuelle est remplie d'histoire de couplages.
+
+Dans ce que j'appelle le 1er principe de la réalité virtuelle : le principe de présence
+qui permet une activité sensori-motrice dans un monde artificiel en mettant l'homme dans la boucle,
+on instaure un premier couplage entre l'homme, entité autonome,
+et l'environnement virtuel.
+
+[trigger=clic]
+
+Ce que j'appelle le second principe de la réalité virtuelle : le principe d'autonomie
+qui en permettant une activité sensori-motrice aux entités numériques, en les autonomisant
+autorise un couplage entre ces entités elles-mêmes.
+
+[trigger=clic]
+
+Enfin, le 3ème principe : le principe de substitution qui par empathie numérique permet de se mettre
+à la place d'une entité numérique  et de coupler 2 points de vue :
+le point de vue à la 3ème personne (celui de l'observateur) et le point de vue à la 1ère personne
+(celui de l'acteur).
+
+L'ensemble de ces principes et de leur mise en oeuvre en réalité virtuelle instrumentalise en fait le concepts d'énaction
+selon lequel la construction des connaissances et liée à la dynamique des couplages entre une entité 
+autonome et son environnement.
+
+[trigger=clic]

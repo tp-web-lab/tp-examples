@@ -1,0 +1,44 @@
+= L’expérimentation in virtuo
+:showtitle:
+
+[tp-callout,role="key-message",variant="brand"]
+--
+La réalité virtuelle : vivre une expérience *cognitive et sensorimotrice* dans un univers virtuel peuplé d’*entités autonomes*.
+--
+
+[div,role="takeaway"]
+--
+→ *Vivre une expérience de pensée.*
+--
+[div,data-slide-step="1"]
+======
+[div,role="columns"]
+====
+[div]
+--
+*Simulation* → _in silico_
+--
+
+[div]
+--
+*Jeu de rôle* → _in vivo_
+--
+
+====
+
+======
+[tp-callout,role="key-message",data-slide-step="2",variant="brand"]
+--
+Mettre l’homme dans la boucle → *Expérimentation in virtuo*
+--
+[div,role="choices",data-slide-step="3"]
+--
+Une autre Pint of Science ?
+
+link:14-metaconnaissance.adoc[Oui, continuons] · link:17-action.adoc[Non, allons au résumé]
+--
+
+
+[tp-slide-note%show-text,src="notes/slide-13.txt",data-tp-source="./",lang="fr",legend="Notes — 13. L'expérimentation in virtuo"]
+--
+--

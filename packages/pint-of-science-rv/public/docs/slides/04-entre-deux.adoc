@@ -1,0 +1,49 @@
+= Entre deux…
+:showtitle:
+
+[tp-callout,role="key-message",variant="brand"]
+--
+*Usage courant* : le virtuel s’oppose au réel.
+--
+[div,data-slide-step="1"]
+--
+*Oxymore* : clair obscur, aigre doux, mort vivant, silence éloquent… *réalité virtuelle*.
+--
+[div,data-slide-step="2"]
+--
+*Constructivisme* : la réalité comme représentation du réel, une construction de l’esprit.
+--
+[div,data-slide-step="3"]
+--
+*Pléonasme* : monter en haut, au jour d’aujourd’hui, prévoir à l’avance, collaborer ensemble… *réalité virtuelle*.
+--
+[div,data-slide-step="4"]
+======
+[div,role="columns"]
+====
+[div]
+--
+[cols="1,1",options="header"]
+|===
+| Latent | Manifeste
+| Possible | Réel
+| Virtuel | Actuel
+|===
+
+--
+
+[div]
+--
+image::docs/fig/levy-livre.jpg[Pierre Lévy — Qu’est-ce que le virtuel ?,width=100]
+
+Pierre Lévy, _Qu’est-ce que le virtuel ?_, 1995.
+--
+
+====
+
+======
+
+
+[tp-slide-note%show-text,src="notes/slide-04.txt",data-tp-source="./",lang="fr",legend="Notes — 4. Entre deux"]
+--
+--

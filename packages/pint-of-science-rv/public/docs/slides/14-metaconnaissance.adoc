@@ -1,0 +1,63 @@
+= Métaconnaissance
+:showtitle:
+
+[div,role="columns"]
+======
+[div]
+====
+[tp-include,data-tp-source="docs/slides/",src="../fig/cognition.svg",aria-label="Sciences cognitives réalité virtuelle et intelligence artificielle"]
+--
+
+--
+
+====
+
+[div]
+====
+[div,data-slide-step="1"]
+--
+*Sciences cognitives* : décrire et comprendre la connaissance.
+--
+
+[div,data-slide-step="2"]
+--
+*Intelligence artificielle* : acquérir, représenter, inférer.
+--
+
+[div,data-slide-step="3"]
+--
+*Réalité virtuelle* : donner du sens, se construire une connaissance.
+--
+
+====
+
+======
+
+[div,role="paradigms"]
+====
+[div,data-slide-step="4"]
+--
+Béhaviorisme
+--
+
+[div,data-slide-step="5"]
+--
+Computationnalisme
+--
+
+[div,data-slide-step="6"]
+--
+Connexionnisme
+--
+
+[div,data-slide-step="7"]
+--
+Énactionnisme
+--
+
+====
+
+
+[tp-slide-note%show-text,src="notes/slide-14.txt",data-tp-source="./",lang="fr",legend="Notes — 14. Métaconnaissance"]
+--
+--
