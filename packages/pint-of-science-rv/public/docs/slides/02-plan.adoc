@@ -1,27 +1,39 @@
 = Plan
 :showtitle:
 
-[h4]
---
-Point de vue épistémologique
---
-
-[ol]
+[h4,style="margin-bottom:2em;"]
 ====
-[li,data-slide-step="1",style="margin-bottom:1em;"]
---
-La réalité virtuelle en deux mots
---
+Point de vue épistémologique
+====
 
-[li,data-slide-step="2",style="margin-bottom:1em;"]
---
-L’expérimentation _in virtuo_
---
+[dl]
+====
+[dt,data-slide-step="1",style="color:var(--tp-brand-text-colorful);"]
+=====
+1. La réalité virtuelle « en deux mots »
+=====
+[dd,data-slide-step="2",style="margin-bottom:1em;margin-left:2em;"]
+=====
+Vivre une expérience de pensée
+=====
 
-[li,data-slide-step="3",style="margin-bottom:1em;"]
---
-L’énaction en action
---
+[dt,data-slide-step="3",style="color:var(--tp-brand-text-colorful);"]
+=====
+2. L'expérimentation _in virtuo_
+=====
+[dd,data-slide-step="4",style="margin-bottom:1em;margin-left:2em;"]
+=====
+Entre simulation classique numérique et jeu de rôle
+=====
+
+[dt,data-slide-step="5",style="color:var(--tp-brand-text-colorful);"]
+=====
+3. L’énaction en action
+=====
+[dd,data-slide-step="6",style="margin-bottom:1em;margin-left:2em;"]
+=====
+Co-construction par couplages entre l’expérimentateur et l'environnement virtuel
+=====
 ====
 
 [tp-slide-note%show-text,src="notes/slide-02.txt",data-tp-source="./",lang="fr",legend="Notes — 2. Plan"]

@@ -1,12 +1,13 @@
-Mais, c'est à la communauté scientifique de préciser les termes qu'elle emploie.
-Et c'est ce qu'a fait la communauté française au début des années 2000,
-lors de l'élaboration collective d'un traité de la réalité virtuelle, 
-en proposant cette définition technique et consensuelle de la réalité virtuelle.
+Selon Bachelard, une discipline scientifique doit faire face à un certain nombre d’obstacles épistémologiques pour s’affirmer en tant que telle.
+L’obstacle du nom choisi pour la discipline en fait partie, et de ce point de vue, la réalité virtuelle, entre oxymore et pléonasme, ne s’est pas facilité la tâche. 
 
-Ce traité de plus de 2000 pages structurées en 5 tomes, propose donc une définition 
-qui ne tient évidemment pas en deux mots.
-Et pour y voir plus clair, retenons ici
-que « la réalité virtuelle est une simulation du comportement d'entités en interaction 
-en temps réel entre elles et avec un ou des utilisateurs. »
+C’est donc justement à la communauté scientifique de préciser les termes qu’elle emploie. 
+Et c’est ce qu’a fait la communauté française au début des années 2000, lors de l’élaboration collective d’un traité de la réalité virtuelle, en proposant une définition technique et consensuelle de la réalité virtuelle.
+
+Je cite : « La réalité virtuelle est un domaine scientifique et technologique, exploitant l’informatique et des interfaces comportementales, en vue de simuler dans un monde virtuel le comportement d’entités 3D, qui sont en interaction en temps réel entre elles, et avec un ou des utilisateurs en immersion pseudo-naturelle, par l’intermédiaire de canaux sensori-moteurs. »
+
+
+Ce traité de plus de 2000 pages structurées en 5 tomes, propose donc une définition qui ne tient évidemment pas en deux mots.
+Et pour y voir plus clair, retenons pour l'instant que : « la réalité virtuelle est une simulation du comportement d'entités en interaction en temps réel entre elles, et avec un ou des utilisateurs. »
 
 [trigger=clic]

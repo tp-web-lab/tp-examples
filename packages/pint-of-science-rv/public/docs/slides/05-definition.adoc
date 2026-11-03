@@ -1,14 +1,8 @@
 = Une définition consensuelle
 :showtitle:
 
-[tp-callout,role="key-message",variant="brand"]
---
-La réalité virtuelle est un domaine scientifique et technologique exploitant l’informatique et des interfaces comportementales en vue de simuler dans un monde virtuel le comportement d’entités 3D, qui sont en interaction en temps réel entre elles et avec un ou des utilisateurs en immersion pseudo-naturelle par l’intermédiaire de canaux sensori-moteurs.
---
-[div,data-slide-step="1"]
---
-*Simuler* des comportements · *interagir* en temps réel · *immerger* des utilisateurs.
---
+[figure,style="padding:0;border:none;box-shadow:none;"]
+====
 [div,role="book-row"]
 --
 image::docs/fig/trv1.jpg[Traité de la réalité virtuelle — volume 1,width=90]
@@ -20,10 +14,22 @@ image::docs/fig/trv3.jpg[Traité de la réalité virtuelle — volume 3,width=90
 image::docs/fig/trv4.jpg[Traité de la réalité virtuelle — volume 4,width=90]
 
 image::docs/fig/trv5.jpg[Traité de la réalité virtuelle — volume 5,width=90]
+--
+[figcaption,style="border:none;padding:0;text-align:center;"]
+--
+_Le Traité de la réalité virtuelle_, Presses de l’École des mines, 2003–2009.
+--
+====
 
+[blockquote.key-message,data-slide-step="1"]
+--
+« La réalité virtuelle est un domaine scientifique et technologique exploitant l’informatique et des interfaces comportementales en vue de **simuler** dans un monde virtuel **le comportement d’entités 3D**, qui sont **en interaction en temps réel** entre elles et avec un ou des **utilisateurs en immersion** pseudo-naturelle par l’intermédiaire de canaux sensori-moteurs. »
 --
 
-_Le Traité de la réalité virtuelle_, Presses de l’École des mines, 2003–2009.
+[div,data-slide-step="2"]
+--
+*Simuler* des comportements · *interagir* en temps réel · *immerger* des utilisateurs.
+--
 
 
 [tp-slide-note%show-text,src="notes/slide-05.txt",data-tp-source="./",lang="fr",legend="Notes — 5. Une définition consensuelle"]

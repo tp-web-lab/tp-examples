@@ -30,3 +30,6 @@
 
 ====
 
+[tp-slide-note%show-text,src="notes/slide-06.txt",data-tp-source="./",lang="fr",legend="Notes — 6. Immersion, interaction, autonomie"]
+--
+--

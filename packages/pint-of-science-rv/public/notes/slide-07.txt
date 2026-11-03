@@ -1,0 +1,18 @@
+
+Pour illustrer cette définition, je vous propose une métaphore, la métaphore de Pinocchio, qui fait reposer la réalité virtuelle sur trois grandes idées : l’immersion des utilisateurs dans les univers virtuels, l’interaction des utilisateurs avec les univers virtuels et l’autonomie des entités virtuelles qui peuplent ces univers.
+
+
+Selon la métaphore de Pinocchio, Pinocchio est un modèle. 
+La réalité virtuelle manipule des modèles numériques. 
+Ici, il s’agit d’un modèle physique; il est donc très facile de s’immerger dans ce modèle puisqu’il est dans notre monde. 
+C’est un peu plus difficile avec les modèles numériques, mais aujourd’hui on y arrive. 
+Ici, on voit clairement sur cette image, l’utilisateur en bleu (Gepetto) observer l’activité du modèle (Pinocchio). 
+On perçoit également la croix du marionnettiste qui va servir à l’utilisateur pour tester laréactivité du modèle.
+Le modélisateur a prévu quelques degrés de liberté dans le modèle et l’utilisateur va pouvoir ainsi tester la réactivité du modèle en interagissant avec le modèle : 
+en manipulant la croix du marionnettiste. 
+Mais si vous vous souvenez de l’histoire de Pinocchio, Pinocchio est un pantin toscan qui, pour l’essentiel de son histoire, est un pantin autonome.
+Il n’y a plus de fils qui le relient à l’utilisateur : il est autonome. 
+Cette troisième dimension de la réalité virtuelle vient renforcer les deux premières.
+Les deux premières images, immersion et interaction, traduisent le principe de présence de l’utilisateur dans les univers virtuels alors que la troisième image traduit le principe d’autonomie des entités virtuelles dans les univers virtuels.
+Pourquoi cette autonomie? 
+Et bien, si l’on veut reproduire une forme de réalité, il faut également reproduire l’autonomie des entités les unes par rapport aux autres telle que nous la vivons tous les jours dans la réalité.
