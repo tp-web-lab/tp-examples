@@ -1,0 +1,116 @@
+= Structures de la langue
+:showtitle:
+
+Choisissez le mot ou le groupe de mots qui complète la phrase.
+
+[tp-single-choice-question,answer="2",lang="fr",open="input"]
+====
+Title:: Une durée
+
+Prompt::
++
+--
+J’habite dans ce quartier […] trois ans.
+--
+
+Form::
++
+* pendant
+
+* depuis
+
+* dans
+
+* en
+
+Feedback::
++
+* « Pendant » présente une durée délimitée. Ici, la situation continue au présent.
+
+* Oui : « depuis » indique une situation commencée dans le passé et toujours actuelle.
+
+* « Dans » situerait un événement dans le futur.
+
+* « En » peut indiquer le temps nécessaire pour accomplir une action.
+
+Solution::
++
+--
+J’habite dans ce quartier *depuis* trois ans.
+--
+====
+
+[tp-single-choice-question,answer="3",lang="fr",open="input"]
+====
+Title:: Une condition
+
+Prompt::
++
+--
+Si nous avions une salle plus grande, nous […] davantage de participants.
+--
+
+Form::
++
+* accueillons
+
+* accueillerons
+
+* accueillerions
+
+* avons accueilli
+
+Feedback::
++
+* Le présent ne convient pas à cette hypothèse à l’imparfait.
+
+* Le futur correspondrait à « si nous avons ».
+
+* Oui : si + imparfait, puis conditionnel présent.
+
+* Le passé composé ne correspond pas à cette hypothèse.
+
+Solution::
++
+--
+Si nous avions une salle plus grande, nous *accueillerions* davantage de participants.
+--
+====
+
+[tp-single-choice-question,answer="4",lang="fr",open="input"]
+====
+Title:: Une opposition
+
+Prompt::
++
+--
+[…] le trajet soit long, Nora préfère venir en train.
+--
+
+Form::
++
+* Parce que
+
+* Malgré
+
+* Pour que
+
+* Bien que
+
+Feedback::
++
+* « Parce que » exprime une cause ; il appellerait ici « est ».
+
+* « Malgré » se construit ici avec un nom : malgré la longueur du trajet.
+
+* « Pour que » exprime un but, ce qui ne convient pas au sens.
+
+* Oui : « bien que » exprime une concession et se construit avec le subjonctif.
+
+Solution::
++
+--
+*Bien que* le trajet soit long, Nora préfère venir en train.
+--
+====
+

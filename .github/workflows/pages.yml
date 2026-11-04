@@ -47,6 +47,13 @@ jobs:
           pnpm --filter @tp/example-jt-vr test
           pnpm --filter @tp/example-jt-vr build
           pnpm --filter @tp/example-pint-of-science-rv build
+          pnpm --filter @tp/example-tcf build
+          pnpm --filter @tp/example-jazz test
+          pnpm --filter @tp/example-jazz build
+          mkdir -p packages/home/.pages/jazz
+          cp -R packages/jazz/dist/. packages/home/.pages/jazz/
+          mkdir -p packages/home/.pages/tcf
+          cp -R packages/tcf/dist/. packages/home/.pages/tcf/
           mkdir -p packages/home/.pages/pint-of-science-rv
           cp -R packages/pint-of-science-rv/dist/. packages/home/.pages/pint-of-science-rv/
           mkdir -p packages/home/.pages/jt-vr

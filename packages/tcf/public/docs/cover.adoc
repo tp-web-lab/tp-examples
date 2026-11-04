@@ -1,0 +1,25 @@
+= Pratiquer le français
+:showtitle:
+
+Un parcours d'entraînement inspiré des types d'activités du *TCF tout public* : écouter, comprendre, choisir une formulation et s'exprimer.
+
+[tp-callout,variant="brand"]
+====
+Ces exercices sont originaux et indépendants de France Éducation international. Ce parcours court n'est ni une épreuve officielle, ni un test blanc complet ; il ne délivre pas de score TCF ni de niveau CECRL.
+====
+
+== Choisissez une activité
+
+* link:#/oral.adoc[*Écouter*] : trois messages lus par synthèse vocale, puis des QCM.
+* link:#/structures.adoc[*Maîtriser la langue*] : trois phrases à compléter.
+* link:#/lecture.adoc[*Lire*] : trois documents du quotidien, puis des QCM.
+* link:#/expression-orale.adoc[*Parler*] : se présenter, demander des renseignements et défendre une opinion.
+* link:#/expression-ecrite.adoc[*Écrire*] : un message, un récit et une comparaison argumentée.
+
+== Comment travailler ?
+
+Répondez avant d'ouvrir la correction ou la solution. Chaque QCM propose quatre réponses dont une seule est correcte. Pour les productions libres, utilisez les critères de relecture et échangez avec un enseignant ou un partenaire : il n'y a pas de correction automatique.
+
+Les durées indiquées pour l'expression orale sont des repères de pratique. Les réponses saisies ne sont pas garanties après un changement de page ou un rechargement : copiez votre travail avant de quitter une activité.
+
+link:#/sources.adoc[Consulter les références officielles et découvrir le code AsciiDoc.]

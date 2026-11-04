@@ -1,0 +1,76 @@
+= Expression écrite
+:showtitle:
+
+Trois productions libres, à relire ou à faire commenter par un enseignant. Les longueurs ci-dessous reprennent les repères du TCF tout public. Le champ de saisie ne compte pas automatiquement les mots.
+
+== 1. Écrire un message
+
+Vous invitez un ami à une journée de découverte de votre ville. Précisez le lieu du rendez-vous, le programme et ce qu’il doit apporter. Écrivez *60 à 120 mots*.
+
+[tp-textfield%multiline%clearable,rows="8",label="Votre texte — 1. Écrire un message"]
+====
+====
+
+[tp-checkbox-list,label="Autoévaluation"]
+====
+* Je m’adresse clairement à mon ami.
+* Je donne les trois informations demandées.
+* Je respecte la longueur et je vérifie les accords.
+====
+
+[tp-accordion]
+====
+Pistes de travail::
++
+Commencez par l’invitation, proposez un horaire et un lieu précis, puis présentez deux activités. Terminez par une question pour confirmer sa venue.
+====
+
+== 2. Raconter une expérience
+
+Vous avez participé à un atelier de réparation d’objets. Sur le blog de votre association, racontez cette expérience et expliquez ce qu’elle vous a apporté. Écrivez *120 à 150 mots*.
+
+[tp-textfield%multiline%clearable,rows="8",label="Votre texte — 2. Raconter une expérience"]
+====
+====
+
+[tp-checkbox-list,label="Autoévaluation"]
+====
+* Je situe l’expérience et raconte son déroulement.
+* Je donne mon appréciation avec des exemples.
+* J’organise les événements et respecte la longueur.
+====
+
+[tp-accordion]
+====
+Pistes de travail::
++
+Présentez l’objet apporté, la difficulté rencontrée, l’aide reçue et le résultat. Expliquez ce que vous avez appris et si vous recommandez cet atelier.
+====
+
+== 3. Comparer et prendre position
+
+*Document A — Léa* : « Les jardins partagés permettent aux voisins de se rencontrer. Même sans expérience, on peut apprendre à cultiver quelques légumes avec les autres. »
+
+*Document B — Marc* : « Un jardin partagé demande du temps et une organisation claire. Sans répartition des tâches, quelques bénévoles risquent de faire tout le travail. »
+
+Pour le journal de votre quartier, présentez les deux points de vue avec vos propres mots, puis donnez votre avis sur les jardins partagés. Écrivez *120 à 180 mots*.
+
+[tp-textfield%multiline%clearable,rows="8",label="Votre texte — 3. Comparer et prendre position"]
+====
+====
+
+[tp-checkbox-list,label="Autoévaluation"]
+====
+* Je reformule les deux points de vue.
+* Je distingue cette présentation de mon opinion.
+* J’appuie mon avis sur des arguments et un exemple.
+* Je relis les connecteurs et respecte la longueur.
+====
+
+[tp-accordion]
+====
+Pistes de travail::
++
+Les documents mettent en avant la convivialité et les contraintes d’organisation. Vous pouvez soutenir le projet tout en proposant un calendrier de tâches, ou défendre une autre position argumentée.
+====
+

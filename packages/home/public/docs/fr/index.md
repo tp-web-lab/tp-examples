@@ -51,6 +51,8 @@ Les exemples présentés ici constituent des cas pédagogiques plus complets qui
 :::
 
 ::: tp-grid { data-example-grid min-width="350px" style="grid-auto-rows:1fr;align-items:stretch;max-width:calc(1050px + 2rem);" }
+
+<!-- derivatives -->
 :::: tp-card { data-type="multi-pages" data-markup="markdown" data-category="math plot physics" style="min-width:0;text-align:center;" }
 header
 : #### Qu'est-ce qu'une dérivée ?
@@ -78,6 +80,7 @@ footer
   :tp-button:Voir l'exemple{href="https://tp-web-lab.github.io/derivatives/" variant="brand" size="xxl"}
 ::::
 
+<!-- geometry -->
 :::: tp-card { data-type="multi-pages" data-markup="markdown" data-category="math" style="min-width:0;text-align:center;" }
 header
 : #### Une règle, un compas
@@ -94,6 +97,7 @@ footer
   :tp-button:Voir l'exemple{href="https://tp-web-lab.github.io/geometry/" variant="brand" size="xxl"}
 ::::
 
+<!-- toeic -->
 :::: tp-card { data-type="multi-pages" data-markup="markdown" data-category="language" style="min-width:0;text-align:center;" }
 header
 : #### Do you speak English?
@@ -131,30 +135,69 @@ footer
 : 
   :tp-button:Voir l'exemple{href="https://tp-web-lab.github.io/toeic/" variant="brand" size="xxl"}
 ::::
-:::: tp-card { data-type="single-page" data-markup="markdown" data-category="programming" style="min-width:0;text-align:center;" }
+
+<!-- tcf -->
+:::: tp-card { data-type="multi-pages" data-markup="asciidoc" data-category="language" style="min-width:0;text-align:center;" }
 header
-: #### JT VR — vidéo interactive
+: #### Pratiquer le français · TCF
 
 main
+: Écouter, lire et s’exprimer en français : des activités originales inspirées du TCF tout public, avec QCM corrigés, synthèse vocale et autoévaluation.
+
+footer
 :
-  Regardez une introduction, puis cliquez sur une des trois vignettes pour choisir la suite. Les quatre vidéos sont hébergées sur YouTube.
+  :tp-button:Découvrir le parcours{href="https://tp-web-lab.github.io/tp-examples/tcf/" variant="brand" size="xxl"}
+::::
+
+<!-- jazz -->
+:::: tp-card { data-type="multi-pages" data-markup="markdown" data-category="music" style="min-width:0;text-align:center;" }
+header
+: #### Jazz · Découvrir et écouter
+
+main
+: Styles, fusions, formations et coups de cœur : des écoutes commentées, une playlist et des partitions pour découvrir le jazz.
+
+footer
+: :tp-button:Découvrir le jazz{href="https://tp-web-lab.github.io/tp-examples/jazz/" variant="brand" size="xxl"}
+::::
+
+<!-- jt-vr -->
+:::: tp-card { data-type="single-page" data-markup="markdown" data-category="epistemology" style="min-width:0;text-align:center;" }
+header
+: #### Épistémologie de la réalité virtuelle
+
+main
+: Une brève introduction à l'épistémologie de la réalité virtuelle en quatre vidéos.
+
+  {style="margin-bottom:1rem;"}
+
+  ::::: tp-video-player { id="jt-vr-video" src="https://www.youtube.com/watch?v=4n0M4YRAVjc" controls label="Introduction à la réalité virtuelle" style="margin-bottom:1rem;"}
+  :::::
+
+  Les vidéos sont en français et sont hébergées sur YouTube.
 
 footer
 :
   :tp-button:Voir l'exemple{href="https://tp-web-lab.github.io/tp-examples/jt-vr/" variant="brand" size="xxl"}
 ::::
 
-:::: tp-card { data-type="slideshow" data-markup="asciidoc" data-category="programming" style="min-width:0;text-align:center;" }
+<!-- pint-of-science-rv -->
+:::: tp-card { data-type="slideshow" data-markup="asciidoc" data-category="epistemology" style="min-width:0;text-align:center;" }
 header
-: #### Réalité virtuelle — Pint of Science
+: #### Pint of Science 2018
 
 main
 :
-  La conférence de Jacques Tisseau : 18 diapositives AsciiDoc, apparitions progressives et notes du conférencier.
+  Adaptation d'un diaporama pour l'édition 2018 de « Pint of Science ». 
+  Le commentaire audio est généré ici à l'aide d'un synthétiseur vocal.
+
+  {style="margin-bottom:1em;"}
+
+  ![Pint of Science 2018](/docs/pint-of-science.png)
 
 footer
 :
-  :tp-button:Voir l’exemple{href="https://tp-web-lab.github.io/tp-examples/pint-of-science-rv/" variant="brand" size="xxl"}
+  :tp-button:Voir l'exemple{href="https://tp-web-lab.github.io/tp-examples/pint-of-science-rv/" variant="brand" size="xxl"}
 ::::
 
 

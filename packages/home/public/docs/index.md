@@ -52,6 +52,8 @@ The examples presented here are more comprehensive educational examples that uti
 :::
 
 ::: tp-grid { data-example-grid min-width="350px" style="grid-auto-rows:1fr;align-items:stretch;max-width:100%;" }
+
+<!-- derivatives -->
 :::: tp-card { data-type="multi-pages" data-markup="markdown" data-category="math plot physics" style="min-width:0;text-align:center;" }
 header
 : #### What is a derivative?
@@ -80,6 +82,7 @@ footer
   :tp-button:View the example{href="https://tp-web-lab.github.io/derivatives/" variant="brand" size="xxl"}
 ::::
 
+<!-- geometry -->
 :::: tp-card { data-type="multi-pages" data-markup="markdown" data-category="math" style="min-width:0;text-align:center;" }
 header
 : #### A ruler, a compass
@@ -96,6 +99,7 @@ footer
   :tp-button:View the example{href="https://tp-web-lab.github.io/geometry/" variant="brand" size="xxl"}
 ::::
 
+<!-- toeic -->
 :::: tp-card { data-type="multi-pages" data-markup="markdown" data-category="language" style="min-width:0;text-align:center;" }
 header
 : #### Do you speak English?
@@ -156,6 +160,32 @@ footer
   :tp-button:View the example{href="https://tp-web-lab.github.io/toeic/" variant="brand" size="xxl"}
 ::::
 
+<!-- tcf -->
+:::: tp-card { data-type="multi-pages" data-markup="asciidoc" data-category="language" style="min-width:0;text-align:center;" }
+header
+: #### Pratiquer le français · TCF
+
+main
+: Écouter, lire et s’exprimer en français : des activités originales inspirées du TCF tout public, avec QCM corrigés, synthèse vocale et autoévaluation.
+
+footer
+:
+  :tp-button:Découvrir le parcours{href="https://tp-web-lab.github.io/tp-examples/tcf/" variant="brand" size="xxl"}
+::::
+
+<!-- jazz -->
+:::: tp-card { data-type="multi-pages" data-markup="markdown" data-category="music" style="min-width:0;text-align:center;" }
+header
+: #### Jazz · Découvrir et écouter
+
+main
+: Styles, fusions, formations et coups de cœur : des écoutes commentées, une playlist et des partitions pour découvrir le jazz.
+
+footer
+: :tp-button:Découvrir le jazz{href="https://tp-web-lab.github.io/tp-examples/jazz/" variant="brand" size="xxl"}
+::::
+
+<!-- jt-vr -->
 :::: tp-card { data-type="single-page" data-markup="markdown" data-category="epistemology" style="min-width:0;text-align:center;" }
 header
 : #### Epistemology of Virtual Reality
@@ -174,17 +204,24 @@ footer
 :
   :tp-button:View the example{href="https://tp-web-lab.github.io/tp-examples/jt-vr/" variant="brand" size="xxl"}
 ::::
-:::: tp-card { data-type="slideshow" data-markup="asciidoc" data-category="programming" style="min-width:0;text-align:center;" }
+
+<!-- pint-of-science-rv -->
+:::: tp-card { data-type="slideshow" data-markup="asciidoc" data-category="epistemology" style="min-width:0;text-align:center;" }
 header
-: #### Réalité virtuelle — Pint of Science
+: #### Pint of Science 2018
 
 main
 :
-  Jacques Tisseau’s talk: 18 AsciiDoc slides with progressive reveals and speaker notes.
+  Adaptation of a slide show presentation for Pint of Science 2018. 
+  The spoken commentary is generated here using speech synthesis.
+
+  {style="margin-bottom:1em;"}
+
+  ![Pint of Science 2018](/docs/pint-of-science.png)
 
 footer
 :
-  :tp-button:View example{href="https://tp-web-lab.github.io/tp-examples/pint-of-science-rv/" variant="brand" size="xxl"}
+  :tp-button:View the example{href="https://tp-web-lab.github.io/tp-examples/pint-of-science-rv/" variant="brand" size="xxl"}
 ::::
 
 

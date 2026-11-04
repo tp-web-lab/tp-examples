@@ -1,0 +1,154 @@
+= Compréhension orale
+:showtitle:
+
+Écoutez chaque message, puis choisissez une réponse. Pour une première tentative, écoutez une seule fois ; vous pourrez ensuite réécouter et consulter la transcription dans la solution.
+
+La voix est celle du navigateur, en français. Sa disponibilité dépend de votre appareil. Ces lectures synthétiques servent à l'entraînement et ne reproduisent pas les enregistrements officiels.
+
+== À la médiathèque
+
+[tp-text-to-speech,lang="fr-FR",legend="Écoute 1"]
+======
+[script,type="tp/txt"]
+----
+La médiathèque ferme exceptionnellement à seize heures aujourd’hui. Les personnes qui souhaitent rendre des livres après cette heure peuvent utiliser la boîte située à droite de l’entrée.
+----
+======
+
+[tp-single-choice-question,answer="2",lang="fr",open="input"]
+====
+Title:: À la médiathèque
+
+Prompt::
++
+--
+Comment rendre un livre après seize heures ?
+--
+
+Form::
++
+* En attendant demain.
+
+* En le déposant dans une boîte.
+
+* En le laissant au café.
+
+* En appelant un bibliothécaire.
+
+Feedback::
++
+* La boîte permet de rendre le livre dès aujourd’hui.
+
+* Oui, la boîte à droite de l’entrée reste accessible.
+
+* Le café n’est pas mentionné.
+
+* Aucun appel n’est demandé.
+
+Solution::
++
+--
+*Réponse : En le déposant dans une boîte.*
+
+Transcription : La médiathèque ferme exceptionnellement à seize heures aujourd’hui. Les personnes qui souhaitent rendre des livres après cette heure peuvent utiliser la boîte située à droite de l’entrée.
+--
+====
+
+== Un rendez-vous déplacé
+
+[tp-text-to-speech,lang="fr-FR",legend="Écoute 2"]
+======
+[script,type="tp/txt"]
+----
+Bonjour Léa, c’est Karim. Notre visite de l’appartement reste prévue samedi, mais le propriétaire ne pourra pas venir à dix heures. Il propose onze heures trente. Retrouvons-nous devant l’immeuble dix minutes avant.
+----
+======
+
+[tp-single-choice-question,answer="3",lang="fr",open="input"]
+====
+Title:: Un rendez-vous déplacé
+
+Prompt::
++
+--
+À quelle heure Karim propose-t-il de retrouver Léa ?
+--
+
+Form::
++
+* À dix heures.
+
+* À onze heures.
+
+* À onze heures vingt.
+
+* À onze heures trente.
+
+Feedback::
++
+* Dix heures était l’horaire initial de la visite.
+
+* Le message ne propose pas onze heures.
+
+* Oui : dix minutes avant onze heures trente.
+
+* C’est l’heure de la visite, pas du rendez-vous entre amis.
+
+Solution::
++
+--
+*Réponse : À onze heures vingt.*
+
+Transcription : Bonjour Léa, c’est Karim. Notre visite de l’appartement reste prévue samedi, mais le propriétaire ne pourra pas venir à dix heures. Il propose onze heures trente. Retrouvons-nous devant l’immeuble dix minutes avant.
+--
+====
+
+== Une décision municipale
+
+[tp-text-to-speech,lang="fr-FR",legend="Écoute 3"]
+======
+[script,type="tp/txt"]
+----
+La ville va expérimenter la gratuité des bus le samedi pendant trois mois. L’objectif est de faciliter l’accès aux commerces du centre. Les élus compareront ensuite la fréquentation des bus et celle des parkings avant de décider s’ils prolongent cette mesure.
+----
+======
+
+[tp-single-choice-question,answer="4",lang="fr",open="input"]
+====
+Title:: Une décision municipale
+
+Prompt::
++
+--
+Que prévoit la ville après les trois mois ?
+--
+
+Form::
++
+* Supprimer tous les parkings.
+
+* Rendre les bus gratuits tous les jours.
+
+* Fermer les commerces du centre.
+
+* Évaluer les résultats de l’expérience.
+
+Feedback::
++
+* Aucune suppression des parkings n’est annoncée.
+
+* Une extension à tous les jours n’est pas annoncée.
+
+* La mesure vise au contraire à faciliter l’accès aux commerces.
+
+* Oui : les fréquentations seront comparées avant une décision.
+
+Solution::
++
+--
+*Réponse : Évaluer les résultats de l’expérience.*
+
+Transcription : La ville va expérimenter la gratuité des bus le samedi pendant trois mois. L’objectif est de faciliter l’accès aux commerces du centre. Les élus compareront ensuite la fréquentation des bus et celle des parkings avant de décider s’ils prolongent cette mesure.
+--
+====
+

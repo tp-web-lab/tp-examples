@@ -1,10 +1,11 @@
-html, body { margin: 0; min-height: 100%; }
-tp-asciidoc-multi-slides { display: block; min-height: 100dvh; }
-.tp-markup-multi-slides-host .tp-markup-multi-pages-content { max-width: 65em; margin-inline: auto; font-size: clamp(1rem, 1.6vw, 1.65rem); line-height: 1.4; padding-inline: clamp(1em, 3vw, 3em); }
-.tp-markup-multi-pages-content h1 { color: var(--tp-brand-text-colorful); font-size: 1.9em; line-height: 1.15; margin-block: .35em .7em; }
-.tp-markup-multi-pages-content p { margin-block: .45em; }
-.tp-markup-multi-pages-content strong, .takeaway, .eyebrow { color: var(--tp-brand-text-colorful); }
-.tp-markup-multi-pages-content img { max-width: 100%; max-height: 13em; object-fit: contain; }
+/* Editorial typography for this conference; shared slide styling lives in the library. */
+tp-asciidoc-multi-slides {
+  --tp-slide-font-size: clamp(1rem, 1.6vw, 1.65rem);
+  --tp-slide-title-size: 1.9em;
+}
+
+/* Layouts and emphasis specific to the conference content. */
+.takeaway, .eyebrow { color: var(--tp-brand-text-colorful); }
 .columns, .four-columns, .comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1em 2em; align-items: start; }
 .four-columns { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .comparison { border-bottom: 1px solid var(--tp-brand-fill-soft); padding: .25em 1em; }
@@ -19,30 +20,12 @@ tp-asciidoc-multi-slides { display: block; min-height: 100dvh; }
 .diagram-stack { display: grid; width: min(100%, 52em); margin-inline: auto; }
 .diagram-stage { grid-area: 1 / 1; width: 100%; }
 .diagram-stack svg { display: block; width: 100%; height: auto; max-height: calc(100dvh - 17rem); }
-tp-include svg { display: block; width: 100%; height: auto; max-height: 22em; }
 .choices { border-top: 2px solid var(--tp-brand-fill-soft); margin-top: 1em; padding-top: .6em; }
 .choices a { display: inline-block; padding: .35em .7em; border: 1px solid var(--tp-brand-fill-mid); border-radius: .4em; margin: .2em; }
 .takeaway { font-size: 1.15em; }
-.speaker-notes { position: fixed; right: 1rem; bottom: 4.3rem; z-index: 5; padding: .2rem .5rem; font-size: .75rem; color: var(--tp-brand-text-colorful); background: var(--tp-paper-color); border-radius: .3rem; }
 @media (max-width: 650px) {
   .columns, .four-columns { grid-template-columns: 1fr; }
   .paradigms { flex-wrap: wrap; }
-  .tp-markup-multi-pages-content img { max-height: 10em; }
-  .speaker-notes { bottom: 4rem; }
-}
-
-[data-slide-notes] .tp-text-to-speech-text { white-space: pre-line; }
-.speaker-notes a { color: inherit; }
-@media (max-width: 650px) { .speaker-notes { max-width: calc(100vw - 2rem); font-size: .7rem; } }
-
-.speaker-notes [data-mode] { display: inline-block; padding: .15em .4em; border-radius: .25rem; }
-.speaker-notes [aria-current="true"] {
-  color: var(--tp-brand-text-on-soft);
-  background: var(--tp-brand-fill-soft);
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-thickness: .12em;
-  text-underline-offset: .2em;
 }
 
 .affiliation-logos, .cover-logos {
@@ -78,12 +61,6 @@ tp-include svg { display: block; width: 100%; height: auto; max-height: 22em; }
   background: transparent;
   border-radius: 0;
 }
-
-#presentation:fullscreen { height: 100dvh; overflow: hidden; }
-.speaker-notes > ul[role="menu"] { flex-wrap: wrap; }
-
-/* The menu reveals the current note, including its summary, on demand. */
-#presentation tp-slide-note:not([open]) { display: none; }
 
 /* Keep each illustration next to its axis as the diagram scales. */
 .pinocchio-diagram {

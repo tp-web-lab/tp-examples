@@ -1,0 +1,72 @@
+= Expression orale
+:showtitle:
+
+Travaillez avec un partenaire qui joue le rôle de l’interlocuteur. Les champs servent à prendre des notes, pas à remplacer la prise de parole. Aucune réponse vocale n’est enregistrée ou évaluée automatiquement.
+
+== 1. Se présenter
+
+Parlez de votre quotidien, de vos centres d’intérêt et d’un projet personnel. Votre partenaire vous pose des questions pour approfondir. Repère : *2 minutes*, sans préparation.
+
+[tp-textfield%multiline%clearable,rows="4",label="Votre texte — 1. Se présenter"]
+====
+====
+
+[tp-checkbox-list,label="Autoévaluation"]
+====
+* Je réponds aux questions sans réciter un texte.
+* Je développe mes réponses avec des exemples.
+* Je parle de façon compréhensible.
+====
+
+[tp-accordion]
+====
+Pistes de travail::
++
+Le partenaire peut demander : Pourquoi ce projet vous intéresse-t-il ? Comment organisez-vous votre semaine ? Quelle activité aimeriez-vous découvrir ?
+====
+
+== 2. Obtenir des renseignements
+
+Votre partenaire travaille dans une association qui organise une randonnée. Vous souhaitez participer. Posez des questions sur le parcours, le prix, l’équipement et l’inscription. Repères : *2 minutes de préparation*, puis *3 minutes 30 d’échange*.
+
+[tp-textfield%multiline%clearable,rows="5",label="Votre texte — 2. Obtenir des renseignements"]
+====
+====
+
+[tp-checkbox-list,label="Autoévaluation"]
+====
+* Je prends l’initiative et pose plusieurs questions.
+* Je réagis aux réponses et demande des précisions.
+* J’utilise un registre adapté.
+====
+
+[tp-accordion]
+====
+Pistes de travail::
++
+Le partenaire peut inventer des réponses cohérentes : départ dimanche à 9 h, parcours de 8 km, tarif de 5 euros, inscription avant jeudi. Gardez ces informations cachées avant l’échange.
+====
+
+== 3. Défendre une opinion
+
+Faut-il rendre les transports publics gratuits le week-end ? Développez votre point de vue avec des raisons et des exemples. Repère : *4 minutes 30*, sans préparation.
+
+[tp-textfield%multiline%clearable,rows="4",label="Votre texte — 3. Défendre une opinion"]
+====
+====
+
+[tp-checkbox-list,label="Autoévaluation"]
+====
+* J’annonce clairement mon point de vue.
+* Je développe au moins deux arguments.
+* Je prends en compte une objection.
+* Je termine par une conclusion cohérente.
+====
+
+[tp-accordion]
+====
+Pistes de travail::
++
+Pensez à l’accès aux loisirs, au financement du service, à la fréquentation et à la place de la voiture. Plusieurs positions sont défendables : la cohérence du raisonnement compte.
+====
+

@@ -1,0 +1,4 @@
+= Page introuvable
+:showtitle:
+
+link:#/cover.adoc[Revenir au parcours.]

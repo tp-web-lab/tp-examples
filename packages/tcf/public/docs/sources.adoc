@@ -1,0 +1,48 @@
+= Sources et fabrication
+:showtitle:
+
+== Références
+
+* https://www.france-education-international.fr/test/exemples-epreuves-tcf[France Éducation international — Exemples d’épreuves du TCF].
+* https://www.france-education-international.fr/test/tcf-tout-public[France Éducation international — TCF tout public].
+
+Références consultées le 3 novembre 2026. Les activités, documents, dialogues et corrigés de ce parcours sont originaux. Les exemples officiels ont inspiré les familles d’activités, sans reprise de leurs sujets, illustrations ou enregistrements. TCF est une marque de France Éducation international ; cet exemple est indépendant.
+
+== Un exemple déclaratif
+
+La page HTML contient un `tp-asciidoc-multi-pages`. Son attribut `repository="./docs"` désigne ce dossier ; `sidebar.adoc` fournit le sommaire.
+
+Les fichiers `.adoc` emploient les composants de la bibliothèque :
+
+* `tp-single-choice-question` pour les QCM et leurs corrections ;
+* `tp-text-to-speech` avec un script `tp/txt` pour l’écoute ;
+* `tp-textfield` pour les productions et les notes ;
+* `tp-checkbox-list` pour l’autoévaluation.
+
+Aucun JavaScript ni CSS propre à l’exemple n’est nécessaire. Le bouton *Code* de la barre d’outils permet de consulter la source de la page courante.
+
+== Ajouter une question
+
+[source,asciidoc]
+----
+[tp-single-choice-question,answer="2",lang="fr",open="input"]
+====
+Title:: Une question
+Prompt:: Choisissez la réponse correcte.
+Form::
++
+* Proposition A
+* Proposition B
+* Proposition C
+* Proposition D
+Feedback::
++
+* Explication A.
+* Explication B.
+* Explication C.
+* Explication D.
+Solution:: La proposition B convient parce que…
+====
+----
+
+L’attribut `answer` désigne la position de la bonne réponse, à partir de 1. Placez les explications dans le même ordre que les propositions.

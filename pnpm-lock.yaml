@@ -57,6 +57,19 @@ importers:
         specifier: 4.1.1
         version: 4.1.1(vite@8.1.5)
 
+  packages/jazz:
+    dependencies:
+      '@tp/tp-components':
+        specifier: link:../../../tp-components
+        version: link:../../../tp-components
+    devDependencies:
+      vite:
+        specifier: 8.1.5
+        version: 8.1.5
+      vite-plugin-static-copy:
+        specifier: 4.1.1
+        version: 4.1.1(vite@8.1.5)
+
   packages/jt-vr:
     dependencies:
       '@tp/tp-components':
@@ -74,6 +87,19 @@ importers:
         version: 4.1.1(vite@8.1.5)
 
   packages/pint-of-science-rv:
+    dependencies:
+      '@tp/tp-components':
+        specifier: link:../../../tp-components
+        version: link:../../../tp-components
+    devDependencies:
+      vite:
+        specifier: 8.1.5
+        version: 8.1.5
+      vite-plugin-static-copy:
+        specifier: 4.1.1
+        version: 4.1.1(vite@8.1.5)
+
+  packages/tcf:
     dependencies:
       '@tp/tp-components':
         specifier: link:../../../tp-components

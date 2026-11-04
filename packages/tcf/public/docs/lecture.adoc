@@ -1,0 +1,131 @@
+= Compréhension écrite
+:showtitle:
+
+Lisez le document de chaque question et choisissez une seule réponse.
+
+[tp-single-choice-question,answer="3",lang="fr",open="input"]
+====
+Title:: Une affiche
+
+Prompt::
++
+--
+[quote]
+____
+Atelier vélo — samedi, de 14 h à 17 h. Venez apprendre à réparer une crevaison. Apportez votre vélo ; les outils sont fournis. Inscription gratuite à l’accueil, avant vendredi midi.
+____
+
+Que faut-il apporter ?
+--
+
+Form::
++
+* Ses propres outils.
+
+* Une pièce de rechange obligatoire.
+
+* Son vélo.
+
+* Le paiement de l’atelier.
+
+Feedback::
++
+* Les outils sont fournis.
+
+* Aucune pièce à apporter n’est indiquée.
+
+* Oui, l’affiche le demande explicitement.
+
+* L’inscription est gratuite.
+
+Solution::
++
+--
+Il faut apporter *son vélo*.
+--
+====
+
+[tp-single-choice-question,answer="2",lang="fr",open="input"]
+====
+Title:: Un courriel
+
+Prompt::
++
+--
+[quote]
+____
+Bonjour Samira, votre commande est arrivée. Notre boutique sera fermée lundi pour inventaire. Vous pouvez retirer votre colis dès mardi à 9 h, ou aujourd’hui jusqu’à 18 h. Nous le conserverons jusqu’à vendredi soir.
+____
+
+Samira est indisponible aujourd’hui. Quand pourra-t-elle retirer son colis au plus tôt ?
+--
+
+Form::
++
+* Lundi à 9 h.
+
+* Mardi à 9 h.
+
+* Vendredi soir seulement.
+
+* Samedi matin.
+
+Feedback::
++
+* La boutique est fermée lundi.
+
+* Oui : c’est le premier créneau proposé après aujourd’hui.
+
+* Vendredi soir est la limite de conservation, pas le début du retrait.
+
+* Le colis n’est annoncé conservé que jusqu’à vendredi soir.
+
+Solution::
++
+--
+Elle pourra venir *mardi à 9 h*.
+--
+====
+
+[tp-single-choice-question,answer="4",lang="fr",open="input"]
+====
+Title:: Un point de vue
+
+Prompt::
++
+--
+[quote]
+____
+Prolonger l’ouverture de la bibliothèque peut aider les étudiants qui travaillent en journée. Mais cette mesure sera peu utile si le dernier bus part avant la fermeture. Pour rendre ce service réellement accessible, il faut donc coordonner les horaires de la bibliothèque et ceux des transports.
+____
+
+Quelle idée l’auteur défend-il ?
+--
+
+Form::
++
+* Les étudiants devraient cesser de travailler.
+
+* La bibliothèque doit fermer plus tôt.
+
+* Les bus sont inutiles aux étudiants.
+
+* L’élargissement des horaires doit s’accompagner de transports adaptés.
+
+Feedback::
++
+* L’auteur tient compte des étudiants salariés sans leur demander d’arrêter.
+
+* L’auteur propose une coordination, pas une fermeture plus tôt.
+
+* Les transports sont au contraire nécessaires à l’accessibilité.
+
+* Oui, c’est la condition avancée pour rendre la mesure utile.
+
+Solution::
++
+--
+L’auteur défend une *coordination entre les horaires de la bibliothèque et ceux des transports*.
+--
+====
+

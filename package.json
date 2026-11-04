@@ -13,7 +13,9 @@
     "dev:geometry": "pnpm --filter @tp/example-geometry dev",
     "dev:toeic": "pnpm --filter @tp/example-toeic dev",
     "dev:jt-vr": "pnpm --filter @tp/example-jt-vr dev",
-    "dev:pint-of-science-rv": "pnpm --filter @tp/example-pint-of-science-rv dev"
+    "dev:pint-of-science-rv": "pnpm --filter @tp/example-pint-of-science-rv dev",
+    "dev:tcf": "pnpm --filter @tp/example-tcf dev",
+    "dev:jazz": "pnpm --filter @tp/example-jazz dev"
   },
   "devDependencies": {
     "@mathjax/src": "4.1.3",
