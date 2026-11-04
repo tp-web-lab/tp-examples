@@ -155,10 +155,27 @@ header
 : #### Jazz · Découvrir et écouter
 
 main
-: Styles, fusions, formations et coups de cœur : des écoutes commentées, une playlist et des partitions pour découvrir le jazz.
+:
+  :tp-button:Découvrir les styles{href="https://tp-web-lab.github.io/tp-examples/jazz/styles/a0-styles.md" variant="brand"}
+  : Des débuts du jazz au free jazz : une découverte chronologique.
+
+  :tp-button:Explorer les fusions{href="https://tp-web-lab.github.io/tp-examples/jazz/fusions/b0-fusions.md" variant="brand"}
+  : Le jazz rencontre les musiques du monde, le rock, le funk et l’électronique.
+
+  :tp-button:Découvrir les formations{href="https://tp-web-lab.github.io/tp-examples/jazz/formations/c0-formations.md" variant="brand"}
+  : Du solo au big band, écouter les différentes types de groupes de jazz.
+
+  :tp-button:Écouter les coups de cœur{href="https://tp-web-lab.github.io/tp-examples/jazz/coeurs/d0-coeurs.md" variant="brand"}
+  : Des écoutes à partager, de l’Europe de l’Est au jazz vocal.
+
+  :tp-button:Écouter la playlist{href="https://tp-web-lab.github.io/tp-examples/jazz/playlist/playlist.md" variant="brand"}
+  : 83 morceaux de jazz à écouter ou à ré-écouter.
+
+  :tp-button:Consulter les partitions{href="https://tp-web-lab.github.io/tp-examples/jazz/partitions/partitions.md" variant="brand"}
+  : 152 partitions à étudier et à jouer.
 
 footer
-: :tp-button:Découvrir le jazz{href="https://tp-web-lab.github.io/tp-examples/jazz/" variant="brand" size="xxl"}
+: :tp-button:View the example{href="https://tp-web-lab.github.io/tp-examples/jazz/" variant="brand" size="xxl"}
 ::::
 
 <!-- jt-vr -->

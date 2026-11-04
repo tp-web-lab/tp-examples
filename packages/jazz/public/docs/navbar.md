@@ -1,0 +1,2 @@
+- <tp-icon-button src="/docs/trumpet.svg" href="playlist/playlist.md" label="Liste de lecture"></tp-icon-button>
+- <tp-icon-button src="/docs/sheet.svg" href="partitions/partitions.md" label="Partitions"></tp-icon-button>
