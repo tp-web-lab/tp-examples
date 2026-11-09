@@ -1,0 +1,199 @@
+[
+  {
+    "id": "couverture",
+    "label": "Couverture",
+    "title": "La couverture du livre",
+    "description": "Fond bicolore, ruban impossible et pense-bête épinglé composent la couverture.",
+    "tryit": "Changez les couleurs du fond ou le texte du pense-bête.",
+    "origin": "TikZ-Couverture.tex",
+    "notes": [
+      "Les repères de page A4 sont remplacés par des coordonnées locales et le dessin est réduit à 55 %. Les couleurs, styles et macros sont regroupés dans tikzpicture. La police système Lucida Handwriting est remplacée par une italique TeX.",
+      "Les accents du source éditable sont écrits directement en UTF-8 ; le fichier original reste disponible."
+    ],
+    "source": "\\documentclass{article}\n\\usepackage{tikz}\n\\usetikzlibrary{calc}\n\\begin{document}\n\\begin{tikzpicture}[scale=0.55,transform shape]\n\n\n%: définition des couleurs et des styles\n% fond Gauche et Droite bleu marron\n\\definecolor{couleurGauche}{rgb}{.25,1,1}\n\\definecolor{couleurDroite}{rgb}{.75,.5,0.25}\n% Post-It jaune\n\\definecolor{couleurPostIt}{rgb}{.9,.9,.35}\n% logo TikZ dégradé blanc gris Top et Bottom\n\\definecolor{couleurTop}{rgb}{1,1,1}\n\\definecolor{couleurBottom}{rgb}{.5,.5,.5}\n\n\n\n\\tikzset{fondA/.style={ball color=couleurGauche}}\n\\tikzset{fondB/.style={ball color=couleurDroite}}\n\\tikzset{fondPostit/.style={color= couleurPostIt}}\n\\tikzset{ombrePunaise/.style={color={blue!10!gray}}}\n\\tikzset{ombrePostit/.style={color={black},opacity=.5}}\n\\tikzset{punaise/.style={ball color=red}}\n\n% ============ utilitaires de construction ============\n%: \\ruban{angle}{point}\n\\newcommand{\\ruban}[2]{\\shadedraw[rotate=#1] #2\n  ++(0:0.57735*\\arete-0.57735*\\epaisseur+2*\\rayon)\n  ++(-30:\\epaisseur-1.73205*\\rayon)\n  arc (60:0:\\rayon)   -- ++(90:\\epaisseur)\n  arc (0:60:\\rayon)   -- ++(150:\\arete)\n  arc (60:120:\\rayon) -- ++(210:\\epaisseur)\n  arc (120:60:\\rayon) -- cycle;}\n\n%: \\logoTikZ{(point)}{angle}{TikZ}{pour}{L'impatient}\n\\newcommand{\\logoTikZ}[5]\n{\\def\\arete{3}   \\def\\epaisseur{5}   \\def\\rayon{2}\n\\begin{scope} [very thick,top color= couleurTop,bottom color= couleurBottom,rotate=#2]\n\t\\coordinate (a) at ($#1+(0,-6)$);\n\t\\coordinate (b) at ($#1+(6,-6)$);\n\t\\coordinate (c) at ($#1+(6,6)$);\n\t\\coordinate (d) at ($#1+(0,6)$);\n\t\\ruban{0}{#1};\n\t\\ruban{120}{#1};\n\t\\ruban{-120}{#1};\n\t\\draw #1 ++(-60:3.5) node[scale=5,rotate={#2+30}]{#3};\n\t\\draw #1 ++(180:3.5) node[scale=3,rotate={#2-90}]{#5};\n\t\\clip (a) -- (b) -- (c) -- (d) -- cycle; % pour croiser\n\t\\ruban{0} {#1};\n\t\\draw #1 ++(60:3.5) node [gray,xscale=-3,yscale=3,rotate={360-#2+30}]{#4};\n\\end{scope}}\n\n% un trait épais et trois ovales empilés\n%: \\epingle{point}{angle}{échelle}\n\\newcommand{\\epingle}[3]{\n\\coordinate[rotate=#2,yshift={#3*0.375cm}] (e) at #1;\n\\coordinate[shift={++(60:0.75)}] (g) at (e);\n\\begin{scope} [scale=1.5]\n \\begin{scope}[rotate=-30]\n   \\coordinate[shift={++(30:0.75)}] (h) at (e);\n   \\draw[ombrePunaise,line cap=round,line width=4pt] (e) -- ++(60:0.75);\n   \\fill [ombrePunaise,rotate=-30,scale=0.5] (h) ellipse (.65 and .3) ;\n   \\fill [ombrePunaise,rotate=60,scale=0.5] (h) ++(0.4,0) ellipse (.4 and .3);\n   \\fill [ombrePunaise,rotate=60,scale=0.5] (h) ++(0.8,0) ellipse (.2 and .4);\n \\end{scope}\n \\draw[line cap=round,line width=4pt] (e) -- ++(60:0.75);\n \\fill [punaise,rotate=-30,scale=0.5] (g) ellipse (.65cm and .3cm) ;\n \\fill [punaise,rotate=60,scale=0.5] (g) ++(0.4,0) ellipse (.4 and .3);\n \\fill [punaise,rotate=60,scale=0.5] (g) ++(0.8,0) ellipse (.2 and .4);\n\\end{scope}}\n\n\n%: \\postIt{(point)}{angle}{échelle}{ligne 1}{ligne 2}{ligne 3}}\n\\newcommand{\\postIt}[6]\n{\\begin{scope} [rotate=#2]\n\\fill [red,ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) \n .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.25,-2.4)$)\n .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)\n -- cycle;\n\\fill [ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) \n .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.2,-2.35)$)\n .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)\n -- cycle;\n\\fill [ombrePostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) \n .. controls+(0,0)and+($#3*(-0.25,0.05)$).. ++ ($#3*(0.15,-2.3)$)\n .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)\n -- cycle;\n\\fill [fondPostit] #1 ++ ($#3*(-1.45,0.72)$) -- ++ ($#3*(2.86,0)$) \n .. controls+(0,0)and+($#3*(-0.2,0.1)$).. ++($#3*(0.1,-2.25)$)\n .. controls+($#3*(-0.1,-0.1)$)and+(0,0).. ++ ($#3*(-2.95,0.1)$)\n -- cycle;\n\\end{scope}\n\\epingle{#1}{#2}{#3}\n% texte\n\\draw #1 node [scale=#3,rotate=#2] {#4};\n\\draw #1 node [scale=#3,rotate=#2,below={#3*0.05cm}] {#5};\n\\draw #1 node [scale=#3,rotate=#2,below={#3*0.2cm}] {#6};}\n\n% pour un placement précis des divers éléments\n\\tikzset{ajustage/.style={yshift=-0.7cm}}\n\n%: ===== PAGE\n\n%: XeLaTeX \\font\\fantaisie pour sous-titre et texte du Post-It \n\\newcommand{\\fantaisie}{\\itshape}\n\n\n\n%===========================================================================\n\n% fond bicolore gauche droite\n\\coordinate [ajustage] (cp) at (0,0);\n\\coordinate [ajustage] (cpe) at (10.5,0);\n\\coordinate [ajustage] (cpne) at (10.5,14.85);\n\\coordinate [ajustage] (cpn) at (0,14.85);\n\\coordinate [ajustage] (cpnw) at (-10.5,14.85);\n\\coordinate [ajustage] (cpw) at (-10.5,0);\n\\coordinate [ajustage] (cpsw) at (-10.5,-14.85);\n\\coordinate [ajustage] (cps) at (0,-14.85);\n\\coordinate [ajustage] (cpse) at (10.5,-14.85);\n\\fill[fondA] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpnw)  -- (cpsw) -- cycle;\n\\fill[fondB] (cps) .. controls (cpw) and (cpe) .. (cpn) -- (cpne)  -- (cpse) -- cycle;\n\\draw[white,line width=4pt] (cps) .. controls (cpw) and (cpe) .. (cpn);\n\\draw[white,line width=8pt] (cpnw)--(cpne)--(cpse)--(cpsw)--cycle;\n\n\n% Logo à peu en dessous du centre (bord interne aligné avec la courbe)\n\\logoTikZ{(cp)}{25}{\\scriptsize Dessiner}{avec}{\\Large \\LaTeX}\n\n% TikZ pour l'impatient en haut à gauche\n\\draw (cp)  node [xshift=-9.5cm,yshift=12cm,scale=6.5,right] {Ti{\\color{orange}\\textit{k}}Z};\n\\draw (cp)  node [xshift=-9cm,yshift=10cm,scale=3,right] {\\fantaisie pour l'impatient};\n\n% Auteurs au centre sous le titre\n\\draw (cp)  node [xshift=-8.7cm,yshift=7.75cm,scale=2,right,color={black!75}] {\\emph{Gérard Tisseau \\  et \\ Jacques Duma}};\n\n% post'it en bas à droite avec les auteurs\n\\coordinate[xshift=4.5cm,yshift=-9.5cm] (postit) at (cp);\n\\postIt{(postit)}{17}{1.75} {\\fantaisie Fait \\   avec}{} {\\fantaisie L\\raisebox{0.25\\height}{A}T\\raisebox{-0.25\\height}{E}X et TikZ}\n\n\n\n%===========================================================================\n\n\n\n%: === Fin ===\n\n\\end{tikzpicture}\n\\end{document}\n",
+    "original": "couverture-original.tex"
+  },
+  {
+    "id": "debut",
+    "label": "Début",
+    "title": "Le ruban impossible",
+    "description": "Trois rubans ombrés se croisent autour du titre du livre.",
+    "tryit": "Modifiez les couleurs du dégradé ou les dimensions du ruban.",
+    "origin": "0/Debut/Debut.tex",
+    "notes": [
+      "Le k du logo TikZ est coloré en orange."
+    ],
+    "source": "\\documentclass{article}\n\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\def\\arete{3}   \\def\\epaisseur{5}   \\def\\rayon{2}\n\n\\newcommand{\\ruban}{(0,0)\n  ++(0:0.57735*\\arete-0.57735*\\epaisseur+2*\\rayon)\n  ++(-30:\\epaisseur-1.73205*\\rayon)\n  arc (60:0:\\rayon)   -- ++(90:\\epaisseur)\n  arc (0:60:\\rayon)   -- ++(150:\\arete)\n  arc (60:120:\\rayon) -- ++(210:\\epaisseur)\n  arc (120:60:\\rayon) -- cycle}\n   \n\\begin{tikzpicture}[very thick,top color=white,bottom color=gray]\n  \\shadedraw \\ruban;\n  \\shadedraw [rotate=120] \\ruban;\n  \\shadedraw [rotate=-120] \\ruban;\n  \\draw (-60:4) node[scale=5,rotate=30]{Ti{\\color{orange}\\textit{k}}Z};\n  \\draw (180:4) node[scale=3,rotate=-90]{l'impatient};\n  \\clip (0,-6) rectangle (6,6); % pour croiser\n  \\shadedraw  \\ruban;\n  \\draw (60:4) node [gray,xscale=-3,yscale=3,rotate=30]{pour};\n\\end{tikzpicture}\n\n\\end{document}\n",
+    "original": "debut-original.tex"
+  },
+  {
+    "chapter": 1,
+    "title": "Triangle et cercle inscrit",
+    "description": "Segments, arcs et annotations construisent le cercle inscrit et les bissectrices.",
+    "tryit": "Déplacez un sommet ou changez le rayon du cercle.",
+    "origin": "1/5.7/5.7.tex",
+    "notes": [],
+    "source": "\\documentclass{article}\n\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n  % Triangle\n  \\draw (3,3)node[above]{$C$}  % C\n      -- (4,0) node[below]{B}; % B\n  \\draw (0,0)node[below] {$A$} % A\n      -- (3,3); \n  \\draw (0,0)-- (4,0);\n  % Cercle\n  \\draw(2.54,1.05) circle (1.05cm);\n  % Rayons, projection de $I$\n  \\draw (1.8,1.8) % contact sur [AC]\n      -- (2.54,1.05); \n  \\draw (2.54,1.05) node[below left]{$I$} node{$\\bullet$}\n      -- (2.54,0); % contact sur [AB]\n  \\draw (2.54,1.05)\n      -- (3.54,1.38); % contact sur [BC]\n  % Bissectrices\n  \\draw (3,3)-- (2.54,1.05); % [IC]\n  \\draw (0,0)-- (2.54,1.05); % [IA]\n  \\draw (4,0)-- (2.54,1.05); % [IB]\n  % marques d'angles\n  \\draw (1,0) arc(0:22:1); % (AB,AI)\n  \\draw (1.11,0.46) arc (23:45:1.2); % (AI,AC)\n  % Angle droit sur [AB]\n  \\draw (2.34,0) -- (2.34,0.2) -- (2.54,0.2);\n  \\draw(1.8,1.8) ;\n\\end{tikzpicture}\n\n\\end{document}\n",
+    "id": "chapitre-1",
+    "label": "Chapitre 1",
+    "original": "chapter-1-original.tex"
+  },
+  {
+    "chapter": 2,
+    "title": "Une somme géométrique",
+    "description": "Pointillés, doubles flèches et fractions accompagnent les longueurs successives 1/2, 1/4, 1/8.",
+    "tryit": "Modifiez le style des flèches ou des pointillés.",
+    "origin": "2/5.6/5.6.tex",
+    "notes": [],
+    "source": "\\documentclass{article}\n\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}[>=latex]\n  \\draw (0,0) node[left]{$O$}-- (2,2) node[above]{$B$};\n  \\draw (2,2)-- (2,0);\n  \\draw (2,2)-- (4,0);\n  \\draw (2,0)-- (3,1);\n  \\draw (3,1)-- (3,0);\n  \\draw (3,0)-- (3.5,0.5);\n  \\draw (3.5,0.5)-- (3.5,0);\n  \\draw (3.5,0)-- (3.75,0.25);\n  \\draw (3.75,0)-- (3.75,0.25);\n  \\draw (3.75,0)-- (3.88,0.13);\n  \\draw  (3.88,0.13)-- (3.88,0);\n  \\draw (0,0) -- (4,0) node[right] {$A$};\n  \\draw[<->] (0,-0.5) -- (2,-0.5)\n     node[midway, below]{$\\displaystyle{\\frac{1}{2}}$};\n  \\draw[<->] (2,-0.5) -- (3,-0.5)\n     node[midway, below]{$\\displaystyle{\\frac{1}{4}}$};\n  \\draw[<->] (3,-0.5) -- (3.5,-0.5)\n     node[midway, below]{$\\displaystyle{\\frac{1}{8}}$};\n  \\draw[<->] (0,-2) -- (4,-2) node[midway, below]{$1$};\n  \\draw[densely dashed] (0,-2) -- (0,0) (4,-2) -- (4,0);\n  \\draw[densely dashed]\n    (2,-0.5) -- (2,0) (3,-0.5) -- (3,0) (3.5,-0.5) -- (3.5,0) ;\n\\end{tikzpicture}\n\n\\end{document}\n",
+    "id": "chapitre-2",
+    "label": "Chapitre 2",
+    "original": "chapter-2-original.tex"
+  },
+  {
+    "chapter": 3,
+    "title": "Ellipse, foyers et tangente",
+    "description": "Courbe paramétrique, coordonnées nommées et découpage construisent une ellipse annotée.",
+    "tryit": "Changez la couleur de la courbe ou le nombre d’échantillons.",
+    "origin": "3/5.1/5.1.tex",
+    "notes": [],
+    "source": "\\documentclass{article}\n\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\begin{tikzpicture}[scale=0.5]\n  \\clip (-6,-4) rectangle (6,4);\n  % axes\n  \\draw[->] (-6,0) -- (6,0);\n  \\draw[->] (0,-4) -- (0,6);\n  % ellipse\n  \\draw plot [samples=100,domain=0:360] ({5 * cos(\\x)},{3*sin(\\x)});\n  % foyer F\n  \\draw (4,0) node{$\\bullet$} coordinate (f1) node[below]{$F$};\n  % foyer F'\n  \\draw (-4,0) node{$\\bullet$} coordinate(f2) node[below]{$F'$};\n  % A sur l'ellipse\n  \\draw (2,2.75) coordinate (a) node[above right] {$A$};\n  \\draw (a) -- (f1); % rayon focal (AF)\n  \\draw (a) -- (f2); % rayon focal (AF')\n  % tangente en A\n  \\draw [dashed] plot [domain=-6.5:6.28](\\x,{(1.24-0.97*\\x)/-0.25});\n  % normale en A\n  \\draw [dashed]  plot [domain=-6.5:6.28](\\x,{(1-0.08*\\x)/0.31});\n  \\coordinate (p) at (1.28,0) ; % P point de la normale sur Ox\n  \\draw (p) node[below right,gray]{$P$}; \n  \\begin{scope} % scope pour clip\n    \\clip (a) -- (p) -- (f2) -- cycle; % triangle APF'\n    \\draw [gray] (a) circle (1); % cercle pour arc\n  \\end{scope}\n  \\begin{scope} % scope pour clip\n    \\clip (a) -- (p) -- (f1) -- cycle; % triangle APF\n    \\draw [gray]  (a)  circle (1.2); % cercle pour arc\n  \\end{scope}\n  \\draw [gray] (2.25,3.72) -- (1.28,3.97) -- (1.03,3); % angle droit en A\n\\end{tikzpicture}\n\n\\end{document}\n",
+    "id": "chapitre-3",
+    "label": "Chapitre 3",
+    "original": "chapter-3-original.tex"
+  },
+  {
+    "chapter": 4,
+    "title": "Section d’un cube",
+    "description": "Coordonnées en trois dimensions, faces transparentes et arêtes cachées dessinent une section du cube.",
+    "tryit": "Modifiez l’opacité des faces pour voir les arêtes cachées.",
+    "origin": "4/2.1/2.1.tex",
+    "notes": [
+      "Le style math3d du préambule est développé dans les options du dessin ; cela évite aussi une accolade surnuméraire présente dans sa définition originale."
+    ],
+    "source": "\\documentclass{article}\n\n\n\\usepackage{tikz}\n\n%--------------------------------------------------\n%: math3d\n\n%--------------------------------------------------\n\\begin{document}\n\n\\begin{tikzpicture}[x={(-0.353cm,-0.353cm)},z={(0cm,1cm)},y={(1cm,0cm)},scale=3]\n\t\\coordinate (a) at (1,0,0);\n\t\\coordinate (b) at (1,1,0);\n\t\\coordinate (c) at (0,1,0);\n\t\\coordinate (d) at (0,0,0);\n\t\\coordinate (e) at (1,0,1);\n\t\\coordinate (f) at (1,1,1);\n\t\\coordinate (g) at (0,1,1);\n\t\\coordinate (h) at (0,0,1);\n\t\\draw (d) edge (a) edge (c) edge (h);\n\t\\fill[fill=white, opacity=0.7] (e) -- (f) -- (g) -- (h) -- cycle; % dessus\n\t\\fill[fill=gray!20, opacity=0.7] (a) -- (b) -- (f) --(e) -- cycle; % avant\n\t\\fill[fill=gray!40, opacity=0.7] (b) -- (c) -- (g)-- (f) -- cycle; % droite\n\t\\draw (a) -- (e) -- (f) -- (g) -- (c) -- (b) -- cycle;\n\t\\draw (e) -- (h) -- (g)  (b)--(f);\n\t\\draw (1,0,1/2) -- (1,1/2,0);\n\t\\draw [densely dashed] (1,1/2,0) --  (1/2,1,0);\n\t\\draw (1/2,1,0) -- (0,1,1/2);\n\t\\draw [densely dashed] (0,1,1/2) -- (0,1/2,1);\n\t\\draw  (0,1/2,1) -- (1/2,0,1);\n\t\\draw [densely dashed] (1/2,0,1) -- (1,0,1/2) ;\n\t\\draw (1,1/2,0) --(3/2,0,0) -- (1,-1/2,1) -- (1/2,0,1);\n\t\\draw (1/2,1,0) -- (0,3/2,0) -- (-1/2,1,1) -- (0,1/2,1);\n\\end{tikzpicture}\n\n\\end{document}\n",
+    "id": "chapitre-4",
+    "label": "Chapitre 4",
+    "original": "chapter-4-original.tex"
+  },
+  {
+    "chapter": 5,
+    "title": "Distribution des notes",
+    "description": "Une macro fournit les données d’un diagramme en bâtons, complété par une grille et des graduations.",
+    "tryit": "Modifiez une valeur dans la macro ou la couleur des bâtons.",
+    "origin": "5/1.5/1.5.tex",
+    "notes": [],
+    "source": "\\documentclass{article}\n\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\newcommand{\\nombresCopiesParNote}\n{(0,0) (1,0) (2,2) (3,0) (4,6) (5,4) (6,7) (7,4) (8,3) (9,0) (10,1)}\n\n\\begin{tikzpicture}\n  \\draw (-1,0) grid (11,7);\n  \\draw[line width=8mm,color=blue!50] plot[ycomb] coordinates {\\nombresCopiesParNote};\n  \\foreach \\x in {0,1,...,10} \\draw (\\x,0) node[below]{\\x};\n  \\foreach \\y in {1,2,...,7} \\draw (-1,\\y) node[left]{\\y};\n  \\draw (5.5,-0.75) node{Notes};\n  \\draw (-1.75,3.5) node[rotate=90]{Nombre de notes};\n\\end{tikzpicture}\n\n\\end{document}\n",
+    "id": "chapitre-5",
+    "label": "Chapitre 5",
+    "original": "chapter-5-original.tex"
+  },
+  {
+    "chapter": 6,
+    "title": "Voyelles et consonnes",
+    "description": "Des nœuds nommés et des flèches classent cinq lettres en deux catégories.",
+    "tryit": "Changez les couleurs des styles lettre et type.",
+    "origin": "6/4.1/4.1.tex",
+    "notes": [],
+    "source": "\\documentclass{article}\n\n\\usepackage{tikz}\n\\usetikzlibrary{arrows}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\t\\tikzstyle{lettre}=[circle,draw,fill=yellow!50,text=blue]\n\t\\tikzstyle{type}=[circle,fill=red!25]\n\t\\tikzstyle{fleche}=[->,>=stealth',thick]\n\t\\node[lettre] (A) at (0,4){A};\n\t\\node[lettre] (B) at (0,3){B};\n\t\\node[lettre] (C) at (0,2){C};\n\t\\node[lettre] (D) at (0,1){D};\n\t\\node[lettre] (E) at (0,0){E};\n\t\\node[type] (v) at (-3,2){Voyelle};  \n\t\\node[type] (c) at (3,2){Consonne};\n\t\\draw[fleche] (A) -- (v);\n\t\\draw[fleche] (B) -- (c);\n\t\\draw[fleche] (C) -- (c);\n\t\\draw[fleche] (D) -- (c);\n\t\\draw[fleche] (E) -- (v);\n\\end{tikzpicture}\n\n\\end{document}\n",
+    "id": "chapitre-6",
+    "label": "Chapitre 6",
+    "original": "chapter-6-original.tex"
+  },
+  {
+    "chapter": 7,
+    "title": "Organigramme d’une somme",
+    "description": "Losange de test, entrées-sorties et flèches de boucle représentent un algorithme.",
+    "tryit": "Modifiez les textes des nœuds ou la couleur du test.",
+    "origin": "7/2.4/2.4.tex",
+    "notes": [
+      "Les accents du source éditable sont écrits directement en UTF-8 ; le fichier original reste disponible."
+    ],
+    "source": "\\documentclass{article}\n\n\\usepackage{tikz}\n\\usetikzlibrary{shapes,arrows}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n % style des noeuds\n  \\tikzstyle{debutfin}=[ellipse,draw,text=red]\n  \\tikzstyle{instruct}=[rectangle,draw,fill=yellow!50]\n  \\tikzstyle{test}=[diamond, aspect=2.5,thick,thick,draw=blue,fill=yellow!50,text=blue]\n  \\tikzstyle{es}=[rectangle,draw,rounded corners=4pt,fill=blue!25]\n % style des fleches\n  \\tikzstyle{suite}=[->,>=stealth',thick,rounded corners=4pt]\n % placement des noeuds\n  \\node[debutfin] (debut) at (-2,5) {Début};\n  \\node[es] (lire) at (-2,4) {Lire un entier positif $N$};\n  \\node[test] (test) at (0,0) {$N>0$ \\  ?};\n  \\node[instruct] (init) at (-2,2.5) {$S\\leftarrow 0$};\n  \\node[instruct] (plus) at (0,-2.5) {$S\\leftarrow S+N$};\n  \\node[instruct] (moins) at (0,-3.5) {$N\\leftarrow N-1$};\n  \\node[es] (afficher) at (-4,-2) {Afficher la somme $S$};\n  \\node[debutfin] (fin) at (-4,-3) {Fin};\n % Placement des fleches\n  \\draw[suite] (debut) -- (lire);\n  \\draw[suite] (lire) -- (init);\n  \\draw[suite] (init) -- (test.north);\n  \\draw[suite] (test) -- (plus) node[midway,fill=white]{oui};\n  \\draw[suite] (plus) -- (moins);\n  \\draw[suite] (moins) |- (3,-4.5) |- (1,1.5) -- (test.north);\n  \\draw[suite] (test) -| (afficher) node[near start,fill=white]{non};\n  \\draw[suite] (afficher) -- (fin);\n\\end{tikzpicture}\n\n\\end{document}\n",
+    "id": "chapitre-7",
+    "label": "Chapitre 7",
+    "original": "chapter-7-original.tex"
+  },
+  {
+    "chapter": 8,
+    "title": "Cinq anneaux entrelacés",
+    "description": "Deux macros paramétrées construisent les anneaux et leurs zones de recouvrement.",
+    "tryit": "Changez une couleur dans les appels à anneau et recouvrement.",
+    "origin": "8/1.3/1.3.tex",
+    "notes": [
+      "L’environnement center est retiré pour que les macros précèdent directement tikzpicture. La mise en page est assurée par la page Web."
+    ],
+    "source": "\\documentclass{article}\n\n\\usepackage{tikz}\n\n\\begin{document}\n\n\\newcommand{\\anneau}[2]%\n{\\fill[#2,even odd rule] (#1) circle (2.5) circle (3);}\n\n\\newcommand{\\recouvrement}[3]%\n{\\fill[#3]   (#1) ++(#2:3)\n   arc (#2:{#2-30}:3)    -- ++({#2-30}:-0.5)\n   arc ({#2-30}:#2:2.5)  -- cycle;}\n   \n\n\t\\begin{tikzpicture} [scale=0.75]\n\t\t\\coordinate (A) at (-6.4,0);\n\t\t\\coordinate (B) at (-3.2,-3.2);\n\t\t\\coordinate (C) at (0,0);\n\t\t\\coordinate (D) at (3.2,-3.2);\n\t\t\\coordinate (E) at (6.4,0);\n\t\t\\anneau{A}{blue}\n\t\t\\anneau{B}{yellow}\n\t\t\\anneau{C}{black}\n\t\t\\anneau{D}{green}\n\t\t\\anneau{E}{red}\n\t\t\\recouvrement{A}{0} {blue}\n\t\t\\recouvrement{B}{90}{yellow}\n\t\t\\recouvrement{C}{0} {black}\n\t\t\\recouvrement{D}{90}{green}\n\t\\end{tikzpicture}\n\n\n\\end{document}\n",
+    "id": "chapitre-8",
+    "label": "Chapitre 8",
+    "original": "chapter-8-original.tex"
+  },
+  {
+    "chapter": 9,
+    "title": "Arbre généalogique",
+    "description": "La syntaxe child dispose un arbre sur trois générations avec des liens courbes.",
+    "tryit": "Modifiez les noms ou la distance entre les générations.",
+    "origin": "9/2.5/2.5.tex",
+    "notes": [
+      "Les styles sont déplacés dans tikzpicture pour être transmis au moteur ; center est retiré au profit de la mise en page Web.",
+      "Les accents du source éditable sont écrits directement en UTF-8 ; le fichier original reste disponible."
+    ],
+    "source": "\\documentclass{article}\n\n\\usepackage{tikz}\n\\usetikzlibrary{arrows}\n\n\\begin{document}\n\n\\begin{tikzpicture}[edge from parent path={[->,>=stealth',thick](\\tikzparentnode) to [out=90,in=-90] (\\tikzchildnode)}]\n\\tikzstyle{lien}=[->,>=stealth,rounded corners=5pt,thick]\n\n\\tikzset{individu/.style={draw,thick,fill=#1!25},individu/.default={green}}\n\\node [individu] {Bibi}[grow'=up,level distance=2cm,sibling distance=6cm]\nchild{\n  node [individu=blue]{Papa} [sibling distance=3cm]\n  child{node [individu=blue]{Pépé}}\n  child{node [individu=red]{Mémé}}\n}\nchild{\n  node [individu=red]{Maman} [sibling distance=3cm]\n  child{node [individu=blue]{Papy}}\n  child{node [individu=red]{Mamie}}\n};\n\\end{tikzpicture}\n\n\n\\end{document}\n",
+    "id": "chapitre-9",
+    "label": "Chapitre 9",
+    "original": "chapter-9-original.tex"
+  },
+  {
+    "id": "fin",
+    "label": "Fin",
+    "title": "Le mot de la fin",
+    "description": "Des lettres tournées et leur reflet progressivement estompé terminent le livre.",
+    "tryit": "Remplacez south par north, east ou west pour changer la direction de l’estompage.",
+    "origin": "0/Fin/Fin.tex",
+    "notes": [],
+    "source": "\\documentclass{article}\n\n\\usepackage{tikz}\n\\usetikzlibrary{fadings}\n\n\\begin{document}\n\n\\newcommand{\\Fin}{node[xshift=-1.5ex,rotate=10]{F}\n                  node[rotate=170]{i}\n                  node[xshift=1.5ex,rotate=45]{n}}\n\n\\begin{tikzpicture}[scale=10,transform shape] \n   \\draw (0,0) \\Fin;\n   \\draw (-1em,-1ex) -- (1em,-1ex);\n   \\path[scope fading=south] (-1em,-0.25em) rectangle (1em,-3.75ex);\n   \\draw[yscale=-1] (0,2ex) \\Fin;\n\\end{tikzpicture}\n\n\\end{document}\n",
+    "original": "fin-original.tex"
+  },
+  {
+    "id": "annexe-clock",
+    "label": "Annexe 1",
+    "title": "Horloges",
+    "description": "Trois cadrans construits par une macro paramétrée : graduations, chiffres et aiguilles.",
+    "tryit": "Modifiez les heures, minutes et secondes dans les appels à Clock.",
+    "origin": "autres-exemples/clock.tex",
+    "notes": [
+      "Les macros du préambule sont placées dans tikzpicture pour être transmises au moteur. Les éléments de mise en page PDF et le bloc documentaire comment sont retirés."
+    ],
+    "source": "% Auteur : Jacques Duma\n% Site : http://math.et.info.free.fr/TikZ/index.html\n\\documentclass{article}\n\\usepackage{tikz}\n\\usetikzlibrary{calc,arrows}\n\\begin{document}\n\\begin{tikzpicture}\n\\newcommand{\\Clock}[5][shift={(0,0)}]%\n{\\begin{scope}[#1,scale={#2/5},transform shape]\n% background\n\\fill[color=yellow!50] (0,0) circle (5);\n% minutes ticks\n\\foreach \\a in {1,2,...,60}\n   \\draw[blue] ($(6*\\a:4.5)$) -- ($(6*\\a:5)$);\n% hours ticks\n\\foreach \\a in {5,10,...,60} \\draw[blue,fill,line width={#2*.4pt}]\n      ($(6*\\a:3.5)$) circle (2pt) -- ($(6*\\a:5)$);\n% hours digits\n\\foreach \\a in {1,2,...,12}\n   \\node[text=blue,fill=yellow!50]\n        at ($(90-\\a*30:4.3)$) {\\Large \\bf \\a};\n% hours hand\n\\draw[->,>=stealth',line width={#2*1.3pt}]\n   (0,0) -- ($(450-30*#3-0.5*#4-0.0083*#5:3.25)$);\n% minutes hand\n\\draw[line width={#2*1.1pt},gray]\n   (0,0) -- ($(450-6*#4-0.1*#5:4.2)$);\n\\draw[->,>=stealth',line width={#2*.7pt}]\n   (0,0) -- ($(450-6*#4-0.1*#5:4.45)$);\n% seconds hand\n\\draw[>->,>=stealth',line width={#2*.6pt},color=gray!80!blue]\n   ($(270-6*#5:1)$) -- ($(450-6*#5:4.4)$);\n% clock center\n\\draw[blue,line width={#2*.2pt},fill=gray] (0,0) circle (.2);\n\\draw[blue,fill] (0,0) circle (.1);\n% clock border\n\\draw[blue,line width={#2*.6pt}] (0,0) circle (5);\n\\end{scope}}\n  \\Clock {6} {11}{20}{39}\n  \\Clock [shift={(-4,-8)}] {1.5} {3}{7}{12}\n  \\Clock [shift={(3,-9)}] {3} {8}{33}{54}\n\\end{tikzpicture}\n\\end{document}\n",
+    "original": "annexe-clock-original.tex",
+    "originUrl": "http://math.et.info.free.fr/TikZ/autresExemples.html"
+  },
+  {
+    "id": "annexe-paratricube",
+    "label": "Annexe 2",
+    "title": "Le ParaTriCube",
+    "description": "Un cube impossible et un triangle composé de neuf cubes impossibles, avec découpage pour les croisements.",
+    "tryit": "Changez les couleurs des arêtes et des faces dans les appels aux macros.",
+    "origin": "autres-exemples/paratricube.tex",
+    "notes": [
+      "Les macros du préambule sont placées dans tikzpicture pour être transmises au moteur. Les éléments de mise en page PDF et le bloc documentaire comment sont retirés."
+    ],
+    "source": "% Auteur : Jacques Duma\n% Site : http://math.et.info.free.fr/TikZ/index.html\n\\documentclass{article}\n\\usepackage{tikz}\n\\usetikzlibrary{calc}\n\\begin{document}\n\\begin{tikzpicture}\n\\newcommand{\\ParaCube}[3][scale=1]\n{\\begin{scope}[#1,scale=.03,shift={(-79,-87)},even odd rule,draw=#2,line join=round]\n\\draw[fill=#3]\n  (94,15.5)--(90,62.9)--(104,59.2)--(107,20.3)--(101,7)--cycle;\n\\draw (100.4,14.4)--(96.9,61.1);\n\\draw[fill=#3]\n  (64,159.8)--(68,112)--(55,115.1)--(52,154.9)--(59,161)--cycle;\n\\draw (57.6,159.8)--(61.2,113.6);\n\\draw[fill=#3] (10,30)--(64,77)--(154,53)--(101,7)--(10,30)--cycle\n  (24,33)--(66,69)--(140,50)--(100,14)--(24,33)--cycle;\n\\draw[fill=#3] (147,145)--(57,168)--(4,121)--(94,99)--(147,145)--cycle\n  (17,124)--(59,161)--(134,142)--(94,106)--(17,124)--cycle;\n\\draw[fill=#3] (56,100.5)--(58,80)--(16,44)--(11,111)--(88,93)--\n  (89,77.2)--(95.8,75.4)--(94,99)--(4,121)--(10,30)--\n  (64,77)--(62.3,99)--(56,100.5);\n\\draw[fill=#3] (103,73.6)--(101,94)--(140,129)--(145,63)--\n  (70,82)--(69,97.5)--(62.3,99)--(64,77)--(154,53)--\n  (147,145)--(94,99)--(95.8,75.4)--(103,73.6);\n\\end{scope}}\n\n% Paradoxical triangle made of 9 paradoxical cubes\n%: \\ParaTriCube[<TikZ options>]{<lc1>}{<fc1>}{<lc2>}{<fc2>}{<lc3>}{<fc3>}\n% <lci> <fci> line color and frame color of i-th cube of a triangle side\n\\newcommand{\\ParaTriCube}[7][shift={(0,0)}]{\\begin{scope}[#1,shift={(-6.8,-4.8)},scale=.95]\n% side one\n\\ParaCube [shift={(8.9,11.6)}]{#2}{#3}\n\\ParaCube [shift={(6.1,8.6)}]{#4}{#5}\n\\ParaCube [shift={(3.3,5.6)}]{#6}{#7}\n% side two\n\\ParaCube [shift={(0.5,2.6)}]{#2}{#3}\n\\ParaCube [shift={(4,1.9)}]{#4}{#5}\n\\ParaCube [shift={(7.5,1.2)}]{#6}{#7}\n% side three\n\\ParaCube [shift={(11,0.5)}]{#2}{#3}\n\\ParaCube [shift={(10.3,4.2)}]{#4}{#5}\n\\ParaCube [shift={(9.6,7.9)}]{#6}{#7}\n% clip outline of last cube\n\\clip [shift={(7.23,5.29)},scale=0.03](9,30)--(101,7)--(154,53)--(147,146)--(57,169)--(3,122)--(9,30);\n% redraw the first two cubes\n\\ParaCube [shift={(8.9,11.6)}]{#2}{#3}\n\\ParaCube [shift={(6.1,8.6)}]{#4}{#5}\n\\end{scope}}\n  \\ParaCube [shift={(-5,8)},scale=1.5,ultra thick] {black}{yellow!50}\n  \\ParaTriCube {red}{white} {green!25!black}{white} {blue}{white}\n\\end{tikzpicture}\n\\end{document}\n",
+    "original": "annexe-paratricube-original.tex",
+    "originUrl": "http://math.et.info.free.fr/TikZ/autresExemples.html"
+  },
+  {
+    "id": "annexe-spheres",
+    "label": "Annexe 3",
+    "title": "Sphères percées",
+    "description": "Trois sphères maillées, vues selon trois repères isométriques, avec transparence et facettes ajourées.",
+    "tryit": "Modifiez les couleurs, l’opacité ou les valeurs de h et k.",
+    "origin": "autres-exemples/spheres.tex",
+    "notes": [
+      "Les styles des trois repères sont développés dans les options de chaque dessin. La mise en page PDF est retirée. Le source original a été récupéré sur le site du livre, la copie locale étant vide."
+    ],
+    "source": "% Auteur : Jacques Duma\n% Site : http://math.et.info.free.fr/TikZ/index.html\n\\documentclass{article}\n\\usepackage{tikz}\n\n\\begin{document}\n%: sphere one\n\\begin{tikzpicture} [scale=5,x={(-0.866cm,-0.5cm)}, y={(0.866cm,-0.5cm)}, z={(0cm,1cm)},ultra thick,opacity=.45,line join=round]\n\\def\\h{7.5}\n\\foreach \\t in {-135,-120,...,35}\n  \\foreach \\f in {165,150,...,5}\n    \\draw [blue,fill=yellow]\n          ({sin (\\f-\\h)*cos(\\t-\\h)},{sin(\\f-\\h)*sin(\\t-\\h)},{cos(\\f-\\h)})\n       -- ({sin(\\f-\\h)*cos(\\t+\\h)},{sin(\\f-\\h)*sin(\\t+\\h)},{cos(\\f-\\h)})\n       -- ({sin(\\f+\\h)*cos(\\t+\\h)},{sin(\\f+\\h)*sin(\\t+\\h)},{cos(\\f+\\h)})\n       -- ({sin(\\f+\\h)*cos(\\t-\\h)},{sin(\\f+\\h)*sin(\\t-\\h)},{cos(\\f+\\h)})\n       -- cycle;\n\\foreach \\t in {210,195,...,40}\n  \\foreach \\f in {165,150,...,5}\n    \\draw [blue,fill=yellow]\n          ({sin (\\f-\\h)*cos(\\t-\\h)},{sin(\\f-\\h)*sin(\\t-\\h)},{cos(\\f-\\h)})\n       -- ({sin(\\f-\\h)*cos(\\t+\\h)},{sin(\\f-\\h)*sin(\\t+\\h)},{cos(\\f-\\h)})\n       -- ({sin(\\f+\\h)*cos(\\t+\\h)},{sin(\\f+\\h)*sin(\\t+\\h)},{cos(\\f+\\h)})\n       -- ({sin(\\f+\\h)*cos(\\t-\\h)},{sin(\\f+\\h)*sin(\\t-\\h)},{cos(\\f+\\h)})\n       -- cycle;\n\\end{tikzpicture}\n\n%: sphere two\n\\begin{tikzpicture} [scale=5,x={(0cm,1cm)}, y={(-0.866cm,-0.5cm)}, z={(0.866cm,-0.5cm)},line join=round]\n\\def\\h{5.75}\n\\foreach \\t in {-135,-120,...,35}\n  \\foreach \\f in {165,150,...,5}\n    \\draw [fill=blue!20]\n          ({sin (\\f-\\h)*cos(\\t-\\h)},{sin(\\f-\\h)*sin(\\t-\\h)},{cos(\\f-\\h)})\n       -- ({sin(\\f-\\h)*cos(\\t+\\h)},{sin(\\f-\\h)*sin(\\t+\\h)},{cos(\\f-\\h)})\n       -- ({sin(\\f+\\h)*cos(\\t+\\h)},{sin(\\f+\\h)*sin(\\t+\\h)},{cos(\\f+\\h)})\n       -- ({sin(\\f+\\h)*cos(\\t-\\h)},{sin(\\f+\\h)*sin(\\t-\\h)},{cos(\\f+\\h)})\n       -- cycle;\n\\foreach \\t in {210,195,...,40}\n  \\foreach \\f in {165,150,...,5}\n    \\draw [fill=blue!20]\n          ({sin (\\f-\\h)*cos(\\t-\\h)},{sin(\\f-\\h)*sin(\\t-\\h)},{cos(\\f-\\h)})\n       -- ({sin(\\f-\\h)*cos(\\t+\\h)},{sin(\\f-\\h)*sin(\\t+\\h)},{cos(\\f-\\h)})\n       -- ({sin(\\f+\\h)*cos(\\t+\\h)},{sin(\\f+\\h)*sin(\\t+\\h)},{cos(\\f+\\h)})\n       -- ({sin(\\f+\\h)*cos(\\t-\\h)},{sin(\\f+\\h)*sin(\\t-\\h)},{cos(\\f+\\h)})\n       -- cycle;\n\\end{tikzpicture}\n\n%: sphere three\n\n\\begin{tikzpicture} [scale=5,x={(0.866cm,-0.5cm)}, y={(0cm,1cm)}, z={(-0.866cm,-0.5cm)},ultra thin,even odd rule,line join=round]\n\\def\\h{8.25}\n\\def\\k{5}\n\\foreach \\t in {-133,-115,...,33}\n  \\foreach \\f in {162,144,...,18}\n    \\draw [fill=red!50]\n          ({sin (\\f-\\h)*cos(\\t-\\h)},{sin(\\f-\\h)*sin(\\t-\\h)},{cos(\\f-\\h)})\n       -- ({sin(\\f-\\h)*cos(\\t+\\h)},{sin(\\f-\\h)*sin(\\t+\\h)},{cos(\\f-\\h)})\n       -- ({sin(\\f+\\h)*cos(\\t+\\h)},{sin(\\f+\\h)*sin(\\t+\\h)},{cos(\\f+\\h)})\n       -- ({sin(\\f+\\h)*cos(\\t-\\h)},{sin(\\f+\\h)*sin(\\t-\\h)},{cos(\\f+\\h)})\n       -- cycle\n          ({sin (\\f-\\k)*cos(\\t-\\k)},{sin(\\f-\\k)*sin(\\t-\\k)},{cos(\\f-\\k)})\n       -- ({sin(\\f-\\k)*cos(\\t+\\k)},{sin(\\f-\\k)*sin(\\t+\\k)},{cos(\\f-\\k)})\n       -- ({sin(\\f+\\k)*cos(\\t+\\k)},{sin(\\f+\\k)*sin(\\t+\\k)},{cos(\\f+\\k)})\n       -- ({sin(\\f+\\k)*cos(\\t-\\k)},{sin(\\f+\\k)*sin(\\t-\\k)},{cos(\\f+\\k)})\n       -- cycle;\n\\foreach \\t in {209,191,...,33}\n  \\foreach \\f in {162,144,...,18}\n    \\draw [fill=red!50]\n          ({sin (\\f-\\h)*cos(\\t-\\h)},{sin(\\f-\\h)*sin(\\t-\\h)},{cos(\\f-\\h)})\n       -- ({sin(\\f-\\h)*cos(\\t+\\h)},{sin(\\f-\\h)*sin(\\t+\\h)},{cos(\\f-\\h)})\n       -- ({sin(\\f+\\h)*cos(\\t+\\h)},{sin(\\f+\\h)*sin(\\t+\\h)},{cos(\\f+\\h)})\n       -- ({sin(\\f+\\h)*cos(\\t-\\h)},{sin(\\f+\\h)*sin(\\t-\\h)},{cos(\\f+\\h)})\n       -- cycle\n          ({sin (\\f-\\k)*cos(\\t-\\k)},{sin(\\f-\\k)*sin(\\t-\\k)},{cos(\\f-\\k)})\n       -- ({sin(\\f-\\k)*cos(\\t+\\k)},{sin(\\f-\\k)*sin(\\t+\\k)},{cos(\\f-\\k)})\n       -- ({sin(\\f+\\k)*cos(\\t+\\k)},{sin(\\f+\\k)*sin(\\t+\\k)},{cos(\\f+\\k)})\n       -- ({sin(\\f+\\k)*cos(\\t-\\k)},{sin(\\f+\\k)*sin(\\t-\\k)},{cos(\\f+\\k)})\n       -- cycle;\n\\end{tikzpicture}\n\\end{document}\n",
+    "original": "annexe-spheres-original.tex",
+    "originUrl": "http://math.et.info.free.fr/TikZ/autresExemples.html"
+  }
+]

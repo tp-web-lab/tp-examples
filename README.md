@@ -149,3 +149,7 @@ Run `pnpm dev:jt-vr` (port 4316) for the interactive video example. It plays fou
 
 Run `pnpm dev:pint-of-science-rv` from this workspace or from tp-docs (port 4319).
 The 18-slide French presentation uses `tp-asciidoc-multi-slides`, native AsciiDoc documents and TP brand colors. See [the example README](packages/pint-of-science-rv/README.md).
+
+## TikZ pour l’impatient
+
+`pnpm dev:tikz` opens the TikZ gallery (15 editable examples, port 4325). See [packages/tikz](packages/tikz/README.md).

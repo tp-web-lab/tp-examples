@@ -1,0 +1,130 @@
+\documentclass{article}
+
+\begin{document}
+
+\section*{Qu'est-ce qu'une dérivée ?}
+\subsubsection*{Les dérivées expliquées à ma petite nièce...}
+
+\wcSpan*[class=tp-red-style]{— C’est quoi une dérivée ?}
+
+Eh bien, c’est simple : c’est la limite du taux d’accroissement.
+
+\wcSpan*[class=tp-red-style]{— Euh…}
+
+Oui, le nombre dérivé d’une fonction $f$ en un point $a$, c’est
+$\displaystyle\lim_{x\to a}\frac{f(x)-f(a)}{x-a}$.\\
+Enfin du moins quand c’est réel.
+
+\wcSpan*[class=tp-red-style]{— Euh…}
+
+Tu comprendras quand tu seras plus grande…
+
+\wcSpan*[class=tp-red-style]{— Mais en vrai, c’est quoi une dérivée ?}
+
+\wcTpFlipCard[style=--tp-flip-card-width:26rem;--tp-flip-card-aspect-ratio:0.75;]{
+  \begin{description}
+    \item[recto]
+      Quel est l'\textbf{accroissement} de la fonction $f(x) = x^2$
+      entre $x = 2$ et $x = 5$ ?
+
+      \wcTpXyPlot{
+        \rawhtml{<script type="tp/xy-plot">
+xyFunctionGraph
+  x-axis [-1,6]
+  x-ticks [-1,0,1,2,3,4,5,6]
+  legend-x "x"
+  y-ticks [-5,0,1,4,9,16,25,36]
+  y-axis [-5,36]
+  legend-y "f(x)"
+  points [["A",2,4,-12,0], ["B",5,25,-12,0]]
+  functions [["Parabola", "x*x"]]
+  vectors [["Dx",2,4,3,0,"dashed"], ["Df",5,4,0,21,"dashed"]]
+</script>}
+      }
+
+    \item[verso]
+      \wcTpStack{
+        \wcP{
+          L’\textbf{accroissement} $\Delta f$ de la fonction $f(x)$ est la variation
+        de sa valeur entre $x = a$ et $x = b$ :
+        }
+
+        \wcP{
+          $\Delta f = f(b) - f(a)$.
+        }
+
+        \wcP{
+          Avec $f(x) = x^2$, $a = 2$ et $b = 5$, on a :
+        }
+
+        \wcP{
+          $\Delta f = f(5) - f(2) = 5^2 - 2^2 = 25 - 4 = 21$
+        }
+
+        \wcTpBox{
+          $\Delta f = 21$ est l'accroissement de $f(x)=x^2$
+          entre $x = 2$ et $x = 5$.
+        }
+      }
+  \end{description}
+}
+
+\wcTpFlipCard[style=--tp-flip-card-width:26rem;--tp-flip-card-aspect-ratio:0.75;]{
+  \begin{description}
+    \item[recto]
+      Quel est le \textbf{taux d’accroissement} de la fonction $f(x) = x^2$
+      entre $x = 2$ et $x = 5$ ?
+
+      \wcTpXyPlot{
+        \rawhtml{<script type="tp/xy-plot">
+xyFunctionGraph
+  x-axis [-1,6]
+  x-ticks [-1,0,1,2,3,4,5,6]
+  legend-x "x"
+  y-ticks [-5,0,1,4,9,16,25,36]
+  y-axis [-5,36]
+  legend-y "f(x)"
+  points [["A",2,4,-12,0], ["B",5,25,-12,0]]
+  functions [["Parabola", "x*x"],["Secant", "7*x - 10", [2,5]]]
+  vectors [["Dx",2,4,3,0,"dashed"], ["Df",5,4,0,21,"dashed"]]
+</script>}
+      }
+
+    \item[verso]
+      \wcTpStack{
+        \wcP{
+          Le \textbf{taux d’accroissement} de la fonction $f(x)$ rapporte
+        son accroissement $\Delta f$ à la variation correspondante $\Delta x$ de $x$ :
+        }
+
+        \wcP{
+          $\displaystyle\frac{\Delta f}{\Delta x} = \frac{f(b) - f(a)}{b - a}$
+        avec $a \neq b$.
+        }
+
+        \wcP{
+          Avec $f(x) = x^2$, $a = 2$ et $b = 5$, on a :
+        }
+
+        \wcP{
+          $\displaystyle\frac{\Delta f}{\Delta x} = \frac{f(5) - f(2)}{5 - 2} = \frac{21}{3} = 7$
+        }
+
+        \wcTpBox{
+          \begin{itemize}
+            \item $\Delta x = 3$ est la variation de $x$.
+            \item $\Delta f = 21$ est l'accroissement correspondant de $f(x)=x^2$.
+            \item $\displaystyle\frac{\Delta f}{\Delta x} = 7$ est le taux
+              d'accroissement de $f(x)=x^2$ entre $x = 2$ et $x = 5$.
+          \end{itemize}
+        }
+
+        \wcP{
+          Géométriquement, le taux d’accroissement est la pente de la droite
+        sécante passant par les points $A(a,f(a))$ et $B(b,f(b))$.
+        }
+      }
+  \end{description}
+}
+
+\end{document}
