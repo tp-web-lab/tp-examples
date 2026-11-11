@@ -7,7 +7,7 @@
 :::
 :::::: 
 
-The [official documentation](https://tp-web-lab.github.io/tp-components/) provides numerous ‘simple’ examples for each component, written in four markup languages: HTML, `tp-asciidoc`, `tp-markdown` and `tp-restructuredtext`.
+The [official documentation](https://tp-web-lab.github.io/tp-components/) provides numerous ‘simple’ examples for each component, written in five markup languages: HTML, `tp-asciidoc`, `tp-latex`, `tp-markdown` and `tp-restructuredtext`.
 
 The examples presented here are more comprehensive educational examples that utilise the components of `tp-components` in real-world scenarios, within a specific context that the official documentation cannot cover.
 
@@ -20,6 +20,7 @@ The examples presented here are more comprehensive educational examples that uti
 - all
 - asciidoc
 - html
+- latex
 - markdown
 - restructuredtext
 :::::
@@ -28,6 +29,7 @@ The examples presented here are more comprehensive educational examples that uti
 :::::
 ::::: tp-dropdown { id="example-category-menu" anchor="#example-category-button" outside-click data-example-filter="category" }
 - all
+- epistemology
 - language
 - math
 - music
@@ -85,7 +87,7 @@ footer
 <!-- geometry -->
 :::: tp-card { data-type="multi-pages" data-markup="markdown" data-category="math" style="min-width:0;text-align:center;" }
 header
-: #### A ruler, a compass
+: #### With just a ruler and a compass
 
 main
 :
@@ -163,7 +165,7 @@ footer
 <!-- tcf -->
 :::: tp-card { data-type="multi-pages" data-markup="asciidoc" data-category="language" style="min-width:0;text-align:center;" }
 header
-: #### Pratiquer le français · TCF
+: #### Do you speak French?
 
 main
 : Écouter, lire et s’exprimer en français : des activités originales inspirées du TCF tout public, avec QCM corrigés, synthèse vocale et autoévaluation.
@@ -176,7 +178,7 @@ footer
 <!-- jazz -->
 :::: tp-card { data-type="multi-pages" data-markup="markdown" data-category="music" style="min-width:0;text-align:center;" }
 header
-: #### Jazz · Discover and listen
+: #### Discover and listen Jazz
 
 main
 :
