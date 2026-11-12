@@ -206,6 +206,7 @@ for (const [index, body] of output.entries()) {
 \\begin{document}
 \\newcounter{tpequation}
 \\setcounter{section}{${index}}
+${index === 0 ? "\\wcTpToc[expand-all,position=end]{}\n" : ""}
 ${content}
 \\end{document}
 `;
