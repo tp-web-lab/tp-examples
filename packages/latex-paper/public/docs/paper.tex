@@ -1,0 +1,619 @@
+\documentclass{article}
+\usepackage{hyperref,graphicx}
+\begin{document}
+\newcounter{paperref}
+\section*{About this example}
+This is a web adaptation of \href{https://pascalmichaillat.org}{Pascal Michaillat}'s \href{https://github.com/pmichaillat/latex-paper}{Minimalist LaTeX Template for Academic Papers}, distributed under the \href{https://github.com/pmichaillat/latex-paper/blob/main/LICENSE.md}{MIT license}. It is a demonstration template with placeholder authors and text, not a research article. The original \href{https://pascalmichaillat.org/a.pdf}{PDF} remains the reference for the print layout.
+
+The article and its embedded appendices are displayed together by \texttt{tp-latex-single-page}. The separate online-appendix variant is not duplicated here. This adaptation uses the following TP components:
+\begin{itemize}
+\item \texttt{tp-lorem-ipsum} generates the plain placeholder passages, including those in notes 2 to 5, with fixed seeds. Explanations, formulas and mixed technical sentences remain explicit.
+\item \texttt{tp-note} defines each note and \texttt{tp-ref} provides its numbered reference. Hover or focus a reference to read its content. \texttt{tp-listof} displays the notes at the end.
+\item \texttt{tp-biblio} defines the nine bibliography entries, using the author's compiled bibliography. Citations keep author and year information and add \texttt{tp-ref} links. \texttt{tp-listof} displays the reference list.
+\item \texttt{tp-math} renders formulas through MathJax. Equation tags preserve the original numbering, including the appendix prefix. Local cross-references use native LaTeX labels and references; explicit counters supply the numbers of adapted equations, figures, tables and results.
+\end{itemize}
+
+The original style and BibTeX files are not executed in the browser. Figures are extracted from the original PDF as images; tables retain their cells and column spans. Floats appear in reading order, and theorem-like environments become labelled blocks. Fonts, spacing and page breaks follow the web layout. Statements in the template about print fonts, variants and float placement describe the original PDF, not a guarantee about this web rendering. The source files and a reproducible adaptation script accompany this example; copyright and permission notices are retained.
+
+\wcTpToc[expand-all]{}
+
+\title{Research Paper}
+\author{First Author, Second Author
+
+
+\wcTpRef*[href=^note-1]{}}
+\date{Month Year}
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+\maketitle
+
+
+This is the abstract. \wcTpLoremIpsum*[type=sentence,words-per-sentence=157,seed=101]{} 
+
+
+
+
+\section{Introduction}\label{s:introduction}
+ 
+\paragraph{Research question} \wcTpLoremIpsum*[type=sentence,words-per-sentence=52,seed=102]{} \wcTpRef*[href=^note-2]{}
+
+\paragraph{Answer to the question} \wcTpLoremIpsum*[type=sentence,words-per-sentence=36,seed=103]{} \wcTpRef*[href=^note-3]{} \wcTpLoremIpsum*[type=sentence,words-per-sentence=16,seed=104]{}  
+
+\paragraph{Positioning in the literature} \wcTpLoremIpsum*[type=sentence,words-per-sentence=84,seed=105]{} 
+
+\paragraph{A paragraph} \wcTpLoremIpsum*[type=sentence,words-per-sentence=136,seed=106]{} 
+
+\paragraph{Another paragraph} \wcTpLoremIpsum*[type=sentence,words-per-sentence=86,seed=107]{} 
+
+\paragraph{Yet another paragraph} \wcTpLoremIpsum*[type=sentence,words-per-sentence=89,seed=108]{} 
+
+\paragraph{A final introduction paragraph} \wcTpLoremIpsum*[type=sentence,words-per-sentence=134,seed=109]{} 
+
+\section{Generic section}\label{s:section}
+
+This is a section. This is the section introduction. Below are the subsections. \wcTpLoremIpsum*[type=sentence,words-per-sentence=31,seed=110]{}  
+
+\subsection{Generic subsection}
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=66,seed=111]{}  
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=56,seed=112]{} \wcTpRef*[href=^note-4]{} 
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=125,seed=113]{} 
+
+\subsection{Subsection with references} 
+
+References can be appended at the end of a sentence, in parenthesis (Michaillat and Saez (2015) \wcTpRef*[href=@MS15]{}). References can also include page numbers or other bibliographical information (Michaillat and Saez (2019) \wcTpRef*[href=@MS19]{}, p. 1305).  References can be in text: for instance, Michaillat (2012) \wcTpRef*[href=@M12]{} found this and Michaillat (2014) \wcTpRef*[href=@M14]{}, figure 1 found that. It's also possible to collate several references to the same author: for instance, Michaillat (2012) \wcTpRef*[href=@M12]{}; Michaillat (2014) \wcTpRef*[href=@M14]{} found things. References from the same authors and same year appear as follows: Landais, Michaillat, and Saez (2018a) \wcTpRef*[href=@LMS18a]{}; Landais, Michaillat, and Saez (2018b) \wcTpRef*[href=@LMS18b]{} wrote something. It is also possible to cite the authors of a study by name, or the year of a study: for instance, Eyster, Madarasz, and Michaillat \wcTpRef*[href=@EMM21]{} wrote a paper in 2021 \wcTpRef*[href=@EMM21]{} on this topic.
+
+\subsection{Subsection with paragraphs}
+
+\paragraph{Paragraph heading} \wcTpLoremIpsum*[type=sentence,words-per-sentence=29,seed=114]{}  Nam sagittis sapien id tortor commodo---a pulvinar velit ultricies\ldots Integer ac magna velorci mollis vestibulum. \wcTpLoremIpsum*[type=sentence,words-per-sentence=11,seed=115]{}  
+
+\paragraph{Another paragraph with some numbers and special characters} Pellentesque habitant 25\% morbi tristique senectus 1837--1905 et netus et malesuada fames ac turpis egestas. Integer semper euismod sapien vel dictum \#1 and \#6. \wcTpLoremIpsum*[type=sentence,words-per-sentence=7,seed=116]{}  (Maecenas tristique felis sed eleifend aliquet.) Donec et ipsum 3/4 in mauris ultricies pulvinar 9/2. \wcTpLoremIpsum*[type=sentence,words-per-sentence=7,seed=117]{}  Cras sed odio \& vitae mi placerat mollis: \$23.
+
+\subsection{Subsection with URL}
+
+It is possible to insert URLs, such as the URL for this paper template's repository: \url{https://github.com/pmichaillat/latex-paper} \wcTpLoremIpsum*[type=sentence,words-per-sentence=36,seed=118]{}  Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{Section with math}\label{s:math}
+
+This section displays a number of mathematical expressions to showcase the math fonts used in the template.
+
+\subsection{Roman letters} 
+
+The Roman characters in math are just the same as the characters in the text---but in \textit{italic} Here are some small letters: 
+\[
+
+a\lbrace p - r \times l\rbrace  + \frac{w(g/z+j)}{i(t)+j(t)+k(t) - e^p - x^j} + \frac{h[f]+x^f}{k[y]-e^y + x^y} = f(j)^{6+y} - i^3_{g,j,p} \approx (p_{ji})^5.
+
+\]
+Here are some capital letters as well: 
+\[
+
+G[p + P^7-Q] - A_B + L\lbrace j\rbrace  = F(X) \to [Y+K]\times Z_f/H - [g_4 - i], \text{for any} i.
+
+\]
+The punctuation is also the same in math as in text. 
+
+\subsection{Digits}
+
+The digits in math are also taken from the text font, just like the Roman characters. So 1, 2, 3, 4, 89, 03 (in text mode) is just the same as $1, 2, 3, 4, 89, 03$ (in math mode). The percentage sign is also the same so 27\% (in text mode) is the same as $27\%$ (in math mode).
+
+\subsection{Greek letters}
+
+Here are some small Greek letters in a math display: 
+\[
+
+\alpha^{\theta} + \gamma^4 + g(a) - \zeta \times \frac{y(\lambda)}{\kappa \cdot k+ \sigma - s} \to \nu_{\eta} = \beta^\epsilon \cdot \delta - \mu + \frac{\xi^4}{\zeta_{ij}} \to m(x) + b^e + \omega .
+
+\]
+Here are some capital Greek letters in another math display: 
+\setcounter{paperref}{0}\refstepcounter{paperref}\label{e:capitalgreek}\[
+
+F(\Psi) - G(\Phi) \times \Delta^{10} = \Sigma \cdot \Omega^2 - \frac{\Lambda_i}{\Theta_j} \cdot \frac{\Gamma(x)}{\Pi(t)}
+\tag{1}
+\]
+
+Some but not all the variants of the standard Greek letters are available. There is a variant for theta ($\vartheta \neq \theta$), for epsilon ($\varepsilon \neq \epsilon$), for pi ($\varpi \neq \pi$), and for phi ($\varphi \neq \phi$). But there is no available variant for sigma ($\varsigma = \sigma$), rho ($\varrho = \rho$), and kappa (\texttt{\textbackslash varkappa} gives an error).
+
+\subsection{Calligraphic letters} 
+
+Calligraphic letters are taken from the same family of fonts as the Greek letters. The calligraphic letters are only available for capital letters. Here are some of the calligraphic letters: 
+\[
+
+\frac{\mathcal{A}(A)}{\mathcal{H}} - \mathcal{B}(\beta) + \mathcal{Q}(j+3f) \to \mathcal{Y} + \mathcal{M}(\mathcal{N} - 2) = \mathcal{J}(X) \neq \mathcal{X}(J) - \mathcal{F}[\mathcal{D} \times \Delta]^8. 
+
+\]
+
+\subsection{Blackboard-bold letters} 
+
+Here are some blackboard-bold letters, used in some mathematical expressions: $x \in\mathbb{R}^n$ but $y\in \mathbb{Q}$ and $[A_1,A_2] \in \mathbb{Z} \times \mathbb{N}$; so that $\mathbb{E}[X\mid Y] = Y + 3 \cdot \mathbb{P}(X^2) \notin \mathbb{C} \times \mathbb{1}(X \subseteq \mathbb{B})$
+
+\subsection{Symbols} 
+
+The template comes with a full set of mathematical symbols. Here is a random assortment of some symbols: 
+\[
+
+\left(\frac{\sum_i \vec{z_i}}{\sum_{j=-\infty}^{+\infty} X_j}\right) \pm Q \subset \mathbb{R} \neq \mathbb{C} \implies \sqrt{\frac{\mathcal{X}}{2}} > \sqrt{\mathcal{Y}} \gg \hat{b}(y_0).
+
+\]
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=38,seed=119]{}  Vivamus fermentum consectetur ante, at rhoncus nisi tristique vel:
+\[
+
+\sum_i \left[\frac{\hat{x}(i)}{\mathcal{Y}(i)}\right]^2 \leq 2\pi \Rightarrow \prod_j \bar{y}(j)^2 \geq \left\lbrace \iint \frac{g(h)}{\gamma(s) \times \Delta(h)} dh ds \right\rbrace  \mapsto f\circ g(x) \iff \tilde{Q}(x) \propto \frac{\dot{x}}{2}
+
+\]
+
+\subsection{Bold characters}
+
+In the template it is possible to bold all math characters. Roman characters can be bolded, such as $\boldsymbol{a} + \boldsymbol{D} = \boldsymbol{E}^2 + \boldsymbol{j}/\boldsymbol{i}$ Greek characters can also be bolded, such as $\boldsymbol{\alpha} + \boldsymbol{\Delta} = \boldsymbol{\epsilon}^2 + \boldsymbol{\Lambda}/\boldsymbol{\Phi}$ It is also possible to bold digits: $1 + 2 \neq \boldsymbol{1} + \boldsymbol{2}$ Finally, it is possible to bold calligraphic letters: $\boldsymbol{\mathcal{C}} + \boldsymbol{\mathcal{E}} - [\boldsymbol{\mathcal{X}}+\boldsymbol{\mathcal{Y}}]$ Blackboard-bold letters are already ``bold'' so they cannot be bolded further.
+
+\subsection{Operators} 
+
+Operators in mathematical expressions are typeset with the text font. Here are a few examples: 
+\[
+
+\max_x \pi(x) = \frac{\int \ln(u)du}{\int\exp(v) dv} \mapsto \cos(\theta) + \sin(\omega) - \min_z[\tan(z)].
+
+\]
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=39,seed=120]{}  
+
+\subsection{Some equations} 
+
+This subsection illustrates how the different math fonts fit together. The equations below combine various characters together.
+
+First, here are equations in text. Lorem ipsum dolor sit amet, consectetur adipiscing elit: $\prod_i\alpha_i(X) \geq 2 \cdot [\partial a_u(Z)/\partial Z] \propto \mathcal{X} \sim 5.2\pi \leadsto +\infty$ Lorem ipsum dolor sit amet, consectetur adipiscing elit: $\sum_{x=1}^4 \xi^x(j)=0,   \forall j\in \mathbb{R}$ Here are some other expressions: $\mathcal{R}(z) = \max\{T_1,\ldots,T_{n}\} > \hat{z}$, and  $\mathbb{P}(T_n < z) = 1 - S(z) = F(z)$ \wcTpLoremIpsum*[type=sentence,words-per-sentence=9,seed=121]{}  Fusce quis consequat arcu: $\alpha^* = S(z^*)$ and $S^*(z^*)=\mathbb{E}[\boldsymbol{\alpha}\mid \beta]$ \wcTpLoremIpsum*[type=sentence,words-per-sentence=14,seed=122]{} 
+
+Here are equations in display mode, without labels:
+\[
+\begin{aligned}
+\frac{\mathcal{S}(u^*)}{1 - \frac{\partial \ln(\theta)}{\partial \theta} + \left[\gamma^\eta\right] - \mathcal{G}(z^*)} &= \sum_{i=0}^{+\infty}\frac{d F^{i}(x)}{d x} - \Lambda(i) \geq \left\lbrace\sum_{i=0}^{+\infty}G^{i} - \Omega(i)\right\rbrace\\
+\frac{\mathbb{Q}(z^*)}{1 -\mu + \exp(\xi) \times \mathbb{M}(z^*)} &= \prod_{i=0}^{+\infty}F^{i} - \Phi(i) \neq \left(\int_{0}^{+\infty}\frac{G^{i}}{\epsilon(i)} di\right).
+\end{aligned}
+\]
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=35,seed=123]{} 
+
+And here is a single equation in display mode without a label:
+\[
+
+\dot{y}(t) \to \sum_{j=0}^{+\infty}\mathcal{W}^j(z^{\ast}(t)) = \frac{S(z) \mathbb{E}(N(z))}{\mu_1 - \zeta_2} \cdot 2 - \left[\prod_{i=0}^{+\infty}\mathcal{F}^{i}\right]-\iiint\exp(\lambda(t) \mu(s)) \sin(\theta)dt ds d\theta.
+
+\]
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=29,seed=124]{} 
+
+\subsection{Theorems, propositions, lemmas, and other results}
+
+Here is a proposition with some more math:   
+\subsubsection*{Proposition 1}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit:
+\setcounter{paperref}{1}\refstepcounter{paperref}\label{e:type1}\[
+
+\sum_k\boldsymbol{S}_{k_x}(z) \approx \frac{S(z)^x}{k / 23 -\zeta\gamma [45- S(z)] + \ln(y) - j^2+x(l)}
+\tag{2}
+\]
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=33,seed=125]{} 
+\setcounter{paperref}{0}\refstepcounter{paperref}\label{p:type1}
+\subsubsection*{Proof}
+ 
+Here is the proof to the proposition. \wcTpLoremIpsum*[type=sentence,words-per-sentence=51,seed=126]{} 
+ 
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=30,seed=127]{}  Now here is a lemma---note that all types of results have their own counter:
+\subsubsection*{Lemma 1}
+ 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat:
+\setcounter{paperref}{2}\refstepcounter{paperref}\label{e:cv}\[
+
+z^* = \int_{0}^{\infty} \alpha(i) \cdot \frac{1-\beta}{1-\alpha(i)\beta} di.
+\tag{3}
+\]
+\setcounter{paperref}{0}\refstepcounter{paperref}\label{p:cv}
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=23,seed=128]{}  Then here is another lemma:
+\subsubsection*{Lemma 2}
+
+Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua $\mathcal{Z}(\alpha)$ 
+\[
+
+\frac{\sum_i z^i}{\prod_i q^i} \to \frac{\int_{0}^{\infty} \alpha(i) \cdot [1-\beta] di}{1-\exp(\alpha)\sin(\beta)}
+
+\]
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=16,seed=129]{}  
+
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=131,seed=130]{} 
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=30,seed=131]{}  And here is a theorem following the lemma:
+\subsubsection*{Theorem 1}
+ 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:
+\[
+
+\mathbb{E}(N(z^*)) \approx \frac{1-\mathbb{P}(\alpha\pi)}{1-\pi}- \frac{f(y)}{z(p)^*} + P(\Gamma).
+
+\]
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=17,seed=132]{} 
+
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=30,seed=133]{}  And here is a corollary following the theorem:
+\subsubsection*{Corollary 1}
+ 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:
+\[
+
+\mathcal{Q}^* = \int_{-\infty}^{+\infty} \mu(j)^2 \cdot \frac{1-\ln(\nu(j))}{1-\exp(\beta(j))} dj.
+
+\]
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=17,seed=134]{} 
+
+
+\section{Section with lists}\label{s:lists}
+
+Lists are not very common in scientific papers, but they are sometimes useful. This section presents a few possible lists.
+
+\subsection{Subsection with itemized lists}
+
+
+Here is a basic itemized list with one level:
+\begin{itemize}
+\item Et harum quidem rerum facilis est et expedita distinctio.
+\item Nam libero tempore, cum soluta nobis est eligendi optio.
+\item Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae.
+\item Nam libero tempore, cum soluta nobis est eligendi optio.
+\end{itemize}
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=34,seed=135]{}  Here is a list with two levels:
+\begin{itemize}
+\item Et harum quidem rerum facilis est et expedita distinctio.
+\item Nam libero tempore, assumenda est, repellendus, cum soluta nobis est eligendi optio:
+\begin{itemize}
+\item Cumque nihil impedit
+\item Quo minus id, quod maxime placeat. \wcTpLoremIpsum*[type=sentence,words-per-sentence=20,seed=136]{} 
+\item Facere possimus, omnis voluptas assumenda est
+\end{itemize}
+\item Emporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet. \wcTpLoremIpsum*[type=sentence,words-per-sentence=9,seed=137]{} 
+\end{itemize}
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=69,seed=138]{} 
+
+\subsection{Subsection with numbered lists}\label{s:numberedlists}
+
+And here is a numbered lists with two levels:
+\begin{enumerate}
+\item Et harum quidem rerum facilis est et expedita distinctio.
+\item Nam libero tempore, cum soluta nobis est eligendi optio.
+\item Emporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet. Nam libero tempore, cum soluta nobis est eligendi optio:
+\begin{enumerate}
+	\item Cumque nihil impedit.
+	\item Quo minus id, quod maxime placeat.
+	\item Facere possimus, omnis voluptas assumenda est.
+\end{enumerate}
+\item Et harum quidem rerum facilis est et expedita distinctio.
+\item Nam libero tempore, cum soluta nobis est eligendi optio.
+\end{enumerate}
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=20,seed=139]{}  
+
+\section{Section with graphs}\label{s:graphs}
+
+Here is a section with a variety of graphs. \wcTpLoremIpsum*[type=sentence,words-per-sentence=43,seed=140]{}  
+
+\subsection{Subsection with graphs at the top of the page}
+
+A simple two-panel graph is on figure \ref{f:graph1} It will be placed at the top of the page, just about here. \wcTpLoremIpsum*[type=sentence,words-per-sentence=57,seed=141]{} 
+
+\wcFigure[class=paper-figure]{
+
+\wcFigure[class=paper-panel]{\includegraphics[alt=Graph from the original paper template]{/docs/figures/figure-01.png}\wcFigcaption{A. A first panel, 1951--2019\setcounter{paperref}{0}\refstepcounter{paperref}\label{f:panelA}}}
+\wcFigure[class=paper-panel]{\includegraphics[alt=Graph from the original paper template]{/docs/figures/figure-02.png}\wcFigcaption{B. A second panel, 1951--2019\setcounter{paperref}{0}\refstepcounter{paperref}\label{f:panelB}}}
+\wcFigcaption{\textbf{Figure 1.} Graph with two panels}
+
+\wcP{This is a note for the graph. \wcTpLoremIpsum*[type=sentence,words-per-sentence=20,seed=142]{} }
+
+\setcounter{paperref}{0}\refstepcounter{paperref}\label{f:graph1}
+}
+
+\subsection{References to figures and panels} 
+
+As usual with LaTeX, it is easy to refer to a figure: see figure \ref{f:graph1} It is possible to refer to a specific panel in a figure, for instance figure \ref{f:panelA}A or figure \ref{f:panelB}B. Its also possible to refer to the entire figure, for instance figure \ref{f:graph1} or figure \ref{f:graph2}
+
+\subsection{A subsection with a full-page figure}
+
+Here is a full-page figure (figure \ref{f:graph2}). It will be placed in a full page about here. \wcTpLoremIpsum*[type=sentence,words-per-sentence=52,seed=143]{} 
+
+\wcFigure[class=paper-figure]{
+
+\wcFigure[class=paper-panel]{\includegraphics[alt=Graph from the original paper template]{/docs/figures/figure-05.png}\wcFigcaption{A. A first black-and-white panel}}
+\wcFigure[class=paper-panel]{\includegraphics[alt=Graph from the original paper template]{/docs/figures/figure-06.png}\wcFigcaption{B. A second black-and-white panel}}
+\wcFigure[class=paper-panel]{\includegraphics[alt=Graph from the original paper template]{/docs/figures/figure-07.png}\wcFigcaption{C. A third black-and-white panel}}
+\wcFigure[class=paper-panel]{\includegraphics[alt=Graph from the original paper template]{/docs/figures/figure-08.png}\wcFigcaption{D. A fourth black-and-white panel}}
+\wcFigure[class=paper-panel]{\includegraphics[alt=Graph from the original paper template]{/docs/figures/figure-09.png}\wcFigcaption{E. A fith black-and-white panel}}
+\wcFigure[class=paper-panel]{\includegraphics[alt=Graph from the original paper template]{/docs/figures/figure-10.png}\wcFigcaption{F. A sixth black-and-white panel}}
+\wcFigcaption{\textbf{Figure 2.} Graph with six black-and-white panels}
+
+\wcP{\textit{Note.} \wcTpLoremIpsum*[type=sentence,words-per-sentence=82,seed=144]{} }
+
+\setcounter{paperref}{1}\refstepcounter{paperref}\label{f:graph2}
+}
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=68,seed=145]{}  
+
+\section{A section with table}
+
+Here is a section with a variety of tables. \wcTpLoremIpsum*[type=sentence,words-per-sentence=41,seed=146]{}  
+
+\subsection{A subsection with a simple table}
+
+Table \ref{t:table1} is a simple table with one panel. \wcTpLoremIpsum*[type=sentence,words-per-sentence=61,seed=147]{}  
+
+\wcFigure[class=paper-table]{
+
+\wcFigcaption{\textbf{Table 1.} Basic table with one panel and multicolumns}
+\wcDiv[class=paper-table-scroll]{\wcTable{\wcTbody{\wcTr{\wcTd{}\wcTd[colspan=2]{Columns 1--2}\wcTd[colspan=2]{Columns 3--4}}\wcTr{\wcTd{}\wcTd{Column 1}\wcTd{Column 2}\wcTd{Column 3}\wcTd{Column 4}}\wcTr{\wcTd{Line 1:}\wcTd{$\alpha$}\wcTd{$\beta$}\wcTd{$\gamma$}\wcTd{$\delta$}}\wcTr{\wcTd{Line 2:}\wcTd{$\epsilon$}\wcTd{$\phi$}\wcTd{$\kappa$}\wcTd{$\eta$}}\wcTr{\wcTd{Line 3:}\wcTd{$\kappa$}\wcTd{$\nu$}\wcTd{$\pi$}\wcTd{$\kappa$}}\wcTr{\wcTd{Line 4:}\wcTd{$\psi$}\wcTd{$\mu$}\wcTd{$\nu$}\wcTd{$\zeta$}}}}}
+
+\wcP{This is a note for the table. \wcTpLoremIpsum*[type=sentence,words-per-sentence=60,seed=148]{} }
+
+\setcounter{paperref}{0}\refstepcounter{paperref}\label{t:table1}
+}
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=41,seed=149]{} 
+
+\subsection{A subsection with a multi-panel table}
+
+Table \ref{t:table2} is a more sophisticated table with several panels. \wcTpLoremIpsum*[type=sentence,words-per-sentence=41,seed=150]{}  
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=59,seed=151]{} 
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=50,seed=152]{} 
+
+
+\wcFigure[class=paper-table]{
+
+\wcFigcaption{\textbf{Table 2.} Bigger table with several panels}
+\wcDiv[class=paper-table-scroll]{\wcTable{\wcTbody{\wcTr{\wcTd{}\wcTd{Column 1}\wcTd{Column 2}\wcTd{Column 3}\wcTd{Column 4}\wcTd{Column 5}\wcTd{Column 6}\wcTd{Column 7}}\wcTr{\wcTd[colspan=8]{A. A first panel with calligraphic letters}}\wcTr{\wcTd{Line 1:}\wcTd{$\mathcal{A}$}\wcTd{$\mathcal{C}$}\wcTd{$\mathcal{V}$}\wcTd{--}\wcTd{--}\wcTd{$\mathcal{K}$}\wcTd{$\mathcal{A}$}}\wcTr{\wcTd{Line 2:}\wcTd{$\mathcal{X}$}\wcTd{$\mathcal{H}$}\wcTd{$\mathcal{O}$}\wcTd{--}\wcTd{--}\wcTd{$\mathcal{K}$}\wcTd{$\mathcal{A}$}}\wcTr{\wcTd[colspan=8]{B. A second panel with capital letters}}\wcTr{\wcTd{Line 3:}\wcTd{U}\wcTd{B}\wcTd{J}\wcTd{K}\wcTd{A}\wcTd{K}\wcTd{A}}\wcTr{\wcTd{Line 4:}\wcTd{N}\wcTd{Y}\wcTd{T}\wcTd{L}\wcTd{T}\wcTd{K}\wcTd{A}}\wcTr{\wcTd{Line 5:}\wcTd{G}\wcTd{S}\wcTd{Q}\wcTd{P}\wcTd{Q}\wcTd{K}\wcTd{A}}\wcTr{\wcTd[colspan=8]{C. A third panel with blackboard-bold letters}}\wcTr{\wcTd{Line 6:}\wcTd{$\mathbb{U}$}\wcTd{$\mathbb{B}$}\wcTd{$\mathbb{J}$}\wcTd{$\mathbb{K}$}\wcTd{$\mathbb{K}$}\wcTd{$\mathbb{K}$}\wcTd{$\mathbb{A}$}}\wcTr{\wcTd{Line 7:}\wcTd{$\mathbb{N}$}\wcTd{$\mathbb{Y}$}\wcTd{$\mathbb{T}$}\wcTd{$\mathbb{L}$}\wcTd{$\mathbb{T}$}\wcTd{$\mathbb{U}$}\wcTd{$\mathbb{E}$}}\wcTr{\wcTd{Line 8:}\wcTd{$\mathbb{G}$}\wcTd{$\mathbb{S}$}\wcTd{$\mathbb{Q}$}\wcTd{$\mathbb{P}$}\wcTd{$\mathbb{Q}$}\wcTd{$\mathbb{K}$}\wcTd{$\mathbb{P}$}}\wcTr{\wcTd[colspan=8]{D. A fourth panel with numbers}}\wcTr{\wcTd{Line 9:}\wcTd{1.0\%}\wcTd{2.3\%}\wcTd{4.5\%}\wcTd{9.0\%}\wcTd{9.8\%}\wcTd{91.2\%}\wcTd{0}}\wcTr{\wcTd{Line 10:}\wcTd{$\infty$}\wcTd{23}\wcTd{1}\wcTd{90}\wcTd{33}\wcTd{4.0\%}\wcTd{0}}\wcTr{\wcTd{Line 11:}\wcTd{--}\wcTd{--}\wcTd{1.2}\wcTd{4.4}\wcTd{0}\wcTd{9.0\%}\wcTd{0}}}}}
+
+\wcP{\textit{Note.} \wcTpLoremIpsum*[type=sentence,words-per-sentence=33,seed=153]{} }
+
+
+\wcP{\textit{Source.} Michaillat and Saez (2021) \wcTpRef*[href=@MS21]{}, table~1 and Eyster, Madarasz, and Michaillat (2021) \wcTpRef*[href=@EMM21]{}, table~2.}
+
+\setcounter{paperref}{1}\refstepcounter{paperref}\label{t:table2}
+}
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=21,seed=154]{} 
+
+\section{A section with cross-references}
+
+As usual, it is possible to reference an equation, such as equation (\ref{e:cv}). It is also possible to reference a section, such as section \ref{s:graphs}, or a subsection, such as section \ref{s:numberedlists} It is also possible to reference an appendix, such as appendix \ref{a:appendix1}, or a subsection in an appendix, such as appendix~\ref{a:subappendix} 
+
+Of course it is possible to reference figures, such as figure \ref{f:graph2}, or tables, such as table~\ref{t:table1} It is possible to refer to a specific panel in a figure, for instance figure \ref{f:panelA}A or figure \ref{f:panelB}B, and to the entire figure, for instance figure \ref{f:graph1} or figure \ref{f:graph2}
+
+\section{Quotes}
+
+It is easy to quote material within the paper. \wcTpLoremIpsum*[type=sentence,words-per-sentence=65,seed=155]{}  Quotes appear as follows:
+
+\wcBlockquote{
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+}
+
+So this was a one-paragraph quote. \wcTpLoremIpsum*[type=sentence,words-per-sentence=41,seed=156]{}  
+
+\section{Conclusion}\label{s:ccl}
+
+\paragraph{Summary} \wcTpLoremIpsum*[type=sentence,words-per-sentence=67,seed=157]{} 
+
+\paragraph{Implications} \wcTpLoremIpsum*[type=sentence,words-per-sentence=103,seed=158]{}  
+
+\paragraph{Next steps} \wcTpLoremIpsum*[type=sentence,words-per-sentence=86,seed=159]{} 
+
+\section*{References}
+\wcTpBiblio[ref=EMM21]{Eyster, Erik, Kristof Madarasz, and Pascal Michaillat. 2021.
+ ``Pricing under Fairness Concerns.''
+ \emph{Journal of the European Economic Association} 19~(3):
+  1853--1898.
+ \url{https://doi.org/10.1093/jeea/jvaa041}}
+\wcTpBiblio[ref=LMS18a]{Landais, Camille, Pascal Michaillat, and Emmanuel Saez. 2018{a}
+ ``A Macroeconomic Approach to Optimal Unemployment Insurance:
+  Applications.''
+ \emph{American Economic Journal: Economic Policy} 10~(2): 182--216.
+ \url{https://doi.org/10.1257/pol.20160462}}
+\wcTpBiblio[ref=LMS18b]{Landais, Camille, Pascal Michaillat, and Emmanuel Saez. 2018{b}
+ ``A Macroeconomic Approach to Optimal Unemployment Insurance:
+  Theory.''
+ \emph{American Economic Journal: Economic Policy} 10~(2): 152--181.
+ \url{https://doi.org/10.1257/pol.20150088}}
+\wcTpBiblio[ref=M12]{Michaillat, Pascal. 2012.
+ ``Do Matching Frictions Explain Unemployment? Not in Bad
+  Times.''
+ \emph{American Economic Review} 102~(4): 1721--1750.
+ \url{https://doi.org/10.1257/aer.102.4.1721}}
+\wcTpBiblio[ref=M14]{Michaillat, Pascal. 2014.
+ ``A Theory of Countercyclical Government Multiplier.''
+ \emph{American Economic Journal: Macroeconomics} 6~(1): 190--217.
+ \url{https://doi.org/10.1257/mac.6.1.190}}
+\wcTpBiblio[ref=MS15]{Michaillat, Pascal and Emmanuel Saez. 2015.
+ ``Aggregate Demand, Idle Time, and Unemployment.''
+ \emph{Quarterly Journal of Economics} 130~(2): 507--569.
+ \url{https://doi.org/10.1093/qje/qjv006}}
+\wcTpBiblio[ref=MS19]{Michaillat, Pascal and Emmanuel Saez. 2019.
+ ``Optimal Public Expenditure with Inefficient Unemployment.''
+ \emph{Review of Economic Studies} 86~(3): 1301--1331.
+ \url{https://doi.org/10.1093/restud/rdy030}}
+\wcTpBiblio[ref=MS21]{Michaillat, Pascal and Emmanuel Saez. 2021.
+ ``Resolving {N}ew {K}eynesian Anomalies with Wealth in the
+  Utility Function.''
+ \emph{Review of Economics and Statistics} 103~(2): 197--215.
+ \url{https://doi.org/10.1162/rest_a_00893}}
+\wcTpBiblio[ref=MS22]{Michaillat, Pascal and Emmanuel Saez. 2022.
+ ``An Economical Business-Cycle Model.''
+ \emph{Oxford Economic Papers} 74~(2): 382--411.
+ \url{https://doi.org/10.1093/oep/gpab021}}
+\wcTpListof[selector=tp-biblio]{}
+\appendix
+
+
+\section{Generic appendix}\label{a:appendix1}
+
+This is a generic appendix. \wcTpLoremIpsum*[type=sentence,words-per-sentence=52,seed=160]{}  
+
+\subsection{Generic subsection} 
+
+This is a generic subsection in the appendix. \wcTpLoremIpsum*[type=sentence,words-per-sentence=36,seed=161]{}  
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=48,seed=162]{}  
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=103,seed=163]{}  
+
+\subsection{Subsection with assumptions and results}
+
+This subsection displays an assumption and results in the appendix to illustrate how they are typeset and numbered. First is an assumption:
+\subsubsection*{Assumption A1}
+ 
+Similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga:
+\[
+
+\mathbb{E}(\Omega_{m,n}) = \mathbb{P}(\omega\cdot \mu - \xi) - \sum_{i=0}^{m}\sum_{j=1}^{n} \sigma(i,j) + 123^{56}
+
+\]
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=26,seed=164]{} 
+\setcounter{paperref}{0}\refstepcounter{paperref}\label{a:appe}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Next is a theorem:
+\subsubsection*{Theorem A1}
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum:
+\[
+
+X^* =\iint_{0}^{\infty} \alpha(i) \cdot \mathcal{A}^2(i) + \mathbb{P}(X\mid Z(i)) di dj,\tag{A1}
+\]
+integer vestibulum sapien nec velit varius, nec scelerisque nunc eleifend. \wcTpLoremIpsum*[type=sentence,words-per-sentence=17,seed=165]{}  
+
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=25,seed=166]{}  Here is another theorem based on assumption~A\ref{a:appe}:
+\subsubsection*{Theorem A2}
+
+Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua: $y(\gamma) \geq 3\pi + \cos(\vartheta)$
+\setcounter{paperref}{1}\refstepcounter{paperref}\label{t:theorem1}
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=57,seed=167]{}  Maecenas nec tempor nisi---as in theorem A\ref{t:theorem1}
+
+\subsection{A subsection with math}
+
+Here is math and equations in the appendix---see equations (AA\ref{e:appendix1}) and (AA\ref{e:experiments}). Temporibus autem quibusdam $\xi$ et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae $1-\gamma$ Itaque earum rerum hic $\mathcal{S}(\zeta^0)$ tenetur a sapiente delectus $\mathcal{B}^\theta$, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat $\mathbb{V}^i$:
+\setcounter{paperref}{1}\refstepcounter{paperref}\label{e:appendix1}\[
+
+\mathbb{V}^r = (1-\gamma) \times 0 +\gamma S(z^*) v^s+\gamma [1-S(z^*)] \mathcal{V}^i-c.
+\tag{A2}
+\]
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=19,seed=168]{}  Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? 
+\setcounter{paperref}{2}\refstepcounter{paperref}\label{e:experiments}\[
+
+\mathbb{E}(N(z)) = \frac{1}{1-\gamma F(z)}
+\tag{A3}
+\]
+
+\section{Another appendix}\label{a:appendix2}
+
+Here is a second appendix. \wcTpLoremIpsum*[type=sentence,words-per-sentence=17,seed=169]{} 
+
+\subsection{Larger figure, without panel, in the appendix} 
+
+Here is a large, simple figure in the appendix (see figure A\ref{f:appendix1}). \wcTpLoremIpsum*[type=sentence,words-per-sentence=43,seed=170]{} 
+
+\wcFigure[class=paper-figure]{
+
+\includegraphics[alt=Graph from the original paper template]{/docs/figures/figure-08.png}
+\wcFigcaption{\textbf{Figure A1.} A larger graph in the appendix}
+
+\wcP{\textit{Source.} This is the source for the larger graph. \wcTpLoremIpsum*[type=sentence,words-per-sentence=20,seed=171]{} }
+
+\setcounter{paperref}{0}\refstepcounter{paperref}\label{f:appendix1}
+}
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=117,seed=172]{}  
+
+\subsection{Subsection with references}\label{a:subappendix}
+
+Here is a sentence with some references in text: Michaillat and Saez (2019) \wcTpRef*[href=@MS19]{}; Michaillat and Saez (2021) \wcTpRef*[href=@MS21]{} found something but that is an uncommon result. The references can also go in parentheses at the end of the sentence (Michaillat and Saez (2021) \wcTpRef*[href=@MS21]{}; Michaillat and Saez (2022) \wcTpRef*[href=@MS22]{}). The references go to the reference list at the end of the main text---so appendix and main text share a common list of references.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\subsection{Subsection with a foonote}
+
+Here is a sentence with a footnote.\wcTpRef*[href=^note-5]{} The numbering of the footnotes, just like the numbering of the pages, continues from the main text to the appendix.
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=19,seed=173]{}  Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\section{Last appendix with text}
+
+This is a last appendix with a bit of text.
+
+\subsection{A first subsection}
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=81,seed=174]{}  
+
+\subsection{A second subsection}
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=57,seed=175]{}  Ut eget libero sed orci tempor ullamcorper:
+\setcounter{paperref}{3}\refstepcounter{paperref}\label{e:type1Classical}\[
+
+S^*(z) = \frac{\alpha}{1-\gamma (1-\alpha)} > \int_{-\infty}^{+\infty}\alpha(x) dx.
+\tag{A4}
+\]
+
+\subsection{A third subsection}
+
+ \wcTpLoremIpsum*[type=sentence,words-per-sentence=98,seed=176]{} 
+
+
+
+\wcTpNote[ref=note-1]{First Author: First University. Second Author: Second University. We thank colleagues for helpful comments and discussions. This work was supported by a grant \lbrack grant number\rbrack; another grant \lbrack grant number\rbrack; and a foundation.}
+\wcTpNote[ref=note-2]{ \wcTpLoremIpsum*[type=sentence,words-per-sentence=13,seed=177]{} }
+\wcTpNote[ref=note-3]{ \wcTpLoremIpsum*[type=sentence,words-per-sentence=51,seed=178]{} }
+\wcTpNote[ref=note-4]{A longer footnote illustrating how multiple lines of footnote text affect the bottom of the page and the main text flow. \wcTpLoremIpsum*[type=sentence,words-per-sentence=101,seed=179]{} }
+\wcTpNote[ref=note-5]{ \wcTpLoremIpsum*[type=sentence,words-per-sentence=23,seed=180]{} }
+\section*{Notes}
+\wcTpListof[selector=tp-note]{}
+
+\end{document}

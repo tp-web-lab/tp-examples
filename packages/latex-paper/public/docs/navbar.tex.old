@@ -1,0 +1,4 @@
+\usepackage{hyperref}
+\begin{itemize}
+\item \href{https://github.com/pmichaillat/latex-paper}{Original template}
+\end{itemize}

@@ -19,6 +19,7 @@ Les exemples présentés ici constituent des cas pédagogiques plus complets qui
 - all
 - asciidoc
 - html
+- latex
 - markdown
 - restructuredtext
 :::::
@@ -27,6 +28,8 @@ Les exemples présentés ici constituent des cas pédagogiques plus complets qui
 :::::
 ::::: tp-dropdown { id="example-category-menu" anchor="#example-category-button" outside-click data-example-filter="category" }
 - all
+- economics
+- epistemology
 - language
 - math
 - music
@@ -176,6 +179,30 @@ main
 
 footer
 : :tp-button:View the example{href="https://tp-web-lab.github.io/tp-examples/jazz/" variant="brand" size="xxl"}
+::::
+
+<!-- dynamic-programming -->
+:::: tp-card { data-type="multi-pages" data-markup="latex" data-category="economics" style="min-width:0;text-align:center;" }
+header
+: #### Dynamic Programming
+
+main
+: Pascal Michaillat's complete economics lecture notes: consumption and saving, Bellman equations, stochastic choice and a Real Business Cycle model. Four LaTeX pages, adapted under CC BY 4.0.
+
+footer
+: :tp-button:Read the course{href="https://tp-web-lab.github.io/tp-examples/dynamic-programming/" variant="brand" size="xxl"}
+::::
+
+<!-- latex-paper -->
+:::: tp-card { data-type="single-page" data-markup="latex" data-category="programming" style="min-width:0;text-align:center;" }
+header
+: #### LaTeX Paper
+
+main
+: Pascal Michaillat's academic paper template adapted to a single page, with generated placeholder paragraphs, equations, figures, tables, TP notes and bibliography.
+
+footer
+: :tp-button:View the template{href="https://tp-web-lab.github.io/tp-examples/latex-paper/" variant="brand" size="xxl"}
 ::::
 
 <!-- jt-vr -->

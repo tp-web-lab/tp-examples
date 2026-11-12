@@ -32,6 +32,8 @@ server with Ctrl+C. Edit the cards in `packages/home/public/docs/index.md`.
 
 | Package | Container | Purpose |
 | --- | --- | --- |
+| `@tp/example-latex-paper` | `tp-latex-single-page` | An academic paper template with TP notes, bibliography and generated placeholder text. |
+| `@tp/example-dynamic-programming` | `tp-latex-multi-pages` | Pascal Michaillat’s complete Dynamic Programming notes, adapted under CC BY 4.0. |
 | `@tp/example-pint-of-science-rv` | `tp-asciidoc-multi-slides` | Jacques Tisseau’s 2018 Pint of Science talk, with progressive reveals and speaker notes. |
 | `@tp/example-jt-vr` | `tp-markdown-single-page` | An interactive video ending with three clickable destinations. |
 | `@tp/example-home` | `tp-markup-single-page` | A Markdown home page linking to the examples. |
@@ -153,3 +155,8 @@ The 18-slide French presentation uses `tp-asciidoc-multi-slides`, native AsciiDo
 ## TikZ pour l’impatient
 
 `pnpm dev:tikz` opens the TikZ gallery (15 editable examples, port 4325). See [packages/tikz](packages/tikz/README.md).
+
+Run `pnpm dev:dynamic-programming` (port 4332) for the economics course.
+See [its README](packages/dynamic-programming/README.md) for the original source, license and reproducible adaptation.
+
+Run `pnpm dev:latex-paper` (port 4334) for the [academic paper template](packages/latex-paper/README.md).

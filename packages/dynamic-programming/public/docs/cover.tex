@@ -1,0 +1,39 @@
+\usepackage{hyperref}
+\section*{Introduction}
+
+\subsection*{A real economics course}
+This example presents \href{https://pascalmichaillat.org/x1.pdf}{\emph{Dynamic Programming}} by \href{https://pascalmichaillat.org}{Pascal Michaillat}, from his course \href{https://pascalmichaillat.org/x/}{\emph{Mathematics for Macroeconomics}}, taught at the London School of Economics and Political Science. The text introduces consumption and saving, the Bellman equation, stochastic choice and a Real Business Cycle model.
+
+The four original sections are presented in full, each on a separate LaTeX page. A fifth content page contains the three original exercises from \href{ps1.tex}{Problem Set on Dynamic Programming}. Use the navigation menu or the previous and next page buttons to read the course.
+
+\begin{itemize}
+\item \href{https://pascalmichaillat.org/x/}{Original course and author information}
+\item \href{https://pascalmichaillat.org/x1.pdf}{Original PDF}
+\item \href{https://github.com/pmichaillat/math-for-macro/blob/main/notes1.tex}{Original LaTeX source}
+\item \href{https://github.com/pmichaillat/math-for-macro/blob/main/ps1.tex}{Original problem set (ps1.tex)}
+\item \href{https://github.com/pmichaillat/math-for-macro}{Source repository, including the original style files}
+\end{itemize}
+
+\subsection*{License and attribution}
+The original material is by Pascal Michaillat and is distributed under the \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International license}. This adaptation is provided by TP Web Lab under the same license. Reuse and adaptation, including commercial reuse, require attribution, a link to the license and an indication of changes. The author has not endorsed this adaptation.
+
+\subsection*{Adaptations for tp-latex}
+The economic text and the four-section structure have been retained. The following changes concern presentation and navigation:
+\begin{itemize}
+\item Each section written in $\LaTeX{}$ is a separate document displayed by \texttt{tp-latex-multi-pages}. Section and equation numbers follow the original course.
+\item The original PDF-specific style files, \texttt{paper.sty} and \texttt{math.sty}, are not loaded. Fonts, margins, headers and page breaks follow the web presentation instead.
+\item Custom mathematical shortcuts are expanded into standard mathematical notation. This includes Greek letters, derivatives, brackets, expectations and optimization operators. Optional arguments of the original operators are expanded explicitly. Explicit thin spacing is omitted for compatibility with the parser.
+\item Equation and alignment environments are placed inside display-math delimiters. MathJax renders the formulas through \texttt{tp-math}; explicit tags preserve the original equation numbers.
+\item Local equation and section references use native LaTeX labels and references, with an explicit counter preserving equation numbers. References between separate pages use explicit links. References to two equations in the same aligned block lead to that block.
+\item The custom definition environment becomes a labelled subsection. The original title page and table of contents are replaced by this introduction and the navigation menu.
+\item The problem set retains all three problems and their question labels, including the E--F continuation in Problem 3. Its print-only \texttt{exam.sty} layout is replaced by web lists. An editorial note identifies an apparent typo in the original probability bound; a separate page provides suggested solutions prepared for this adaptation, not an official answer key by the author.
+\end{itemize}
+
+This is an adapted web edition, not a pixel-identical reproduction of the PDF. The original sources and a reproducible adaptation script are included with the example.
+
+\subsection*{Notes with tp-components}
+The footnote in \href{theory.tex}{section 4} uses the note components of \texttt{tp-components}. Its content is defined once with \texttt{tp-note}; a \texttt{tp-ref} in the text displays the numbered reference. Hover over the reference or focus it with the keyboard to read the note without leaving the paragraph. A \texttt{tp-listof} with \texttt{selector=tp-note} also displays the note at the end of the page. Both presentations use the same content, preserving the author's original footnote.
+
+\href{solutions.tex}{Suggested solutions to the exercises}
+
+\href{deterministic.tex}{Start with Simple deterministic problem}

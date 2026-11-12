@@ -1,0 +1,14 @@
+\section*{About this example}
+This is a web adaptation of Pascal Michaillat's \href{https://github.com/pmichaillat/latex-paper}{Minimalist LaTeX Template for Academic Papers}, distributed under the \href{https://github.com/pmichaillat/latex-paper/blob/main/LICENSE.md}{MIT license}. It is a demonstration template with placeholder authors and text, not a research article. The original \href{https://pascalmichaillat.org/a.pdf}{PDF} remains the reference for the print layout.
+
+The article and its embedded appendices are displayed together by \texttt{tp-latex-single-page}. The separate online-appendix variant is not duplicated here. This adaptation uses the following TP components:
+\begin{itemize}
+\item \texttt{tp-lorem-ipsum} generates the plain placeholder passages, including those in notes 2 to 5, with fixed seeds. Explanations, formulas and mixed technical sentences remain explicit.
+\item \texttt{tp-note} defines each note and \texttt{tp-ref} provides its numbered reference. Hover or focus a reference to read its content. \texttt{tp-listof} displays the notes at the end.
+\item \texttt{tp-biblio} defines the nine bibliography entries, using the author's compiled bibliography. Citations keep author and year information and add \texttt{tp-ref} links. \texttt{tp-listof} displays the reference list.
+\item \texttt{tp-math} renders formulas through MathJax. Equation tags preserve the original numbering, including the appendix prefix. Local cross-references use native LaTeX labels and references; explicit counters supply the numbers of adapted equations, figures, tables and results.
+\end{itemize}
+
+The original style and BibTeX files are not executed in the browser. Figures are extracted from the original PDF as images; tables retain their cells and column spans. Floats appear in reading order, and theorem-like environments become labelled blocks. Fonts, spacing and page breaks follow the web layout. Statements in the template about print fonts, variants and float placement describe the original PDF, not a guarantee about this web rendering. The source files and a reproducible adaptation script accompany this example; copyright and permission notices are retained.
+
+\wcTpToc[expand-all]{}

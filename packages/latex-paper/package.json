@@ -1,0 +1,11 @@
+{
+  "name": "@tp/example-latex-paper",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": "^20.19.0 || >=22.12.0" },
+  "scripts": { "dev": "vite", "adapt": "python3 scripts/adapt.py", "build": "vite build", "preview": "vite preview" },
+  "dependencies": { "@tp/tp-components": "link:../../../tp-components" },
+  "devDependencies": { "vite": "8.1.5", "vite-plugin-static-copy": "4.1.1" }
+}

@@ -1,0 +1,203 @@
+\usepackage{hyperref}
+\renewcommand{\thesubsubsection}{\Alph{subsubsection}}
+\section*{Suggested solutions}
+These solutions were prepared for this TP Web Lab adaptation. They are not an official answer key by Pascal Michaillat. They accompany the original \href{ps1.tex}{Problem Set on Dynamic Programming}. The question letters match the exercise page.
+
+We impose positive consumption, nonnegative capital, feasible asset positions and the relevant transversality conditions. First-order equalities below concern interior optima with differentiable value functions; boundary choices require inequalities. In Problem 2 we read the source's incomplete probability bound as $0.5<\rho<1$ and assume $0<\beta<1$.
+
+\subsection*{Problem 1: optimal growth}
+\setcounter{subsubsection}{0}
+\subsubsection{Lagrangian and consumption dynamics}
+Use current-value multipliers $\lambda_t$ and write
+\[
+\mathcal{L}=\sum_{t=0}^{\infty}\beta^t\left[\ln c_t+\lambda_t(a k_t^{\alpha}-c_t-k_{t+1})\right].
+\]
+The consumption and capital conditions are
+\[
+\lambda_t=\frac{1}{c_t},\qquad
+\lambda_t=\beta\lambda_{t+1}\alpha a k_{t+1}^{\alpha-1}.
+\]
+Consequently,
+\[
+c_{t+1}=\beta\alpha a k_{t+1}^{\alpha-1}c_t.
+\]
+This Euler equation alone does not determine the initial consumption choice. It must be combined with feasibility and a transversality condition, here
+\[
+\lim_{T\to\infty}\beta^T\frac{k_{T+1}}{c_T}=0.
+\]
+Part F supplies the optimal policy and thus the complete consumption path.
+
+\subsubsection{State and control}
+Capital $k_t$ is the state. Consumption $c_t$ is a control; equivalently, choose next-period capital $k_{t+1}$ and recover consumption from the resource constraint.
+
+\subsubsection{Bellman equation}
+\[
+V(k)=\max_{0\leq k'<a k^{\alpha}}\left[\ln(a k^{\alpha}-k')+\beta V(k')\right].
+\]
+For the infinite-horizon problem, choosing $k'=0$ makes positive consumption impossible in the following period. The optimum therefore has $k'>0$.
+
+\subsubsection{Euler equation from the Bellman equation}
+The first-order and envelope conditions give
+\[
+\frac{1}{c}=\beta V'(k'),\qquad V'(k)=\frac{\alpha a k^{\alpha-1}}{c}.
+\]
+Applying the envelope condition next period and substituting into the first-order condition yields exactly the Euler equation in part A.
+
+\subsubsection{First two value-function iterates}
+Starting from $V_0=0$, the one-period problem consumes all output and leaves zero terminal capital:
+\[
+V_1(k)=\ln(a k^{\alpha})=\ln a+\alpha\ln k.
+\]
+The second iterate solves
+\[
+V_2(k)=\max_{0<k'<a k^{\alpha}}\left[\ln(a k^{\alpha}-k')+\beta\ln a+\alpha\beta\ln k'\right].
+\]
+Its first-order condition implies
+\[
+k'_2(k)=\frac{\alpha\beta}{1+\alpha\beta}a k^{\alpha},\qquad
+c_2(k)=\frac{a k^{\alpha}}{1+\alpha\beta}.
+\]
+Therefore
+\[
+V_2(k)=\ln\left(\frac{a k^{\alpha}}{1+\alpha\beta}\right)+\beta\ln a
++\alpha\beta\ln\left(\frac{\alpha\beta a k^{\alpha}}{1+\alpha\beta}\right).
+\]
+The zero terminal capital choice for $V_1$ is a finite-horizon boundary condition, not the infinite-horizon policy.
+
+\subsubsection{Infinite-horizon policy}
+The proposed value function has derivative
+\[
+V'(k)=\frac{\alpha}{(1-\alpha\beta)k}.
+\]
+Substitute it into the first-order condition:
+\[
+\frac{1}{a k^{\alpha}-k'}=\frac{\alpha\beta}{(1-\alpha\beta)k'}.
+\]
+Solving gives
+\[
+k'(k)=\alpha\beta a k^{\alpha},\qquad c(k)=(1-\alpha\beta)a k^{\alpha}.
+\]
+For completeness, substitution into the Bellman equation determines the constant:
+\[
+\kappa=\frac{1}{1-\beta}\left[\ln((1-\alpha\beta)a)+\frac{\alpha\beta}{1-\alpha\beta}\ln(\alpha\beta a)\right].
+\]
+The policy is feasible and positive, satisfies the Euler equation, and satisfies transversality because $\beta^T k_{T+1}/c_T=\beta^T\alpha\beta/(1-\alpha\beta)\to0$.
+
+\subsubsection{Comparing the approaches}
+Dynamic programming yields a policy for every state, makes the continuation value explicit and supports numerical iteration and stochastic extensions. Its costs include storing a value function over the state space and establishing the conditions for convergence; the unbounded logarithmic payoff requires care with general convergence claims.
+
+The Lagrangian gives Euler equations and marginal trade-offs directly and can be simpler for analytical or local calculations. However, these conditions must be completed by feasibility, boundary and transversality conditions; they do not by themselves select the optimal path or provide a global policy.
+
+\subsection*{Problem 2: asset pricing}
+\setcounter{subsubsection}{0}
+\subsubsection{State and control}
+The state is $(s,d)$: current asset holdings and the observed dividend. Price is $p(d)$, so it is not an additional independent state. Choose next-period holdings $s'$; consumption is $c=(d+p(d))s-p(d)s'$. Choices are adapted to currently available information.
+
+\subsubsection{Bellman equation}
+Let $P_{ll}=P_{hh}=\rho$ and $P_{lh}=P_{hl}=1-\rho$. For $i\in\lbrace l,h\rbrace $,
+\[
+V(s,d_i)=\max_{s'\in\Gamma(s,d_i)}\left[u((d_i+p_i)s-p_i s')+\beta\sum_{j\in\lbrace l,h\rbrace }P_{ij}V(s',d_j)\right].
+\]
+Here $p_i=p(d_i)$ and $\Gamma$ denotes feasible positions, including any borrowing or short-sale restrictions and positive consumption. An interior solution is assumed in part C.
+
+\subsubsection{Euler equation}
+The first-order condition and envelope condition are
+\[
+p_i u'(c)=\beta\sum_jP_{ij}V_s(s',d_j),\qquad
+V_s(s,d_i)=(d_i+p_i)u'(c).
+\]
+Combining them gives
+\[
+p_tu'(c_t)=\beta\mathbb{E}\left[(d_{t+1}+p_{t+1})u'(c_{t+1})\mid s_t,d_t\right].
+\]
+Along the chosen policy, current holdings and choices are understood as known. With that convention the exercise writes the conditioning simply as $d_t$. At a binding trading constraint the first-order equality need not hold.
+
+\subsubsection{Linear utility and high-dividend prices}
+When $u(c)=c$, marginal utility is one. For an unconstrained marginal trade the pricing equations become
+\[
+\begin{aligned}
+p_l&=\beta[\rho(d_l+p_l)+(1-\rho)(d_h+p_h)],\\
+p_h&=\beta[(1-\rho)(d_l+p_l)+\rho(d_h+p_h)].
+\end{aligned}
+\]
+Subtracting and setting $\Delta p=p_h-p_l$, $\Delta d=d_h-d_l$ gives
+\[
+\Delta p=\beta(2\rho-1)(\Delta d+\Delta p),\qquad
+\Delta p=\frac{\beta(2\rho-1)}{1-\beta(2\rho-1)}\Delta d>0.
+\]
+The numerator is positive because $\rho>1/2$ and $d_h>d_l$; the denominator is positive because $\beta<1$ and $2\rho-1<1$.
+
+For an explicit check, define $\bar d=(d_l+d_h)/2$. Adding the two equations gives $\bar p=\beta\bar d/(1-\beta)$, and $p_l=\bar p-\Delta p/2$, $p_h=\bar p+\Delta p/2$. These are the stationary finite prices. The restriction $p=p(d)$ rules out an additional time-varying bubble. Linear utility does not itself select a unique individual consumption plan.
+
+\subsection*{Problem 3: consumption and labor}
+\setcounter{subsubsection}{0}
+\subsubsection{Deterministic state and controls}
+Capital $k$ is the state; next-period capital $k'$ and labor $l\in[0,1]$ are controls. Consumption is $c=f(k,l)-k'$.
+
+\subsubsection{Deterministic Bellman equation}
+\[
+V(k)=\max_{\substack{k'\geq0,\ 0\leq l\leq1\\ f(k,l)-k'>0}}
+\left[u(f(k,l)-k',l)+\beta V(k')\right].
+\]
+
+\subsubsection{Optimality conditions}
+At an interior choice, differentiating with respect to $k'$ and $l$ and using the envelope condition yields
+\[
+u_c(c,l)=\beta V'(k'),\qquad
+u_c(c,l)f_l(k,l)+u_l(c,l)=0,\qquad
+V'(k)=u_c(c,l)f_k(k,l).
+\]
+Thus
+\[
+\begin{aligned}
+u_c(c_t,l_t)&=\beta u_c(c_{t+1},l_{t+1})f_k(k_{t+1},l_{t+1}),\\
+u_c(c_t,l_t)f_l(k_t,l_t)&=-u_l(c_t,l_t).
+\end{aligned}
+\]
+For labor at $l=0$, the marginal expression $u_cf_l+u_l$ must be nonpositive; at $l=1$ it must be nonnegative. These are one-sided necessary conditions.
+
+The statement assumes utility is convex in labor. This does not ensure a concave maximization problem or an interior labor optimum. Accordingly, the equalities are necessary conditions for an interior optimum, not a general sufficiency theorem. Candidate solutions must be compared with boundary choices.
+
+\subsubsection{Steady-state ratios with Cobb--Douglas production}
+Assume a positive stationary solution, with $0<\alpha<1$, $k'=k$ and constant consumption and labor. The capital Euler equation gives
+\[
+1=\beta\alpha k^{\alpha-1}l^{1-\alpha}
+=\beta\alpha(l/k)^{1-\alpha}.
+\]
+Hence
+\[
+\frac{l}{k}=\left(\frac{1}{\alpha\beta}\right)^{1/(1-\alpha)},\qquad
+\frac{c}{k}=\frac{f(k,l)}{k}-1=\frac{1}{\alpha\beta}-1.
+\]
+The subtraction of one follows from the exercise's law of motion, which has no undepreciated capital term. These ratios do not determine the levels: the utility function and the labor condition determine the scale, subject to $l\leq1$. Their derivation is conditional on the existence of a positive steady state.
+
+\subsubsection{Stochastic Bellman equation}
+The state is now $(k,a_i)$, with the productivity shock observed before choices. Using $P_{ii}=\rho$ and $P_{ij}=1-\rho$ for $j\ne i$,
+\[
+V(k,a_i)=\max_{\substack{k'\geq0,\ 0\leq l\leq1\\ a_i f(k,l)-k'>0}}
+\left[u(a_i f(k,l)-k',l)+\beta\sum_{j=1}^2P_{ij}V(k',a_j)\right].
+\]
+
+\subsubsection{Stochastic optimality conditions}
+The first-order and envelope conditions at interior choices are
+\[
+\begin{aligned}
+u_c(c,l)&=\beta\sum_jP_{ij}V_k(k',a_j),\\
+u_c(c,l)a_i f_l(k,l)+u_l(c,l)&=0,\\
+V_k(k,a_i)&=u_c(c,l)a_i f_k(k,l).
+\end{aligned}
+\]
+Combining them yields
+\[
+\begin{aligned}
+u_c(c_t,l_t)&=\beta\mathbb{E}_t\left[u_c(c_{t+1},l_{t+1})a_{t+1}f_k(k_{t+1},l_{t+1})\right],\\
+u_c(c_t,l_t)a_t f_l(k_t,l_t)&=-u_l(c_t,l_t).
+\end{aligned}
+\]
+Future consumption and labor depend on the realized next-period productivity. The labor boundary signs from part C apply with $f_l$ replaced by $a_t f_l$. For a well-behaved optimum the capital path must also satisfy the appropriate expected transversality condition, typically
+\[
+\lim_{T\to\infty}\mathbb{E}_0\left[\beta^T u_c(c_T,l_T)k_{T+1}\right]=0.
+\]
+As in the deterministic case, first-order conditions alone do not establish global optimality under the stated curvature assumptions.
+
+\href{ps1.tex}{Back to the exercises}

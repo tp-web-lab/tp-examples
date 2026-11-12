@@ -1,0 +1,195 @@
+% Adapted from Dynamic Programming by Pascal Michaillat. CC BY 4.0.
+% See cover.tex for sources and adaptation details.
+\documentclass{article}
+\usepackage{hyperref}
+\begin{document}
+\newcounter{tpequation}
+\setcounter{section}{2}
+\section{Real Business Cycle model}
+
+Sections \href{deterministic.tex#ref-sec-deterministic}{1} and \href{stochastic.tex#ref-sec-stochastic}{2} apply dynamic programming to very simple optimization problems. However, dynamic programming has a wide range of applications and can be used to solve complex problems in macroeconomics. To illustrate how to use dynamic programming in a macroeconomic model, we solve for the equilibrium of a Real Business Cycle (RBC) model using dynamic programming.
+
+\subsection{Model}
+
+The model is built from the following elements:
+\begin{itemize}
+\item Preferences of the representative household: 
+
+\[
+\mathbb{E}_{0}\left(\sum_{t=0}^{\infty}\beta^t u(C_{t},L_{t})\right)
+\]
+with 
+
+\[
+u(C_{t},L_{t}) =\ln\left(C_{t}\right) +\theta \cdot \frac{(1-L_{t})^{1-\gamma}}{1-\gamma}.
+\]
+\item Technology: we introduce labor-augmenting technology so that we have a balanced growth path.
+\begin{itemize}
+\item Production function: $Y_{t}=K_{t}^{\alpha} \left(A_{t} L_{t}\right)^{1-\alpha}$ with $0<\alpha<1$.
+\item Capital accumulation: $K_{t+1}= (1-\delta) K_{t}+I_{t}$.
+\end{itemize}
+\item National accounts identity: $Y_{t} =C_{t}+I_{t}$.
+\item Technology shock: $\ln\left(A_{t}\right) =\rho_{A} \ln\left(A_{t-1}\right) +\epsilon^{A}_{t}$, $\left\lvert \rho_{A}\right\rvert<1$, $\epsilon^{A}_{t}\sim \mathcal{N}\left(0,\sigma_{A}^{2}\right)$, $\sigma_{A}>0$.
+\end{itemize}
+
+\subsection{Optimal allocation}
+
+\subsubsection*{Definition 1} The optimal allocation is the collection of stochastic processes $\left\lbrace C_{t},I_{t},Y_{t},K_{t},A_{t},L_{t}\right\rbrace _{t=0}^{\infty}$ that solves:
+
+\[
+\max_{\left\lbrace C_{t},L_{t}\right\rbrace _{t=0}^{\infty}} \mathbb{E}_{0}\left(\sum_{t=0}^{\infty}\beta^{t} u(C_{t},L_{t})\right)
+\]
+subject to
+\wcSpan*[id=equation-23]{}
+\setcounter{tpequation}{22}\refstepcounter{tpequation}\label{e:rbc1}
+\setcounter{tpequation}{23}\refstepcounter{tpequation}\label{e:rbc2}
+\setcounter{tpequation}{24}\refstepcounter{tpequation}\label{e:rbc3}
+\[
+\begin{align*}
+K_{t+1} &=(1-\delta) K_{t}+I_{t}\tag{23}\\
+Y_{t}&=K_{t}^{\alpha} \left(A_{t} L_{t}\right)^{1-\alpha}\tag{24}\\
+Y_{t}&=C_{t}+I_{t}\tag{25}\\
+\ln\left(A_{t}\right) &=\rho_{A} \ln\left(A_{t-1}\right) +\epsilon^{A}_{t}, \epsilon^{A}_{t}\sim \mathcal{N}\left(0,\sigma_{A}^{2}\right).
+\end{align*}
+\]
+
+The welfare theorems imply that the allocation in the competitive equilibrium coincides with the optimal allocation; thus, we focus on the optimal allocation.
+
+\subsection{Characterization of the optimal allocation}
+
+We use dynamic programming to characterize the optimal allocation. This stochastic problem admits a recursive structure with
+\begin{itemize}
+\item control variable: $C,L$
+\item state variable: $K$
+\item shock: $A$.
+\end{itemize}
+Furthermore, the transition equation for the state variable $K$ is obtained by combining equations~(\ref{e:rbc1}),~(\ref{e:rbc2}), and~(\ref{e:rbc3}). The three equations can be aggregated into a single transition equation for capital:
+\wcSpan*[id=equation-26]{}
+\setcounter{tpequation}{25}\refstepcounter{tpequation}\label{e:rbctrans}
+\[
+K'=(1-\delta) K+K^{\alpha} (A L)^{1-\alpha}-C.\tag{26}
+\]
+
+\paragraph{Step 1: Bellman equation} The Bellman equation is
+
+\[
+V(K,A) = \max_{C,L}\left(u(C,L) +\beta \mathbb{E}_{A'\mid A}\left(V(K',A')\right)\right)
+\]
+We plug the transition equation for capital, given by~(\ref{e:rbctrans}), into the value function:
+
+\[
+V(K,A) = \max_{C,L}\left(u(C,L)+\beta \mathbb{E}_{A'\mid A}\left(V\left((1-\delta) K+K^{\alpha} (A L)^{1-\alpha}-C, A'\right)\right)\right).
+\]
+
+\paragraph{Step 2: First-order conditions} We derive the first-order conditions with respect to $C$ and $L$ in the Bellman equation:
+
+\[
+\begin{align*}
+0&= \frac{\partial u}{\partial C}(C,L) +\beta \mathbb{E}_{A'\mid A}\left(\frac{\partial V}{\partial K}(K',A') \frac{\partial K'}{\partial C}\right)\\
+0&=\frac{\partial u}{\partial L}(C,L) +\beta \mathbb{E}_{A'\mid A}\left(\frac{\partial V}{\partial K}(K',A') \frac{\partial K'}{\partial L}\right).
+\end{align*}
+\]
+Equation~(\ref{e:rbctrans}) implies that
+
+\[
+\begin{align*}
+\frac{\partial K'}{\partial C}&=-1\\
+\frac{\partial K'}{\partial L}&=(1-\alpha)\cdot \frac{Y}{L}.
+\end{align*}
+\]
+The assumption that $u(C,L)=\ln\left(C\right)+\theta\cdot (1-L)^{1-\gamma}/(1-\gamma)$ implies that
+
+\[
+\begin{align*}
+\frac{\partial u}{\partial C}&=\frac{1}{C}\\
+-\frac{\partial u}{\partial L}&=\theta (1-L)^{-\gamma}.
+\end{align*}
+\]
+Thus, we obtain
+\wcSpan*[id=equation-27]{}
+\setcounter{tpequation}{26}\refstepcounter{tpequation}\label{e:xx2}
+\setcounter{tpequation}{27}\refstepcounter{tpequation}\label{e:xx3}
+\[
+\begin{align*}
+\frac{1}{C}&=\beta \mathbb{E}_{A'\mid A}\left(\frac{\partial V}{\partial K}(K',A')\right)\tag{27}\\
+\theta (1-L)^{-\gamma}&=\beta (1-\alpha) \frac{Y}{L}\cdot \mathbb{E}_{A'\mid A}\left(\frac{\partial V}{\partial K}(K',A')\right).\tag{28}
+\end{align*}
+\]
+By taking the ratio of equations~(\ref{e:xx2}) and~(\ref{e:xx3}), we obtain the following intratemporal optimality condition:
+\wcSpan*[id=equation-29]{}
+\setcounter{tpequation}{28}\refstepcounter{tpequation}\label{e:intra}
+\[
+\frac{\theta C}{(1-L)^{\gamma}}=(1-\alpha) \cdot \frac{Y}{L} .\tag{29}
+\]
+This condition simply says that the marginal rate of substitution between leisure and consumption (left-hand side of the equation) equals the marginal product of labor (right-hand side of the equation) in the optimal allocation.
+
+\paragraph{Step 3: Benveniste-Scheinkman equation} We use the Benveniste-Scheinkman equation to determine $\partial V/\partial K$ and make progress on~(\ref{e:xx2}): 
+
+\[
+\frac{\partial V}{\partial K}(K,A) = \beta \mathbb{E}_{A'\mid A}\left(\frac{\partial V}{\partial K}(K',A') \cdot \frac{\partial K'}{\partial K}\right).
+\]
+Equation~(\ref{e:rbctrans}) implies that
+
+\[
+\frac{\partial K'}{\partial K}= \left[(1-\delta)+\alpha \cdot \frac{Y}{K}\right]\equiv R.
+\]
+Thus, we obtain 
+\wcSpan*[id=equation-30]{}
+\setcounter{tpequation}{29}\refstepcounter{tpequation}\label{e:xx1}
+\[
+\frac{\partial V}{\partial K}(K,A) =\beta R \mathbb{E}_{A'\mid A}\left(\frac{\partial V}{\partial K}(K',A')\right).\tag{30}
+\]
+
+\paragraph{Step 4: Euler equation} Combining the first-order condition~(\ref{e:xx2}) with the Benveniste-Scheinkman equation~(\ref{e:xx1}) yields
+
+\[
+\frac{\partial V}{\partial K}(K,A) = \frac{R}{C}.
+\]
+Moving one period ahead yields
+\wcSpan*[id=equation-31]{}
+\setcounter{tpequation}{30}\refstepcounter{tpequation}\label{e:xx4}
+\[
+\frac{\partial V}{\partial K}(K',A') = \frac{R'}{C'}.\tag{31}
+\]
+Finally, we combine the first-order condition~(\ref{e:xx2}) with equation~(\ref{e:xx4}) to obtain the Euler equation:
+\wcSpan*[id=equation-32]{}
+\setcounter{tpequation}{31}\refstepcounter{tpequation}\label{e:euler}
+\[
+\frac{1}{C}=\beta \mathbb{E}_{A'\mid A}\left(R'\cdot\frac{1}{C'}\right).\tag{32}
+\]
+We aim to solve explicitly for the stochastic processes of the key variables in this model (consumption, leisure, capital, and so on). There are two approaches to solve for these stochastic processes in the literature: either simplify the economic environment, or find an approximate analytical solution by log-linearizing the model. Here we follow the first approach.
+
+\subsection{Simplifying assumptions}
+
+The model contains a mixture of linear and log-linear elements that makes it impossible to find a closed-form solution. To eliminate the linear elements in the model and only keep log-linear elements, we assume full capital depreciation: $\delta=1$. This assumption implies that the capital-accumulation equation simplifies to
+
+\[
+K'=I=Y-C=s Y,
+\]
+where $s$ is the current saving rate. Under these assumptions, we simplify the Euler equation as follows:
+
+\[
+\begin{align*}
+\frac{1}{\left(1-s\right) Y}&=\beta \mathbb{E}_{A'\mid A}\left(\alpha\cdot \frac{Y'}{K'}\cdot \frac{1}{(1-s') Y'}\right)\\
+\frac{1}{\left(1-s\right) Y}&=\alpha \beta \mathbb{E}_{A'\mid A}\left(\frac{1}{s Y}\cdot \frac{1}{1-s'}\right)\\
+\frac{s}{\left(1-s\right) } & =\alpha \beta \mathbb{E}_{A'\mid A}\left(\frac{1}{1-s'}\right).
+\end{align*}
+\]
+
+We solve this equation by guessing and verifying. We guess that the saving rate remains constant over time: $s=s'=s^*$. In that case, 
+
+\[
+\frac{s^*}{1-s^*}=\alpha \beta \mathbb{E}_{A'\mid A}\left(\frac{1}{1-s^*}\right)=\frac{\alpha \beta}{1-s^*}.
+\]
+Thus $s^* =\alpha \beta$. Using this result in the first-order condition~(\ref{e:intra}) yields
+
+\[
+\begin{align*}
+\frac{\theta (1-s^*) Y}{(1-L)^{\gamma}} =(1-\alpha)\cdot \frac{Y}{L}\\
+\frac{\theta (1-s^*)}{1-\alpha} = \frac{(1-L)^{\gamma}}{L}.
+\end{align*}
+\]
+Therefore employment $L$ is constant over time. The two first-order conditions hold for each point in time, and not just along the balanced growth path. Hence the optimal allocation is characterized by a constant saving rate and a constant employment, even in the presence of transitory technology shocks.
+
+
+\end{document}

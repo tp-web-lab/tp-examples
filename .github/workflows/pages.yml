@@ -50,6 +50,12 @@ jobs:
           pnpm --filter @tp/example-tcf build
           pnpm --filter @tp/example-jazz test
           pnpm --filter @tp/example-jazz build
+          pnpm --filter @tp/example-latex-paper build
+          mkdir -p packages/home/.pages/latex-paper
+          cp -R packages/latex-paper/dist/. packages/home/.pages/latex-paper/
+          pnpm --filter @tp/example-dynamic-programming build
+          mkdir -p packages/home/.pages/dynamic-programming
+          cp -R packages/dynamic-programming/dist/. packages/home/.pages/dynamic-programming/
           mkdir -p packages/home/.pages/jazz
           cp -R packages/jazz/dist/. packages/home/.pages/jazz/
           mkdir -p packages/home/.pages/tcf

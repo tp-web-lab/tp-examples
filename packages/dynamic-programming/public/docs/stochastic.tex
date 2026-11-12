@@ -1,0 +1,87 @@
+% Adapted from Dynamic Programming by Pascal Michaillat. CC BY 4.0.
+% See cover.tex for sources and adaptation details.
+\documentclass{article}
+\usepackage{hyperref}
+\begin{document}
+\newcounter{tpequation}
+\setcounter{section}{1}
+\section{Simple stochastic problem}\label{sec:stochastic}\wcSpan*[id=ref-sec-stochastic]{}
+
+In this section, we introduce randomness in the example of Section~\href{deterministic.tex#ref-sec-deterministic}{1} and show how the techniques that we developed there can be applied.
+
+\subsection{Taste shocks}
+
+We assume that the utility of consumption fluctuates randomly over time. The utility of consuming $c_{t}$ in period $t$ is given by
+
+\[
+\epsilon_t \cdot u(c_t),
+\]
+where $\epsilon_t$ is a taste shock in period $t$. The taste shock is determined at the beginning of the period and observed before the consumption decision. The shock can take only two values: $\epsilon_{t}\in\left\lbrace \epsilon_h,\epsilon_l\right\rbrace $ with $\epsilon_h>\epsilon_l>0$. The shock follows a Markov process; therefore, the distribution of $\epsilon_t$ only depends on the realization $\epsilon_{t-1}$ of $\epsilon$ in the previous period. 
+
+The problem can be solved as before. The major difference is that the value function is not only a function of current wealth, $a$, but also a function of the current realization of the taste shock, $\epsilon$. In other words, there are two state variables: $a$ and $\epsilon$.
+
+\subsection{Step 1: Bellman equation}
+
+The Bellman equation becomes
+
+\[
+V(a,\epsilon)=\max_{a'\in[0,(1+r) a]} \left\lbrace \epsilon \cdot u((1+r) a-a')+\beta \mathbb{E}_{\epsilon'\mid \epsilon}\left(V(a',\epsilon')\right)\right\rbrace .
+\]
+\subsection{Step 2: First-order condition}
+Taking the first-order condition with respect to $a'$ in the Bellman equation yields
+\wcSpan*[id=equation-19]{}
+\setcounter{tpequation}{18}\refstepcounter{tpequation}\label{e:foc0}
+\[
+\epsilon \cdot \frac{d u}{d c}((1+r) a-a')=\beta \mathbb{E}_{\epsilon'\mid \epsilon}\left(\frac{\partial V}{\partial a}(a',\epsilon')\right),\tag{19}
+\]
+where 
+
+
+\[
+\frac{\partial V}{\partial a}(a',\epsilon')
+\]
+designates the partial derivative of the value function $V(a,\epsilon)$ with respect to the first variable, $a$, evaluated at the pair $(a',\epsilon')$.
+
+\subsection{Step 3: Benveniste-Scheinkman equation}
+
+In the first-order condition~(\ref{e:foc0}), we do not know the derivative $\partial V/\partial a$ of the value function. We determine $\partial V/\partial a$ by applying the Benveniste-Scheinkman equation:
+\wcSpan*[id=equation-20]{}
+\setcounter{tpequation}{19}\refstepcounter{tpequation}\label{e:bs1}
+\[
+\frac{\partial V}{\partial a}(a,\epsilon)= (1+r) \epsilon \cdot \frac{d u}{d c}((1+r) a-a').\tag{20}
+\]
+\subsection{Step 4: One step forward}
+Equation (\ref{e:bs1}) is valid for any vector $(a,\epsilon)$ of state variables. In particular, it is valid for the vector $(a',\epsilon')$ of next period's state variables. Hence,
+\wcSpan*[id=equation-21]{}
+\setcounter{tpequation}{20}\refstepcounter{tpequation}\label{e:onestep0}
+\[
+\frac{\partial V}{\partial a}(a',\epsilon')= (1+r) \epsilon'\cdot \frac{d u}{d c}((1+r) a'-a'').\tag{21}
+\]
+
+\subsection{Step 5: Euler equation}
+
+Plugging equation (\ref{e:onestep0}) into the first-order condition (\ref{e:foc0}) yields:
+\wcSpan*[id=equation-22]{}
+\setcounter{tpequation}{21}\refstepcounter{tpequation}\label{e:eulerstoc}
+\[
+\begin{align*}
+\epsilon \cdot \frac{d u}{d c}((1+r) a-a')&=(1+r) \beta \mathbb{E}_{\epsilon'\mid \epsilon}\left(\epsilon' \cdot \frac{d u}{d c}((1+r) a'-a'')\right)\\
+\epsilon \cdot \frac{d u}{d c}(c)&=(1+r) \beta \mathbb{E}_{\epsilon'\mid \epsilon}\left(\epsilon' \cdot \frac{d u}{d c}(c')\right).\tag{22}
+\end{align*}
+\]
+This is the Euler equation.
+
+The policy function gives the optimal level of consumption in any state of the world. The policy function now depends on the realization $\epsilon$ of the shock in the current period:
+
+
+\[
+c^{*}=h(a,\epsilon).
+\]
+The policy function specifies a contingent plan of consumption, which depends on the state variable $a$ and on the realization of the shock variable $\epsilon$. We can rewrite the Euler equation with the policy function:
+
+\[
+\epsilon \cdot \frac{d u}{d c}(h(a,\epsilon))=(1+r) \beta \mathbb{E}_{\epsilon' \mid \epsilon}\left(\frac{d u}{d c}(h(a',\epsilon'))\right).
+\]
+
+
+\end{document}

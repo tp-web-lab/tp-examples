@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pascal Michaillat's academic paper template adapted to LaTeX and TP web components.">
+  <title>LaTeX Paper · TP Examples</title>
+  <script vite-ignore type="module" src="./@tp/tp-components/tp-loader.js"></script>
+  <style>
+    /* Match paper.sty's two list levels, without styling the generated TOC. */
+    .tp-latex-output .body > ul > li { list-style-type: disc; }
+    .tp-latex-output .body > ul > li > ul > li { list-style-type: "–  "; }
+    .tp-latex-output .body > ol > li { list-style-type: decimal; }
+    .tp-latex-output .body > ol > li > ol > li { list-style-type: upper-alpha; }
+    .paper-figure { margin: 1.5rem 0; }
+    .paper-panel { display: inline-block; vertical-align: top; width: min(100%, 28rem); margin: .5rem; }
+    .paper-figure img { max-width: 100%; height: auto; }
+    .paper-table-scroll { overflow-x: auto; }
+    .paper-table table { width: 100%; border-collapse: collapse; }
+    .paper-table td { padding: .5em; border-bottom: 1px solid currentColor; text-align: center; }
+    .paper-table td:first-child { text-align: start; }
+  </style>
+</head>
+<body>
+  <tp-latex-single-page src="./docs/paper.tex" label="LaTeX Paper" toolbar="code,color,theme,fullscreen" lang="en"></tp-latex-single-page>
+</body>
+</html>
